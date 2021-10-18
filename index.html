@@ -1,0 +1,25 @@
+
+{{ insert head.html }}
+<main aria-role="main">
+
+<div>
+
+{{ isdef sitename }}
+  <h1 style="font-family:JuliaMono;">{{ fill sitename }}</h1>
+{{ end }}
+
+{{ jlinsert social-icons }}
+
+</div>
+
+<br />
+<div class="row">
+  <a href="{{ website_url }}/about">
+    <img src="{{ website_url }}/images/profile/NTNU_profile.jpg" class="center" style="border-radius: 50%">
+  </a>
+</div>
+
+
+</main>
+
+{{ insert foot.html }}

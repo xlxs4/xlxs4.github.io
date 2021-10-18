@@ -1,0 +1,31 @@
+<!-- CONTENT ENDS HERE -->
+{{ ifdef layout-post }}
+    </div>
+    </article>
+    <hr>
+
+<!--
+    <div class="post-info">
+    <p>
+    {{ svg tag }} {{ jlinsert pagetags }}
+    </p>
+
+
+    </div>
+-->
+    </main>
+{{ end }}
+
+
+    </div> <!-- <div class="content"> -->
+
+    {{ insert footer.html }}
+
+    {{ if hasmath }} {{ insert foot_katex.html }} {{ end }}
+    {{ if hascode }} {{ insert foot_highlight.html }} {{ end }}
+
+    <script src="/libs/hello-hermit.js"></script>
+
+    </div> <!-- container -->
+  </body>
+</html>
