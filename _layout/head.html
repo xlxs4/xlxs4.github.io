@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="{{ fill website_url }}{{ get_url }}"/>
+
+  <meta name="author" content="{{ fill author.name }}">
+  <meta name="description" content="{{ markdown2html website_description }}">
+
+  {{ if hasmath }} {{ insert head_katex.html }} {{ end }}
+  {{ if hascode }} {{ insert head_highlight.html }} {{ end }}
+
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" href="/css/hello-hermit.css">
+
+{{ isnotpage /index.html }}<title>{{ markdown2html title }} | {{ fill sitename }}</title>{{ end }}
+{{ ispage /index.html }}<title>{{ fill sitename }}</title>{{ end }}
+</head>
+
+<body class="">
+<!-- <body class="dark-theme"> -->
+<div class="container">
+
+{{insert header.html}}
+
+<div class="content">
+
+{{ ifdef layout-post }}
+  <main class="post">
+  <div class="post-info">
+  <p style="display: flex; justify-content: space-between">
+  <span>
+  {{ svg clock }} {{ jlinsert read-time }}
+  </span>
+  <span>
+    {{ svg calendar }} {{ fill date }}
+  </span>
+  </p>
+  <p>
+    {{ svg tag }} {{ jlinsert pagetags }}
+  </p>
+  </div>
+
+  <article>
+
+  <div class="post-content">
+{{ end }}
+
+<!-- Content appended here -->
