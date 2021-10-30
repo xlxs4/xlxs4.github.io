@@ -35,7 +35,7 @@ Before that, while still a master's student at NTNU, I contributed as a teaching
 ## Publications &#128221;
 - Pauliuk S., Koslowski M., Madhu K., Schulte S., Kilchert S. (in review): *Informing the Co‑design of Digital Transformation and Sustainable Development Strategies – What Sociometabolic and Industrial Ecology Research can contribute*
 - Verones F., Koslowski M., Woods J.S., Lonka R., Stadler K. (in review): *MarINvaders: a web toolkit of marine invasive species for use in environmental decision-making.*
-- Koslowski M. (2021): *Climate compensation 2.0: Extending carbon compensation schemes by ownership.* [White paper, ClimatePoint](https://en.climatepoint.com/)
+- Koslowski M. (2021): *Climate compensation 2.0: Extending carbon compensation schemes by ownership.* White paper, [ClimatePoint](https://en.climatepoint.com/), accessible [here](https://github.com/maximikos/climatepoint)
 - Koslowski M., Moran DD., Tisserant A., Verones F., Wood R. (2020): *Quantifying Europe's biodiversity footprints and the role of urbanization and income.* [Global Sustainability 3, e1, 1–12](https://doi.org/10.1017/sus.2019.23)
 
 ~~~
