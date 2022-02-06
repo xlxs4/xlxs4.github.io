@@ -2,7 +2,7 @@
 date = "2021-11-11"
 title = "Discussions at work"
 var"layout-post" = nothing
-tags = ["debate", "IndEcol", "PhD", "COP26"]
+tags = ["debate", "indecol", "phd", "cop"]
 rss = "We had our first Inde-Conversation!"
 
 # Dependent variables

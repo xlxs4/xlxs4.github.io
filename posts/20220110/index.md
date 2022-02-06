@@ -2,7 +2,7 @@
 date = "2022-01-10"
 title = "New year, new you"
 var"layout-post" = nothing
-tags = ["holidays", "IndEcol", "PhD"]
+tags = ["holidays", "indecol", "phd"]
 rss = "Happy new year!"
 
 # Dependent variables

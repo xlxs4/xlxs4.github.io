@@ -2,7 +2,7 @@
 date = "2021-12-21"
 title = "Same procedure as every year"
 var"layout-post" = nothing
-tags = ["workshop", "SHAPE", "julebord"]
+tags = ["workshop", "shape", "julebord"]
 rss = "Pre-christmas frenzy"
 
 # Dependent variables

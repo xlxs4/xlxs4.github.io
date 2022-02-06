@@ -2,7 +2,7 @@
 date = "2021-11-15"
 title = "So, that was it?!"
 var"layout-post" = nothing
-tags = ["COP", "policymaking", "climate", "UN"]
+tags = ["cop", "policymaking", "climate", "un"]
 rss = "COP26 finally took place and disappointed"
 
 # Dependent variables
