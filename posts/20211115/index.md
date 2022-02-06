@@ -21,7 +21,10 @@ Of course, not everything is bad. A few alliances were forged, a little financia
 Anyway, [this article](https://www.carbonbrief.org/cop26-key-outcomes-agreed-at-the-un-climate-talks-in-glasgow?utm_campaign=Carbon%20Brief%20Daily%20Briefing&utm_content=20211116&utm_medium=email&utm_source=Revue%20Daily) by CarbonBrief sums up the climate summit perfectly. In addition, I would like to highlight the excellent speeches by [Sir David Attenborough](https://www.youtube.com/watch?v=A6SO0xkr_uI&ab_channel=CNBCInternationalTV) and [Barbados PM Mia Mottley](https://twitter.com/i/status/1455225256491298819). And if anyone wants to get started with "my country emits less than 2% of global emissions" - please, please, have a look at [this video](https://www.youtube.com/embed/6zP0L69ielU)!
 
 ~~~
-<iframe width="60%" height="auto" src="https://www.youtube.com/embed/6zP0L69ielU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe style="display: block; 
+           margin-left: auto;
+           margin-right: auto;
+           width: 80%;" src="https://www.youtube.com/embed/6zP0L69ielU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ~~~
 
 Over and out &#129296;
