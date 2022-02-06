@@ -32,7 +32,14 @@ But that was not too bad because we actually had some fun events in the week bef
 </img>
 
 <div class="row">
-  <a href="{{ website_url }}/about">
+  <a href="{{ website_url }}/posts/20211221">
+    <img src="{{ website_url }}/images/posts/Culinary_map.jpeg" class="center" style="border-radius: 50%">
+  </a>
+</div>
+
+
+<div class="row">
+  <a href="{{ website_url }}/posts">
     <img src="{{ website_url }}/images/posts/Culinary_map.jpeg" class="center" style="border-radius: 50%">
   </a>
 </div>
