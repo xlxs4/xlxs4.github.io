@@ -27,9 +27,15 @@ But that was not too bad because we actually had some fun events in the week bef
            margin-left: auto;
            margin-right: auto;
            width: 60%;"
-    src="https://i.imgur.com/oqR2tR4.jpeg" 
+    src="{{ website_url }}/images/posts/Culinary_map.jpeg" 
     alt="Culinary map of Europe">
 </img>
+
+<div class="row">
+  <a href="{{ website_url }}/about">
+    <img src="{{ website_url }}/images/posts/Culinary_map.jpeg" class="center" style="border-radius: 50%">
+  </a>
+</div>
 
 After the julebord, the office got quite empty because many people left early for visiting their families at home. That's the time when you start to feel a little lonely in Trondheim. Note to self: Get away early as well!
 
