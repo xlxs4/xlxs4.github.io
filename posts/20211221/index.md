@@ -22,6 +22,7 @@ Well, my research group was supposed to go on a a retreat in Oppdal (~2 hours so
 
 But that was not too bad because we actually had some fun events in the week before. Namely, IndEcol's julebord (a Christmas party with colleagues) took place in an old restaurant on one of Trondheim's hills. We didn't come for the food though - if we did, we would have only gottten disappointed. After all, Norway is not known for being a place with culinary highlights, and in the festive season most dishes have some sort of meat as their main ingredient. Not the best match with our group where we have many vegans and vegetarians... But that didn't spoil the party!
 
+~~~
 <img 
     style="display: block; 
            margin-left: auto;
@@ -43,6 +44,7 @@ But that was not too bad because we actually had some fun events in the week bef
     <img src="{{ website_url }}/images/posts/Culinary_map.jpeg" class="center" style="border-radius: 50%">
   </a>
 </div>
+~~~
 
 After the julebord, the office got quite empty because many people left early for visiting their families at home. That's the time when you start to feel a little lonely in Trondheim. Note to self: Get away early as well!
 
