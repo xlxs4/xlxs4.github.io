@@ -9,14 +9,14 @@
 
   <channel>
     <title>
-      <![CDATA[  Max Koslowski  ]]>
+      <![CDATA[  xlxs4  ]]>
     </title>
-    <link> https://maximikos.github.io </link>
+    <link> https://xlxs4.github.io </link>
     <description>
-      <![CDATA[  My personal academic website. I am a PhD student @IndEcol developing sustainable development pathways. Sometimes I post about research, PhD life, and other topics.  ]]>
+      <![CDATA[  My personal website.  ]]>
     </description>
     <atom:link
-      href="https://maximikos.github.io/feed.xml"
+      href="https://xlxs4.github.io/feed.xml"
       rel="self"
       type="application/rss+xml" />
 
@@ -25,8 +25,8 @@
   <title>
     <![CDATA[  What do you do?  ]]>
   </title>
-  <link> https://maximikos.github.io/posts/intro-research-topic/index.html </link>
-  <guid> https://maximikos.github.io/posts/intro-research-topic/index.html </guid>
+  <link> https://xlxs4.github.io/posts/intro-research-topic/index.html </link>
+  <guid> https://xlxs4.github.io/posts/intro-research-topic/index.html </guid>
   <description>
     <![CDATA[  This is a stub for a lengthier article on what my PhD is about.  ]]>
   </description>  
@@ -35,7 +35,7 @@
   
   
   <atom:author>
-    <atom:name>Max Koslowski</atom:name>
+    <atom:name>xlxs4</atom:name>
   </atom:author>
         
 </item>

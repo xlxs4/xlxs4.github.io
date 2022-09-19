@@ -9,14 +9,14 @@
 
   <channel>
     <title>
-      <![CDATA[  Max Koslowski  ]]>
+      <![CDATA[  xlxs4  ]]>
     </title>
-    <link> https://maximikos.github.io </link>
+    <link> https://xlxs4.github.io </link>
     <description>
-      <![CDATA[  My personal academic website. I am a PhD student @IndEcol developing sustainable development pathways. Sometimes I post about research, PhD life, and other topics.  ]]>
+      <![CDATA[  My personal website.  ]]>
     </description>
     <atom:link
-      href="https://maximikos.github.io/feed.xml"
+      href="https://xlxs4.github.io/feed.xml"
       rel="self"
       type="application/rss+xml" />
 
@@ -25,8 +25,8 @@
   <title>
     <![CDATA[  So, that was it?&#33;  ]]>
   </title>
-  <link> https://maximikos.github.io/posts/20211115/index.html </link>
-  <guid> https://maximikos.github.io/posts/20211115/index.html </guid>
+  <link> https://xlxs4.github.io/posts/20211115/index.html </link>
+  <guid> https://xlxs4.github.io/posts/20211115/index.html </guid>
   <description>
     <![CDATA[  COP26 finally took place and disappointed  ]]>
   </description>  
@@ -35,7 +35,7 @@
   
   
   <atom:author>
-    <atom:name>Max Koslowski</atom:name>
+    <atom:name>xlxs4</atom:name>
   </atom:author>
         
 </item>
@@ -44,8 +44,8 @@
   <title>
     <![CDATA[  Discussions at work  ]]>
   </title>
-  <link> https://maximikos.github.io/posts/20211111/index.html </link>
-  <guid> https://maximikos.github.io/posts/20211111/index.html </guid>
+  <link> https://xlxs4.github.io/posts/20211111/index.html </link>
+  <guid> https://xlxs4.github.io/posts/20211111/index.html </guid>
   <description>
     <![CDATA[  We had our first Inde-Conversation&#33;  ]]>
   </description>  
@@ -54,7 +54,7 @@
   
   
   <atom:author>
-    <atom:name>Max Koslowski</atom:name>
+    <atom:name>xlxs4</atom:name>
   </atom:author>
         
 </item>

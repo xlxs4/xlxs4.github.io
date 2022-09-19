@@ -1,4 +1,4 @@
-Sitemap: https://maximikos.github.io/sitemap.xml
+Sitemap: https://xlxs4.github.io/sitemap.xml
 
 User-agent: *
 Disallow:
