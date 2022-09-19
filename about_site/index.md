@@ -9,7 +9,7 @@ title = "About this site"
 
 # About this site
 
-This is my personal academic website. All credits for the design of it go to Fredrik Ekre, whose Julia-based [website](https://fredrikekre.se/) I used as a template.
+This is my personal academic website. All credits for the design of it go to Max Koslowski, whose Julia-based [website](https://maximikos.github.io/) I used as a template. That in turn used the [website](https://fredrikekre.se/) of Fredrik Ekre as its inspiration.
 
 ## License
 
