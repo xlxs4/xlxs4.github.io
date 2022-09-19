@@ -1,8 +1,8 @@
 <!-- RSS settings -->
 
-@def website_title = "Max Koslowski"
-@def website_description = "My personal academic website. I am a PhD student @IndEcol developing sustainable development pathways. Sometimes I post about research, PhD life, and other topics."
-@def website_url = "https://maximikos.github.io"
+@def website_title = "xlxs4"
+@def website_description = "My personal website."
+@def website_url = "https://xlxs4.github.io"
 @def generate_rss = true
 
 +++
@@ -21,26 +21,23 @@ ignore = [setdiff([isfile(x) ? x : x * "/" for x in readdir()], _include); _excl
 
 <!-- Theme specific options -->
 <!-- @def title = "Max Koslowski" -->
-@def sitename = "Max Koslowski"
-@def author.name = "Max Koslowski"
-@def author = "Max Koslowski"
+@def sitename = "xlxs4"
+@def author.name = "Orestis Ousoultzoglou"
+@def author = "xlxs4"
 
 <!-- Social icons -->
 @def social = (
-        ssh = "https://www.ntnu.edu/employees/maximilian.koslowski",
-        linkedin = "https://www.linkedin.com/in/maximilian-koslowski-711365143/",
-        github = "https://github.com/maximiko",
-        twitter = "https://twitter.com/maximikos"
+        github = "https://github.com/xlxs4",
+        twitter = "https://twitter.com/orousoultzoglou"
     )
 
 <!-- Logo -->
 @def logo.mark = "\$"
-@def logo.text = "cd /home/max"
+@def logo.text = "cd /home/xlxs4"
 
 <!-- Menu -->
 @def menu = [
         (name = "posts", url = "/posts/"),
-        (name = "research", url = "/research/"),
         (name = "about", url = "/about/"),
     ]
 
