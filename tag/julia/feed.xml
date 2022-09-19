@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  Max Koslowski  ]]>
+    </title>
+    <link> https://maximikos.github.io </link>
+    <description>
+      <![CDATA[  My personal academic website. I am a PhD student @IndEcol developing sustainable development pathways. Sometimes I post about research, PhD life, and other topics.  ]]>
+    </description>
+    <atom:link
+      href="https://maximikos.github.io/feed.xml"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  Hello, world&#33;  ]]>
+  </title>
+  <link> https://maximikos.github.io/posts/welcome/index.html </link>
+  <guid> https://maximikos.github.io/posts/welcome/index.html </guid>
+  <description>
+    <![CDATA[  Welcome to my personal academic website and my first blong entry&#33;  ]]>
+  </description>  
+    
+  <pubDate>Sun, 17 Oct 2021 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Max Koslowski</atom:name>
+  </atom:author>
+        
+</item>
+</channel></rss>

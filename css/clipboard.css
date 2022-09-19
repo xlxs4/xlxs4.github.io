@@ -1,0 +1,1 @@
+@charset "utf-8";pre{position:relative}.copy-button{position:absolute;top:.5rem;right:.5rem;padding:0;margin:0;background:transparent !important;opacity:.3;transition:.2s opacity;color:#ebdbb2 !important}.copy-button:active{transform:translate(1px,1px)}.copy-button svg{height:1.0rem;width:1.0rem}pre:hover .copy-button{opacity:1}
