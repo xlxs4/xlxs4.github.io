@@ -177,6 +177,7 @@ Tags not really needed, you can just (fuzzy) search stuff (at least in Obsidian)
 - [Part 2 Behind the Scenes 1/2: Note highlights and initial sketches. Creating the BASB Book on a Page - YouTube](https://www.youtube.com/watch?v=KTsw020KFf0)
 - [Part 3 Behind the Scenes 2/2: Creating the final book on a page for Building a Second Brain - YouTube](https://www.youtube.com/watch?v=Mo-o4c2pzYE)
 - [The Productivity Secret of Michelin-Star Chefs | Work Clean by Dan Charnas - YouTube](https://www.youtube.com/watch?v=Wbznh-bPoEg)
+- [How to Take Smart Notes - Book on a Page - YouTube](https://www.youtube.com/watch?v=o49C8jQIsvs)
 
 ## Plugins
 
