@@ -28,7 +28,8 @@ ignore = [setdiff([isfile(x) ? x : x * "/" for x in readdir()], _include); _excl
 <!-- Social icons -->
 @def social = (
         github = "https://github.com/xlxs4",
-        twitter = "https://twitter.com/orousoultzoglou"
+        twitter = "https://twitter.com/orousoultzoglou",
+        holopin = "https://www.holopin.me/xlxs4"
     )
 
 <!-- Logo -->
