@@ -10,52 +10,6 @@ function hfun_m1fill(vname)
     return Franklin.pagevar("index", var)
 end
 
-function hfun_jlinsert(arg)
-    arg = first(arg)
-    if arg == "social-icons"
-        return social_icons()
-    elseif arg == "read-time"
-        return read_time()
-    elseif arg == "pagetags"
-        return pagetags()
-    else
-        error("unknown argument arg = $arg")
-    end
-end
-
-function read_time()
-    src = joinpath(Franklin.PATHS[:folder], Franklin.FD_ENV[:CUR_PATH])
-    nwords = length(split(read(src, String)))
-    nmin = ceil(Int, nwords / 220)
-    return "$(nmin) minute$(nmin > 1 ? "s" : "")"
-end
-
-function social_icons()
-    icons = locvar("social")
-    isempty(icons) && return ""
-    io = IOBuffer()
-    println(io, "<div class=\"social-icons\">")
-    for (name, url) in pairs(icons)
-        name = string(name)
-        svg = Franklin.convert_html("{{ svg $(name) }}")
-        svg = strip(svg)
-        isempty(svg) && (@warn "could not find svg icon for social.$name, skipping"; continue)
-        aref = """&nbsp; <a href="$(url)" title="$(name)">$(svg)</a> &nbsp;"""
-        println(io, aref)
-    end
-    println(io, "</div>")
-    r = Franklin.convert_html(String(take!(io)))
-    return r
-end
-
-function pagetags()
-    io = IOBuffer()
-    for tag in Franklin.locvar("tags")
-        print(io, "<span class=\"tag\"><a href=\"/tag/$(tag)\">$(tag)</a></span>")
-    end
-    return strip(String(take!(io)))
-end
-
 function hfun_eval(arg)
     x = Core.eval(Franklin, Meta.parse(join(arg)))
     io = IOBuffer()
@@ -196,15 +150,22 @@ let counter = 0
     end
 end
 
-function hfun_markdown2html(arg)
-    arg = first(arg)
-    if arg == "website_description" || arg == "title" || arg == "markdown_title"
-        str = locvar(arg)
-        @assert str !== nothing
-        return Franklin.md2html(str; stripp=true)
-    else
-        error("unknown argument arg = $arg")
-    end
+function hfun_weave2html(document)
+    f_name = tempname(pwd()) * ".html"
+    weave(first(document); out_path=f_name)
+    text = read(f_name, String)
+    final = x ->
+        replace(x, r"<span class='hljl-.*?>" => "") |> # Removes weave code block syntax
+        x ->
+            replace(x, "</span>" => "") |> # Removes weave code block syntax
+            x ->
+                replace(
+                    x,
+                    "<pre class='hljl'>\n" => "<pre><code class = \"language-julia\">", # Replaces weave code block syntax with Franklin's
+                ) |> x -> replace(x, "</pre>" => "</code></pre>")("<!DOCTYPE html>\n<HTML lang = \"en\">" *
+                                                                  split(text, "</HEAD>")[2]) # Replaces weave code block syntax with Franklin's
+    rm(f_name)
+    return final
 end
 
 """
