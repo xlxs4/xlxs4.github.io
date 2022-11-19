@@ -1,4 +1,6 @@
-using Franklin, Dates
+using Dates
+using Franklin
+using Weave
 
 function hfun_bar(vname)
     val = Meta.parse(vname[1])
