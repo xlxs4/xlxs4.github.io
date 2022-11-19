@@ -135,7 +135,11 @@ function list_pages_by_date(pages)
     return String(take!(io))
 end
 
-hfun_taglist() = list_pages_by_date(globvar("fd_tag_pages")[locvar(:fd_tag)])
+function hfun_taglist()
+    tag = Franklin.locvar(:fd_tag)::String
+    rpaths = Franklin.globvar("fd_tag_pages")[tag]
+    return write_notes(rpaths)
+end
 
 function hfun_get_url()
     Franklin.get_url(Franklin.locvar("fd_rpath"))
