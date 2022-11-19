@@ -51,22 +51,6 @@ function write_notes(rpaths)::String
     return String(take!(io))
 end
 
-function hfun_definetagtitle()
-    return hfun_define(["title", "#$(locvar("fd_tag"))"])
-end
-
-function hfun_define(arg)
-    vname = arg[1]
-    vdef = repr(get(arg, 2, nothing))
-    Franklin.set_vars!(Franklin.LOCAL_VARS, [vname => vdef, ]) # TODO: Use set_var! instead ???
-    return ""
-end
-function hfun_undef(arg)
-    arg = arg[1]
-    haskey(Franklin.LOCAL_VARS, arg) && delete!(Franklin.LOCAL_VARS, arg)
-    return ""
-end
-
 function hfun_list_posts(folders)
     pages = String[]
     root = Franklin.PATHS[:folder]
