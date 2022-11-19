@@ -99,22 +99,6 @@ Franklin.@delay function hfun_alltags()
     return String(take!(io))
 end
 
-Franklin.@delay function hfun_notetags()
-    pagetags = Franklin.globvar("fd_page_tags")
-    pagetags === nothing && return ""
-    io = IOBuffer()
-    tags = sort(collect(pagetags[splitext(Franklin.locvar("fd_rpath"))[1]]))
-    write(io, """<div class="page-tag"><i class="fa fa-tag"></i>""")
-    for tag in tags[1:(end - 1)]
-        t = replace(tag, "_" => " ")
-        write(io, """<a href="/tag/$tag/">$t</a>, """)
-    end
-    tag = tags[end]
-    t = replace(tag, "_" => " ")
-    write(io, """<a href="/tag/$tag/">$t</a></div>""")
-    return String(take!(io))
-end
-
 function hfun_taglist()
     tag = Franklin.locvar(:fd_tag)::String
     rpaths = Franklin.globvar("fd_tag_pages")[tag]
@@ -137,6 +121,64 @@ function hfun_weave2html(document)
                                                                   split(text, "</HEAD>")[2]) # Replaces weave code block syntax with Franklin's
     rm(f_name)
     return final
+end
+
+Franklin.@delay function hfun_notetags()
+    pagetags = Franklin.globvar("fd_page_tags")
+    pagetags === nothing && return ""
+    io = IOBuffer()
+    tags = sort(collect(pagetags[splitext(Franklin.locvar("fd_rpath"))[1]]))
+    write(io, """<div class="page-tag"><i class="fa fa-tag"></i>""")
+    for tag in tags[1:(end - 1)]
+        t = replace(tag, "_" => " ")
+        write(io, """<a href="/tag/$tag/">$t</a>, """)
+    end
+    tag = tags[end]
+    t = replace(tag, "_" => " ")
+    write(io, """<a href="/tag/$tag/">$t</a></div>""")
+    return String(take!(io))
+end
+
+function hfun_socialicons()
+    io = IOBuffer()
+    write(
+        io,
+        """
+<div class="social-container">
+    <div class="social-icon">
+        <a href="/notes/" title="Notes">
+            <i class="fa fa-pencil"></i>
+        </a>
+    </div>
+    <div class="social-icon">
+        <a href="/about/" title="About">
+            <i class="fa fa-user-circle-o"></i>
+        </a>
+    </div>
+    <div class="social-icon">
+        <a href="/feed.xml" title="RSS">
+            <i class="fa fa-rss"></i>
+        </a>
+    </div>
+    <div class="social-icon">
+        <a href="https://gitlab.com/jvaverka" title="GitLab">
+            <i class="fa fa-gitlab" aria-hidden="false"></i>
+        </a>
+    </div>
+    <div class="social-icon">
+        <a href="https://github.com/jvaverka" title="GitHub">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+    <div class="social-icon">
+        <a href="https://www.linkedin.com/in/jacob-vaverka-b5965052" title="LinkedIn">
+            <i class="fa fa-linkedin"></i>
+        </a>
+    </div>
+</div>
+""",
+    )
+    return String(take!(io))
 end
 
 """
