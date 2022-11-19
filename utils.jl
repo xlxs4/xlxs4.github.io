@@ -99,6 +99,22 @@ Franklin.@delay function hfun_alltags()
     return String(take!(io))
 end
 
+Franklin.@delay function hfun_notetags()
+    pagetags = Franklin.globvar("fd_page_tags")
+    pagetags === nothing && return ""
+    io = IOBuffer()
+    tags = sort(collect(pagetags[splitext(Franklin.locvar("fd_rpath"))[1]]))
+    write(io, """<div class="page-tag"><i class="fa fa-tag"></i>""")
+    for tag in tags[1:(end - 1)]
+        t = replace(tag, "_" => " ")
+        write(io, """<a href="/tag/$tag/">$t</a>, """)
+    end
+    tag = tags[end]
+    t = replace(tag, "_" => " ")
+    write(io, """<a href="/tag/$tag/">$t</a></div>""")
+    return String(take!(io))
+end
+
 function hfun_taglist()
     tag = Franklin.locvar(:fd_tag)::String
     rpaths = Franklin.globvar("fd_tag_pages")[tag]
