@@ -53,6 +53,17 @@ function write_notes(rpaths)::String
     return String(take!(io))
 end
 
+function sort_notes!(rpaths)
+    sorter(p) = begin
+        pvd = Franklin.pagevar(p, :date)
+        if isnothing(pvd)
+            return Date(Dates.unix2datetime(stat(p * ".md").ctime))
+        end
+        return pvd
+    end
+    return sort!(rpaths; by=sorter, rev=true)
+end
+
 function hfun_taglist()
     tag = Franklin.locvar(:fd_tag)::String
     rpaths = Franklin.globvar("fd_tag_pages")[tag]
