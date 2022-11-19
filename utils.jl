@@ -53,83 +53,10 @@ function write_notes(rpaths)::String
     return String(take!(io))
 end
 
-function hfun_list_posts(folders)
-    pages = String[]
-    root = Franklin.PATHS[:folder]
-    for folder in folders
-        startswith(folder, "/") && (folder = folder[2:end])
-        cd(root) do
-            foreach(((r, _, fs),) ->  append!(pages, joinpath.(r, fs)), walkdir(folder))
-        end
-    end
-    filter!(x -> endswith(x, ".md"), pages)
-    for i in eachindex(pages)
-        pages[i] = replace(pages[i], r"\.md$"=>"")
-    end
-    return list_pages_by_date(pages)
-end
-
-function list_pages_by_date(pages)
-    # Collect required information from the pages
-    items = Dict{Int,Any}()
-    for page in pages
-        date = pagevar(page, "date")
-        date === nothing && error("no date found on page $page")
-        date = Date(date)
-        title = something(pagevar(page, "markdown_title"), pagevar(page, "title"))
-        title === nothing && error("no title found on page $page")
-        title = Franklin.md2html(title; stripp=true)
-        stitle = something(pagevar(page, "title"), title) # for sorting (no <code> etc)
-        url = get_url(page)
-        push!(get!(items, year(date), []), (date=date, title=title, stitle=stitle, url=url))
-    end
-    # Write out the list
-    io = IOBuffer()
-    for k in sort!(collect(keys(items)); rev=true)
-        year_items = items[k]
-        # Sort primarily by date (in reverse) and secondary by title
-        lt = (x, y) -> x.date == y.date ? x.stitle > y.stitle : x.date < y.date
-        sort!(year_items; lt=lt, rev=true)
-        print(io, """
-            <div class="posts-group">
-              <div class="post-year">$(k)</div>
-              <ul class="posts-list">
-            """)
-        for item in year_items
-            print(io, """
-                    <li class="post-item">
-                      <a href=\"$(item.url)\">
-                        <span class="post-title">$(item.title)</span>
-                        <span class="post-day">$(Dates.format(item.date, "d u"))</span>
-                      </a>
-                    </li>
-                """)
-        end
-        print(io, """
-              </ul>
-            </div>
-            """)
-    end
-    return String(take!(io))
-end
-
 function hfun_taglist()
     tag = Franklin.locvar(:fd_tag)::String
     rpaths = Franklin.globvar("fd_tag_pages")[tag]
     return write_notes(rpaths)
-end
-
-function hfun_get_url()
-    Franklin.get_url(Franklin.locvar("fd_rpath"))
-end
-
-let counter = 0
-    global function hfun_unique_id(n=nothing)
-        if n !== nothing
-            counter += 1
-        end
-        return "unique-id-$(counter)"
-    end
 end
 
 function hfun_weave2html(document)
