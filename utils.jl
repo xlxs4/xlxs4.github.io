@@ -162,3 +162,36 @@ function hfun_markdown2html(arg)
         error("unknown argument arg = $arg")
     end
 end
+
+"""
+    newnote(;title::String, descr::String, tags::Vector{String}, code=false)
+"""
+function newnote(;title::String, descr::String, tags::Vector{String}, code=false)
+    path = joinpath(@__DIR__, "notes", replace(lowercase(title), " " => "-"))
+    note = joinpath(path, "index.md")
+    mkpath(path)
+    touch(note)
+    y = Dates.year(Dates.today())
+    m = Dates.month(Dates.today())
+    d = Dates.day(Dates.today())
+    open(note, "w") do io
+        write(io, """
+        +++
+        title = "$title"
+        descr = "$descr"
+        rss = "$descr"
+        date = Date($y, $m, $d)
+        hascode = $code
+        tags = $(sort(tags))
+        +++
+
+        {{ notetags }}
+
+        ## $title
+
+        \\toc
+
+        ### Subtitle
+        """)
+    end
+end
