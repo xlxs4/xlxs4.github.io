@@ -64,6 +64,14 @@ function sort_notes!(rpaths)
     return sort!(rpaths; by=sorter, rev=true)
 end
 
+function hfun_allnotes()::String
+    rpaths = [
+        joinpath("notes", note, "index.md") for
+        note in readdir("notes") if !endswith(note, ".md")
+    ]
+    return write_notes(rpaths)
+end
+
 function hfun_taglist()
     tag = Franklin.locvar(:fd_tag)::String
     rpaths = Franklin.globvar("fd_tag_pages")[tag]
