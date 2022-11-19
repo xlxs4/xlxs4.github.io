@@ -53,6 +53,40 @@ function hfun_eval(arg)
     return String(take!(io))
 end
 
+function write_notes(rpaths)::String
+    sort_notes!(rpaths)
+    curyear = Dates.year(Franklin.pagevar(rpaths[1], :date))
+    io = IOBuffer()
+    write(io, "<h3 class=\"notes\">$curyear</h3>")
+    write(io, "<ul class=\"notes\">")
+    for rp in rpaths
+        year = Dates.year(Franklin.pagevar(rp, :date))
+        if year < curyear
+            write(io, "<h3 class=\"notes\">$year</h3>")
+            curyear = year
+        end
+        title = Franklin.pagevar(rp, :title)
+        descr = Franklin.pagevar(rp, :descr)
+        descr === nothing && error("no description found on page $rp")
+        pubdate = Dates.format(Date(Franklin.pagevar(rp, :date)), "U d")
+        path = joinpath(splitpath(rp)[1:2]...)
+        write(
+            io,
+            """
+      <li class="note">
+          <p>
+              <span class="note">$pubdate</span>
+              <a class="note" href="/$path/">$title</a>
+              <span class="note-descr tag">$descr</span>
+          </p>
+      </li>
+      """,
+        )
+    end
+    write(io, "</ul>")  #= notes =#
+    return String(take!(io))
+end
+
 function hfun_definetagtitle()
     return hfun_define(["title", "#$(locvar("fd_tag"))"])
 end
