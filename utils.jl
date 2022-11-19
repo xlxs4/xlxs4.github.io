@@ -27,7 +27,6 @@ function social_icons()
     println(io, "<div class=\"social-icons\">")
     for (name, url) in pairs(icons)
         name = string(name)
-        # svg = Franklin.convert_html("{{ define svg.$(name) }} {{ insert svg.html }} {{ undef svg.$(name) }}")
         svg = Franklin.convert_html("{{ svg $(name) }}")
         svg = strip(svg)
         isempty(svg) && (@warn "could not find svg icon for social.$name, skipping"; continue)
@@ -66,11 +65,7 @@ function hfun_define(arg)
 end
 function hfun_undef(arg)
     arg = arg[1]
-    # print("Evaluating {{ undef $arg }}:")
-    # print(" ($arg = $(locvar(arg))) => ")
     haskey(Franklin.LOCAL_VARS, arg) && delete!(Franklin.LOCAL_VARS, arg)
-    # println(" ($arg = $(locvar(arg)))")
-    # set_vars!(LOCAL_VARS, [String(vname) => String(vdef), ])
     return ""
 end
 
@@ -81,7 +76,7 @@ function hfun_list_posts(folders)
         startswith(folder, "/") && (folder = folder[2:end])
         cd(root) do
             foreach(((r, _, fs),) ->  append!(pages, joinpath.(r, fs)), walkdir(folder))
-        end # do
+        end
     end
     filter!(x -> endswith(x, ".md"), pages)
     for i in eachindex(pages)
@@ -147,35 +142,6 @@ hfun_taglist() = list_pages_by_date(globvar("fd_tag_pages")[locvar(:fd_tag)])
 function hfun_get_url()
     Franklin.get_url(Franklin.locvar("fd_rpath"))
 end
-
-# function hfun_list(params)
-#     tag = params[1]
-#     TAG_PAGES = globvar("fd_tag_pages")
-#     c = IOBuffer()
-#     # -------------------------------------------
-#     # add your logic here
-#     write(c, "<h1>Tag: $tag</h1>")
-#     write(c, "<ul>")
-#     rpaths = TAG_PAGES[tag]
-#     sorter(p) = begin
-#         pvd = pagevar(p, "date")
-#         if isnothing(pvd)
-#             return Date(Dates.unix2datetime(stat(p * ".md").ctime))
-#         end
-#         return pvd
-#     end
-#     sort!(rpaths, by=sorter, rev=true)
-#     for rpath in rpaths
-#         title = pagevar(rpath, "title")
-#         if isnothing(title)
-#             title = "/$rpath/"
-#         end
-#         write(c, "<li><a href=\"/$rpath/\">$title</a></li>")
-#     end
-#     write(c, "</ul>")
-#     # -------------------------------------------
-#     return String(take!(c))
-# end
 
 let counter = 0
     global function hfun_unique_id(n=nothing)
