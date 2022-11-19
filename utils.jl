@@ -67,14 +67,6 @@ function hfun_list_posts(folders)
     return list_pages_by_date(pages)
 end
 
-function hfun_svg(arg)
-    name = arg[1]
-    svg = Franklin.convert_html("{{ define svg.$(name) }} {{ insert svg.html }} {{ undef svg.$(name) }}")
-    # delete html comments
-    svg = strip(replace(strip(svg), r"^<!--.*-->$"m => ""))
-    return svg
-end
-
 function list_pages_by_date(pages)
     # Collect required information from the pages
     items = Dict{Int,Any}()
