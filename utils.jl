@@ -72,6 +72,33 @@ function hfun_allnotes()::String
     return write_notes(rpaths)
 end
 
+Franklin.@delay function hfun_alltags()
+    tagpages = Franklin.globvar("fd_tag_pages")
+    if tagpages === nothing
+        return ""
+    end
+    tags = sort(collect(keys(tagpages)))
+    tags_count = [length(tagpages[t]) for t in tags]
+    io = IOBuffer()
+    write(io, "<div class=\"tag-container\">")
+    for (t, c) in zip(tags, tags_count)
+        write(
+            io,
+            """
+<div class="tag">
+  <nobr>
+    <a class="tag" href="/tag/$t/">
+      $(replace(t, "_" => " "))<span style="color:var(--color-grey-dark)">(</span><span style="color:var(--color-yellow)">$c</span><span style="color:var(--color-grey-dark)">)</span>
+    </a>
+  </nobr>
+</div>
+      """,
+        )
+    end
+    write(io, "</div>")  #= tag-container =#
+    return String(take!(io))
+end
+
 function hfun_taglist()
     tag = Franklin.locvar(:fd_tag)::String
     rpaths = Franklin.globvar("fd_tag_pages")[tag]
