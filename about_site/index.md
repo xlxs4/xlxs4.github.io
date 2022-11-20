@@ -2,6 +2,8 @@
 title = "About this site"
 +++
 
+@@about
+
 ~~~
 <main class="post">
 ~~~
@@ -9,7 +11,7 @@ title = "About this site"
 
 # About this site
 
-This is my personal academic website. All credits for the design of it go to Max Koslowski, whose Julia-based [website](https://maximikos.github.io/) I used as a template. That in turn used the [website](https://fredrikekre.se/) of Fredrik Ekre as its inspiration.
+This is my personal academic website. All credits for the design of it go to  Jacob Vaverka, whose Julia-based [website](https://jvaverka.com/) I used as a template. I also took some inspiration from Max Koslowski ([website](https://maximikos.github.io/)), that in turn used the [website](https://fredrikekre.se/) of Fredrik Ekre as its inspiration.
 
 ## License
 
@@ -19,12 +21,18 @@ All code snippets on this website are licensed under the [MIT License](https://c
 
 The website is built using the static site generator [Franklin.jl](https://franklinjl.org/) ([MIT License](https://github.com/tlienart/Franklin.jl/blob/master/LICENSE.md)).
 
-The styling and theme for the website is licensed under the [MIT License](https://choosealicense.com/licenses/mit/) and it is derived from the [`hello-friend-ng`](https://themes.gohugo.io/hugo-theme-hello-friend-ng/) theme ([MIT License](https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md)).
+The color palette and theme for this website is derived from
+[`tokyonight.nvim`](https://github.com/folke/tokyonight.nvim) ([MIT
+License](https://github.com/folke/tokyonight.nvim/blob/main/LICENSE)).
 
 ## Privacy Policy
 
-No data is collected from visitors to this website. The website is hosted on GitHub Pages. GitHub's privacy policy is available [here](https://help.github.com/en/github/site-policy/github-privacy-statement). The page is delivered through Cloudflare CDN. Cloudflare's privacy policy is available [here](https://www.cloudflare.com/privacypolicy/).
+No data is collected from visitors to this website. The website is hosted on
+GitHub Pages. GitHub's privacy policy is available
+[here](https://help.github.com/en/github/site-policy/github-privacy-statement).
 
 ~~~
 </main>
 ~~~
+
+@@ <!-- about -->

@@ -10,7 +10,7 @@ title = "About me"
 # Hi folks &#128075;
 ~~~
 <div class="row">
-  <img align="right" width="300" src="{{ website_url }}/images/profile/explaining.jpg" style="float: left; padding: 0px 15px 0px 0px; border-radius: 10%">
+  <img align="right" width="300" src="{{ website_url }}/images/profile/piano.jpg" style="float: left; padding: 0px 15px 0px 0px; border-radius: 10%">
   <p>
     I'm Orestis, and it seems like you want to get to know me a little more. In the upcoming weeks, I'm planning to write a little about my life and what my interests are about, among others. Until then, I hope you find enough on this page to entertain you :)
   </p>
@@ -18,14 +18,8 @@ title = "About me"
 </div>
 ~~~
 
-## In the now
-Hmm... Deafening silence...
-
 ## Education
 I'm currently getting my B.Sc. in Computer Science (scientific computing + artificial intelligence) by the Aristotle University of Thessaloniki (AUTh), Greece.
-
-## Miscellaneous
-Nothing to see here? How very interesting...
 
 ~~~
 </main>
