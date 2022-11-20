@@ -13,7 +13,7 @@
     </title>
     <link> https://xlxs4.github.io </link>
     <description>
-      <![CDATA[  My personal website.  ]]>
+      <![CDATA[  The Lorekeeper archives.  ]]>
     </description>
     <atom:link
       href="https://xlxs4.github.io/feed.xml"
@@ -25,17 +25,24 @@
   <title>
     <![CDATA[  What do you do?  ]]>
   </title>
-  <link> https://xlxs4.github.io/posts/intro-research-topic/index.html </link>
-  <guid> https://xlxs4.github.io/posts/intro-research-topic/index.html </guid>
+  <link> https://xlxs4.github.io/notes/intro-research-topic/index.html </link>
+  <guid> https://xlxs4.github.io/notes/intro-research-topic/index.html </guid>
   <description>
     <![CDATA[  This is a stub for a lengthier article on what my thesis is about.  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/topic/">topic</a>, <a href="https://xlxs4.github.io/tag/welcome/">welcome</a></div>
+<p>This is a stub for a lengthier article on what my thesis is about.</p>
+ ]]>
+  </content:encoded>
     
   <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
-    <atom:name>xlxs4</atom:name>
+    <atom:name>Orestis Ousoultzoglou</atom:name>
   </atom:author>
         
 </item>

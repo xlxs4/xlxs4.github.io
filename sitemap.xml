@@ -2,50 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-    <loc>https://xlxs4.github.io/posts/intro-research-topic/index.html</loc>
-    <lastmod>2022-11-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://xlxs4.github.io/posts/welcome/index.html</loc>
-    <lastmod>2022-11-06</lastmod>
+    <loc>https://xlxs4.github.io/notes/second-brain/index.html</loc>
+    <lastmod>2022-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://xlxs4.github.io/404/index.html</loc>
-    <lastmod>2022-11-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://xlxs4.github.io/about_site/index.html</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://xlxs4.github.io/about/index.html</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>https://xlxs4.github.io/posts/20220920/index.html</loc>
-    <lastmod>2022-11-06</lastmod>
+    <loc>https://xlxs4.github.io/notes/intro-research-topic/index.html</loc>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://xlxs4.github.io/notes/welcome/index.html</loc>
+    <lastmod>2022-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://xlxs4.github.io/notes/index.html</loc>
+    <lastmod>2022-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://xlxs4.github.io/index/</loc>
-    <lastmod>2022-11-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>https://xlxs4.github.io/posts/index/</loc>
-    <lastmod>2022-11-06</lastmod>
+    <lastmod>2022-11-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
