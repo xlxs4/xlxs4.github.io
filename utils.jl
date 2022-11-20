@@ -23,12 +23,12 @@ function write_notes(rpaths)::String
     sort_notes!(rpaths)
     curyear = Dates.year(Franklin.pagevar(rpaths[1], :date))
     io = IOBuffer()
-    write(io, "<h3 class=\"posts\">$curyear</h3>")
-    write(io, "<ul class=\"posts\">")
+    write(io, "<h3 class=\"notes\">$curyear</h3>")
+    write(io, "<ul class=\"notes\">")
     for rp in rpaths
         year = Dates.year(Franklin.pagevar(rp, :date))
         if year < curyear
-            write(io, "<h3 class=\"posts\">$year</h3>")
+            write(io, "<h3 class=\"notes\">$year</h3>")
             curyear = year
         end
         title = Franklin.pagevar(rp, :title)
@@ -66,8 +66,8 @@ end
 
 function hfun_allnotes()::String
     rpaths = [
-        joinpath("posts", note, "index.md") for
-        note in readdir("posts") if !endswith(note, ".md")
+        joinpath("notes", note, "index.md") for
+        note in readdir("notes") if !endswith(note, ".md")
     ]
     return write_notes(rpaths)
 end
@@ -75,6 +75,7 @@ end
 Franklin.@delay function hfun_alltags()
     tagpages = Franklin.globvar("fd_tag_pages")
     if tagpages === nothing
+        print("Aaaaaaaaaaaaaaadklfjd")
         return ""
     end
     tags = sort(collect(keys(tagpages)))
@@ -146,7 +147,7 @@ function hfun_socialicons()
         """
 <div class="social-container">
     <div class="social-icon">
-        <a href="/posts/" title="Posts">
+        <a href="/notes/" title="Notes">
             <i class="fa fa-pencil"></i>
         </a>
     </div>
@@ -161,18 +162,18 @@ function hfun_socialicons()
         </a>
     </div>
     <div class="social-icon">
-        <a href="https://gitlab.com/jvaverka" title="GitLab">
+        <a href="https://gitlab.com/xlxs4" title="GitLab">
             <i class="fa fa-gitlab" aria-hidden="false"></i>
         </a>
     </div>
     <div class="social-icon">
-        <a href="https://github.com/jvaverka" title="GitHub">
+        <a href="https://github.com/xlxs4" title="GitHub">
             <i class="fa fa-github"></i>
         </a>
     </div>
     <div class="social-icon">
-        <a href="https://www.linkedin.com/in/jacob-vaverka-b5965052" title="LinkedIn">
-            <i class="fa fa-linkedin"></i>
+        <a href="https://www.holopin.me/xlxs4" title="Holopin">
+            <i class="fa fa-star"></i>
         </a>
     </div>
 </div>
@@ -185,7 +186,7 @@ end
     newnote(;title::String, descr::String, tags::Vector{String}, code=false)
 """
 function newnote(;title::String, descr::String, tags::Vector{String}, code=false)
-    path = joinpath(@__DIR__, "posts", replace(lowercase(title), " " => "-"))
+    path = joinpath(@__DIR__, "notes", replace(lowercase(title), " " => "-"))
     note = joinpath(path, "index.md")
     mkpath(path)
     touch(note)
