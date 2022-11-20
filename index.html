@@ -1,25 +1,14 @@
-
 {{ insert head.html }}
-<main aria-role="main">
 
-<div>
-
-{{ isdef sitename }}
-  <h1 style="font-family:JuliaMono;">{{ fill sitename }}</h1>
-{{ end }}
-
-{{ jlinsert social-icons }}
+<div class="cover-container">
+    <div class="cover">
+        <img src="/assets/cover/bulb.png" alt=""/>
+        <h1>Jacob Vaverka</h1>
+        {{ socialicons }}
+    </div>
 
 </div>
 
-<br />
-<div class="row">
-  <a href="{{ website_url }}/about">
-    <img src="{{ website_url }}/images/profile/piano.jpg" class="center" style="width: 300px; border-radius: 50%">
-  </a>
-</div>
-
-</main>
 
 <div style="padding: 5%">
 
