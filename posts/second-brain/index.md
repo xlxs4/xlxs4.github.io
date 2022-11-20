@@ -1,23 +1,16 @@
 +++
-date = "2022-09-26"
+date = Date(2022, 9, 26)
 title = "Second Brain"
 hascode = false
 var"layout-post" = nothing
 tags = ["second brain", "sketchnoting"]
+descr = "My first journey into the uncharted lands of Building A Second Brain"
 rss = "My first journey into the uncharted lands of Building A Second Brain"
 rss_title = "Second Brain"
-rss_pubdate = "2022-09-26"
+rss_pubdate = Date(2022, 9, 26)
 
 tags = ["second brain", "productivity", "organization"]
-
-# Dependent variables
-website_description = replace(rss, "*" => "")
-rss_pubdate = Date(date)
 +++
-
-~~~
-<h1><a href="{{ get_url }}">{{ markdown2html title }}</a></h1>
-~~~
 
 \toc
 

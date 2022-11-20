@@ -1,18 +1,10 @@
 +++
-date = "2022-09-20"
+date = Date(2022, 9, 20)
 title = "Hello, world!"
 var"layout-post" = nothing
 tags = ["welcome", "julia"]
 rss = "Welcome to my personal academic website and my first blog entry!"
-
-# Dependent variables
-website_description = replace(rss, "*" => "")
-rss_pubdate = Date(date)
 +++
-
-~~~
-<h1><a href="{{ get_url }}">{{ markdown2html title }}</a></h1>
-~~~
 
 This is my first post! Time to celebrate &#127881;
 
