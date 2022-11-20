@@ -2,3 +2,7 @@ Manifest.toml
 /__site
 /gh_pages
 .vscode
+.DS_Store
+franklin
+franklin.pub
+node_modules/

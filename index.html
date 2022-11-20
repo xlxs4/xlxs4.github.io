@@ -1,27 +1,16 @@
-
 {{ insert head.html }}
-<main aria-role="main">
 
-<div>
-
-{{ isdef sitename }}
-  <h1 style="font-family:JuliaMono;">{{ fill sitename }}</h1>
-{{ end }}
-
-{{ jlinsert social-icons }}
+<div class="cover-container">
+    <div class="cover">
+        <img src="/images/profile/noodle.jpg" alt=""/>
+        <h1>Orestis Ousoultzoglou</h1>
+        {{ socialicons }}
+    </div>
 
 </div>
 
-<br />
-<div class="row">
-  <a href="{{ website_url }}/about">
-    <img src="{{ website_url }}/images/profile/piano.jpg" class="center" style="width: 300px; border-radius: 50%">
-  </a>
-</div>
 
-</main>
-
-<div style="padding: 5%">
+<div style="text-align:center">
 
   <a href="https://open.spotify.com/user/83zjpodyytr2zojufrnni850b">
     <img src="https://spotify-embed-xlxs4.vercel.app/api?theme=dark&scan=true" alt="Current Spotify Song">

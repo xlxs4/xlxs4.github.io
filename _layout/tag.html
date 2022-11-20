@@ -1,9 +1,20 @@
-{{ definetagtitle }}
-
-{{ insert head.html }}
-<main class="posts">
-    <!-- <h1>{{ svg tag }} Posts with tag #<u>{{ fill fd_tag }}</u></h1> -->
-  <h1 class="tag-page-title">{{ svg tag }} #<u>{{ fill fd_tag }}</u></h1>
-    {{ taglist }}
-</main>
-{{ insert foot.html }}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/frank.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>{{fill fd_tag}} | {{fill author}}</title>
+</head>
+<body>
+  {{insert header.html}}
+  <div class="franklin-content">
+    <div class="notes">
+      <h2>Tag ⇒ <span class="active-tag">{{fill fd_tag}}</span></h2>
+      {{taglist}}
+    </div>
+    {{insert page_foot.html}}
+  </div>
+</body>
+</html>
