@@ -33,8 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/organization/">organization</a>, <a href="https://xlxs4.github.io/tag/productivity/">productivity</a>, <a href="https://xlxs4.github.io/tag/second_brain/">second brain</a></div>
-<div class="franklin-toc"><ol><li>Description</li><li>General</li><li>Process</li><li>Main Techniques</li><li>Sketchnoting</li><li>Fluff</li><li>Resources</li><li>Plugins</li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/organization/">organization</a>, <a href="https://xlxs4.github.io/tag/productivity/">productivity</a>, <a href="https://xlxs4.github.io/tag/second_brain/">second brain</a></div><div class="franklin-toc"><ol><li>Description</li><li>General</li><li>Process</li><li>Main Techniques</li><li>Sketchnoting</li><li>Fluff</li><li>Resources</li><li>Plugins</li></ol></div>
 <h2 id="description">Description</h2>
 <p>Besides a notebook, everything else happens in a single <a href="https://obsidian.md/">Obsidian</a> vault. Note that I&#39;m <a href="https://notes.andymatuschak.org/z8AfCaQJdp852orumhXPxHb3r278FHA9xZN8J">writing things for myself by default, disregarding the audience</a> this won&#39;t make much sense. If you want it to make more sense, start with the resources first, they&#39;re ordered. I want transition to <em>sketchnoting</em>, hopefully accumulating a vocabulary of atomic, small drawings that I can use in a modular fashion. If you want an even more structured way to make sense of all of this, I recommend you start with <a href="https://www.youtube.com/watch?v&#61;fJMP6fg_eIQ">The First Principles of Visual Note-Taking - YouTube</a> and then <a href="https://www.youtube.com/watch?v&#61;pWcHBmJLvLc">Mind mapping with Excalidraw-Obsidian - YouTube</a> and <a href="https://www.youtube.com/watch?v&#61;3i4CiImIYYA">Part 1 Building a Second Brain Book on a Page - YouTube</a>.</p>
 <h2 id="general">General</h2>
@@ -180,8 +179,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/welcome/">welcome</a></div>
-<p>This is my first post&#33; Time to celebrate &#127881;</p>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/welcome/">welcome</a></div><p>This is my first post&#33; Time to celebrate &#127881;</p>
 <p>Although I have been having the idea of creating a website for a long time, it took me until the start of my thesis to finally sit down and get going. After some attempts with Hugo, Jekyll and so on, I thought: &quot;Why not try to use the <a href="https://julialang.org/">Julia</a> programming language for my website?&quot; Luckily, there exists the package <a href="https://franklinjl.org">Franklin</a> that allows to do exactly that. Even luckier, I came across <a href="https://fredrikekre.se">this pretty website</a> by <a href="https://github.com/fredrikekre">Fredrik Ekre</a>, which Max Kolowski took as a template. I, in turn, was inspired by <a href="https://maximikos.github.io/">his design</a>. And voilà&#33; Here we go &#128512;.</p>
  ]]>
   </content:encoded>
@@ -207,8 +205,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/topic/">topic</a>, <a href="https://xlxs4.github.io/tag/welcome/">welcome</a></div>
-<p>This is a stub for a lengthier article on what my thesis is about.</p>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/topic/">topic</a>, <a href="https://xlxs4.github.io/tag/welcome/">welcome</a></div><p>This is a stub for a lengthier article on what my thesis is about.</p>
  ]]>
   </content:encoded>
     
