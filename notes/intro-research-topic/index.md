@@ -8,4 +8,6 @@ rss = "This is a stub for a lengthier article on what my thesis is about."
 
 {{ notetags }}
 
+{{ add_read_time }}
+
 This is a stub for a lengthier article on what my thesis is about.

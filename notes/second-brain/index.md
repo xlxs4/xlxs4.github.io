@@ -2,7 +2,6 @@
 date = Date(2022, 9, 26)
 title = "Second Brain"
 hascode = false
-var"layout-post" = nothing
 tags = ["second brain", "sketchnoting"]
 descr = "My first journey into the uncharted lands of Building A Second Brain"
 rss = "My first journey into the uncharted lands of Building A Second Brain"
@@ -13,6 +12,8 @@ tags = ["second brain", "productivity", "organization"]
 +++
 
 {{ notetags }}
+
+{{ add_read_time }}
 
 \toc
 

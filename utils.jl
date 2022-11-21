@@ -75,7 +75,6 @@ end
 Franklin.@delay function hfun_alltags()
     tagpages = Franklin.globvar("fd_tag_pages")
     if tagpages === nothing
-        print("Aaaaaaaaaaaaaaadklfjd")
         return ""
     end
     tags = sort(collect(keys(tagpages)))
@@ -130,7 +129,7 @@ Franklin.@delay function hfun_notetags()
     io = IOBuffer()
     tags = sort(collect(pagetags[splitext(Franklin.locvar("fd_rpath"))[1]]))
     write(io, """<div class="page-tag"><i class="fa fa-tag"></i>""")
-    for tag in tags[1:(end - 1)]
+    for tag in tags[1:(end-1)]
         t = replace(tag, "_" => " ")
         write(io, """<a href="/tag/$tag/">$t</a>, """)
     end
@@ -185,7 +184,7 @@ end
 """
     newnote(;title::String, descr::String, tags::Vector{String}, code=false)
 """
-function newnote(;title::String, descr::String, tags::Vector{String}, code=false)
+function newnote(; title::String, descr::String, tags::Vector{String}, code=false)
     path = joinpath(@__DIR__, "notes", replace(lowercase(title), " " => "-"))
     note = joinpath(path, "index.md")
     mkpath(path)
@@ -194,23 +193,50 @@ function newnote(;title::String, descr::String, tags::Vector{String}, code=false
     m = Dates.month(Dates.today())
     d = Dates.day(Dates.today())
     open(note, "w") do io
-        write(io, """
-        +++
-        title = "$title"
-        descr = "$descr"
-        rss = "$descr"
-        date = Date($y, $m, $d)
-        hascode = $code
-        tags = $(sort(tags))
-        +++
+        write(
+            io,
+            """
+  +++
+  title = "$title"
+  descr = "$descr"
+  rss = "$descr"
+  date = Date($y, $m, $d)
+  hascode = $code
+  tags = $(sort(tags))
+  +++
 
-        {{ notetags }}
+  {{ notetags }}
 
-        ## $title
+  ## $title
 
-        \\toc
+  \\toc
 
-        ### Subtitle
-        """)
+  ### Subtitle
+  """
+        )
     end
+end
+
+function read_time()
+    src = joinpath(Franklin.PATHS[:folder], Franklin.FD_ENV[:CUR_PATH])
+    nwords = length(split(read(src, String)))
+    nmin = ceil(Int, nwords / 220)
+    return "$(nmin) minute$(nmin > 1 ? "s" : "")"
+end
+
+function hfun_add_read_time()
+    io = IOBuffer()
+    write(
+        io,
+        """
+    <div class="tag">
+    <br>
+    <span style="color:var(--color-grey)">
+    <i class="fa fa-book"></i> $(read_time())
+    </span>
+    </br>
+    </div>
+""",
+    )
+    return String(take!(io))
 end
