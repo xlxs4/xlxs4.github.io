@@ -33,7 +33,8 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/welcome/">welcome</a></div><p>This is my first post&#33; Time to celebrate &#127881;</p>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/welcome/">welcome</a></div><h2 id="hi">Hi&#33;</h2>
+<p>This is my first post&#33; Time to celebrate &#127881;</p>
 <p>Although I have been having the idea of creating a website for a long time, it took me until the start of my thesis to finally sit down and get going. After some attempts with Hugo, Jekyll and so on, I thought: &quot;Why not try to use the <a href="https://julialang.org/">Julia</a> programming language for my website?&quot; Luckily, there exists the package <a href="https://franklinjl.org">Franklin</a> that allows to do exactly that. Even luckier, I came across <a href="https://fredrikekre.se">this pretty website</a> by <a href="https://github.com/fredrikekre">Fredrik Ekre</a>, which Max Kolowski took as a template. I, in turn, was inspired by <a href="https://maximikos.github.io/">his design</a>. And voilà&#33; Here we go &#128512;.</p>
  ]]>
   </content:encoded>

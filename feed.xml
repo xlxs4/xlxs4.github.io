@@ -23,18 +23,47 @@
 
 <item>
   <title>
+    <![CDATA[  ESA Design Booster  ]]>
+  </title>
+  <link> https://xlxs4.github.io/notes/esa-design-booster/index.html </link>
+  <guid> https://xlxs4.github.io/notes/esa-design-booster/index.html </guid>
+  <description>
+    <![CDATA[  A visit in ESA &#40;Netherlands&#41; for the design booster week  ]]>
+  </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li></ol></div>
+<h2 id="esa_design_booster">ESA Design Booster</h2>
+<p>The <a href="https://www.esa.int/Education/CubeSats_-_Fly_Your_Satellite/Fly_Your_Satellite&#33;_Design_Booster_pilot?fbclid&#61;IwAR3hcjAva089hKRr8a74cB60zLhuBLy3mbpIcjtmc6AKB5Er1PXpcs9zvpw">Fly Your Satellite&#33; Design Booster</a> is a pilot program of the <a href="https://www.esa.int/">European Space Agency &#40;ESA&#41;</a>. It&#39;s aimed at students working in the design of a CubeSat mission. <a href="https://www.wikiwand.com/en/CubeSat">CubeSat</a>s are miniaturized satellites that have standardized form — in LEGO brick fashion, they&#39;re shaped as \(n \ge 1\) 10cm cubes, stacked vertically. It&#39;s an idea to accelerate and democratize space missions, cutting down on the cost and effort required to get the spacecraft in-orbit.</p>
+<p>Design Booster aims to assist the teams by providing further training during the full project lifecycle and across a wide spectrum of areas from aerospace engineering to project management or even operating the CubeSat while it&#39;s in-orbit. The program is split in distinct phases that are adapted from the typical development cycle of space missions and it follows a fixed scheduled spanning 1.5 years. In brief, the teams first have to apply to the program. Then, the shortlisted teams undergo the &quot;Training and Selection&quot; phase where they receive training from ESA experts and in about a month after they have to defend their proposed design in front of a panel of ESA experts. The selected teams continue on to the next phase, &quot;Baseline Design Review&quot; where they have to baseline their design which is then assessed by the experts. After this two-month phase is concluded, the teams have about a year to finalize their design. The program ends with the so-called &quot;Final Design Review&quot;, where the design undergoes through examination to check whether the design has been successfully consolidated.</p>
+<p>🔧 The rest of this page is under construction&#33;</p>
+ ]]>
+  </content:encoded>
+    
+  <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Orestis Ousoultzoglou</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Second Brain  ]]>
   </title>
   <link> https://xlxs4.github.io/notes/second-brain/index.html </link>
   <guid> https://xlxs4.github.io/notes/second-brain/index.html </guid>
   <description>
-    <![CDATA[  My first journey into the uncharted lands of Building A Second Brain  ]]>
+    <![CDATA[  A journey into the uncharted lands of Building A Second Brain  ]]>
   </description>  
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/organization/">organization</a>, <a href="https://xlxs4.github.io/tag/productivity/">productivity</a>, <a href="https://xlxs4.github.io/tag/second_brain/">second brain</a></div><div class="franklin-toc"><ol><li>Description</li><li>General</li><li>Process</li><li>Main Techniques</li><li>Sketchnoting</li><li>Fluff</li><li>Resources</li><li>Plugins</li></ol></div>
-<h2 id="description">Description</h2>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/second_brain/">second brain</a>, <a href="https://xlxs4.github.io/tag/sketchnoting/">sketchnoting</a></div><div class="franklin-toc"><ol><li>Second Brain</li><li>General</li><li>Process</li><li>Main Techniques</li><li>Sketchnoting</li><li>Fluff</li><li>Resources</li><li>Plugins</li></ol></div>
+<h2 id="second_brain">Second Brain</h2>
 <p>Besides a notebook, everything else happens in a single <a href="https://obsidian.md/">Obsidian</a> vault. Note that I&#39;m <a href="https://notes.andymatuschak.org/z8AfCaQJdp852orumhXPxHb3r278FHA9xZN8J">writing things for myself by default, disregarding the audience</a> this won&#39;t make much sense. If you want it to make more sense, start with the resources first, they&#39;re ordered. I want transition to <em>sketchnoting</em>, hopefully accumulating a vocabulary of atomic, small drawings that I can use in a modular fashion. If you want an even more structured way to make sense of all of this, I recommend you start with <a href="https://www.youtube.com/watch?v&#61;fJMP6fg_eIQ">The First Principles of Visual Note-Taking - YouTube</a> and then <a href="https://www.youtube.com/watch?v&#61;pWcHBmJLvLc">Mind mapping with Excalidraw-Obsidian - YouTube</a> and <a href="https://www.youtube.com/watch?v&#61;3i4CiImIYYA">Part 1 Building a Second Brain Book on a Page - YouTube</a>.</p>
 <h2 id="general">General</h2>
 <p>The notes, including any drawings or even icons, should be atomic and modular. <a href="https://notes.andymatuschak.org/z21cgR9K3UcQ5a7yPsj2RUim3oM2TzdBByZu">Work with the garage door up</a>. <a href="https://notes.andymatuschak.org/z4bK6LaSBRetDzuYkeCs3A8mJ8DufTbK4o6FS">Anti-marketing</a>. <a href="https://notes.andymatuschak.org/z8AfCaQJdp852orumhXPxHb3r278FHA9xZN8J">Write things for yourself by default, disregarding the audience</a>. Adopt the mindset of a curator - objective, opinionated and reflective; in a deliberate way. Keep only what resonates; focus on actionability and <em>relevance to projects</em>. Be opportunistic, don&#39;t create entries in advance, further compress them and refine them only when needed.</p>
@@ -179,7 +208,8 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/welcome/">welcome</a></div><p>This is my first post&#33; Time to celebrate &#127881;</p>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/welcome/">welcome</a></div><h2 id="hi">Hi&#33;</h2>
+<p>This is my first post&#33; Time to celebrate &#127881;</p>
 <p>Although I have been having the idea of creating a website for a long time, it took me until the start of my thesis to finally sit down and get going. After some attempts with Hugo, Jekyll and so on, I thought: &quot;Why not try to use the <a href="https://julialang.org/">Julia</a> programming language for my website?&quot; Luckily, there exists the package <a href="https://franklinjl.org">Franklin</a> that allows to do exactly that. Even luckier, I came across <a href="https://fredrikekre.se">this pretty website</a> by <a href="https://github.com/fredrikekre">Fredrik Ekre</a>, which Max Kolowski took as a template. I, in turn, was inspired by <a href="https://maximikos.github.io/">his design</a>. And voilà&#33; Here we go &#128512;.</p>
  ]]>
   </content:encoded>

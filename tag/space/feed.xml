@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:media="http://search.yahoo.com/mrss/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:georss="http://www.georss.org/georss">
+
+  <channel>
+    <title>
+      <![CDATA[  xlxs4  ]]>
+    </title>
+    <link> https://xlxs4.github.io </link>
+    <description>
+      <![CDATA[  The Lorekeeper archives.  ]]>
+    </description>
+    <atom:link
+      href="https://xlxs4.github.io/feed.xml"
+      rel="self"
+      type="application/rss+xml" />
+
+
+<item>
+  <title>
+    <![CDATA[  ESA Design Booster  ]]>
+  </title>
+  <link> https://xlxs4.github.io/notes/esa-design-booster/index.html </link>
+  <guid> https://xlxs4.github.io/notes/esa-design-booster/index.html </guid>
+  <description>
+    <![CDATA[  A visit in ESA &#40;Netherlands&#41; for the design booster week  ]]>
+  </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li></ol></div>
+<h2 id="esa_design_booster">ESA Design Booster</h2>
+<p>The <a href="https://www.esa.int/Education/CubeSats_-_Fly_Your_Satellite/Fly_Your_Satellite&#33;_Design_Booster_pilot?fbclid&#61;IwAR3hcjAva089hKRr8a74cB60zLhuBLy3mbpIcjtmc6AKB5Er1PXpcs9zvpw">Fly Your Satellite&#33; Design Booster</a> is a pilot program of the <a href="https://www.esa.int/">European Space Agency &#40;ESA&#41;</a>. It&#39;s aimed at students working in the design of a CubeSat mission. <a href="https://www.wikiwand.com/en/CubeSat">CubeSat</a>s are miniaturized satellites that have standardized form — in LEGO brick fashion, they&#39;re shaped as \(n \ge 1\) 10cm cubes, stacked vertically. It&#39;s an idea to accelerate and democratize space missions, cutting down on the cost and effort required to get the spacecraft in-orbit.</p>
+<p>Design Booster aims to assist the teams by providing further training during the full project lifecycle and across a wide spectrum of areas from aerospace engineering to project management or even operating the CubeSat while it&#39;s in-orbit. The program is split in distinct phases that are adapted from the typical development cycle of space missions and it follows a fixed scheduled spanning 1.5 years. In brief, the teams first have to apply to the program. Then, the shortlisted teams undergo the &quot;Training and Selection&quot; phase where they receive training from ESA experts and in about a month after they have to defend their proposed design in front of a panel of ESA experts. The selected teams continue on to the next phase, &quot;Baseline Design Review&quot; where they have to baseline their design which is then assessed by the experts. After this two-month phase is concluded, the teams have about a year to finalize their design. The program ends with the so-called &quot;Final Design Review&quot;, where the design undergoes through examination to check whether the design has been successfully consolidated.</p>
+<p>🔧 The rest of this page is under construction&#33;</p>
+ ]]>
+  </content:encoded>
+    
+  <pubDate>Tue, 22 Nov 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Orestis Ousoultzoglou</atom:name>
+  </atom:author>
+        
+</item>
+</channel></rss>
