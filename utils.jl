@@ -358,6 +358,6 @@ function _abbreviation(; title="", abbr="")
     isempty(abbr) && (abbr = "TODO: add abbreviation!")
     isempty(title) && (title = "TODO: add abbreviation text!")
     return html("""
-        <p><abbr title="$title">$abbr</abbr>
+        <abbr title="$title">$abbr</abbr>
         """)
 end
