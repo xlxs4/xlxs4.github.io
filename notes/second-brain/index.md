@@ -17,7 +17,7 @@ rss_pubdate = Date(2022, 9, 26)
 
 ## Second Brain
 
-Besides a notebook, everything else happens in a single [Obsidian](https://obsidian.md/) vault. Note that I'm [writing things for myself by default, disregarding the audience](https://notes.andymatuschak.org/z8AfCaQJdp852orumhXPxHb3r278FHA9xZN8J) this won't make much sense. If you want it to make more sense, start with the [resources](#resources) first, they're ordered. I want transition to *sketchnoting*, hopefully accumulating a vocabulary of atomic, small drawings that I can use in a modular fashion. If you want an even more structured way to make sense of all of this, I recommend you start with [The First Principles of Visual Note-Taking - YouTube](https://www.youtube.com/watch?v=fJMP6fg_eIQ) and then [Mind mapping with Excalidraw-Obsidian - YouTube](https://www.youtube.com/watch?v=pWcHBmJLvLc) and [Part 1 Building a Second Brain Book on a Page - YouTube](https://www.youtube.com/watch?v=3i4CiImIYYA).
+Besides a notebook, everything else happens in a single [Obsidian](https://obsidian.md/) vault. Note that I'm [writing things for myself by default, disregarding the audience](https://notes.andymatuschak.org/z8AfCaQJdp852orumhXPxHb3r278FHA9xZN8J) — this won't make much sense. If you want it to make more sense, start with the [resources](#resources) first, they're ordered. I want to transition to *sketchnoting*, hopefully accumulating a vocabulary of atomic, small drawings that I can use in a modular fashion. If you want an even more structured way to make sense of all of this, I recommend you start with [The First Principles of Visual Note-Taking - YouTube](https://www.youtube.com/watch?v=fJMP6fg_eIQ) and then [Mind mapping with Excalidraw-Obsidian - YouTube](https://www.youtube.com/watch?v=pWcHBmJLvLc) and [Part 1 Building a Second Brain Book on a Page - YouTube](https://www.youtube.com/watch?v=3i4CiImIYYA).
 
 ## General
 
@@ -40,7 +40,7 @@ Try to use as few sources as possible.
 
 In other words, there's no need to organize unless you need to organize.
 No need to figure out the system first, it will gradually come into existence through an iterative process.
-Keep all organization, thinking, etc. to a minimum, don't unecessarily complicate.
+Keep all organization, thinking, etc. to a minimum, don't unnecessarily complicate.
 Prioritize less friction; separate the various subprocesses, e.g. separate **C**ollecting from **O**rganizing.
 Don't use a lot of (app) features, it's a rabbit hole.
 
@@ -67,9 +67,9 @@ You can also do more lengthy, in-depth reviews, e.g. once per month, to reflect 
 You can split your tasks into "process", or background tasks, and immersive tasks.
 Always keep at the back of your head that background tasks are more important than immersive tasks.
 Identify the small things you can do that will start, little by little, unlocking great value, e.g. asking a question about an upcoming meeting early in the morning to have a larger buffer time for everyone to respond and any potential followup discussion.
-Another thing you can do, like a chef, is to use placeholder for your open loops, i.e. tasks that you've started and are currently pending more work *by you* before they can be considered completed.
+Another thing you can do, like a chef, is to use placeholders for your open loops, i.e. tasks that you've started and are currently pending more work *by you* before they can be considered completed.
 You can treat everything that you must devote your time to as a request.
-You should externalize, offload these requests from your mind and congnition to your (mostly digital) surroundings.
+You should externalize, offload these requests from your mind and cognition to your (mostly digital) surroundings.
 For example, jot down a thought somewhere, add an event or reminder to your calendar, capture an open loop with your task manager/kanban board...
 
 What's more important is arguably adopting a so-called finishing mindset.
