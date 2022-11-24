@@ -30,11 +30,21 @@ The selected teams continue on to the next phase, "Baseline Design Review" where
 After this two-month phase is concluded, the teams have about a year to finalize their design.
 The program ends with the so-called "Final Design Review", where the design undergoes through examination to check whether the design has been successfully consolidated.
 
+### Getting There
+
 The "Training and Selection" phase kicked off with presentations from ESA experts in Nov. 7.
 I was invited to give a talk to share some insight on how working at a long-term space mission project can be, with an addendum on the challenges behind trying to run Space Biology experiments inside a CubeSat.
 I flew from Greece to Munich, Munich to Amsterdam, took the train to Leiden and there I was on a rainy day!
 
 \figure{path="./assets/leiden-centraal.jpg", caption="The Leiden Centraal train station."}
+
+The training workshop was hosted in the [ESA ESTEC](https://www.esa.int/About_Us/ESTEC/European_Space_Research_and_Technology_Centre_ESTEC2) facilities.
+ESTEC is in Noordwijk, a small town by the sea somewhere in the Netherlands.
+It's the larger site and the technical heart of ESA.
+I got to navigate through the facilities inside an autonomous shuttle bus you could drive with a joystick and a touchscreen!
+
+\figure{path="./assets/exomars.jpg", caption="<a href='https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars'>Exomars</a> — has life ever existed on Mars?"}
+
 
 [^1]: Poghosyan, A., & Golkar, A. (2017). CubeSat evolution: Analyzing CubeSat capabilities for conducting science missions. *Progress in Aerospace Sciences, 88*, 59-83.
 [^2]: Sweeting, M. (2018). Modern small satellites-changing the economics of space. *Proceedings of the IEEE, 106(3)*, 343-361.
