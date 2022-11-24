@@ -347,3 +347,17 @@ function _figure(; path="", alt="", width="", style="",
         </figure>
         """)
 end
+
+function lx_abbr(com, _)
+    content = strip(lxproc(com))
+    _, kwargs = lxargs(content, "abbreviation")
+    return _abbreviation(; kwargs...)
+end
+
+function _abbreviation(; title="", abbr="")
+    isempty(abbr) && (abbr = "TODO: add abbreviation!")
+    isempty(title) && (title = "TODO: add abbreviation text!")
+    return html("""
+        <p><abbr title="$title">$abbr</abbr>
+        """)
+end
