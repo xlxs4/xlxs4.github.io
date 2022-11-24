@@ -24,6 +24,7 @@ It's an idea to accelerate and democratize space missions[^1], cutting down on t
 
 Design Booster aims to assist the teams by providing further training during the full project lifecycle and across a wide spectrum of areas from aerospace engineering to project management or even operating the CubeSat while it's in-orbit.
 The program is split in distinct phases that are adapted from the typical development cycle of space missions and it follows a fixed scheduled spanning 1.5 years.
+
 In brief, the teams first have to apply to the program.
 Then, the shortlisted teams undergo the "Training and Selection" phase where they receive training from \abbr{title="European Space Agency", abbr="ESA"} experts and in about a month after they have to defend their proposed design in front of a panel of ESA experts.
 The selected teams continue on to the next phase, "Baseline Design Review" where they have to baseline their design which is then assessed by the experts.
@@ -60,11 +61,12 @@ The AcubeSAT nanosatellite undertaking began late 2018.
 We've designed and are developing a \abbr{title="3-Unit — 3 10cm cubes", abbr="3U"} CubeSat which holds a 2U biology payload.
 Our mission is two-fold: we want to establish our idea for a modular platform to perform space biology experiments in CubeSats/small satellites as a working prototype.
 Also, we aim to probe the way conditions in \abbr{title="Low Earth Orbit", abbr="LEO"} (mainly microgravity and cosmic radiation) affect yeast cells at the gene expression level.
-To achieve that, the 2U payload is a pressurized vessel which hosts a container with the various compartments to run our experiments.
+
+To achieve the mission goals, the 2U payload is a pressurized vessel which hosts a container with the various compartments to run our experiments.
 We'll culture cells in-orbit and then see how their gene expression is altered through acquiring images via our DIY microscope-like imaging system.
 We aim to run the same experiment in three distinct timepoints across the duration of our mission, and to do this we've been using a small platform called a \abbr{title="Lab-on-a-Chip", abbr="LoC"} to hold the cells and interface them with the various fluidics in a miniaturized version of a biology lab.
 
-In brief, we've submitted our proposal in October 2019, took part in the selection workshop hosted here in December 2019, got accepted in February 2020, submitted the \abbr{title="Technical Specification Verification Control Document", abbr="TS-VCD"} in April, submitted the first version of \abbr{title="Critical Design Review", abbr="CDR"} in October and had it approved in September 2021, marking the end of the design phase and the beginning of the construction/testing phase.
+Our high-level roadmap looks like: we've submitted our proposal in October 2019, took part in the selection workshop hosted here in December 2019, got accepted in February 2020, submitted the \abbr{title="Technical Specification Verification Control Document", abbr="TS-VCD"} in April, submitted the first version of \abbr{title="Critical Design Review", abbr="CDR"} in October and had it approved in September 2021, marking the end of the design phase and the beginning of the construction/testing phase.
 Right now we are getting ready to run a series of testing campaigns at the ESA facilities, then pass the \abbr{title="Manufacturing Readiness Review", abbr="MRR"} and be in-orbit by late 2023/early 2024.
 
 ## Project management
@@ -185,7 +187,7 @@ Think about what I write and try to understand *why* I write it.
 - Progress is seldom linear, or apparent. Try to make it apparent, but have that in mind
 - Involve people and throw problems at them (but always be there when needed) - don't be afraid to throw problems at them, that's how they grow
 
-### Fluff
+## Fluff
 
 Some other things I wanted to make time to mention but couldn't group with the rest of the topics
 
@@ -214,4 +216,3 @@ TODO: talk about the importance of having a vision, of having some pillars, of y
 
 [^1]: Poghosyan, A., & Golkar, A. (2017). CubeSat evolution: Analyzing CubeSat capabilities for conducting science missions. *Progress in Aerospace Sciences, 88*, 59-83.
 [^2]: Sweeting, M. (2018). Modern small satellites-changing the economics of space. *Proceedings of the IEEE, 106(3)*, 343-361.
-
