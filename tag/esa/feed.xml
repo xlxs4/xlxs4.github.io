@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li><li>Getting There</li><li>Refresher</li><li>Project management<ol><li>Things are tough</li><li>Scale up</li><li>Organization: the small</li><li>... and the big</li><li>Calm down</li><li>The bus factor</li><li>People and problems :&#40;</li></ol></li><li>People management<ol><li>People can also be tough</li><li>Talk&#33;</li><li>The leadership behind the leadership</li><li>Help them help you</li><li>Help them help you: Vol 2</li><li>Fluff</li></ol></li><li>Space Biology Payload Challenges</li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li><li>Getting There</li><li>Refresher</li><li>Project management<ol><li>Things are tough</li><li>Scale up</li><li>Organization: the small</li><li>... and the big</li><li>Calm down</li><li>The bus factor</li><li>People and problems :&#40;</li></ol></li><li>People management<ol><li>People can also be tough</li><li>Talk&#33;</li><li>The leadership behind the leadership</li><li>Help them help you</li><li>Help them help you: Vol 2</li><li>Fluff</li></ol></li><li>Space Biology Payload Challenges</li><li>Outro</li></ol></div>
 <h2 id="esa_design_booster">ESA Design Booster</h2>
 <p>The <a href="https://www.esa.int/Education/CubeSats_-_Fly_Your_Satellite/Fly_Your_Satellite&#33;_Design_Booster_pilot?fbclid&#61;IwAR3hcjAva089hKRr8a74cB60zLhuBLy3mbpIcjtmc6AKB5Er1PXpcs9zvpw">Fly Your Satellite&#33; Design Booster</a> is a pilot program of the <a href="https://www.esa.int/">European Space Agency &#40;ESA&#41;</a>. It&#39;s aimed at students working in the design of a CubeSat mission. <a href="https://www.wikiwand.com/en/CubeSat">CubeSat</a>s are miniaturized satellites that have standardized form — in LEGO brick fashion, they&#39;re shaped as \(n \ge 1\) 10cm cubes, stacked vertically. It&#39;s an idea to accelerate and democratize space missions<sup id="fnref:1">[1]</sup>, cutting down on the cost<sup id="fnref:2">[2]</sup> and effort required to get the spacecraft in-orbit.</p>
 <p>Design Booster aims to assist the teams by providing further training during the full project lifecycle and across a wide spectrum of areas from aerospace engineering to project management or even operating the CubeSat while it&#39;s in-orbit. The program is split in distinct phases that are adapted from the typical development cycle of space missions and it follows a fixed scheduled spanning 1.5 years. In brief, the teams first have to apply to the program. Then, the shortlisted teams undergo the &quot;Training and Selection&quot; phase where they receive training from ESA experts and in about a month after they have to defend their proposed design in front of a panel of ESA experts. The selected teams continue on to the next phase, &quot;Baseline Design Review&quot; where they have to baseline their design which is then assessed by the experts. After this two-month phase is concluded, the teams have about a year to finalize their design. The program ends with the so-called &quot;Final Design Review&quot;, where the design undergoes through examination to check whether the design has been successfully consolidated.</p>
@@ -252,7 +252,11 @@ The Leiden Centraal train station.
 </li>
 </ul>
 <p>TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that&#39;s so so so important &#40;e.g. to screenshot apo random&#41;</p>
-<h2 id="space_biology_payload_challenges">Space Biology Payload Challenges</h2>
+<figure class="figure">
+  <img src="./assets/leiden-centraal-night.jpg" alt="The Leiden Centraal train station — dark mode." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The Leiden Centraal train station — dark mode.
+</figcaption></figure><h2 id="space_biology_payload_challenges">Space Biology Payload Challenges</h2>
 <ul>
 <li><p>Miniaturization of cell culturing instrumentation</p>
 </li>
@@ -269,7 +273,16 @@ The Leiden Centraal train station.
 <li><p>Standardization of common wet lab methods to meet space engineering requirements/procedures</p>
 </li>
 </ul>
-<p><table class="fndef" id="fndef:1">
+<figure class="figure">
+  <img src="./assets/arles.jpg" alt="The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'>ARLES experiment</a> investigates how liquids evaporate in microgravity." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'>ARLES experiment</a> investigates how liquids evaporate in microgravity.
+</figcaption></figure><h2 id="outro">Outro</h2>
+<figure class="figure">
+  <img src="./assets/schipol.jpg" alt="The Amsterdam Schipol airport at dawn." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The Amsterdam Schipol airport at dawn.
+</figcaption></figure><p><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
         <td class="fndef-content">Poghosyan, A., &amp; Golkar, A. &#40;2017&#41;. CubeSat evolution: Analyzing CubeSat capabilities for conducting science missions. <em>Progress in Aerospace Sciences, 88</em>, 59-83.</td>
