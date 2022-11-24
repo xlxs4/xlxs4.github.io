@@ -3,23 +3,23 @@
 ================================================================== */
 
 :root {
-  --small:            14px;
-  --medium:           16px;
-  --normal:           20px;
+  --small: 14px;
+  --medium: 16px;
+  --normal: 20px;
   /* Tokyonight begin */
   --color-background: #24283b;
   --color-foreground: #c0caf5;
-  --color-alt-text:   #a9b1d6;
-  --color-black:      #1d202f;
-  --color-red:        #f7768e;
-  --color-green:      #9ece6a;
-  --color-yellow:     #e0af68;
-  --color-blue:       #7aa2f7;
-  --color-purple:     #bb9af7;
-  --color-cyan:       #7dcfff;
+  --color-alt-text: #a9b1d6;
+  --color-black: #1d202f;
+  --color-red: #f7768e;
+  --color-green: #9ece6a;
+  --color-yellow: #e0af68;
+  --color-blue: #7aa2f7;
+  --color-purple: #bb9af7;
+  --color-cyan: #7dcfff;
   --color-grey-light: #a9b1d6;
-  --color-grey-dark:  #414868;
-  --color-orange:     #ff9e64;
+  --color-grey-dark: #414868;
+  --color-orange: #ff9e64;
   /* Tokyonight end */
 }
 
@@ -120,13 +120,13 @@ html {
   .copyright {
     flex-direction: column;
     margin-top: 10px
- }
+  }
 }
 
 @media (max-width: 900px) {
   .copyright>*:not(:last-child) {
     border: none
- }
+  }
 }
 
 /* ==================================================================
@@ -166,9 +166,17 @@ html {
     TITLES
 ================================================================== */
 
-.franklin-content h1 { font-size: xxx-large; }
-.franklin-content h2 { font-size: xx-large; }
-.franklin-content h3 { font-size: x-large; }
+.franklin-content h1 {
+  font-size: xxx-large;
+}
+
+.franklin-content h2 {
+  font-size: xx-large;
+}
+
+.franklin-content h3 {
+  font-size: x-large;
+}
 
 .franklin-content h1,
 h2,
@@ -207,18 +215,53 @@ h6 {
   margin-bottom: 1em;
 }
 
-.franklin-content h1 a { color: inherit; }
-.franklin-content h1 a:hover { text-decoration: none; }
-.franklin-content h2 a { color: inherit; }
-.franklin-content h2 a:hover { text-decoration: none; }
-.franklin-content h3 a { color: inherit; }
-.franklin-content h3 a:hover { text-decoration: none; }
-.franklin-content h4 a { color: inherit; }
-.franklin-content h4 a:hover { text-decoration: none; }
-.franklin-content h5 a { color: inherit; }
-.franklin-content h5 a:hover { text-decoration: none; }
-.franklin-content h6 a { color: inherit; }
-.franklin-content h6 a:hover { text-decoration: none; }
+.franklin-content h1 a {
+  color: inherit;
+}
+
+.franklin-content h1 a:hover {
+  text-decoration: none;
+}
+
+.franklin-content h2 a {
+  color: inherit;
+}
+
+.franklin-content h2 a:hover {
+  text-decoration: none;
+}
+
+.franklin-content h3 a {
+  color: inherit;
+}
+
+.franklin-content h3 a:hover {
+  text-decoration: none;
+}
+
+.franklin-content h4 a {
+  color: inherit;
+}
+
+.franklin-content h4 a:hover {
+  text-decoration: none;
+}
+
+.franklin-content h5 a {
+  color: inherit;
+}
+
+.franklin-content h5 a:hover {
+  text-decoration: none;
+}
+
+.franklin-content h6 a {
+  color: inherit;
+}
+
+.franklin-content h6 a:hover {
+  text-decoration: none;
+}
 
 .franklin-content table {
   margin-left: auto;
@@ -273,8 +316,13 @@ td {
     HYPERREFS AND FOOTNOTES
 ================================================================== */
 
-.franklin-content .eqref a { color: var(--color-green); }
-.franklin-content .bibref a { color: var(--color-green); }
+.franklin-content .eqref a {
+  color: var(--color-green);
+}
+
+.franklin-content .bibref a {
+  color: var(--color-green);
+}
 
 .franklin-content sup {
   font-size: 70%;
@@ -332,9 +380,13 @@ td {
     KATEX
 ================================================================== */
 
-body { counter-reset: eqnum; }
+body {
+  counter-reset: eqnum;
+}
 
-.katex { font-size: 1em !important; }
+.katex {
+  font-size: 1em !important;
+}
 
 .katex-display .katex {
   /* Overwrite KaTeX settings. */
@@ -372,13 +424,21 @@ code {
 
 .hljs-meta,
 .hljs-metas,
-.hljs-metap { font-weight: bold; }
+.hljs-metap {
+  font-weight: bold;
+}
 
-.hljs-meta { color: var(--color-green); }
+.hljs-meta {
+  color: var(--color-green);
+}
 
-.hljs-metas { color: var(--color-red); }
+.hljs-metas {
+  color: var(--color-red);
+}
 
-.hljs-metap { color: var(--text-color-alt); }
+.hljs-metap {
+  color: var(--text-color-alt);
+}
 
 .code-output {
   background: var(--color-black);
@@ -488,8 +548,9 @@ code {
 Some modifications taken from github.css
 
 */
-.hljs-title, .hljs-class {
-    font-weight: 700;
+.hljs-title,
+.hljs-class {
+  font-weight: 700;
 }
 
 /* ==================================================================
@@ -613,12 +674,16 @@ header li a:hover {
 medium display: nav goes under name
 */
 @media (max-width: 760px) {
-  header { display: block; }
+  header {
+    display: block;
+  }
+
   header .blog-name {
     display: block;
     width: 100%;
     padding-bottom: 10px;
   }
+
   nav {
     width: 100%;
   }
@@ -662,8 +727,14 @@ instead, display a burger menu.
     padding: 0;
     margin: 0;
   }
-  header li a { border-bottom: none; }
-  header li a:hover { border-bottom: none; }
+
+  header li a {
+    border-bottom: none;
+  }
+
+  header li a:hover {
+    border-bottom: none;
+  }
 
   nav:hover ul {
     display: block;
@@ -689,7 +760,7 @@ tr:first-of-type {
   background: var(--color-black);
 }
 
-tr:first-of-type > th {
+tr:first-of-type>th {
   text-align: center;
 }
 
@@ -711,7 +782,7 @@ table tbody tr td {
 .cover-container {
   display: flex;
   flex-direction: column;
-  align-items:  center;
+  align-items: center;
   justify-content: center;
   position: relative;
   height: 100vh;
@@ -747,6 +818,7 @@ table tbody tr td {
     max-width: 150px;
     margin-top: 0;
   }
+
   .cover h1 {
     font-size: 45px;
     margin-bottom: revert;
@@ -911,51 +983,56 @@ span.note-descr {
 
 @font-face {
   font-family: InterUI;
-  font-style:normal;
-  font-display:auto;
-  font-weight:400;
-  src:url(../assets/fonts/Inter-UI-Regular.woff2) format("woff2"),
-  url(../assets/fonts/Inter-UI-Regular.woff) format("woff")
+  font-style: normal;
+  font-display: auto;
+  font-weight: 400;
+  src: url(../assets/fonts/Inter-UI-Regular.woff2) format("woff2"),
+    url(../assets/fonts/Inter-UI-Regular.woff) format("woff")
 }
+
 @font-face {
   font-family: InterUI;
-  font-style:italic;
-  font-display:auto;
-  font-weight:400;
-  src:url(../assets/fonts/Inter-UI-Italic.woff2) format("woff2"),
-  url(../assets/fonts/Inter-UI-Italic.woff) format("woff")
+  font-style: italic;
+  font-display: auto;
+  font-weight: 400;
+  src: url(../assets/fonts/Inter-UI-Italic.woff2) format("woff2"),
+    url(../assets/fonts/Inter-UI-Italic.woff) format("woff")
 }
+
 @font-face {
   font-family: InterUI;
-  font-style:normal;
-  font-display:auto;
-  font-weight:600;
-  src:url(../assets/fonts/Inter-UI-Medium.woff2) format("woff2"),
-  url(../assets/fonts/Inter-UI-Medium.woff) format("woff")
+  font-style: normal;
+  font-display: auto;
+  font-weight: 600;
+  src: url(../assets/fonts/Inter-UI-Medium.woff2) format("woff2"),
+    url(../assets/fonts/Inter-UI-Medium.woff) format("woff")
 }
+
 @font-face {
   font-family: InterUI;
-  font-style:italic;
-  font-display:auto;
-  font-weight:600;
-  src:url(../assets/fonts/Inter-UI-MediumItalic.woff2) format("woff2"),
-  url(../assets/fonts/Inter-UI-MediumItalic.woff) format("woff")
+  font-style: italic;
+  font-display: auto;
+  font-weight: 600;
+  src: url(../assets/fonts/Inter-UI-MediumItalic.woff2) format("woff2"),
+    url(../assets/fonts/Inter-UI-MediumItalic.woff) format("woff")
 }
+
 @font-face {
   font-family: InterUI;
-  font-style:normal;
-  font-display:auto;
-  font-weight:800;
-  src:url(../assets/fonts/Inter-UI-Bold.woff2) format("woff2"),
-  url(../assets/fonts/Inter-UI-Bold.woff) format("woff")
+  font-style: normal;
+  font-display: auto;
+  font-weight: 800;
+  src: url(../assets/fonts/Inter-UI-Bold.woff2) format("woff2"),
+    url(../assets/fonts/Inter-UI-Bold.woff) format("woff")
 }
+
 @font-face {
   font-family: InterUI;
-  font-style:italic;
-  font-display:auto;
-  font-weight:800;
-  src:url(../assets/fonts/Inter-UI-BoldItalic.woff2) format("woff2"),
-  url(../assets/fonts/Inter-UI-BoldItalic.woff) format("woff")
+  font-style: italic;
+  font-display: auto;
+  font-weight: 800;
+  src: url(../assets/fonts/Inter-UI-BoldItalic.woff2) format("woff2"),
+    url(../assets/fonts/Inter-UI-BoldItalic.woff) format("woff")
 }
 
 @font-face {
@@ -963,7 +1040,8 @@ span.note-descr {
   src: url("../assets/fonts/JuliaMono-RegularLatin.woff2") format("woff2");
   font-display: auto;
   font-weight: 400;
-  unicode-range: U+00-7F; /* Basic Latin characters */
+  unicode-range: U+00-7F;
+  /* Basic Latin characters */
 }
 
 @font-face {
@@ -971,7 +1049,8 @@ span.note-descr {
   src: url("../assets/fonts/JuliaMono-BoldLatin.woff2") format("woff2");
   font-display: auto;
   font-weight: 700;
-  unicode-range: U+00-7F; /* Basic Latin characters */
+  unicode-range: U+00-7F;
+  /* Basic Latin characters */
 }
 
 @font-face {
@@ -986,4 +1065,18 @@ span.note-descr {
   src: url("../assets/fonts/JuliaMono-Bold.woff2") format("woff2");
   font-display: auto;
   font-weight: 700;
+}
+
+figure {
+  margin: 25px;
+  display: table;
+  max-width: 100%;
+}
+
+figcaption {
+  font-size: small;
+  font-style: italic;
+  color: var(--color-alt-text);
+  text-align: left;
+  margin-top: 5px;
 }

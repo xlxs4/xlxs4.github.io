@@ -240,3 +240,110 @@ function hfun_add_read_time()
     )
     return String(take!(io))
 end
+
+"""
+    html(s)
+
+Mark a string as HTML to be included in Franklin-markdown. Line spacing is
+to reduce issues with `<p>`.
+"""
+html(s) = "~~~$s~~~"
+
+"""
+    lxproc(com)
+
+Extract the content of a single-brace lx command. For instance `\\com{foo}`
+would be extracted to `foo`.
+"""
+lxproc(com) = Franklin.content(com.braces[1])
+
+"""
+    lxargs(s)
+
+Extract function-style arguments.
+Expect (arg1, arg2, ..., name1=val1, name2=val2, ...)
+
+Example:
+
+    julia> a = ":section, 1, 3, title=\"hello\", name=\"bar\""
+    julia> lxargs(a)
+    (Any[:section, 1, 3], Any[:title => "hello", :name => "bar"])
+"""
+function lxargs(s, fname="")
+    isempty(s) && return [], []
+    s = "(" * s * ",)"
+    args = nothing
+    try
+        args = Meta.parse(s).args
+    catch
+        error("A command/env $fname had improper options:\n$s; verify.")
+    end
+    # unpack if multiple kwargs are given
+    if !isempty(args) && args[1] isa Expr && args[1].head == :parameters
+        nokw = args[2:end]
+        args = [nokw..., args[1].args...]
+        i = length(nokw) + 1
+    else
+        i = findfirst(e -> isa(e, Expr) && e.head in (:(=), :parameters), args)
+    end
+    if isnothing(i)
+        cand_args = args
+        cand_kwargs = []
+    else
+        cand_args = args[1:i-1]
+        cand_kwargs = args[i:end]
+    end
+    proc_args   = []
+    proc_kwargs = []
+    for arg in cand_args
+        if arg isa QuoteNode
+            push!(proc_args, arg.value)
+        elseif arg isa Expr
+            push!(proc_args, eval(arg))
+        else
+            push!(proc_args, arg)
+        end
+    end
+    all(e -> e isa Expr, cand_kwargs) || error("""
+        In command/env $fname, expected arguments followed by keyword arguments but got:
+        $s; verify.""")
+    cand_kwargs = map(e -> e.head == :parameters ? e.args : e, cand_kwargs)
+    for kwarg in cand_kwargs
+        v = kwarg.args[2]
+        if v isa Expr
+            v = eval(v)
+        end
+        push!(proc_kwargs, kwarg.args[1] => v)
+    end
+    return proc_args, proc_kwargs
+end
+
+"""
+    \\figure{path=..., alt=..., width=..., ...}
+
+Insert a figure with kwargs specifications. See [`_figure`](@ref) for allowed specifications.
+"""
+function lx_figure(com, _)
+    content = strip(lxproc(com))
+    _, kwargs = lxargs(content, "figure")
+    return _figure(; kwargs...)
+end
+
+function _figure(; path="", alt="", width="", style="",
+                   caption="", imgclass="", captionclass="")
+    style = ifelse(isempty(style), "", "style=\"$style\"")
+    if !isempty(caption)
+        isempty(alt) && (alt = caption)
+        caption = """
+            <figcaption class="figure-caption $captionclass">
+            $caption
+            </figcaption>
+            """
+    end
+    return html("""
+        <figure class="figure">
+          <img src="$path" alt="$alt" class="figure-img img-fluid $imgclass" width="$width" $style>
+          $caption
+        </figure>
+        """)
+end
