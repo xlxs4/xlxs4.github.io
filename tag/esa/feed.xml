@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li><li>Getting There</li><li>Refresher</li><li>Project management<ol><li>Things are tough</li><li>Scale up</li><li>Organization: the small</li><li>... and the big</li><li>Calm down</li><li>The bus factor</li><li>People and problems :&#40;</li></ol></li><li>People management<ol><li>People can also be tough</li><li>Talk&#33;</li><li>The leadership behind the leadership</li><li>Help them help you</li><li>Help them help you: Vol 2</li><li>Fluff</li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li><li>Getting There</li><li>Refresher</li><li>Project management<ol><li>Things are tough</li><li>Scale up</li><li>Organization: the small</li><li>... and the big</li><li>Calm down</li><li>The bus factor</li><li>People and problems :&#40;</li></ol></li><li>People management<ol><li>People can also be tough</li><li>Talk&#33;</li><li>The leadership behind the leadership</li><li>Help them help you</li><li>Help them help you: Vol 2</li><li>Fluff</li></ol></li><li>Space Biology Payload Challenges</li></ol></div>
 <h2 id="esa_design_booster">ESA Design Booster</h2>
 <p>The <a href="https://www.esa.int/Education/CubeSats_-_Fly_Your_Satellite/Fly_Your_Satellite&#33;_Design_Booster_pilot?fbclid&#61;IwAR3hcjAva089hKRr8a74cB60zLhuBLy3mbpIcjtmc6AKB5Er1PXpcs9zvpw">Fly Your Satellite&#33; Design Booster</a> is a pilot program of the <a href="https://www.esa.int/">European Space Agency &#40;ESA&#41;</a>. It&#39;s aimed at students working in the design of a CubeSat mission. <a href="https://www.wikiwand.com/en/CubeSat">CubeSat</a>s are miniaturized satellites that have standardized form — in LEGO brick fashion, they&#39;re shaped as \(n \ge 1\) 10cm cubes, stacked vertically. It&#39;s an idea to accelerate and democratize space missions<sup id="fnref:1">[1]</sup>, cutting down on the cost<sup id="fnref:2">[2]</sup> and effort required to get the spacecraft in-orbit.</p>
 <p>Design Booster aims to assist the teams by providing further training during the full project lifecycle and across a wide spectrum of areas from aerospace engineering to project management or even operating the CubeSat while it&#39;s in-orbit. The program is split in distinct phases that are adapted from the typical development cycle of space missions and it follows a fixed scheduled spanning 1.5 years. In brief, the teams first have to apply to the program. Then, the shortlisted teams undergo the &quot;Training and Selection&quot; phase where they receive training from ESA experts and in about a month after they have to defend their proposed design in front of a panel of ESA experts. The selected teams continue on to the next phase, &quot;Baseline Design Review&quot; where they have to baseline their design which is then assessed by the experts. After this two-month phase is concluded, the teams have about a year to finalize their design. The program ends with the so-called &quot;Final Design Review&quot;, where the design undergoes through examination to check whether the design has been successfully consolidated.</p>
@@ -50,7 +50,7 @@ The Leiden Centraal train station.
 <a href='https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars'>Exomars</a> — has life ever existed on Mars?
 </figcaption></figure><p>When preparing the material to share, I asked myself: how can I help the candidate teams as much as possible in such little time? I decided to structure my talk loosely, with some tips clustered into overlapping categories. I&#39;ll try to roughly recollect some of the material below.</p>
 <h2 id="refresher">Refresher</h2>
-<p>I come from Greece and I&#39;m the co-science lead in the AcubeSAT project. AcubeSAT is part of the Fly Your Satellite 3&#33; program. I&#39;ve been involved in this effort since almost the very beginnings, when everything was still at a nascent stage. I&#39;m currently getting to wrap up my studies, and I&#39;ve joined the team not long after I enrolled in the university, I&#39;ve worked in different aspects of the project, technical and not, and currently I&#39;m responsible for the Science-y stuff.</p>
+<p>I come from Greece and I&#39;m the co-Science Lead in the <a href="https://acubesat.spacedot.gr/">AcubeSAT</a> project. AcubeSAT <a href="https://www.esa.int/Education/CubeSats_-_Fly_Your_Satellite/AcubeSAT_successfully_passes_Critical_Design_Review">is part</a> of the Fly Your Satellite 3&#33; program. I&#39;ve been involved in this effort since almost the very beginnings, when everything was still at a nascent stage. I&#39;m currently getting to wrap up my studies, and I&#39;ve joined the team not long after I enrolled in the university, I&#39;ve worked in different aspects of the project, technical and not, and currently I&#39;m responsible for the science-y stuff.</p>
 <p>The AcubeSAT nanosatellite undertaking began late 2018. We&#39;ve designed and are developing a 3U CubeSat which holds a 2U biology payload. Our mission is two-fold: we want to establish our idea for a modular platform to perform space biology experiments in CubeSats/small satellites as a working prototype. Also, we aim to probe the way conditions in LEO &#40;mainly microgravity and cosmic radiation&#41; affect yeast cells at the gene expression level. To achieve that, the 2U payload is a pressurized vessel which hosts a container with the various compartments to run our experiments. We&#39;ll culture cells in-orbit and then see how their gene expression is altered through acquiring images via our DIY microscope-like imaging system. We aim to run the same experiment in three distinct timepoints across the duration of our mission, and to do this we&#39;ve been using a small platform called a Lab-On-a-Chip to hold the cells and interface them with the various fluidics in a miniaturized version of a biology lab.</p>
 <p>In brief, we&#39;ve submitted our proposal in October 2019, took part in the selection workshop hosted here in December 2019, got accepted in February 2020, submitted the TS-VCD in April, submitted the first version of CDR in October and had it approved in September 2021, marking the end of the design phase and the beginning of the construction/testing phase. Right now we are getting ready to run a series of testing campaigns at the ESA facilities, then pass the MRR and be in-orbit by late 2023/early 2024.</p>
 <h2 id="project_management">Project management</h2>
@@ -62,103 +62,101 @@ The Leiden Centraal train station.
 <p>Don&#39;t take what I write as a hard absolute to be followed. It&#39;s empirical data gathered through observation. Think about what I write and try to understand <em>why</em> I write it.</p>
 <h3 id="things_are_tough">Things are tough</h3>
 <ul>
-<li><p>you have to develop skillset from zero - not just technical, but mostly the organizational</p>
+<li><p>You have to develop skillset from zero — not just technical, but mostly the organizational</p>
 </li>
-<li><p>almost everything is behind closed doors, you don&#39;t even know what&#39;s out there, you have to learn but how?</p>
+<li><p>Almost everything is behind closed doors, you don&#39;t even know what&#39;s out there, you have to learn but how?</p>
 </li>
-<li><p>you have to find support &#40;e.g. from university&#41;</p>
+<li><p>You have to find support &#40;e.g. from university&#41;</p>
 </li>
-<li><p>you have to ensure infrastructure &#40;e.g. machines&#41; - might be something very generic to get prototypes, might be something very specific related to your payload. Getting access to required infrastructure might be almost trivial in some cases, near impossible in others. You&#39;ll face this sooner or later, start thinking about it as early as possible</p>
+<li><p>You have to ensure infrastructure &#40;e.g. machines&#41; — might be something very generic to get prototypes, might be something very specific related to your payload. Getting access to required infrastructure might be almost trivial in some cases, near impossible in others. You&#39;ll face this sooner or later, start thinking about it as early as possible</p>
 </li>
-<li><p>invest in open-source and the community. There&#39;s people you can learn from, if not teach - talk a little bit about open-source and how it has helped us and others. In any case, do some research for what&#39;s out there. FYS&#33; is about CubeSats. CubeSats are very affordable and easy to build and verify, which means in turn that they are very approachable and that a lot of people who are somehow involved with a similar mission do not belong in the space industry, meaning there&#39;s a wealth of information that isn&#39;t as strictly regulated</p>
+<li><p>Invest in open-source and the community. There&#39;s people you can learn from, if not teach — talk a little bit about open-source and how it has helped us and others. In any case, do some research for what&#39;s out there. FYS&#33; is about CubeSats. CubeSats are very affordable and easy to build and verify, which means in turn that they are very approachable and that a lot of people who are somehow involved with a similar mission do not belong in the space industry, meaning there&#39;s a wealth of information that isn&#39;t as strictly regulated</p>
 </li>
-<li><p>you got help from ESA, experts &#40;esp. the experts&#41;, reach out - a lot of experience that you can&#39;t find elsewhere. Don&#39;t be afraid to ask because it might seem like you haven&#39;t done your research; it&#39;s an educational program and they want you to succeed. Remember that they&#39;ve went through the whole journey multiple times. This is very crucial to take advantage of as early as possible. They won&#39;t just help you solve problems, they might give you fundamentally new ideas and paths to explore</p>
+<li><p>You get help from ESA, experts... reach out — a lot of experience that you can&#39;t find elsewhere. Don&#39;t be afraid to ask because it might seem like you haven&#39;t done your research; it&#39;s an educational program and they want you to succeed. Remember that they&#39;ve went through the whole journey multiple times. This is very crucial to take advantage of as early as possible. They won&#39;t just help you solve problems, they might give you fundamentally new ideas and paths to explore</p>
 </li>
-<li><p>other teams participate in FYS&#33;; be in touch - in other FYS&#33; versions and other related projects, we&#39;ve helped and received helped</p>
+<li><p>Other teams participate in FYS&#33;, be in touch. In other FYS&#33; versions and other related projects, we&#39;ve helped and received help</p>
 </li>
 </ul>
-<p>bridge: you can get help, and you will need help, because:</p>
 <h3 id="scale_up">Scale up</h3>
 <ul>
-<li><p>there&#39;s no leadership voice outside of the team, the organization has to be DIY - biggest factor towards your success, no one will help you, and you won&#39;t have expertise. It&#39;s one thing to learn how to blink LEDs, and another to learn how to run a team of 40 people to meet strict deadlines in a very demanding project</p>
+<li><p>There&#39;s no leadership outside of the team, the organization has to be DIY - biggest factor towards your success, no one will help you, and you won&#39;t have expertise. It&#39;s one thing to learn how to blink LEDs, and another to learn how to run a team of 40 people to meet strict deadlines in a very demanding project</p>
 </li>
-<li><p>COVID hit, and it hit hard. Why? - a good segue, we had to rethink our organizational structure due to limited physical access. A hybrid scheme works best</p>
+<li><p>COVID-19 hit, and it hit hard. Why? - a good segue, we had to rethink our organizational structure due to limited physical access. A hybrid scheme works best</p>
 </li>
-<li><p>you&#39;ll eventually have to scale up, time and time again. How? - your organization must not only stand the test of &quot;now&quot;, but also be future proof</p>
+<li><p>You&#39;ll eventually have to scale up, time and time again. How? - your organization must not only stand the test of &quot;now&quot;, but also be future proof</p>
 </li>
-<li><p>find good infrastructure, platforms, esp. for organization - can&#39;t stress this enough. Communication, tracking and finding information, project planning and management. Don&#39;t be pushing things back because you have a deadline to meet. Don&#39;t be afraid to invest early, plant the seeds; they will bloom later.</p>
+<li><p>Find good infrastructure, platforms, esp. for organization - can&#39;t stress this enough. Communication, tracking and finding information, project planning and management. Don&#39;t be pushing things back because you have a deadline to meet. Don&#39;t be afraid to invest early, plant the seeds; they will bloom later.</p>
 </li>
-</ul>
-<p><strong>Information transfer</strong></p>
+<li><p>Try maintain information transfer at all costs - our biggest problem</p>
 <ul>
-<li><p>try maintain information transfer at all costs - our biggest problem</p>
-<ul>
-<li><p>documentation is always needed after completion &#40;Akin&#39;s law&#41;, it almost never gets written post. If you come to me after I announce that I&#39;ll leave and say hey, can you write documentation and/or train new members? It will never happen. It will be sub-optimal at best</p>
+<li><p>Akin&#39;s Law 22: </p>
+<blockquote>
+<p>When in doubt, document. &#40;Documentation requirements will reach a maximum shortly after the termination of a program.&#41;</p>
+</blockquote>
+<p>If you come to me after I announce that I&#39;ll leave and say hey, can you write documentation and/or train new members? It will never happen. It will be sub-optimal at best</p>
 </li>
 </ul>
 </li>
 </ul>
-<p>bridge: TODO: organization</p>
 <h3 id="organization_the_small">Organization: the small</h3>
 <ul>
-<li><p>keep minutes, have agendas, don&#39;t recycle topics, end each topic with an action, make the most out of a meeting</p>
+<li><p>Keep minutes, have agendas, don&#39;t recycle topics, end each topic with an action, make the most out of a meeting</p>
 </li>
-<li><p>cross-team meetings are very important</p>
+<li><p>Cross-team meetings are very important</p>
 </li>
-<li><p>hold concurrent sessions, frequent meetings, be transparent always</p>
+<li><p>Hold concurrent sessions, frequent meetings, be transparent always</p>
 </li>
 </ul>
-<p>bridge: on a more general note, ...</p>
 <h3 id="and_the_big">... and the big</h3>
 <ul>
-<li><p>you need SYE, aka systems overview: for management, always see the forest, not the tree - how do all the pieces interact with all the other pieces?</p>
+<li><p>You need SYE, aka systems overview: for management, always see the forest, not the tree - how do all the pieces interact with all the other pieces?</p>
 </li>
-<li><p>always be wary of cross-dependencies - some work that needs to be done needs other work to be done first; or I&#39;m needed at A but I&#39;m also needed at B</p>
+<li><p>Always be wary of cross-dependencies - some work that needs to be done needs other work to be done first; or I&#39;m needed at A but I&#39;m also needed at B</p>
 </li>
-<li><p>constantly track things, move deadlines appropriately, be on top of things - you&#39;ll come to find out that you&#39;ll be setting a deadline and it will be way overdue and then you&#39;ll have to set a deadline anew and do that because it helps you know where you are and where you need to at all times</p>
+<li><p>Constantly track things, move deadlines appropriately, be on top of things - you&#39;ll come to find out that you&#39;ll be setting a deadline and it will be way overdue and then you&#39;ll have to set a deadline anew and do that because it helps you know where you are and where you need to at all times</p>
 </li>
-<li><p>be agile, especially in the beginning. Find what&#39;s good for you. Understand <em>why</em> it&#39;s good for you - purposely talking in a loose frame and giving general comments, self-reflection is the most important thing</p>
+<li><p>Be agile, especially in the beginning. Find what&#39;s good for you. Understand <em>why</em> it&#39;s good for you - purposely talking in a loose frame and giving general comments, self-reflection is the most important thing</p>
+</li>
+<li><p>Explore a path that you might later on decide that you won&#39;t follow, play with the design, the structure, be bold. You have time, you can afford to make mistakes</p>
 </li>
 </ul>
-<p>bridge: exploring a path that you might later on decide that you won&#39;t follow, playing with the design, the structure, being bold. You have time, you can afford to make mistakes</p>
 <h3 id="calm_down">Calm down</h3>
 <ul>
-<li><p>you&#39;ll screw up, constantly. Relax and learn from it - it sounds very cliche, but it holds so so true. We&#39;ve had so many situations where things almost derailed and came close to crumbling down because people were losing their minds. Relax, be calm, assess the situation, do your best, learn from any mistakes and move on. In the grand scheme of things, it probably doesn&#39;t matter that much</p>
+<li><p>You&#39;ll screw up, constantly. Relax and learn from it - it sounds very cliché, but it holds so so true. We&#39;ve had so many situations where things almost derailed and came close to crumbling down because people were losing their minds. Relax, be calm, assess the situation, do your best, learn from any mistakes and move on. In the grand scheme of things, it probably doesn&#39;t matter that much</p>
 </li>
-<li><p>diffuse situations, avoid crowd mentality - we&#39;ve had &quot;critical&quot; situations dozens of times, we&#39;re still here</p>
+<li><p>Diffuse situations, avoid crowd mentality - we&#39;ve had &quot;critical&quot; situations dozens of times, we&#39;re still here</p>
 </li>
-<li><p>remember, everything&#39;s gonna be alright</p>
+<li><p>Remember, everything&#39;s gonna be alright</p>
 </li>
-<li><p>if it isn&#39;t, not to worry. It&#39;s an educational program - I&#39;m not trying to set the bar low here, things are very challenging and you should strive for excellence, but you have to understand the nature of the program and that the ESA people are here to help and that they know you will commit a lot of mistakes. The thought that they expect you to make mistakes is very liberating, because you will make mistakes and you might think that the consequences will be way bigger than they actually will be. I&#39;ve noticed that they even get anxious if time passes and you don&#39;t seem to be having any problems. Plus, having a problem is great because you know that something is wrong, you probably know what it is, and you will eventually figure out a way to fix things. That&#39;s way better than sitting awkwardly wondering whether there&#39;s a problem looming around the corner waiting to bite you when you&#39;re not looking </p>
+<li><p>If it isn&#39;t, not to worry. It&#39;s an educational program - I&#39;m not trying to set the bar low here, things are very challenging and you should strive for excellence, but you have to understand the nature of the program and that the ESA people are here to help and that they know you will commit a lot of mistakes. The thought that they expect you to make mistakes is very liberating, because you will make mistakes and you might think that the consequences will be way bigger than they actually will be. I&#39;ve noticed that they even get anxious if time passes and you don&#39;t seem to be having any problems. Plus, having a problem is great because you know that something is wrong, you probably know what it is, and you will eventually figure out a way to fix things. That&#39;s way better than sitting awkwardly wondering whether there&#39;s a problem looming around the corner waiting to bite you when you&#39;re not looking </p>
 </li>
-<li><p>try to build a momentum, expect a momentum to be built, then ride it, but guide it too; don&#39;t let it carry you - I keep saying that things are difficult; you&#39;ll find it difficult at first with a lot of things, for example with the organizational structure. It will require a lot of effort in the beginning, it&#39;s like a slope where, if you&#39;re doing it right, little by little it will get easier with time. Our case happened after we delivered the first CDR version successfully, things somewhat got automated, everyone knew what to work on, communication was frictionless, new members were seamlessly integrated, but you have to always keep things in check and revisit things. We did this mistake and cracks started to appear; it costs us a lot in the end.</p>
+<li><p>Try to build a momentum, expect a momentum to be built, then ride it, but guide it too; don&#39;t let it carry you - I keep saying that things are difficult; you&#39;ll find it difficult at first with a lot of things, for example with the organizational structure. It will require a lot of effort in the beginning, it&#39;s like a slope where, if you&#39;re doing it right, little by little it will get easier with time. Our case happened after we delivered the first CDR version successfully, things somewhat got automated, everyone knew what to work on, communication was frictionless, new members were seamlessly integrated, but you have to always keep things in check and revisit things. We did this mistake and cracks started to appear; it costs us a lot in the end.</p>
 </li>
 </ul>
 <h3 id="the_bus_factor">The bus factor</h3>
 <ul>
-<li><p>be afraid of the <a href="https://www.wikiwand.com/en/Bus_factor">bus factor</a>. The bus factor is when ... and you will come across it and some times there won&#39;t be a lot of things you&#39;ll be able to do to mitigate it. But also always remember: NO ONE is irreplaceable - &#40;όσες φορές είπαμε να πάμε με τα νερά κάποιου δεν δούλεψε, you&#39;re capable&#41;. Also trust your gut, same thing as in interviews.</p>
+<li><p>Be afraid of the <a href="https://www.wikiwand.com/en/Bus_factor">bus factor</a>. The bus factor is when ... and you will come across it and some times there won&#39;t be a lot of things you&#39;ll be able to do to mitigate it. But also always remember: NO ONE is irreplaceable - &#40;όσες φορές είπαμε να πάμε με τα νερά κάποιου δεν δούλεψε, you&#39;re capable&#41;. Also trust your gut, same thing as in interviews.</p>
 </li>
-<li><p>this is a very long-term project, it therefore transcends individuals - as we&#39;ve already stressed, always always always think about the long-term</p>
+<li><p>This is a very long-term project, it therefore transcends individuals - as we&#39;ve already stressed, always always always think about the long-term</p>
 </li>
-<li><p>have a plan B, C, D, ... &#40;even about design, <em>even</em> about people &#40;just need it to work - Akin&#39;s Law&#41;&#41;</p>
+<li><p>Have a plan B, C, D, ... &#40;even about design, <em>even</em> about people &#40;just need it to work - Akin&#39;s Law&#41;&#41;</p>
 </li>
-<li><p>it&#39;s a marathon, not a sprint - a phrase of a friend that I feel encapsulates all of this well</p>
+<li><p>It&#39;s a marathon, not a sprint - a phrase of a friend that I feel encapsulates all of this well</p>
 <ul>
 <li><p>&#40;... but there will be sprints&#41;</p>
 </li>
 </ul>
 </li>
 </ul>
-<p>bridge: TODO: long term and patterns and things you must keep in mind</p>
 <h3 id="people_and_problems">People and problems :&#40;</h3>
 <ul>
-<li><p>always find the next gen, preemptively. Otherwise it will be too late and you&#39;ll be patching holes. We&#39;ve had that problem multiple times</p>
+<li><p>Always find the next gen, preemptively. Otherwise it will be too late and you&#39;ll be patching holes. We&#39;ve had that problem multiple times</p>
 </li>
-<li><p>more often than not, there&#39;s a bigger underlying problem, and it has to do with structure. People are usually not the source of the problem - don&#39;t be too eager to blame something on an individual, dig deeper</p>
+<li><p>More often than not, there&#39;s a bigger underlying problem, and it has to do with structure. People are usually not the source of the problem - Don&#39;t be too eager to blame something on an individual, dig deeper</p>
 <ul>
-<li><p>but people CAN be the source of the problem. Never underestimate that. Especially if they are in a position of power, either organizationally or due to technical expertise</p>
+<li><p>But people CAN be the source of the problem. Never underestimate that. Especially if they are in a position of power, either organizationally or due to technical expertise</p>
 </li>
-<li><p>don&#39;t make someone coo lightly &#40;i.e. don&#39;t endow with power lightly&#41;. We&#39;ve had that problem happen way too many times. It&#39;s better to leave a gap than to shoot yourself in the foot this way </p>
+<li><p>Don&#39;t make someone coo lightly &#40;i.e. don&#39;t endow with power lightly&#41;. We&#39;ve had that problem happen way too many times. It&#39;s better to leave a gap than to shoot yourself in the foot this way </p>
 </li>
 </ul>
 </li>
@@ -168,92 +166,93 @@ The Leiden Centraal train station.
 <ul>
 <li><p>Again, there are a lot of difficulties you&#39;ll face when you&#39;re trying to get people to collaborate to see this through. There&#39;s some similar questions to ask yourselves. The first is how do you find someone to do the boring work? There will be a lot of it, filling spreadsheets, searching for manuals... Especially if you have to hold events and have a social presence too </p>
 </li>
-<li><p>it&#39;s a demanding project without rewards &#40;monetary, ECTS...&#41; - how do you get people to do volunteering work? Because they want to do it. Therefore, you have to make sure they want to do it <em>a lot</em></p>
+<li><p>It&#39;s a demanding project without rewards &#40;monetary, ECTS...&#41; - how do you get people to do volunteering work? Because they want to do it. Therefore, you have to make sure they want to do it <em>a lot</em></p>
 </li>
 <li><p>How do you get ordinary people to do the extraordinary? You&#39;ll have to face great technical challenges while at the same time, constantly support and get the others pumped, be there to mediate in case any conflicts occur, etc.</p>
 </li>
-<li><p>taking initiatives is vital - that has been one of our biggest complaints about members. There&#39;s new ideas someone has to think, and there&#39;s work that no one will do unless someone decides to take it up by themselves. It also helps tremendously in fostering an environment where people feel their peers are motivated</p>
+<li><p>Taking initiatives is vital - that has been one of our biggest complaints about members. There&#39;s new ideas someone has to think, and there&#39;s work that no one will do unless someone decides to take it up by themselves. It also helps tremendously in fostering an environment where people feel their peers are motivated</p>
 </li>
-<li><p>how do you ensure meeting participation?</p>
+<li><p>How do you ensure meeting participation?</p>
 </li>
 <li><p>HR - remember that you should think about how you approach these things too. A good example and place to start might be &quot;Leadership That Gets Results&quot; by Daniel Goleman in HBR. This is recommended for you to see that there&#39;s a lot of thought that can go behind things &#40;TODO the report about collective meetings&#41; and a lot of different ways you can approach someone</p>
 </li>
-<li><p>physical presence is vital</p>
+<li><p>Physical presence is vital</p>
 </li>
-<li><p>expand beyond the scope of the project, hang out, do cool things on the side - This team was to me something way way more than just the project. I&#39;ve learned a ton, met cool people, made friends, found out what I want to do academically, etc. And this is what&#39;s kept me working in the project for so long ;&#41;</p>
+<li><p>Expand beyond the scope of the project, hang out, do cool things on the side - This team was to me something way way more than just the project. I&#39;ve learned a ton, met cool people, made friends, found out what I want to do academically, etc. And this is what&#39;s kept me working in the project for so long ;&#41;</p>
 </li>
-<li><p>the project requires heavy investment. This means it will overlap with other areas of the member&#39;s lives. You have to take that into account and learn about other areas of their life in order to effectively support them. This goes hand in hand with forming groups and being part of a gang</p>
+<li><p>The project requires heavy investment. This means it will overlap with other areas of the member&#39;s lives. You have to take that into account and learn about other areas of their life in order to effectively support them. This goes hand in hand with forming groups and being part of a gang</p>
 </li>
 </ul>
 <h3 id="talk">Talk&#33;</h3>
 <ul>
-<li><p>ALWAYS face your problems, always speak, always communicate - hoarding problems under the rag instead of facing them is a very well known human tendency. I find that the more long term the thing you&#39;re not doing is, the more catastrophic the consequences will be when the time comes to face them. Again, this sounds like a cliche, &quot;just do everything in time&quot; so I will give you an example &#40;TODO: mention EPS&#41;</p>
+<li><p>ALWAYS face your problems, always speak, always communicate - hoarding problems under the rag instead of facing them is a very well known human tendency. I find that the more long term the thing you&#39;re not doing is, the more catastrophic the consequences will be when the time comes to face them. Again, this sounds like a cliché, &quot;just do everything in time&quot; so I will give you an example &#40;TODO: mention EPS&#41;</p>
 </li>
-<li><p>communicate problems to ESA - again, they&#39;re hear to help. The sooner the learn about something the better. They&#39;ll always appreciate you being upfront, trust me. Don&#39;t put yourselves into rabbit holes you&#39;ll then have to dig out of</p>
+<li><p>Communicate problems to ESA - again, they&#39;re hear to help. The sooner the learn about something the better. They&#39;ll always appreciate you being upfront, trust me. Don&#39;t put yourselves into rabbit holes you&#39;ll then have to dig out of</p>
 </li>
-<li><p>feedback is crucial, it&#39;s all about feedback cycles - This is by far the most important think to take out of this talk. Feedback requires good communication channels, so first build these. Then learn to give feedback. Learn to receive feedback. Provide people with a lot of different ways they can give feedback. Make sure that there&#39;s always more than one person &#40;that hopefully occupies a different position in the team&#41; for someone to speak to. Feedback cycles is the way we get better. Again, make sure to do everything you can to have people a&#41; giving feedback and b&#41; receiving feedback and acting on it</p>
+<li><p>Feedback is crucial, it&#39;s all about feedback cycles - This is by far the most important think to take out of this talk. Feedback requires good communication channels, so first build these. Then learn to give feedback. Learn to receive feedback. Provide people with a lot of different ways they can give feedback. Make sure that there&#39;s always more than one person &#40;that hopefully occupies a different position in the team&#41; for someone to speak to. Feedback cycles is the way we get better. Again, make sure to do everything you can to have people a&#41; giving feedback and b&#41; receiving feedback and acting on it</p>
 </li>
-<li><p>praise in public blame in private &#40;not always&#41; - a good reminder to keep in mind mostly the praising </p>
+<li><p>Praise in public blame in private &#40;not always&#41; - a good reminder to keep in mind mostly the praising </p>
 </li>
 </ul>
 <h3 id="the_leadership_behind_the_leadership">The leadership behind the leadership</h3>
 <ul>
-<li><p>set up a &quot;core&quot; team of people to serve as the backbone of the team at all times - This is, organizationally, what helped us make it. It also affected our progress severely when we lacked it</p>
+<li><p>Set up a &quot;core&quot; team of people to serve as the backbone of the team at all times - This is, organizationally, what helped us make it. It also affected our progress severely when we lacked it</p>
 </li>
-<li><p>who thinks about the team and not just technical work or events? - That&#39;s how you can find the people you&#39;ll rely upon</p>
+<li><p>Who thinks about the team and not just technical work or events? - That&#39;s how you can find the people you&#39;ll rely upon</p>
 </li>
-<li><p>decisions will always upset some people. The question is which - If all goes south, side with the ones that will carry the team on their shoulders. They&#39;re your most important asset. Always consider how a decision might affect them and their motivation</p>
+<li><p>Decisions will always upset some people. The question is which - If all goes south, side with the ones that will carry the team on their shoulders. They&#39;re your most important asset. Always consider how a decision might affect them and their motivation</p>
 </li>
-<li><p>invest in those you believe will carry the team forward, not from a technical viewpoint</p>
+<li><p>Invest in those you believe will carry the team forward, not from a technical viewpoint</p>
 <ul>
-<li><p>this might mean not going with the majority. The majority will also blindly follow whatever, it&#39;s a formless mass to give shape to &#40;oops&#41;</p>
+<li><p>This might mean not going with the majority. The majority will also blindly follow whatever, it&#39;s a formless mass to give shape to &#40;oops&#41;</p>
 </li>
 </ul>
 </li>
-<li><p>don&#39;t shadow-government much - this all might go against transparency and people will eventually catch up to that. Be transparent almost always</p>
+<li><p>Don&#39;t shadow-government much - this all might go against transparency and people will eventually catch up to that. Be transparent almost always</p>
 </li>
 </ul>
 <h3 id="help_them_help_you">Help them help you</h3>
 <ul>
-<li><p>people won&#39;t do things they don&#39;t want to do forever - never forget that, try to find an alternative</p>
+<li><p>People won&#39;t do things they don&#39;t want to do forever - never forget that, try to find an alternative</p>
 </li>
-<li><p>there&#39;s always someone out there that wants to work on what you don&#39;t. Find them</p>
+<li><p>There&#39;s always someone out there that wants to work on what you don&#39;t. Find them</p>
 <ul>
-<li><p>newer members can find something more exciting, <em>resource allocation</em></p>
+<li><p>Newer members can find something more exciting, <em>resource allocation</em></p>
 </li>
-<li><p>also talk about the chef tasks book &#40;&quot;Work Clean&quot;&#41;, you should also include things in feedback on how to work more efficiently, etc.</p>
+<li><p>Also talk about the chef tasks book &#40;&quot;Work Clean&quot;&#41;, you should also include things in feedback on how to work more efficiently, etc.</p>
 </li>
 </ul>
 </li>
 </ul>
 <h3 id="help_them_help_you_vol_2">Help them help you: Vol 2</h3>
 <ul>
-<li><p>don&#39;t leave anyone on their own</p>
+<li><p>Don&#39;t leave anyone on their own</p>
 </li>
-<li><p>set group tasks</p>
+<li><p>Set group tasks</p>
 </li>
-<li><p>set small, well-defined tasks. Make the members feel and visualize the progress</p>
+<li><p>Set small, well-defined tasks. Make the members feel and visualize the progress</p>
 </li>
-<li><p>make sure everyone is on the same page regarding the high-level roadmap</p>
+<li><p>Make sure everyone is on the same page regarding the high-level roadmap</p>
 </li>
-<li><p>give people things they might not love but that are important, and things that aren&#39;t important but they love doing - try to find asteris top model</p>
+<li><p>Give people things they might not love but that are important, and things that aren&#39;t important but they love doing - try to find asteris top model</p>
 </li>
-<li><p>progress is seldom linear, or apparent. Try to make it apparent, but have that in mind</p>
+<li><p>Progress is seldom linear, or apparent. Try to make it apparent, but have that in mind</p>
 </li>
-<li><p>involve people and throw problems at them &#40;but always be there when needed&#41; - don&#39;t be afraid to throw problems at them, that&#39;s how they grow</p>
+<li><p>Involve people and throw problems at them &#40;but always be there when needed&#41; - don&#39;t be afraid to throw problems at them, that&#39;s how they grow</p>
 </li>
 </ul>
 <h3 id="fluff">Fluff</h3>
 <p>Some other things I wanted to make time to mention but couldn&#39;t group with the rest of the topics</p>
 <ul>
-<li><p>sometimes you have to be quick to arrive at a decision. That might mean you won&#39;t have time to get everyone to agree with said decision</p>
+<li><p>Sometimes you have to be quick to arrive at a decision. That might mean you won&#39;t have time to get everyone to agree with said decision</p>
 </li>
-<li><p>recruitment is key. You&#39;ll also need to establish presence in the uni&#40;s&#41; to get people in REC</p>
+<li><p>Recruitment is key. You&#39;ll also need to establish presence in the uni&#40;s&#41; to get people in REC</p>
 </li>
 <li><p><a href="https://spacecraft.ssl.umd.edu/akins_laws.html">Akin&#39;s Laws</a> - HEH</p>
 </li>
 </ul>
 <p>TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that&#39;s so so so important &#40;e.g. to screenshot apo random&#41;</p>
+<h2 id="space_biology_payload_challenges">Space Biology Payload Challenges</h2>
 <ul>
 <li><p>Miniaturization of cell culturing instrumentation</p>
 </li>
