@@ -195,6 +195,8 @@ Some other things I wanted to make time to mention but couldn't group with the r
 
 TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that's so so so important (e.g. to screenshot apo random)
 
+\figure{path="./assets/leiden-centraal-night.jpg", caption="The Leiden Centraal train station — dark mode."}
+
 ## Space Biology Payload Challenges
 
 - Miniaturization of cell culturing instrumentation
@@ -204,6 +206,12 @@ TODO: talk about the importance of having a vision, of having some pillars, of y
 - Preparing predictable long-term biological sample storage methods before launch
 - Engineering reliable readouts for cell viability/metabolism
 - Standardization of common wet lab methods to meet space engineering requirements/procedures
+
+\figure{path="./assets/arles.jpg", caption="The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'>ARLES experiment</a> investigates how liquids evaporate in microgravity."}
+
+## Outro
+
+\figure{path="./assets/schipol.jpg", caption="The Amsterdam Schipol airport at dawn."}
 
 [^1]: Poghosyan, A., & Golkar, A. (2017). CubeSat evolution: Analyzing CubeSat capabilities for conducting science missions. *Progress in Aerospace Sciences, 88*, 59-83.
 [^2]: Sweeting, M. (2018). Modern small satellites-changing the economics of space. *Proceedings of the IEEE, 106(3)*, 343-361.
