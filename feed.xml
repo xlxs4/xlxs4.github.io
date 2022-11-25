@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li><li>Getting There</li><li>Refresher</li><li>Project management<ol><li>Things are tough</li><li>Scale up</li><li>Organization: the small</li><li>... and the big</li><li>Calm down</li><li>The bus factor</li><li>Problems</li></ol></li><li>People management<ol><li>People can <em>also</em> be tough</li><li>Talk&#33;</li><li>The leadership behind the leadership</li><li>Help them help you</li><li>Help them help you: Vol 2</li></ol></li><li>Fluff</li><li>Space Biology Payload Challenges</li><li>Outro</li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li><li>Getting There</li><li>Refresher</li><li>Project management<ol><li>Things are tough</li><li>Scale up</li><li>Organization: the small</li><li>... and the big</li><li>Calm down</li><li>The bus factor</li><li>Problems</li></ol></li><li>People management<ol><li>People can <em>also</em> be tough</li><li>Talk&#33;</li><li>The leadership behind the leadership</li><li>Help them help you</li><li>Help them help you: Vol 2</li></ol></li><li>Space Biology Payload Challenges</li><li>Outro</li></ol></div>
 <h2 id="esa_design_booster">ESA Design Booster</h2>
 <p>The <a href="https://www.esa.int/Education/CubeSats_-_Fly_Your_Satellite/Fly_Your_Satellite&#33;_Design_Booster_pilot?fbclid&#61;IwAR3hcjAva089hKRr8a74cB60zLhuBLy3mbpIcjtmc6AKB5Er1PXpcs9zvpw">Fly Your Satellite&#33; Design Booster</a> is a pilot program of the <a href="https://www.esa.int/">European Space Agency &#40;ESA&#41;</a>. It&#39;s aimed at students working in the design of a CubeSat mission. <a href="https://www.wikiwand.com/en/CubeSat">CubeSat</a>s are miniaturized satellites that have standardized form — in LEGO brick fashion, they&#39;re shaped as \(n \ge 1\) 10cm cubes, stacked vertically. It&#39;s an idea to accelerate and democratize space missions<sup id="fnref:1">[1]</sup>, cutting down on the cost<sup id="fnref:2">[2]</sup> and effort required to get the spacecraft in-orbit.</p>
 <p>Design Booster aims to assist the teams by providing further training during the full project lifecycle and across a wide spectrum of areas from aerospace engineering to project management or even operating the CubeSat while it&#39;s in-orbit. The program is split in distinct phases that are adapted from the typical development cycle of space missions and it follows a fixed scheduled spanning 1.5 years.</p>
@@ -128,7 +128,7 @@ The Leiden Centraal train station — dark mode.
 <p>Again, there are a lot of difficulties you&#39;ll face when you&#39;re trying to get people to collaborate to see this through. There&#39;s some questions to ponder on. How do you find someone to do the boring work? There will be a lot of it, filling spreadsheets, searching for manuals... Especially if you have to hold events and have a social presence too. </p>
 <p>It&#39;s a demanding project without short-term tangible rewards &#40;monetary, ECTS ...&#41;. So how do you get people to do unpaid work? They&#39;ll do it if they want to do it. Therefore, you have to make sure they want to do it <em>a lot</em>.</p>
 <p>How do you get ordinary people to do the extraordinary? You&#39;ll have to face great technical challenges. At the same time, you&#39;ll have to constantly support and get the others pumped. You&#39;ll have to be there to mediate in case any conflicts occur, etc.</p>
-<p>Taking initiatives is vital — that has been one of our biggest complaints about our members. There&#39;s new ideas someone has to think. There&#39;s work that no one will do unless someone decides to take it up by themselves. It also helps tremendously in fostering an environment where people feel their peers are motivated. <em>Building a DIY arcade cabinet can also help you, check <sup id="fnref:4">[4]</sup></em>.</p>
+<p>Taking initiatives is vital — that has been one of our biggest complaints about our members. There&#39;s new ideas someone has to think. There&#39;s work that no one will do unless someone decides to take it up by themselves. It also helps tremendously in fostering an environment where people feel their peers are motivated. <em>Building a DIY arcade cabinet can also help you</em>, check ➡️ <sup id="fnref:4">[4]</sup>.</p>
 <p>How do you ensure meeting participation? Remember that you should think about how you approach these things too. A good example and place to start might be <sup id="fnref:5">[5]</sup>. This is recommended for you to see that there&#39;s a lot of thought that can go behind all this. Meetings facilitate collective intelligence. Have you thought about that? <sup id="fnref:6">[6]</sup> There&#39;s a lot of different ways you can approach people and people-problems.</p>
 <p>Physical presence is vital. Expand beyond the scope of the project. <em>Hang out</em>, do cool things on the side. SpaceDot is to me something way, way more than just the project. I&#39;ve learned a ton, met cool people, made friends, found out what I want to pursue in academia, and more. And this is what&#39;s kept me working in the project for so long :D</p>
 <p>If you want to go all the way, <em>go all the way</em>. The project requires heavy investment. It will take a toll. It will also overlap with other areas of your peers&#39; lives. You have to take that into account and learn about their life in order to effectively support them. This goes hand-in-hand with forming groups and being part of a gang, crew, band, squad, syndicate.</p>
@@ -140,65 +140,18 @@ The Leiden Centraal train station — dark mode.
 </blockquote>
 <p>Well, not always but you get the idea.</p>
 <h3 id="the_leadership_behind_the_leadership">The leadership behind the leadership</h3>
-<ul>
-<li><p>Set up a &quot;core&quot; team of people to serve as the backbone of the team at all times - This is, organizationally, what helped us make it. It also affected our progress severely when we lacked it</p>
-</li>
-<li><p>Who thinks about the team and not just technical work or events? - That&#39;s how you can find the people you&#39;ll rely upon</p>
-</li>
-<li><p>Decisions will always upset some people. The question is which - If all goes south, side with the ones that will carry the team on their shoulders. They&#39;re your most important asset. Always consider how a decision might affect them and their motivation</p>
-</li>
-<li><p>Invest in those you believe will carry the team forward, not from a technical viewpoint</p>
-<ul>
-<li><p>This might mean not going with the majority. The majority will also blindly follow whatever, it&#39;s a formless mass to give shape to &#40;oops&#41;</p>
-</li>
-</ul>
-</li>
-<li><p>Don&#39;t shadow-government much - this all might go against transparency and people will eventually catch up to that. Be transparent almost always</p>
-</li>
-</ul>
+<p>Set up a &quot;core&quot; group of people to serve as the backbone of the team at all times. This is, organizationally, mainly what helped us make it. It also affected our progress severely when we lacked it.</p>
+<p>Who thinks about the team and not just technical work or events? That&#39;s how you can find the people you&#39;ll rely upon. Decisions will always upset some people. The question is which.</p>
+<p>If all goes south, side with the ones that will carry the team on their shoulders. They&#39;re your most important asset. Always consider how a decision might affect them <em>and</em> their motivation. Invest in those you believe will carry the team forward, not from a technical viewpoint. This might mean not siding with the majority. The majority will also blindly follow whatever, if you give it enough time.</p>
+<p>But&#33; Don&#39;t shadow-government much — this all goes against being transparent and people will eventually catch up. Be transparent, it almost always pays off.</p>
 <figure class="figure">
   <img src="./assets/arles.jpg" alt="The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'>ARLES experiment</a> investigates how liquids evaporate in microgravity." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
 The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'>ARLES experiment</a> investigates how liquids evaporate in microgravity.
 </figcaption></figure><h3 id="help_them_help_you">Help them help you</h3>
-<ul>
-<li><p>People won&#39;t do things they don&#39;t want to do forever - never forget that, try to find an alternative</p>
-</li>
-<li><p>There&#39;s always someone out there that wants to work on what you don&#39;t. Find them</p>
-<ul>
-<li><p>Newer members can find something more exciting, <em>resource allocation</em></p>
-</li>
-<li><p>Also talk about the chef tasks book &#40;&quot;Work Clean&quot;&#41;, you should also include things in feedback on how to work more efficiently, etc.</p>
-</li>
-</ul>
-</li>
-</ul>
+<p>People won&#39;t do things they don&#39;t want to do forever - never forget that, try to find an alternative There&#39;s always someone out there that wants to work on what you don&#39;t. Find them Newer members can find something more exciting, <em>resource allocation</em> Also talk about the chef tasks book &#40;&quot;Work Clean&quot;&#41;, you should also include things in feedback on how to work more efficiently, etc.</p>
 <h3 id="help_them_help_you_vol_2">Help them help you: Vol 2</h3>
-<ul>
-<li><p>Don&#39;t leave anyone on their own</p>
-</li>
-<li><p>Set group tasks</p>
-</li>
-<li><p>Set small, well-defined tasks. Make the members feel and visualize the progress</p>
-</li>
-<li><p>Make sure everyone is on the same page regarding the high-level roadmap</p>
-</li>
-<li><p>Give people things they might not love but that are important, and things that aren&#39;t important but they love doing - try to find asteris top model</p>
-</li>
-<li><p>Progress is seldom linear, or apparent. Try to make it apparent, but have that in mind</p>
-</li>
-<li><p>Involve people and throw problems at them &#40;but always be there when needed&#41; - don&#39;t be afraid to throw problems at them, that&#39;s how they grow</p>
-</li>
-</ul>
-<h2 id="fluff">Fluff</h2>
-<p>Some other things I wanted to make time to mention but couldn&#39;t group with the rest of the topics</p>
-<ul>
-<li><p>Sometimes you have to be quick to arrive at a decision. That might mean you won&#39;t have time to get everyone to agree with said decision</p>
-</li>
-<li><p>Recruitment is key. You&#39;ll also need to establish presence in the uni&#40;s&#41; to get people join</p>
-</li>
-</ul>
-<p>TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that&#39;s so so so important &#40;e.g. to screenshot apo random&#41;</p>
+<p>Don&#39;t leave anyone on their own Set group tasks Set small, well-defined tasks. Make the members feel and visualize the progress Make sure everyone is on the same page regarding the high-level roadmap Give people things they might not love but that are important, and things that aren&#39;t important but they love doing - try to find asteris top model Progress is seldom linear, or apparent. Try to make it apparent, but have that in mind Involve people and throw problems at them &#40;but always be there when needed&#41; - don&#39;t be afraid to throw problems at them, that&#39;s how they grow</p>
 <h2 id="space_biology_payload_challenges">Space Biology Payload Challenges</h2>
 <ul>
 <li><p>Miniaturization of cell culturing instrumentation</p>
@@ -217,6 +170,7 @@ The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'
 </li>
 </ul>
 <h2 id="outro">Outro</h2>
+<p>TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that&#39;s so so so important &#40;e.g. to screenshot apo random&#41;</p>
 <figure class="figure">
   <img src="./assets/schipol.jpg" alt="The Amsterdam Schipol airport at dawn." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
