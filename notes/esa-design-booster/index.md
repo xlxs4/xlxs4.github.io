@@ -113,21 +113,44 @@ All in all, we've helped and received a great deal of help.
 
 ### Scale up
 
-- There's no leadership outside of the team, the organization has to be DIY - biggest factor towards your success, no one will help you, and you won't have expertise. It's one thing to learn how to blink LEDs, and another to learn how to run a team of 40 people to meet strict deadlines in a very demanding project
-- COVID-19 hit, and it hit hard. Why? - a good segue, we had to rethink our organizational structure due to limited physical access. A hybrid scheme works best
-- You'll eventually have to scale up, time and time again. How? - your organization must not only stand the test of "now", but also be future proof
-- Find good infrastructure, platforms, esp. for organization - can't stress this enough. Communication, tracking and finding information, project planning and management. Don't be pushing things back because you have a deadline to meet. Don't be afraid to invest early, plant the seeds; they will bloom later.
-- Try maintain information transfer at all costs - our biggest problem
-  - [Akin's Law](https://spacecraft.ssl.umd.edu/akins_laws.html) 22: 
-    > When in doubt, document. (Documentation requirements will reach a maximum shortly after the termination of a program.)
-    If you come to me after I announce that I'll leave and say hey, can you write documentation and/or train new members? It will never happen. It will be sub-optimal at best
+There's no leadership outside of the team, the organization has to be DIY - biggest factor towards your success, no one will help you, and you won't have expertise.
+It's one thing to learn how to blink LEDs, and another to learn how to run a team of 40 people to meet strict deadlines in a very demanding project.
+COVID-19 hit, and it hit hard.
+Why?
+That's a good segue, we had to rethink our organizational structure due to limited physical access.
+We found a hybrid scheme to work best [^3].
+You'll eventually have to scale up, time and time again.
+How?
+Your organization must not only stand the test of "now", but also be future proof.
+
+Make sure to find good infrastructure, platforms, especially for organization.
+I can't stress this enough.
+Communication, tracking and finding information, project planning and management.
+Don't be pushing things back because you have a deadline to meet.
+Don't be afraid to invest early, plant the seeds; they will bloom later.
+Try maintain information transfer at all costs — that was our biggest problem.
+Documentation is the best remedy to this problem.
+As per [Akin's Law](https://spacecraft.ssl.umd.edu/akins_laws.html) 22: 
+> When in doubt, document. (Documentation requirements will reach a maximum shortly after the termination of a program.)
 
 ### Organization: the small
 
-- Keep minutes, have agendas, don't recycle topics, end each topic with an action, make the most out of a meeting
-- Cross-team meetings are very important
-- Hold concurrent sessions, frequent meetings, be transparent always
-- TODO: https://mm.spacedot.gr/acubesat/pl/88ncfantcj89zq7ibee8fnsnbr
+Keep minutes, have agendas, don't recycle topics, end each topic with an action, make the most out of a meeting.
+Cross-team meetings are very important.
+Hold concurrent sessions, frequent meetings, be transparent always.
+
+| ✅ Do meetings when: | ❌ Don't do meetings when: |
+| -------------------- | -------------------------- |
+| People are feeling lost | There's technical work to be done. Just ask people to document, unless they need extra motivation |
+| For teambuilding activities | You want to brainstorm. If you have to, make sure that there's enough preparation beforehand |
+| For weekly sessions that promote team coherency and updates | There's people waiting for other people. Extremely inefficient, people get bored |
+| For feedback sessions | When people do nothing during the meetings, actions are not taken |
+| You are unsure of next steps | When meetings are the "excuse" for you to feel productive |
+
+
+Text can often be hard, but text is king.
+It stays forever, you can quickly reference it or look it up at a later date, it can be used as training material, it can be used to explain concepts to new members without the need of constant supervising.
+It saves time and effort, while talking is just an inefficient back-and-forth.
 
 ### ... and the big
 
@@ -237,3 +260,4 @@ TODO: talk about the importance of having a vision, of having some pillars, of y
 
 [^1]: Poghosyan, A., & Golkar, A. (2017). CubeSat evolution: Analyzing CubeSat capabilities for conducting science missions. *Progress in Aerospace Sciences, 88*, 59-83.
 [^2]: Sweeting, M. (2018). Modern small satellites-changing the economics of space. *Proceedings of the IEEE, 106(3)*, 343-361.
+[^3]: Retselis, A. F., Papafotiou, T., & Kanavouras, K. (2022, April). Adaptation of the AcubeSAT nanosatellite project into remote working during the COVID-19 era. In *4th Symposium on Space Educational Activities*. Universitat Politècnica de Catalunya.
