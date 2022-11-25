@@ -82,19 +82,9 @@ The Leiden Centraal train station.
 <table><tr><th align="right">✅ Do meetings when:</th><th align="right">❌ Don&#39;t do meetings when:</th></tr><tr><td align="right">People are feeling lost</td><td align="right">There&#39;s technical work to be done. Just ask people to document, unless they need extra motivation</td></tr><tr><td align="right">For teambuilding activities</td><td align="right">You want to brainstorm. If you have to, make sure that there&#39;s enough preparation beforehand</td></tr><tr><td align="right">For weekly sessions that promote team coherency and updates</td><td align="right">There&#39;s people waiting for other people. Extremely inefficient, people get bored</td></tr><tr><td align="right">For feedback sessions</td><td align="right">When people do nothing during the meetings, actions are not taken</td></tr><tr><td align="right">You are unsure of next steps</td><td align="right">When meetings are the &quot;excuse&quot; for you to feel productive</td></tr></table>
 <p>Text can often be hard, but text is king. It stays forever, you can quickly reference it or look it up at a later date, it can be used as training material, it can be used to explain concepts to new members without the need of constant supervising. It saves time and effort, while talking is just an inefficient back-and-forth.</p>
 <h3 id="and_the_big">... and the big</h3>
-<ul>
-<li><p>You need <abbr title="SYstems Engineers">SYE</abbr>
-, aka systems overview: for management, always see the forest, not the tree - how do all the pieces interact with all the other pieces?</p>
-</li>
-<li><p>Always be wary of cross-dependencies - some work that needs to be done needs other work to be done first; or I&#39;m needed at A but I&#39;m also needed at B</p>
-</li>
-<li><p>Constantly track things, move deadlines appropriately, be on top of things - you&#39;ll come to find out that you&#39;ll be setting a deadline and it will be way overdue and then you&#39;ll have to set a deadline anew and do that because it helps you know where you are and where you need to at all times</p>
-</li>
-<li><p>Be agile, especially in the beginning. Find what&#39;s good for you. Understand <em>why</em> it&#39;s good for you - purposely talking in a loose frame and giving general comments, self-reflection is the most important thing</p>
-</li>
-<li><p>Explore a path that you might later on decide that you won&#39;t follow, play with the design, the structure, be bold. You have time, you can afford to make mistakes</p>
-</li>
-</ul>
+<p>You need <abbr title="SYstems Engineers">SYE</abbr>
+, aka systems overview: for management, always see the forest, not the tree - how do all the pieces interact with all the other pieces? Always be wary of cross-dependencies. Constantly track things, move deadlines appropriately, be on top of things - you&#39;ll come to find out that you&#39;ll be setting a deadline and it will be way overdue and then you&#39;ll have to set a deadline anew — do that.</p>
+<p>Be agile, especially in the beginning. Find what&#39;s good for you. Understand <em>why</em> it&#39;s good for you. Self-reflection is the most important thing. Explore a path that you might later on decide that you won&#39;t follow, play with the design, the structure, be bold. You have time, you can afford to make mistakes.</p>
 <figure class="figure">
   <img src="./assets/exomars.jpg" alt="<a href='https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars'>Exomars</a> — has life ever existed on Mars?" class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
