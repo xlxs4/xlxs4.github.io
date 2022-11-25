@@ -72,37 +72,15 @@ The Leiden Centraal train station.
  is about CubeSats. CubeSats are very affordable and easy to build and verify, which means in turn that they are very approachable and that a lot of people who might be able to help you do not belong in the space industry, meaning there&#39;s a wealth of information that isn&#39;t as strictly regulated.</p>
 <p>Remember that you get help from ESA and the experts. Reach out — there&#39;s a lot of experience that you can&#39;t find elsewhere. Don&#39;t be afraid to ask because it might seem like you haven&#39;t done your homework. Keep in mind that it&#39;s an educational program and that they want you to succeed. They&#39;ve went through the whole journey multiple times. This is very crucial to take advantage of as early as possible. They won&#39;t just help you solve problems, they might give you fundamentally new ideas and paths to explore. Lastly, other teams participate in FYS&#33;, be in touch. In other FYS&#33; versions and other related projects, too. All in all, we&#39;ve helped and received a great deal of help.</p>
 <h3 id="scale_up">Scale up</h3>
-<ul>
-<li><p>There&#39;s no leadership outside of the team, the organization has to be DIY - biggest factor towards your success, no one will help you, and you won&#39;t have expertise. It&#39;s one thing to learn how to blink LEDs, and another to learn how to run a team of 40 people to meet strict deadlines in a very demanding project</p>
-</li>
-<li><p>COVID-19 hit, and it hit hard. Why? - a good segue, we had to rethink our organizational structure due to limited physical access. A hybrid scheme works best</p>
-</li>
-<li><p>You&#39;ll eventually have to scale up, time and time again. How? - your organization must not only stand the test of &quot;now&quot;, but also be future proof</p>
-</li>
-<li><p>Find good infrastructure, platforms, esp. for organization - can&#39;t stress this enough. Communication, tracking and finding information, project planning and management. Don&#39;t be pushing things back because you have a deadline to meet. Don&#39;t be afraid to invest early, plant the seeds; they will bloom later.</p>
-</li>
-<li><p>Try maintain information transfer at all costs - our biggest problem</p>
-<ul>
-<li><p><a href="https://spacecraft.ssl.umd.edu/akins_laws.html">Akin&#39;s Law</a> 22: </p>
+<p>There&#39;s no leadership outside of the team, the organization has to be DIY - biggest factor towards your success, no one will help you, and you won&#39;t have expertise. It&#39;s one thing to learn how to blink LEDs, and another to learn how to run a team of 40 people to meet strict deadlines in a very demanding project. COVID-19 hit, and it hit hard. Why? That&#39;s a good segue, we had to rethink our organizational structure due to limited physical access. We found a hybrid scheme to work best <sup id="fnref:3">[3]</sup>. You&#39;ll eventually have to scale up, time and time again. How? Your organization must not only stand the test of &quot;now&quot;, but also be future proof.</p>
+<p>Make sure to find good infrastructure, platforms, especially for organization. I can&#39;t stress this enough. Communication, tracking and finding information, project planning and management. Don&#39;t be pushing things back because you have a deadline to meet. Don&#39;t be afraid to invest early, plant the seeds; they will bloom later. Try maintain information transfer at all costs — that was our biggest problem. Documentation is the best remedy to this problem. As per <a href="https://spacecraft.ssl.umd.edu/akins_laws.html">Akin&#39;s Law</a> 22: </p>
 <blockquote>
 <p>When in doubt, document. &#40;Documentation requirements will reach a maximum shortly after the termination of a program.&#41;</p>
 </blockquote>
-<p>If you come to me after I announce that I&#39;ll leave and say hey, can you write documentation and/or train new members? It will never happen. It will be sub-optimal at best</p>
-</li>
-</ul>
-</li>
-</ul>
 <h3 id="organization_the_small">Organization: the small</h3>
-<ul>
-<li><p>Keep minutes, have agendas, don&#39;t recycle topics, end each topic with an action, make the most out of a meeting</p>
-</li>
-<li><p>Cross-team meetings are very important</p>
-</li>
-<li><p>Hold concurrent sessions, frequent meetings, be transparent always</p>
-</li>
-<li><p>TODO: https://mm.spacedot.gr/acubesat/pl/88ncfantcj89zq7ibee8fnsnbr</p>
-</li>
-</ul>
+<p>Keep minutes, have agendas, don&#39;t recycle topics, end each topic with an action, make the most out of a meeting. Cross-team meetings are very important. Hold concurrent sessions, frequent meetings, be transparent always.</p>
+<table><tr><th align="right">✅ Do meetings when:</th><th align="right">❌ Don&#39;t do meetings when:</th></tr><tr><td align="right">People are feeling lost</td><td align="right">There&#39;s technical work to be done. Just ask people to document, unless they need extra motivation</td></tr><tr><td align="right">For teambuilding activities</td><td align="right">You want to brainstorm. If you have to, make sure that there&#39;s enough preparation beforehand</td></tr><tr><td align="right">For weekly sessions that promote team coherency and updates</td><td align="right">There&#39;s people waiting for other people. Extremely inefficient, people get bored</td></tr><tr><td align="right">For feedback sessions</td><td align="right">When people do nothing during the meetings, actions are not taken</td></tr><tr><td align="right">You are unsure of next steps</td><td align="right">When meetings are the &quot;excuse&quot; for you to feel productive</td></tr></table>
+<p>Text can often be hard, but text is king. It stays forever, you can quickly reference it or look it up at a later date, it can be used as training material, it can be used to explain concepts to new members without the need of constant supervising. It saves time and effort, while talking is just an inefficient back-and-forth.</p>
 <h3 id="and_the_big">... and the big</h3>
 <ul>
 <li><p>You need <abbr title="SYstems Engineers">SYE</abbr>
@@ -291,6 +269,12 @@ The Amsterdam Schipol airport at dawn.
     <tr>
         <td class="fndef-backref">[2]</td>
         <td class="fndef-content">Sweeting, M. &#40;2018&#41;. Modern small satellites-changing the economics of space. <em>Proceedings of the IEEE, 106&#40;3&#41;</em>, 343-361.</td>
+    </tr>
+</table>
+<table class="fndef" id="fndef:3">
+    <tr>
+        <td class="fndef-backref">[3]</td>
+        <td class="fndef-content">Retselis, A. F., Papafotiou, T., &amp; Kanavouras, K. &#40;2022, April&#41;. Adaptation of the AcubeSAT nanosatellite project into remote working during the COVID-19 era. In <em>4th Symposium on Space Educational Activities</em>. Universitat Politècnica de Catalunya.</td>
     </tr>
 </table>
 </p>
