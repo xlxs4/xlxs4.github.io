@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li><li>Getting There</li><li>Refresher</li><li>Project management<ol><li>Things are tough</li><li>Scale up</li><li>Organization: the small</li><li>... and the big</li><li>Calm down</li><li>The bus factor</li><li>People and problems :&#40;</li></ol></li><li>People management<ol><li>People can also be tough</li><li>Talk&#33;</li><li>The leadership behind the leadership</li><li>Help them help you</li><li>Help them help you: Vol 2</li></ol></li><li>Fluff</li><li>Space Biology Payload Challenges</li><li>Outro</li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li><li>Getting There</li><li>Refresher</li><li>Project management<ol><li>Things are tough</li><li>Scale up</li><li>Organization: the small</li><li>... and the big</li><li>Calm down</li><li>The bus factor</li><li>Problems</li></ol></li><li>People management<ol><li>People can <em>also</em> be tough</li><li>Talk&#33;</li><li>The leadership behind the leadership</li><li>Help them help you</li><li>Help them help you: Vol 2</li></ol></li><li>Fluff</li><li>Space Biology Payload Challenges</li><li>Outro</li></ol></div>
 <h2 id="esa_design_booster">ESA Design Booster</h2>
 <p>The <a href="https://www.esa.int/Education/CubeSats_-_Fly_Your_Satellite/Fly_Your_Satellite&#33;_Design_Booster_pilot?fbclid&#61;IwAR3hcjAva089hKRr8a74cB60zLhuBLy3mbpIcjtmc6AKB5Er1PXpcs9zvpw">Fly Your Satellite&#33; Design Booster</a> is a pilot program of the <a href="https://www.esa.int/">European Space Agency &#40;ESA&#41;</a>. It&#39;s aimed at students working in the design of a CubeSat mission. <a href="https://www.wikiwand.com/en/CubeSat">CubeSat</a>s are miniaturized satellites that have standardized form — in LEGO brick fashion, they&#39;re shaped as \(n \ge 1\) 10cm cubes, stacked vertically. It&#39;s an idea to accelerate and democratize space missions<sup id="fnref:1">[1]</sup>, cutting down on the cost<sup id="fnref:2">[2]</sup> and effort required to get the spacecraft in-orbit.</p>
 <p>Design Booster aims to assist the teams by providing further training during the full project lifecycle and across a wide spectrum of areas from aerospace engineering to project management or even operating the CubeSat while it&#39;s in-orbit. The program is split in distinct phases that are adapted from the typical development cycle of space missions and it follows a fixed scheduled spanning 1.5 years.</p>
@@ -99,42 +99,31 @@ The Leiden Centraal train station.
 <a href='https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars'>Exomars</a> — has life ever existed on Mars?
 </figcaption></figure><h3 id="calm_down">Calm down</h3>
 <p>You&#39;ll screw up, <em>constantly</em>. Relax and learn from it. We&#39;ve had so many situations where things almost derailed and came close to crumbling down because people were losing their minds. <em>Relax</em>, be calm, assess the situation, do your best, learn from any mistakes and move on. In the grand scheme of things, it probably doesn&#39;t matter that much. Diffuse situations, avoid crowd mentality - we&#39;ve had &quot;critical&quot; situations dozens of times, we&#39;re still here Remember, 🎵 everything&#39;s gonna be alright 🎵.</p>
-<p>If it isn&#39;t, not to worry. It&#39;s an educational program. I&#39;m not trying to set the bar low here, things are very challenging and you should strive for excellence, but you have to understand the nature of the program and that the ESA people are here to help and that they know you will commit a lot of mistakes. The thought that they expect you to make mistakes is very liberating, because you will make mistakes and you might think that the consequences will be way bigger than they actually will be. I&#39;ve noticed that they even get anxious if time passes and you don&#39;t seem to be having any problems. Plus, having a problem is great because you know that something is wrong, you probably know what it is, and you will eventually figure out a way to fix things. That&#39;s <em>way</em> better than sitting awkwardly wondering whether there&#39;s a problem looming around the corner waiting to bite you when you&#39;re not looking.</p>
-<p>Try to build a momentum, expect a momentum to be built. Then, ride it, but guide it too — don&#39;t let it carry you. I keep saying that things are difficult — you&#39;ll find it difficult at first with a lot of things, for example with the organizational structure. It will require a lot of effort in the beginning. It&#39;s like a slope where, if you&#39;re doing it right, little by little it will get easier with time. Our case happened after we delivered the first CDR version successfully, things somewhat got automated, everyone knew what to work on, communication was frictionless, new members were seamlessly integrated, but you have to always keep things in check and constantly revisit. We didn&#39;t and cracks started to appear soon enough; it costs us a lot in the end.</p>
+<p>If it isn&#39;t, not to worry. It&#39;s an educational program. I&#39;m not trying to set the bar low here, things are very challenging and you should strive for excellence, but you have to understand the nature of the program and that the ESA people are here to help and that they know you will commit a lot of mistakes. The thought that they expect you to make mistakes is very liberating, because you will make mistakes and you might think that the consequences will be way bigger than they actually will be.</p>
+<p>Plus, having a problem is great because you know that something is wrong, you probably know what it is, and you will eventually figure out a way to fix things. That&#39;s <em>way</em> better than sitting awkwardly wondering whether there&#39;s a problem looming around the corner waiting to bite you when you&#39;re not looking.</p>
+<p>Try to build a momentum, expect a momentum to be built. Then, ride it, but guide it too — don&#39;t let it carry you. I keep saying that things are difficult — you&#39;ll find it difficult at first with a lot of things, for example with the organizational structure. It will require a lot of effort in the beginning. It&#39;s like a slope where, if you&#39;re doing it right, little by little it will get easier with time.</p>
+<p>Our case happened after we delivered the first CDR version successfully. Things somewhat got automated, everyone knew what to work on, communication was frictionless, new members were seamlessly integrated No matter what, you have to always keep things in check and constantly revisit. We didn&#39;t and cracks started to appear soon enough; it costs us a lot in the end.</p>
 <h3 id="the_bus_factor">The bus factor</h3>
-<ul>
-<li><p>Be afraid of the <a href="https://www.wikiwand.com/en/Bus_factor">bus factor</a>. The bus factor is when ... and you will come across it and some times there won&#39;t be a lot of things you&#39;ll be able to do to mitigate it. But also always remember: NO ONE is irreplaceable - &#40;each time we chose to go with someone&#39;s flow, it didn&#39;t work. You&#39;re capable, don&#39;t forget that&#41;. Also trust your gut, like you should do in interviews.</p>
-</li>
-<li><p>This is a very long-term project, it therefore transcends individuals - as we&#39;ve already stressed, always always always think about the long-term</p>
-</li>
-<li><p>Have a plan B, C, D, ... &#40;even about design, <em>even</em> about people &#40;just need it to work - Akin&#39;s Law&#41;&#41;</p>
-</li>
-<li><p>It&#39;s a marathon, not a sprint - a phrase of a friend that I feel encapsulates all of this well</p>
-<ul>
-<li><p>&#40;... but there will be sprints&#41;</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="people_and_problems">People and problems :&#40;</h3>
-<ul>
-<li><p>Always find the next gen, preemptively. Otherwise it will be too late and you&#39;ll be patching holes. We&#39;ve had that problem multiple times</p>
-</li>
-<li><p>More often than not, there&#39;s a bigger underlying problem, and it has to do with structure. People are usually not the source of the problem - Don&#39;t be too eager to blame something on an individual, dig deeper</p>
-<ul>
-<li><p>But people CAN be the source of the problem. Never underestimate that. Especially if they are in a position of power, either organizationally or due to technical expertise</p>
-</li>
-<li><p>Don&#39;t make someone coo lightly &#40;i.e. don&#39;t endow with power lightly&#41;. We&#39;ve had that problem happen way too many times. It&#39;s better to leave a gap than to shoot yourself in the foot this way</p>
-</li>
-</ul>
-</li>
-</ul>
+<p>Be afraid of the <a href="https://www.wikiwand.com/en/Bus_factor">bus factor</a>. The bus factor is a crude way to assess how important someone is for the project. The way you do that is you ask yourselves, &quot;what if this person was to get hit by a bus tomorrow?&quot;. You <em>will</em> come across it. Some times there won&#39;t be a lot you&#39;ll be able to do to mitigate it. But also always remember: no one is irreplaceable. Each time we chose to go with someone&#39;s flow after a certain threshold was crossed, it never worked. You&#39;re capable, don&#39;t forget that. Also trust your gut, like you should do in interviews.</p>
+<p>This is a very long-term project, it therefore <em>transcends</em> individuals. As we&#39;ve already stressed, always always always think about the long-term. Have a plan B, C, D, ... &#40;even about design, <em>even</em> about people&#41;. A phrase of a friend that I feel encapsulates all of this well:</p>
+<blockquote>
+<p>It&#39;s a marathon, not a sprint</p>
+</blockquote>
+<p>... but there will be sprints ;&#41;</p>
+<h3 id="problems">Problems</h3>
+<p>Always find the next generation that will succeed you and/or your peers. Do that <em>preemptively</em>. Otherwise, it will be too late and you&#39;ll be patching holes. We&#39;ve faced this problem multiple times. More often than not, there&#39;s a bigger underlying problem, and it has to do with structure. People are <em>usually</em> not the source of the problem. Don&#39;t be too eager to blame something on an individual, dig deeper.</p>
+<p>But people <em>can</em> be the source of the problem.  Never underestimate that. Especially if they are in a position of power, either organizationally or due to technical expertise. Don&#39;t endow with power lightly:</p>
+<blockquote>
+<p>With great power comes great responsibility</p>
+</blockquote>
+<p>— Uncle Ben</p>
+<p>We&#39;ve had that problem happen way too many times. It&#39;s better to leave a gap than to shoot yourself in the foot this way.</p>
 <figure class="figure">
   <img src="./assets/leiden-centraal-night.jpg" alt="The Leiden Centraal train station — dark mode." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
 The Leiden Centraal train station — dark mode.
 </figcaption></figure><h2 id="people_management">People management</h2>
-<h3 id="people_can_also_be_tough">People can also be tough</h3>
+<h3 id="people_can_also_be_tough">People can <em>also</em> be tough</h3>
 <ul>
 <li><p>Again, there are a lot of difficulties you&#39;ll face when you&#39;re trying to get people to collaborate to see this through. There&#39;s some similar questions to ask yourselves. The first is how do you find someone to do the boring work? There will be a lot of it, filling spreadsheets, searching for manuals... Especially if you have to hold events and have a social presence too </p>
 </li>
