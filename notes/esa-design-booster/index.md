@@ -44,8 +44,6 @@ The training workshop was hosted in the [ESA ESTEC](https://www.esa.int/About_Us
 It's the larger site and the technical heart of ESA.
 I got to navigate through the facilities inside an autonomous shuttle bus you could drive with a joystick and a touchscreen!
 
-\figure{path="./assets/exomars.jpg", caption="<a href='https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars'>Exomars</a> — has life ever existed on Mars?"}
-
 When preparing the material to share, I asked myself: how can I help the candidate teams as much as possible in such little time?
 I decided to structure my talk loosely, with some tips clustered into overlapping categories.
 I'll try to roughly recollect some of the material below.
@@ -83,13 +81,35 @@ Think about what I write and try to understand *why* I write it.
 
 ### Things are tough
 
-- You have to develop skillset from zero — not just technical, but mostly the organizational
-- Almost everything is behind closed doors, you don't even know what's out there, you have to learn but how?
-- You have to find support (e.g. from university)
-- You have to ensure infrastructure (e.g. machines) — might be something very generic to get prototypes, might be something very specific related to your payload. Getting access to required infrastructure might be almost trivial in some cases, near impossible in others. You'll face this sooner or later, start thinking about it as early as possible
-- Invest in open-source and the community. There's people you can learn from, if not teach — talk a little bit about open-source and how it has helped us and others. In any case, do some research for what's out there. \abbr{title="Fly Your Satellite!", abbr="FYS!"} is about CubeSats. CubeSats are very affordable and easy to build and verify, which means in turn that they are very approachable and that a lot of people who are somehow involved with a similar mission do not belong in the space industry, meaning there's a wealth of information that isn't as strictly regulated
-- You get help from ESA, experts... reach out — a lot of experience that you can't find elsewhere. Don't be afraid to ask because it might seem like you haven't done your research; it's an educational program and they want you to succeed. Remember that they've went through the whole journey multiple times. This is very crucial to take advantage of as early as possible. They won't just help you solve problems, they might give you fundamentally new ideas and paths to explore
-- Other teams participate in FYS!, be in touch. In other FYS! versions and other related projects, we've helped and received help
+When you find yourselves in such a project, things can be tough.
+Why?
+Well, for starters:
+You have to develop skillset from zero — not just on the technical side, but mostly on the organizational.
+Almost everything is behind closed doors, you don't even know what's out there, you have to learn but how?
+You have to find support (e.g. from the university).
+You have to ensure infrastructure (e.g. machines).
+This might be something very generic to get prototypes, might be something very specific related to your payload.
+Getting access to required infrastructure might be almost trivial in some cases, near impossible in others.
+You'll face this sooner or later, start thinking about it as early as possible.
+
+So what can you do other than resort to self-sarcasm as a coping method?
+Invest in open-source and the community.
+There's people you can learn from, if not teach.
+Our team has benefited greatly from open-source and open science.
+In any case, do some research and see what's out there.
+\abbr{title="Fly Your Satellite!", abbr="FYS!"} is about CubeSats.
+CubeSats are very affordable and easy to build and verify, which means in turn that they are very approachable and that a lot of people who might be able to help you do not belong in the space industry, meaning there's a wealth of information that isn't as strictly regulated.
+
+Remember that you get help from ESA and the experts.
+Reach out — there's a lot of experience that you can't find elsewhere.
+Don't be afraid to ask because it might seem like you haven't done your homework.
+Keep in mind that it's an educational program and that they want you to succeed.
+They've went through the whole journey multiple times.
+This is very crucial to take advantage of as early as possible.
+They won't just help you solve problems, they might give you fundamentally new ideas and paths to explore.
+Lastly, other teams participate in FYS!, be in touch.
+In other FYS! versions and other related projects, too.
+All in all, we've helped and received a great deal of help.
 
 ### Scale up
 
@@ -117,6 +137,7 @@ Think about what I write and try to understand *why* I write it.
 - Be agile, especially in the beginning. Find what's good for you. Understand _why_ it's good for you - purposely talking in a loose frame and giving general comments, self-reflection is the most important thing
 - Explore a path that you might later on decide that you won't follow, play with the design, the structure, be bold. You have time, you can afford to make mistakes
 
+\figure{path="./assets/exomars.jpg", caption="<a href='https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars'>Exomars</a> — has life ever existed on Mars?"}
 ### Calm down
 
 - You'll screw up, constantly. Relax and learn from it - it sounds very cliché, but it holds so so true. We've had so many situations where things almost derailed and came close to crumbling down because people were losing their minds. Relax, be calm, assess the situation, do your best, learn from any mistakes and move on. In the grand scheme of things, it probably doesn't matter that much
@@ -138,7 +159,9 @@ Think about what I write and try to understand *why* I write it.
 - Always find the next gen, preemptively. Otherwise it will be too late and you'll be patching holes. We've had that problem multiple times
 - More often than not, there's a bigger underlying problem, and it has to do with structure. People are usually not the source of the problem - Don't be too eager to blame something on an individual, dig deeper
     - But people CAN be the source of the problem. Never underestimate that. Especially if they are in a position of power, either organizationally or due to technical expertise
-    - Don't make someone coo lightly (i.e. don't endow with power lightly). We've had that problem happen way too many times. It's better to leave a gap than to shoot yourself in the foot this way 
+    - Don't make someone coo lightly (i.e. don't endow with power lightly). We've had that problem happen way too many times. It's better to leave a gap than to shoot yourself in the foot this way
+
+\figure{path="./assets/leiden-centraal-night.jpg", caption="The Leiden Centraal train station — dark mode."}
 
 ## People management
 
@@ -170,6 +193,8 @@ Think about what I write and try to understand *why* I write it.
     - This might mean not going with the majority. The majority will also blindly follow whatever, it's a formless mass to give shape to (oops)
 - Don't shadow-government much - this all might go against transparency and people will eventually catch up to that. Be transparent almost always
 
+\figure{path="./assets/arles.jpg", caption="The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'>ARLES experiment</a> investigates how liquids evaporate in microgravity."}
+
 ### Help them help you
 
 - People won't do things they don't want to do forever - never forget that, try to find an alternative
@@ -196,8 +221,6 @@ Some other things I wanted to make time to mention but couldn't group with the r
 
 TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that's so so so important (e.g. to screenshot apo random)
 
-\figure{path="./assets/leiden-centraal-night.jpg", caption="The Leiden Centraal train station — dark mode."}
-
 ## Space Biology Payload Challenges
 
 - Miniaturization of cell culturing instrumentation
@@ -207,8 +230,6 @@ TODO: talk about the importance of having a vision, of having some pillars, of y
 - Preparing predictable long-term biological sample storage methods before launch
 - Engineering reliable readouts for cell viability/metabolism
 - Standardization of common wet lab methods to meet space engineering requirements/procedures
-
-\figure{path="./assets/arles.jpg", caption="The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'>ARLES experiment</a> investigates how liquids evaporate in microgravity."}
 
 ## Outro
 
