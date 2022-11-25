@@ -56,7 +56,7 @@ I've been involved in this effort since almost the very beginnings, when everyth
 I'm currently getting to wrap up my studies, and I've joined the team not long after I enrolled in the university, I've worked in different aspects of the project, technical and not, and currently I'm responsible for the science-y stuff.
 
 The AcubeSAT nanosatellite undertaking began late 2018.
-We've designed and are developing a \abbr{title="3-Unit — 3 10cm cubes", abbr="3U"} CubeSat which holds a 2U biology payload.
+We've designed and are developing a \abbr{title="3-Unit, three cubes of 10 cm each", abbr="3U"} CubeSat which holds a 2U biology payload.
 Our mission is two-fold: we want to establish our idea for a modular platform to perform space biology experiments in CubeSats/small satellites as a working prototype.
 Also, we aim to probe the way conditions in \abbr{title="Low Earth Orbit", abbr="LEO"} (mainly microgravity and cosmic radiation) affect yeast cells at the gene expression level.
 
@@ -64,7 +64,8 @@ To achieve the mission goals, the 2U payload is a pressurized vessel which hosts
 We'll culture cells in-orbit and then see how their gene expression is altered through acquiring images via our DIY microscope-like imaging system.
 We aim to run the same experiment in three distinct timepoints across the duration of our mission, and to do this we've been using a small platform called a \abbr{title="Lab-on-a-Chip", abbr="LoC"} to hold the cells and interface them with the various fluidics in a miniaturized version of a biology lab.
 
-Our high-level roadmap looks like: we've submitted our proposal in October 2019, took part in the selection workshop hosted here in December 2019, got accepted in February 2020, submitted the \abbr{title="Technical Specification Verification Control Document", abbr="TS-VCD"} in April, submitted the first version of \abbr{title="Critical Design Review", abbr="CDR"} in October and had it approved in September 2021, marking the end of the design phase and the beginning of the construction/testing phase.
+Our high-level roadmap is roughly the following:
+We've submitted our proposal in October 2019, took part in the selection workshop hosted here in December 2019, got accepted in February 2020, submitted the \abbr{title="Technical Specification Verification Control Document", abbr="TS-VCD"} in April, submitted the first version of \abbr{title="Critical Design Review", abbr="CDR"} in October and had it approved in September 2021, marking the end of the design phase and the beginning of the construction/testing phase.
 Right now we are getting ready to run a series of testing campaigns at the ESA facilities, then pass the \abbr{title="Manufacturing Readiness Review", abbr="MRR"} and be in-orbit by late 2023/early 2024.
 
 ## Project management
@@ -116,11 +117,15 @@ All in all, we've helped and received a great deal of help.
 
 ### Scale up
 
-There's no leadership outside of the team, the organization has to be DIY - biggest factor towards your success, no one will help you, and you won't have expertise.
+There's no leadership outside of the team, the organization has to be DIY.
+That might very well be the biggest factor towards your success.
+No one will help you, and you won't have expertise.
 It's one thing to learn how to blink LEDs, and another to learn how to run a team of 40 people to meet strict deadlines in a very demanding project.
+
 COVID-19 hit, and it hit hard.
-Why?
-That's a good segue, we had to rethink our organizational structure due to limited physical access.
+Why am I saying this?
+Because it's a good segue.
+We had to rethink our organizational structure due to limited physical access.
 We found a hybrid scheme to work best [^3].
 You'll eventually have to scale up, time and time again.
 How?
@@ -171,6 +176,7 @@ Akin's Law 11:
 You have time, you can afford to make mistakes.
 
 \figure{path="./assets/exomars.jpg", caption="<a href='https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars'>Exomars</a> — has life ever existed on Mars?"}
+
 ### Calm down
 
 You'll screw up, *constantly*.
@@ -204,7 +210,7 @@ We didn't and cracks started to appear soon enough; it costs us a lot in the end
 
 Be afraid of the [bus factor](https://www.wikiwand.com/en/Bus_factor).
 The bus factor is a crude way to assess how important someone is for the project.
-The way you do that is you ask yourselves, "what if this person was to get hit by a bus tomorrow?".
+The way you do that is you ask yourself, "what if this person was to get hit by a bus tomorrow?".
 You *will* come across it.
 Some times there won't be a lot you'll be able to do to mitigate it.
 But also always remember: no one is irreplaceable.
@@ -213,7 +219,7 @@ You're capable, don't forget that.
 Also trust your gut, like you should do in interviews.
 
 This is a very long-term project, it therefore *transcends* individuals.
-As we've already stressed, always always always think about the long-term.
+As we've already stressed, always, always, always think about the long-term.
 Have a plan B, C, D, ... (even about design, _even_ about people).
 A phrase of a friend that I feel encapsulates all of this well:
 > It's a marathon, not a sprint
@@ -247,22 +253,73 @@ It's better to leave a gap than to shoot yourself in the foot this way.
 
 ### People can *also* be tough
 
-- Again, there are a lot of difficulties you'll face when you're trying to get people to collaborate to see this through. There's some similar questions to ask yourselves. The first is how do you find someone to do the boring work? There will be a lot of it, filling spreadsheets, searching for manuals... Especially if you have to hold events and have a social presence too 
-- It's a demanding project without rewards (monetary, ECTS...) - how do you get people to do volunteering work? Because they want to do it. Therefore, you have to make sure they want to do it *a lot*
-- How do you get ordinary people to do the extraordinary? You'll have to face great technical challenges while at the same time, constantly support and get the others pumped, be there to mediate in case any conflicts occur, etc.
-- Taking initiatives is vital - that has been one of our biggest complaints about members. There's new ideas someone has to think, and there's work that no one will do unless someone decides to take it up by themselves. It also helps tremendously in fostering an environment where people feel their peers are motivated
-- How do you ensure meeting participation?
-- HR - remember that you should think about how you approach these things too. A good example and place to start might be "Leadership That Gets Results" by Daniel Goleman in HBR. This is recommended for you to see that there's a lot of thought that can go behind things (TODO the report about collective meetings) and a lot of different ways you can approach someone
-- Physical presence is vital
-- Expand beyond the scope of the project, hang out, do cool things on the side - This team was to me something way way more than just the project. I've learned a ton, met cool people, made friends, found out what I want to do academically, etc. And this is what's kept me working in the project for so long ;)
-- The project requires heavy investment. This means it will overlap with other areas of the member's lives. You have to take that into account and learn about other areas of their life in order to effectively support them. This goes hand in hand with forming groups and being part of a gang
+Again, there are a lot of difficulties you'll face when you're trying to get people to collaborate to see this through.
+There's some questions to ponder on.
+How do you find someone to do the boring work?
+There will be a lot of it, filling spreadsheets, searching for manuals...
+Especially if you have to hold events and have a social presence too. 
+
+It's a demanding project without short-term tangible rewards (monetary, ECTS ...).
+So how do you get people to do unpaid work?
+They'll do it if they want to do it.
+Therefore, you have to make sure they want to do it *a lot*.
+
+How do you get ordinary people to do the extraordinary?
+You'll have to face great technical challenges.
+At the same time, you'll have to constantly support and get the others pumped.
+You'll have to be there to mediate in case any conflicts occur, etc.
+
+Taking initiatives is vital — that has been one of our biggest complaints about our members.
+There's new ideas someone has to think.
+There's work that no one will do unless someone decides to take it up by themselves.
+It also helps tremendously in fostering an environment where people feel their peers are motivated.
+*Building a DIY arcade cabinet can also help you, check [^4]*.
+
+How do you ensure meeting participation?
+Remember that you should think about how you approach these things too.
+A good example and place to start might be [^5].
+This is recommended for you to see that there's a lot of thought that can go behind all this.
+Meetings facilitate collective intelligence.
+Have you thought about that? [^6]
+There's a lot of different ways you can approach people and people-problems.
+
+Physical presence is vital.
+Expand beyond the scope of the project.
+*Hang out*, do cool things on the side.
+SpaceDot is to me something way, way more than just the project.
+I've learned a ton, met cool people, made friends, found out what I want to pursue in academia, and more.
+And this is what's kept me working in the project for so long :D
+
+If you want to go all the way, *go all the way*.
+The project requires heavy investment.
+It will take a toll.
+It will also overlap with other areas of your peers' lives.
+You have to take that into account and learn about their life in order to effectively support them.
+This goes hand-in-hand with forming groups and being part of a gang, crew, band, squad, syndicate.
 
 ### Talk!
 
-- ALWAYS face your problems, always speak, always communicate - hoarding problems under the rag instead of facing them is a very well known human tendency. I find that the more long term the thing you're not doing is, the more catastrophic the consequences will be when the time comes to face them. Again, this sounds like a cliché, "just do everything in time" so I will give you an example (TODO: mention EPS)
-- Communicate problems to ESA - again, they're hear to help. The sooner the learn about something the better. They'll always appreciate you being upfront, trust me. Don't put yourselves into rabbit holes you'll then have to dig out of
--  Feedback is crucial, it's all about feedback cycles - This is by far the most important think to take out of this talk. Feedback requires good communication channels, so first build these. Then learn to give feedback. Learn to receive feedback. Provide people with a lot of different ways they can give feedback. Make sure that there's always more than one person (that hopefully occupies a different position in the team) for someone to speak to. Feedback cycles is the way we get better. Again, make sure to do everything you can to have people a) giving feedback and b) receiving feedback and acting on it
--  Praise in public blame in private (not always) - a good reminder to keep in mind mostly the praising 
+*Always* face your problems, always speak, always communicate.
+Hoarding problems under the rag instead of facing them is a very well known human tendency.
+Communicate problems to ESA.
+Again, they're hear to help.
+The sooner they learn about something the better.
+They'll always appreciate you being upfront, trust me.
+Don't put yourselves into rabbit holes you'll then have to dig out of.
+
+Feedback is crucial, it's all about feedback cycles [^7].
+This is by far the most important think to take out of this article.
+Feedback requires good communication channels, so first build these.
+Then learn to *give* feedback.
+Learn to *receive* feedback.
+Provide people with a lot of different ways they can give feedback.
+Make sure that there's always more than one person (that hopefully occupies a different position in the team) for someone to speak to.
+Feedback cycles is the way we get better.
+Again, make sure to do everything you can to have people giving feedback, as well as receiving feedback and acting on it.
+
+> Praise in public blame in private
+
+Well, not always but you get the idea.
 
 ### The leadership behind the leadership
 
@@ -318,3 +375,7 @@ TODO: talk about the importance of having a vision, of having some pillars, of y
 [^1]: Poghosyan, A., & Golkar, A. (2017). CubeSat evolution: Analyzing CubeSat capabilities for conducting science missions. *Progress in Aerospace Sciences, 88*, 59-83.
 [^2]: Sweeting, M. (2018). Modern small satellites-changing the economics of space. *Proceedings of the IEEE, 106(3)*, 343-361.
 [^3]: Retselis, A. F., Papafotiou, T., & Kanavouras, K. (2022, April). Adaptation of the AcubeSAT nanosatellite project into remote working during the COVID-19 era. In *4th Symposium on Space Educational Activities*. Universitat Politècnica de Catalunya.
+[^4]: Clair, J. S. (2011). *Project Arcade: Build Your Own Arcade Machine* (Vol. 52). John Wiley and Sons.
+[^5]: Goleman, D. (2017). Leadership that gets results. In *Leadership Perspectives* (pp. 85-96). Routledge.
+[^6]: Cooren, F. (2004). The communicative achievement of collective minding: Analysis of board meeting excerpts. *Management Communication Quarterly*, 17(4), 517-551.
+[^7]: Hattie, J., & Timperley, H. (2007). The power of feedback. *Review of educational research*, 77(1), 81-112.
