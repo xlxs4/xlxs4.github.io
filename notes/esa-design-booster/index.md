@@ -95,6 +95,9 @@ You'll face this sooner or later, start thinking about it as early as possible.
 So what can you do other than resort to self-sarcasm as a coping method?
 Invest in open-source and the community.
 There's people you can learn from, if not teach.
+[Akin's Law](https://spacecraft.ssl.umd.edu/akins_laws.html) 43:
+> You really understand something the third time you see it (or the first time you teach it.)
+
 Our team has benefited greatly from open-source and open science.
 In any case, do some research and see what's out there.
 \abbr{title="Fly Your Satellite!", abbr="FYS!"} is about CubeSats.
@@ -130,7 +133,7 @@ Don't be pushing things back because you have a deadline to meet.
 Don't be afraid to invest early, plant the seeds; they will bloom later.
 Try maintain information transfer at all costs — that was our biggest problem.
 Documentation is the best remedy to this problem.
-As per [Akin's Law](https://spacecraft.ssl.umd.edu/akins_laws.html) 22: 
+As per Akin's Law 22: 
 > When in doubt, document. (Documentation requirements will reach a maximum shortly after the termination of a program.)
 
 ### Organization: the small
@@ -163,16 +166,36 @@ Find what's good for you.
 Understand _why_ it's good for you.
 Self-reflection is the most important thing.
 Explore a path that you might later on decide that you won't follow, play with the design, the structure, be bold.
+Akin's Law 11:
+> Sometimes, the fastest way to get to the end is to throw everything out and start over.
 You have time, you can afford to make mistakes.
 
 \figure{path="./assets/exomars.jpg", caption="<a href='https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars'>Exomars</a> — has life ever existed on Mars?"}
 ### Calm down
 
-- You'll screw up, constantly. Relax and learn from it - it sounds very cliché, but it holds so so true. We've had so many situations where things almost derailed and came close to crumbling down because people were losing their minds. Relax, be calm, assess the situation, do your best, learn from any mistakes and move on. In the grand scheme of things, it probably doesn't matter that much
-- Diffuse situations, avoid crowd mentality - we've had "critical" situations dozens of times, we're still here
-- Remember, everything's gonna be alright
-- If it isn't, not to worry. It's an educational program - I'm not trying to set the bar low here, things are very challenging and you should strive for excellence, but you have to understand the nature of the program and that the ESA people are here to help and that they know you will commit a lot of mistakes. The thought that they expect you to make mistakes is very liberating, because you will make mistakes and you might think that the consequences will be way bigger than they actually will be. I've noticed that they even get anxious if time passes and you don't seem to be having any problems. Plus, having a problem is great because you know that something is wrong, you probably know what it is, and you will eventually figure out a way to fix things. That's way better than sitting awkwardly wondering whether there's a problem looming around the corner waiting to bite you when you're not looking 
-- Try to build a momentum, expect a momentum to be built, then ride it, but guide it too; don't let it carry you - I keep saying that things are difficult; you'll find it difficult at first with a lot of things, for example with the organizational structure. It will require a lot of effort in the beginning, it's like a slope where, if you're doing it right, little by little it will get easier with time. Our case happened after we delivered the first CDR version successfully, things somewhat got automated, everyone knew what to work on, communication was frictionless, new members were seamlessly integrated, but you have to always keep things in check and revisit things. We did this mistake and cracks started to appear; it costs us a lot in the end.
+You'll screw up, *constantly*.
+Relax and learn from it.
+We've had so many situations where things almost derailed and came close to crumbling down because people were losing their minds.
+*Relax*, be calm, assess the situation, do your best, learn from any mistakes and move on.
+In the grand scheme of things, it probably doesn't matter that much.
+Diffuse situations, avoid crowd mentality - we've had "critical" situations dozens of times, we're still here
+Remember, 🎵 everything's gonna be alright 🎵.
+
+If it isn't, not to worry.
+It's an educational program.
+I'm not trying to set the bar low here, things are very challenging and you should strive for excellence, but you have to understand the nature of the program and that the ESA people are here to help and that they know you will commit a lot of mistakes.
+The thought that they expect you to make mistakes is very liberating, because you will make mistakes and you might think that the consequences will be way bigger than they actually will be.
+I've noticed that they even get anxious if time passes and you don't seem to be having any problems.
+Plus, having a problem is great because you know that something is wrong, you probably know what it is, and you will eventually figure out a way to fix things.
+That's *way* better than sitting awkwardly wondering whether there's a problem looming around the corner waiting to bite you when you're not looking.
+  
+Try to build a momentum, expect a momentum to be built.
+Then, ride it, but guide it too — don't let it carry you.
+I keep saying that things are difficult — you'll find it difficult at first with a lot of things, for example with the organizational structure.
+It will require a lot of effort in the beginning.
+It's like a slope where, if you're doing it right, little by little it will get easier with time.
+Our case happened after we delivered the first CDR version successfully, things somewhat got automated, everyone knew what to work on, communication was frictionless, new members were seamlessly integrated, but you have to always keep things in check and constantly revisit.
+We didn't and cracks started to appear soon enough; it costs us a lot in the end.
 
 ### The bus factor
 
