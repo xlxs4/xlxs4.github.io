@@ -185,7 +185,7 @@ If it isn't, not to worry.
 It's an educational program.
 I'm not trying to set the bar low here, things are very challenging and you should strive for excellence, but you have to understand the nature of the program and that the ESA people are here to help and that they know you will commit a lot of mistakes.
 The thought that they expect you to make mistakes is very liberating, because you will make mistakes and you might think that the consequences will be way bigger than they actually will be.
-I've noticed that they even get anxious if time passes and you don't seem to be having any problems.
+
 Plus, having a problem is great because you know that something is wrong, you probably know what it is, and you will eventually figure out a way to fix things.
 That's *way* better than sitting awkwardly wondering whether there's a problem looming around the corner waiting to bite you when you're not looking.
   
@@ -194,29 +194,58 @@ Then, ride it, but guide it too — don't let it carry you.
 I keep saying that things are difficult — you'll find it difficult at first with a lot of things, for example with the organizational structure.
 It will require a lot of effort in the beginning.
 It's like a slope where, if you're doing it right, little by little it will get easier with time.
-Our case happened after we delivered the first CDR version successfully, things somewhat got automated, everyone knew what to work on, communication was frictionless, new members were seamlessly integrated, but you have to always keep things in check and constantly revisit.
+
+Our case happened after we delivered the first CDR version successfully.
+Things somewhat got automated, everyone knew what to work on, communication was frictionless, new members were seamlessly integrated
+No matter what, you have to always keep things in check and constantly revisit.
 We didn't and cracks started to appear soon enough; it costs us a lot in the end.
 
 ### The bus factor
 
-- Be afraid of the [bus factor](https://www.wikiwand.com/en/Bus_factor). The bus factor is when ... and you will come across it and some times there won't be a lot of things you'll be able to do to mitigate it. But also always remember: NO ONE is irreplaceable - (each time we chose to go with someone's flow, it didn't work. You're capable, don't forget that). Also trust your gut, like you should do in interviews.
-- This is a very long-term project, it therefore transcends individuals - as we've already stressed, always always always think about the long-term
-- Have a plan B, C, D, ... (even about design, _even_ about people (just need it to work - Akin's Law))
-- It's a marathon, not a sprint - a phrase of a friend that I feel encapsulates all of this well
-    - (... but there will be sprints)
+Be afraid of the [bus factor](https://www.wikiwand.com/en/Bus_factor).
+The bus factor is a crude way to assess how important someone is for the project.
+The way you do that is you ask yourselves, "what if this person was to get hit by a bus tomorrow?".
+You *will* come across it.
+Some times there won't be a lot you'll be able to do to mitigate it.
+But also always remember: no one is irreplaceable.
+Each time we chose to go with someone's flow after a certain threshold was crossed, it never worked.
+You're capable, don't forget that.
+Also trust your gut, like you should do in interviews.
 
-### People and problems :(
+This is a very long-term project, it therefore *transcends* individuals.
+As we've already stressed, always always always think about the long-term.
+Have a plan B, C, D, ... (even about design, _even_ about people).
+A phrase of a friend that I feel encapsulates all of this well:
+> It's a marathon, not a sprint
 
-- Always find the next gen, preemptively. Otherwise it will be too late and you'll be patching holes. We've had that problem multiple times
-- More often than not, there's a bigger underlying problem, and it has to do with structure. People are usually not the source of the problem - Don't be too eager to blame something on an individual, dig deeper
-    - But people CAN be the source of the problem. Never underestimate that. Especially if they are in a position of power, either organizationally or due to technical expertise
-    - Don't make someone coo lightly (i.e. don't endow with power lightly). We've had that problem happen way too many times. It's better to leave a gap than to shoot yourself in the foot this way
+... but there will be sprints ;)
+
+### Problems
+
+Always find the next generation that will succeed you and/or your peers.
+Do that *preemptively*.
+Otherwise, it will be too late and you'll be patching holes.
+We've faced this problem multiple times.
+More often than not, there's a bigger underlying problem, and it has to do with structure.
+People are *usually* not the source of the problem.
+Don't be too eager to blame something on an individual, dig deeper.
+
+But people *can* be the source of the problem. 
+Never underestimate that.
+Especially if they are in a position of power, either organizationally or due to technical expertise.
+Don't endow with power lightly:
+> With great power comes great responsibility
+
+— Uncle Ben
+
+We've had that problem happen way too many times.
+It's better to leave a gap than to shoot yourself in the foot this way.
 
 \figure{path="./assets/leiden-centraal-night.jpg", caption="The Leiden Centraal train station — dark mode."}
 
 ## People management
 
-### People can also be tough
+### People can *also* be tough
 
 - Again, there are a lot of difficulties you'll face when you're trying to get people to collaborate to see this through. There's some similar questions to ask yourselves. The first is how do you find someone to do the boring work? There will be a lot of it, filling spreadsheets, searching for manuals... Especially if you have to hold events and have a social presence too 
 - It's a demanding project without rewards (monetary, ECTS...) - how do you get people to do volunteering work? Because they want to do it. Therefore, you have to make sure they want to do it *a lot*
