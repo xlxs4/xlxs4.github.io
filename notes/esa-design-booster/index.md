@@ -347,20 +347,30 @@ Be transparent, it almost always pays off.
 
 ### Help them help you
 
-People won't do things they don't want to do forever - never forget that, try to find an alternative
-There's always someone out there that wants to work on what you don't. Find them
-Newer members can find something more exciting, _resource allocation_
-Also talk about the chef tasks book ("Work Clean"), you should also include things in feedback on how to work more efficiently, etc.
+People won't do things they don't want to do forever.
+*Never* forget that, always try to find them an alternative.
+Wisdom has it there's always someone out there that wants to work on what you don't.
+Find them.
+Newer members might find something more exciting.
+Use that and it's good _resource allocation_.
+Don't shy away from talking to your peers about non-technical issues.
+You can always help them learn how to work more efficiently, for instance.
+A good example would be a talk on [building a second brain](https://xlxs4.github.io/notes/second-brain/).
 
 ### Help them help you: Vol 2
 
-Don't leave anyone on their own
-Set group tasks
-Set small, well-defined tasks. Make the members feel and visualize the progress
-Make sure everyone is on the same page regarding the high-level roadmap
-Give people things they might not love but that are important, and things that aren't important but they love doing - try to find asteris top model
-Progress is seldom linear, or apparent. Try to make it apparent, but have that in mind
-Involve people and throw problems at them (but always be there when needed) - don't be afraid to throw problems at them, that's how they grow
+Don't leave anyone on their own.
+Set group tasks.
+Set small, well-defined tasks.
+Make the members feel and visualize the progress.
+Make sure everyone is on the same page regarding the high-level roadmap.
+Give people things they might not love but that are important, and things that aren't important but they love doing [^8].
+Progress is seldom linear, or apparent.
+Try to make it apparent, but have that in mind.
+Involve people and throw problems at them (but always be there when needed).
+Don't be afraid to throw problems at them, that's how they grow.
+
+\figure{path="./assets/learning-curve.png", caption="Your project progress curve compared to other projects."}
 
 ## Space Biology Payload Challenges
 
@@ -371,6 +381,10 @@ Involve people and throw problems at them (but always be there when needed) - do
 - Preparing predictable long-term biological sample storage methods before launch
 - Engineering reliable readouts for cell viability/metabolism
 - Standardization of common wet lab methods to meet space engineering requirements/procedures
+
+## Other teams
+
+TODO
 
 ## Outro
 
@@ -385,3 +399,4 @@ TODO: talk about the importance of having a vision, of having some pillars, of y
 [^5]: Goleman, D. (2017). Leadership that gets results. In *Leadership Perspectives* (pp. 85-96). Routledge.
 [^6]: Cooren, F. (2004). The communicative achievement of collective minding: Analysis of board meeting excerpts. *Management Communication Quarterly*, 17(4), 517-551.
 [^7]: Hattie, J., & Timperley, H. (2007). The power of feedback. *Review of educational research*, 77(1), 81-112.
+[^8]: Alon, U. (2010). How to build a motivated research group. *Molecular cell*, 37(2), 151-152.
