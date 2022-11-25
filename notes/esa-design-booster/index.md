@@ -154,11 +154,16 @@ It saves time and effort, while talking is just an inefficient back-and-forth.
 
 ### ... and the big
 
--  You need \abbr{title="SYstems Engineers", abbr="SYE"}, aka systems overview: for management, always see the forest, not the tree - how do all the pieces interact with all the other pieces?
-- Always be wary of cross-dependencies - some work that needs to be done needs other work to be done first; or I'm needed at A but I'm also needed at B
-- Constantly track things, move deadlines appropriately, be on top of things - you'll come to find out that you'll be setting a deadline and it will be way overdue and then you'll have to set a deadline anew and do that because it helps you know where you are and where you need to at all times
-- Be agile, especially in the beginning. Find what's good for you. Understand _why_ it's good for you - purposely talking in a loose frame and giving general comments, self-reflection is the most important thing
-- Explore a path that you might later on decide that you won't follow, play with the design, the structure, be bold. You have time, you can afford to make mistakes
+You need \abbr{title="SYstems Engineers", abbr="SYE"}, aka systems overview: for management, always see the forest, not the tree - how do all the pieces interact with all the other pieces?
+Always be wary of cross-dependencies.
+Constantly track things, move deadlines appropriately, be on top of things - you'll come to find out that you'll be setting a deadline and it will be way overdue and then you'll have to set a deadline anew — do that.
+
+Be agile, especially in the beginning.
+Find what's good for you.
+Understand _why_ it's good for you.
+Self-reflection is the most important thing.
+Explore a path that you might later on decide that you won't follow, play with the design, the structure, be bold.
+You have time, you can afford to make mistakes.
 
 \figure{path="./assets/exomars.jpg", caption="<a href='https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/Exploration/ExoMars'>Exomars</a> — has life ever existed on Mars?"}
 ### Calm down
