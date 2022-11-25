@@ -273,7 +273,7 @@ Taking initiatives is vital — that has been one of our biggest complaints abou
 There's new ideas someone has to think.
 There's work that no one will do unless someone decides to take it up by themselves.
 It also helps tremendously in fostering an environment where people feel their peers are motivated.
-*Building a DIY arcade cabinet can also help you, check [^4]*.
+*Building a DIY arcade cabinet can also help you*, check ➡️ [^4].
 
 How do you ensure meeting participation?
 Remember that you should think about how you approach these things too.
@@ -323,40 +323,44 @@ Well, not always but you get the idea.
 
 ### The leadership behind the leadership
 
-- Set up a "core" team of people to serve as the backbone of the team at all times - This is, organizationally, what helped us make it. It also affected our progress severely when we lacked it
-- Who thinks about the team and not just technical work or events? - That's how you can find the people you'll rely upon
-- Decisions will always upset some people. The question is which - If all goes south, side with the ones that will carry the team on their shoulders. They're your most important asset. Always consider how a decision might affect them and their motivation
-- Invest in those you believe will carry the team forward, not from a technical viewpoint
-    - This might mean not going with the majority. The majority will also blindly follow whatever, it's a formless mass to give shape to (oops)
-- Don't shadow-government much - this all might go against transparency and people will eventually catch up to that. Be transparent almost always
+Set up a "core" group of people to serve as the backbone of the team at all times.
+This is, organizationally, mainly what helped us make it.
+It also affected our progress severely when we lacked it.
+
+Who thinks about the team and not just technical work or events?
+That's how you can find the people you'll rely upon.
+Decisions will always upset some people.
+The question is which.
+
+If all goes south, side with the ones that will carry the team on their shoulders.
+They're your most important asset.
+Always consider how a decision might affect them *and* their motivation.
+Invest in those you believe will carry the team forward, not from a technical viewpoint.
+This might mean not siding with the majority.
+The majority will also blindly follow whatever, if you give it enough time.
+
+But!
+Don't shadow-government much — this all goes against being transparent and people will eventually catch up.
+Be transparent, it almost always pays off.
 
 \figure{path="./assets/arles.jpg", caption="The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'>ARLES experiment</a> investigates how liquids evaporate in microgravity."}
 
 ### Help them help you
 
-- People won't do things they don't want to do forever - never forget that, try to find an alternative
-- There's always someone out there that wants to work on what you don't. Find them
-    - Newer members can find something more exciting, _resource allocation_
-    - Also talk about the chef tasks book ("Work Clean"), you should also include things in feedback on how to work more efficiently, etc.
+People won't do things they don't want to do forever - never forget that, try to find an alternative
+There's always someone out there that wants to work on what you don't. Find them
+Newer members can find something more exciting, _resource allocation_
+Also talk about the chef tasks book ("Work Clean"), you should also include things in feedback on how to work more efficiently, etc.
 
 ### Help them help you: Vol 2
 
-- Don't leave anyone on their own
-- Set group tasks
-- Set small, well-defined tasks. Make the members feel and visualize the progress
-- Make sure everyone is on the same page regarding the high-level roadmap
-- Give people things they might not love but that are important, and things that aren't important but they love doing - try to find asteris top model
-- Progress is seldom linear, or apparent. Try to make it apparent, but have that in mind
-- Involve people and throw problems at them (but always be there when needed) - don't be afraid to throw problems at them, that's how they grow
-
-## Fluff
-
-Some other things I wanted to make time to mention but couldn't group with the rest of the topics
-
-- Sometimes you have to be quick to arrive at a decision. That might mean you won't have time to get everyone to agree with said decision
-- Recruitment is key. You'll also need to establish presence in the uni(s) to get people join
-
-TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that's so so so important (e.g. to screenshot apo random)
+Don't leave anyone on their own
+Set group tasks
+Set small, well-defined tasks. Make the members feel and visualize the progress
+Make sure everyone is on the same page regarding the high-level roadmap
+Give people things they might not love but that are important, and things that aren't important but they love doing - try to find asteris top model
+Progress is seldom linear, or apparent. Try to make it apparent, but have that in mind
+Involve people and throw problems at them (but always be there when needed) - don't be afraid to throw problems at them, that's how they grow
 
 ## Space Biology Payload Challenges
 
@@ -369,6 +373,8 @@ TODO: talk about the importance of having a vision, of having some pillars, of y
 - Standardization of common wet lab methods to meet space engineering requirements/procedures
 
 ## Outro
+
+TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that's so so so important (e.g. to screenshot apo random)
 
 \figure{path="./assets/schipol.jpg", caption="The Amsterdam Schipol airport at dawn."}
 
