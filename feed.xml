@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li><li>Getting There</li><li>Refresher</li><li>Project management<ol><li>Things are tough</li><li>Scale up</li><li>Organization: the small</li><li>... and the big</li><li>Calm down</li><li>The bus factor</li><li>Problems</li></ol></li><li>People management<ol><li>People can <em>also</em> be tough</li><li>Talk&#33;</li><li>The leadership behind the leadership</li><li>Help them help you</li><li>Help them help you: Vol 2</li></ol></li><li>Space Biology Payload Challenges</li><li>Other teams</li><li>Outro</li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/esa/">esa</a>, <a href="https://xlxs4.github.io/tag/space/">space</a></div><div class="franklin-toc"><ol><li>ESA Design Booster</li><li>Getting There</li><li>Refresher</li><li>Project management<ol><li>Things are tough</li><li>Scale up</li><li>Organization: the small</li><li>... and the big</li><li>Calm down</li><li>The bus factor</li><li>Problems</li></ol></li><li>People management<ol><li>People can <em>also</em> be tough</li><li>Talk&#33;</li><li>The leadership behind the leadership</li><li>Help them help you</li><li>Help them help you: Vol 2</li></ol></li><li>Space Biology Payload Challenges</li><li>Teams</li><li>Outro</li></ol></div>
 <h2 id="esa_design_booster">ESA Design Booster</h2>
 <p>The <a href="https://www.esa.int/Education/CubeSats_-_Fly_Your_Satellite/Fly_Your_Satellite&#33;_Design_Booster_pilot?fbclid&#61;IwAR3hcjAva089hKRr8a74cB60zLhuBLy3mbpIcjtmc6AKB5Er1PXpcs9zvpw">Fly Your Satellite&#33; Design Booster</a> is a pilot program of the <a href="https://www.esa.int/">European Space Agency &#40;ESA&#41;</a>. It&#39;s aimed at students working in the design of a CubeSat mission. <a href="https://www.wikiwand.com/en/CubeSat">CubeSat</a>s are miniaturized satellites that have standardized form — in LEGO brick fashion, they&#39;re shaped as \(n \ge 1\) 10cm cubes, stacked vertically. It&#39;s an idea to accelerate and democratize space missions<sup id="fnref:1">[1]</sup>, cutting down on the cost<sup id="fnref:2">[2]</sup> and effort required to get the spacecraft in-orbit.</p>
 <p>Design Booster aims to assist the teams by providing further training during the full project lifecycle and across a wide spectrum of areas from aerospace engineering to project management or even operating the CubeSat while it&#39;s in-orbit. The program is split in distinct phases that are adapted from the typical development cycle of space missions and it follows a fixed scheduled spanning 1.5 years.</p>
@@ -162,49 +162,52 @@ The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'
 Your project learning curve compared to other projects.
 </figcaption></figure><h2 id="space_biology_payload_challenges">Space Biology Payload Challenges</h2>
 <ul>
-<li><p>Miniaturization of cell culturing instrumentation</p>
+<li><p>Miniaturization of cell culturing instrumentation.</p>
 </li>
-<li><p>Ensuring biocompatibility of payload materials</p>
+<li><p>Ensuring biocompatibility of payload materials.</p>
 </li>
-<li><p>Regulating temperature and pressure to decouple cell survival-behavior from other space stressors &#40;e.g. radiation&#41;</p>
+<li><p>Regulating temperature and pressure to decouple cell survival-behavior from other space stressors &#40;e.g. radiation&#41;.</p>
 </li>
-<li><p>Using methods for autonomous measurements &#40;e.g. spectroscopy, microscopy&#41;</p>
+<li><p>Using methods for autonomous measurements &#40;e.g. spectroscopy, microscopy&#41;.</p>
 </li>
-<li><p>Preparing predictable long-term biological sample storage methods before launch</p>
+<li><p>Preparing predictable long-term biological sample storage methods before launch.</p>
 </li>
-<li><p>Engineering reliable readouts for cell viability/metabolism</p>
+<li><p>Engineering reliable readouts for cell viability/metabolism.</p>
 </li>
-<li><p>Standardization of common wet lab methods to meet space engineering requirements/procedures</p>
+<li><p>Standardization of common wet lab methods to meet space engineering requirements/procedures.</p>
 </li>
 </ul>
-<h2 id="other_teams">Other teams</h2>
+<h2 id="teams">Teams</h2>
+<p>12 teams developing a CubeSat were shortlisted in the &quot;Training and Selection&quot; phase:</p>
 <ul>
-<li><p><a href="https://polispace.it/6s-cubesat-project/">6S</a> by PoliSpace: flight-proof and characterize solar cells and structural battery payloads. From Italy, 1U</p>
+<li><p><a href="https://polispace.it/6s-cubesat-project/">6S</a> by PoliSpace: flight-proof and characterize solar cells and structural battery payloads. From Italy, 1U.</p>
 </li>
-<li><p>AlbaSat - Italy</p>
+<li><p>AlbaSat - Italy.</p>
 </li>
-<li><p>ANTAUES - Portugal</p>
+<li><p>ANTAUES - Portugal.</p>
 </li>
-<li><p><a href="https://www.nottingham.ac.uk/aerospace/space/student-space-programme/missions/index.aspx">Astrojam</a> by the Aerospace department of the University of Nottingham: GNSS interference mapping and characterization payload. From UK</p>
+<li><p><a href="https://www.nottingham.ac.uk/aerospace/space/student-space-programme/missions/index.aspx">Astrojam</a> by the Aerospace department of the University of Nottingham: GNSS interference mapping and characterization payload. From UK.</p>
 </li>
 <li><p><a href="https://orbitntnu.com/biosat/">BioSat</a> by <a href="https://orbitntnu.com/">Orbit NTNU</a>: sustain a plan in <abbr title="Sun-Synchronous Orbit">SSO</abbr>
- &#40;400-600km&#41;. From Norway</p>
+ &#40;400-600km&#41;. From Norway.</p>
 </li>
-<li><p><a href="https://uvigospacelab.space/en/bixo/">BIXO</a> by <a href="https://uvigospacelab.space/en/">UVigo SpaceLab</a>: probe quorum sensing in bacteria inside millifluidic cards. From Spain, 2U</p>
+<li><p><a href="https://uvigospacelab.space/en/bixo/">BIXO</a> by <a href="https://uvigospacelab.space/en/">UVigo SpaceLab</a>: probe quorum sensing in bacteria inside millifluidic cards. From Spain, 2U.</p>
 </li>
-<li><p><a href="https://www.upv.es/noticias-upv/noticia-13869-pluton-upv-es.html">Estigia</a> by the Valencia Polytechnic University: AI chatbot for the public to communicate with the satellite. From Spain, 2U</p>
+<li><p><a href="https://www.upv.es/noticias-upv/noticia-13869-pluton-upv-es.html">Estigia</a> by the Valencia Polytechnic University: AI chatbot for the public to communicate with the satellite. From Spain, 2U.</p>
 </li>
 <li><p><a href="https://www.s5lab.space/">LEDSAT 2</a> from <a href="Sapienza Space Systems and Space Surveillance Laboratory">S5Lab</a> - Italy</p>
 </li>
-<li><p><a href="https://rospin.org/rospin-sat-1/">ROSPIN-SAT-1</a> by <a href="https://rospin.org/">ROSPIN</a>: monitor Romania&#39;s health vegetation status. From Romania, 3U</p>
+<li><p><a href="https://rospin.org/rospin-sat-1/">ROSPIN-SAT-1</a> by <a href="https://rospin.org/">ROSPIN</a>: monitor Romania&#39;s health vegetation status. From Romania, 3U.</p>
 </li>
 <li><p><a href="https://aris-space.ch/sage-2022/">SAGE</a> by <a href="https://aris-space.ch/">ARIS</a>: generate milli-gravity and probe its impact on the senescence of primary cell lines. From Switzerland.</p>
 </li>
-<li><p><a href="https://aero.uc3m.es/the-st3llarsat1-boira-has-been-shortlisted-by-esa-for-its-fys-design-booster-program/">ST3LLAR-Sat1 BOIRA</a> by <a href="https://www.uc3m.es/home">UC3M</a>: measure atmospheric humidity primarily in European regions. From Spain, 2U</p>
+<li><p><a href="https://aero.uc3m.es/the-st3llarsat1-boira-has-been-shortlisted-by-esa-for-its-fys-design-booster-program/">ST3LLAR-Sat1 BOIRA</a> by <a href="https://www.uc3m.es/home">UC3M</a>: measure atmospheric humidity primarily in European regions. From Spain, 2U.</p>
 </li>
-<li><p><a href="https://tudsat.space/section/cubesat/">TRACE</a> by <a href="https://tudsat.space/">TUDSAT</a>: test retroreflector-based satellite identification strategies. From Germany, 1U</p>
+<li><p><a href="https://tudsat.space/section/cubesat/">TRACE</a> by <a href="https://tudsat.space/">TUDSAT</a>: test retroreflector-based satellite identification strategies. From Germany, 1U.</p>
 </li>
 </ul>
+<p>Having the chat to get to chat with some of the people working in these projects was a great experience. It made me especially happy to see that more research groups are trying to take a jab at developing a satellite that will host a biology payload for in-orbit experiments&#33; We&#39;ve maintained communication with some of the teams and I&#39;m eager to see what they&#39;ll announce during their upcoming <abbr title="Preliminary Design Review">PDR</abbr>
+.</p>
 <h2 id="outro">Outro</h2>
 <p>TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that&#39;s so so so important &#40;e.g. to screenshot apo random&#41;</p>
 <figure class="figure">
