@@ -111,7 +111,11 @@ The Leiden Centraal train station.
 <p>It&#39;s a marathon, not a sprint</p>
 </blockquote>
 <p>... but there will be sprints ;&#41;</p>
-<h3 id="problems">Problems</h3>
+<figure class="figure">
+  <img src="./assets/presentation.jpg" alt="Now more people are afraid of the bus factor!" class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Now more people are afraid of the bus factor!
+</figcaption></figure><h3 id="problems">Problems</h3>
 <p>Always find the next generation that will succeed you and/or your peers. Do that <em>preemptively</em>. Otherwise, it will be too late and you&#39;ll be patching holes. We&#39;ve faced this problem multiple times. More often than not, there&#39;s a bigger underlying problem, and it has to do with structure. People are <em>usually</em> not the source of the problem. Don&#39;t be too eager to blame something on an individual, dig deeper.</p>
 <p>But people <em>can</em> be the source of the problem.  Never underestimate that. Especially if they are in a position of power, either organizationally or due to technical expertise. Don&#39;t endow with power lightly:</p>
 <blockquote>
@@ -153,9 +157,9 @@ The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'
 <h3 id="help_them_help_you_vol_2">Help them help you: Vol 2</h3>
 <p>Don&#39;t leave anyone on their own. Set group tasks. Set small, well-defined tasks. Make the members feel and visualize the progress. Make sure everyone is on the same page regarding the high-level roadmap. Give people things they might not love but that are important, and things that aren&#39;t important but they love doing <sup id="fnref:8">[8]</sup>. Progress is seldom linear, or apparent. Try to make it apparent, but have that in mind. Involve people and throw problems at them &#40;but always be there when needed&#41;. Don&#39;t be afraid to throw problems at them, that&#39;s how they grow.</p>
 <figure class="figure">
-  <img src="./assets/learning-curve.png" alt="Your project progress curve compared to other projects." class="figure-img img-fluid " width="" >
+  <img src="./assets/learning-curve.png" alt="Your project learning curve compared to other projects." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
-Your project progress curve compared to other projects.
+Your project learning curve compared to other projects.
 </figcaption></figure><h2 id="space_biology_payload_challenges">Space Biology Payload Challenges</h2>
 <ul>
 <li><p>Miniaturization of cell culturing instrumentation</p>
@@ -174,7 +178,33 @@ Your project progress curve compared to other projects.
 </li>
 </ul>
 <h2 id="other_teams">Other teams</h2>
-<p>TODO</p>
+<ul>
+<li><p><a href="https://polispace.it/6s-cubesat-project/">6S</a> by PoliSpace: flight-proof and characterize solar cells and structural battery payloads. From Italy, 1U</p>
+</li>
+<li><p>AlbaSat - Italy</p>
+</li>
+<li><p>ANTAUES - Portugal</p>
+</li>
+<li><p><a href="https://www.nottingham.ac.uk/aerospace/space/student-space-programme/missions/index.aspx">Astrojam</a> by the Aerospace department of the University of Nottingham: GNSS interference mapping and characterization payload. From UK</p>
+</li>
+<li><p><a href="https://orbitntnu.com/biosat/">BioSat</a> by <a href="https://orbitntnu.com/">Orbit NTNU</a>: sustain a plan in <abbr title="Sun-Synchronous Orbit">SSO</abbr>
+ &#40;400-600km&#41;. From Norway</p>
+</li>
+<li><p><a href="https://uvigospacelab.space/en/bixo/">BIXO</a> by <a href="https://uvigospacelab.space/en/">UVigo SpaceLab</a>: probe quorum sensing in bacteria inside millifluidic cards. From Spain, 2U</p>
+</li>
+<li><p><a href="https://www.upv.es/noticias-upv/noticia-13869-pluton-upv-es.html">Estigia</a> by the Valencia Polytechnic University: AI chatbot for the public to communicate with the satellite. From Spain, 2U</p>
+</li>
+<li><p><a href="https://www.s5lab.space/">LEDSAT 2</a> from <a href="Sapienza Space Systems and Space Surveillance Laboratory">S5Lab</a> - Italy</p>
+</li>
+<li><p><a href="https://rospin.org/rospin-sat-1/">ROSPIN-SAT-1</a> by <a href="https://rospin.org/">ROSPIN</a>: monitor Romania&#39;s health vegetation status. From Romania, 3U</p>
+</li>
+<li><p><a href="https://aris-space.ch/sage-2022/">SAGE</a> by <a href="https://aris-space.ch/">ARIS</a>: generate milli-gravity and probe its impact on the senescence of primary cell lines. From Switzerland.</p>
+</li>
+<li><p><a href="https://aero.uc3m.es/the-st3llarsat1-boira-has-been-shortlisted-by-esa-for-its-fys-design-booster-program/">ST3LLAR-Sat1 BOIRA</a> by <a href="https://www.uc3m.es/home">UC3M</a>: measure atmospheric humidity primarily in European regions. From Spain, 2U</p>
+</li>
+<li><p><a href="https://tudsat.space/section/cubesat/">TRACE</a> by <a href="https://tudsat.space/">TUDSAT</a>: test retroreflector-based satellite identification strategies. From Germany, 1U</p>
+</li>
+</ul>
 <h2 id="outro">Outro</h2>
 <p>TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that&#39;s so so so important &#40;e.g. to screenshot apo random&#41;</p>
 <figure class="figure">
