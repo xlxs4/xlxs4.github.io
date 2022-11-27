@@ -386,7 +386,7 @@ Don't be afraid to throw problems at them, that's how they grow.
 
 ## Teams
 
-12 teams developing a CubeSat were shortlisted in the "Training and Selection" phase:
+12 teams developing a CubeSat were shortlisted to participate in the "Training and Selection" phase:
 
 - [6S](https://polispace.it/6s-cubesat-project/) by PoliSpace: flight-proof and characterize solar cells and structural battery payloads.
   From Italy, 1U.
@@ -394,7 +394,7 @@ Don't be afraid to throw problems at them, that's how they grow.
 - ANTAUES - Portugal.
 - [Astrojam](https://www.nottingham.ac.uk/aerospace/space/student-space-programme/missions/index.aspx) by the Aerospace department of the University of Nottingham: GNSS interference mapping and characterization payload.
   From UK.
-- [BioSat](https://orbitntnu.com/biosat/) by [Orbit NTNU](https://orbitntnu.com/): sustain a plan in \abbr{title="Sun-Synchronous Orbit", abbr="SSO"} (400-600km).
+- [BioSat](https://orbitntnu.com/biosat/) by [Orbit NTNU](https://orbitntnu.com/): sustain a plant in \abbr{title="Sun-Synchronous Orbit", abbr="SSO"} (400-600km).
   From Norway.
 - [BIXO](https://uvigospacelab.space/en/bixo/) by [UVigo SpaceLab](https://uvigospacelab.space/en/): probe quorum sensing in bacteria inside millifluidic cards.
   From Spain, 2U.
@@ -404,7 +404,7 @@ Don't be afraid to throw problems at them, that's how they grow.
 - [ROSPIN-SAT-1](https://rospin.org/rospin-sat-1/) by [ROSPIN](https://rospin.org/): monitor Romania's health vegetation status.
   From Romania, 3U.
 - [SAGE](https://aris-space.ch/sage-2022/) by [ARIS](https://aris-space.ch/): generate milli-gravity and probe its impact on the senescence of primary cell lines.
-  From Switzerland.
+  From Switzerland, 3U.
 - [ST3LLAR-Sat1 BOIRA](https://aero.uc3m.es/the-st3llarsat1-boira-has-been-shortlisted-by-esa-for-its-fys-design-booster-program/) by [UC3M](https://www.uc3m.es/home): measure atmospheric humidity primarily in European regions.
   From Spain, 2U.
 - [TRACE](https://tudsat.space/section/cubesat/) by [TUDSAT](https://tudsat.space/): test retroreflector-based satellite identification strategies.
@@ -416,7 +416,55 @@ We've maintained communication with some of the teams and I'm eager to see what 
 
 ## Outro
 
-TODO: talk about the importance of having a vision, of having some pillars, of your work being multifaceted and extending past just some research topic, etc. Mention our mission as an example and explain why that's so so so important (e.g. to screenshot apo random)
+My very condensed personal story about FYS! is something along these lines:
+During high school, or what I like to call "the dark ages", for various reasons I didn't have strong goals or motivation.
+When I entered the university, I felt for the first time in my life that this is a new chapter, a new beginning.
+Every new beginning holds a lot of power — and there I was, moving immediately to a new town.
+
+While I didn't have any particular background, I was very motivated, so I put in the effort during the classes.
+However, I soon discovered that I wanted something more than what seemed to me as school with extra steps.
+I joined some teams here and there, mostly as a software engineer, tried to work on projects with supervising professors etc.
+It was good for a while and I learned a lot, but what I wanted was to be in an environment where people around me would be *passionate*.
+
+Long story short, I managed to get accepted in SpaceDot, when the project was just about starting.
+I suddenly found myself in an environment where the ones next to me where motivated, passionate, had dreams and were willing to put in the extra work to see their goals come to fruition.
+I made a lot of friends (and not only), drank beers and had great fun.
+I found friends that shared my dreams and, more importantly, my fears.
+Friends to play games and do stupid side projects with.
+Friends that are still by my side to this day.
+
+Not all was easy of course, we had our fair share of fights, of dead ends, of seemingly impossible problems, of sleepless nights to submit the proposal on time or tiring months to get everything ready for CDR.
+There were others that didn't want to help or that actively dragged us down.
+Trying to undertake such a project is very difficult as is, trying to undertake it while being a student in Greece is a lot harder: we had to conjure money and expertise out of thin air.
+And this was exactly the strong bond that kept us all together.
+
+I was there for others and they had my back, we stayed awake at nights together, we hanged together, we faced our demons and grew together.
+Undertaking a project just to put it in your CV isn't bad per se, but it seems if you want to chase the big challenges, you can't do it alone.
+It's not the CV that keeps you on track while you're in the trenches, it's your friend that has worked more than you have for the same dream that you're trying to accomplish.
+
+> Sometimes it is the people no one can imagine anything of who do the things no one can imagine
+
+— Alan Turing
+
+Why should you do all of this?
+Well, give it some time, love it enough and you'll join the game.
+I shared my story, give yours form.
+Getting to actively participate in a very demanding, large scale (40-80 teammates) long-term project with a mission at the interface of seemingly unrelated fields as a student is rare.
+What's even more rare is the freedom of choice you'll have when trying to make things work in a project such as this one.
+FYS! is an invaluable opportunity for you to grow as a person and to inspire others along the way.
+Its scope expands way past getting your CubeSat to fly.
+You'll give form to a common vision — we wanted to bring Aerospace to Greece, and it seems like we're doing just that.
+This came in Nov. 6:
+
+\figure{path="./assets/appreciation.png", caption="Giving others the inspiration and opportunities you didn't have is the best."}
+
+Above all, it's rewarding and a ton of fun:
+
+> If it's not fun, why bother?
+
+— Reggie Fils-Aimé
+
+_Have **fun**_.
 
 \figure{path="./assets/schipol.jpg", caption="The Amsterdam Schipol airport at dawn."}
 
