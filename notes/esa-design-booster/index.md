@@ -417,7 +417,7 @@ Don't be afraid to throw problems at them, that's how they grow.
 
 Having the opportunity to get to chat with some of the people working in these projects was a great experience.
 It made me especially happy to see that more research groups are trying to take a jab at developing a satellite that will host a biology payload for in-orbit experiments!
-We've maintained communication with some of the teams and I'm eager to see what you'll announce during their upcoming \abbr{title="Preliminary Design Review", abbr="PDR"}.
+We've maintained communication with some of the teams and I'm eager to see what you'll announce during your upcoming \abbr{title="Preliminary Design Review", abbr="PDR"}s.
 
 ## Outro
 
