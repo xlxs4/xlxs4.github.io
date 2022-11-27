@@ -68,6 +68,8 @@ Our high-level roadmap is roughly the following:
 We've submitted our proposal in October 2019, took part in the selection workshop hosted here in December 2019, got accepted in February 2020, submitted the \abbr{title="Technical Specification Verification Control Document", abbr="TS-VCD"} in April, submitted the first version of \abbr{title="Critical Design Review", abbr="CDR"} in October and had it approved in September 2021, marking the end of the design phase and the beginning of the construction/testing phase.
 Right now we are getting ready to run a series of testing campaigns at the ESA facilities, then pass the \abbr{title="Manufacturing Readiness Review", abbr="MRR"} and be in-orbit by late 2023/early 2024.
 
+You can check out more about AcubeSAT in [GitLab](https://gitlab.com/acubesat).
+
 ## Project management
 
 There's always exceptions to rules.
@@ -93,7 +95,7 @@ This might be something very generic to get prototypes, might be something very 
 Getting access to required infrastructure might be almost trivial in some cases, near impossible in others.
 You'll face this sooner or later, start thinking about it as early as possible.
 
-So what can you do other than resort to self-sarcasm as a coping method?
+So what can you do other than resort to self-sarcasm as a coping mechanism?
 Invest in open-source and the community.
 There's people you can learn from, if not teach.
 [Akin's Law](https://spacecraft.ssl.umd.edu/akins_laws.html) 43:
@@ -137,7 +139,7 @@ Communication, tracking and finding information, project planning and management
 Don't be pushing things back because you have a deadline to meet.
 Don't be afraid to invest early, plant the seeds; they will bloom later.
 Try maintain information transfer at all costs — that was our biggest problem.
-Documentation is the best remedy to this problem.
+Documentation is the best remedy to said problem.
 As per Akin's Law 22: 
 > When in doubt, document. (Documentation requirements will reach a maximum shortly after the termination of a program.)
 
@@ -149,22 +151,23 @@ Hold concurrent sessions, frequent meetings, be transparent always.
 
 | ✅ Do meetings when: | ❌ Don't do meetings when: |
 | -------------------- | -------------------------- |
-| People are feeling lost | There's technical work to be done. Just ask people to document, unless they need extra motivation |
-| For teambuilding activities | You want to brainstorm. If you have to, make sure that there's enough preparation beforehand |
+| People are feeling lost | There's technical work to be done. Ask people to document, unless they need extra motivation |
+| For teambuilding activities | For brainstorming. If you have to, make sure that there's enough preparation beforehand |
 | For weekly sessions that promote team coherency and updates | There's people waiting for other people. Extremely inefficient, people get bored |
-| For feedback sessions | When people do nothing during the meetings, actions are not taken |
+| For feedback sessions | When people do nothing during the meetings and actions are not taken |
 | You are unsure of next steps | When meetings are the "excuse" for you to feel productive |
-
 
 Text can often be hard, but text is king.
 It stays forever, you can quickly reference it or look it up at a later date, it can be used as training material, it can be used to explain concepts to new members without the need of constant supervising.
-It saves time and effort, while talking is just an inefficient back-and-forth.
+It saves time and effort, while talking can be an inefficient back-and-forth if you're not careful about it.
 
 ### ... and the big
 
-You need \abbr{title="SYstems Engineers", abbr="SYE"}, aka systems overview: for management, always see the forest, not the tree - how do all the pieces interact with all the other pieces?
+You need \abbr{title="SYstems Engineers", abbr="SYE"}, aka systems overview.
+Regarding management, always see the forest, not the tree - how do all the pieces interact with all the other pieces?
 Always be wary of cross-dependencies.
-Constantly track things, move deadlines appropriately, be on top of things - you'll come to find out that you'll be setting a deadline and it will be way overdue and then you'll have to set a deadline anew — do that.
+Constantly track things, move deadlines appropriately, be on top of things.
+You'll come to find out that you'll be setting a deadline and it will be way overdue and then you'll have to set a deadline anew — do that.
 
 Be agile, especially in the beginning.
 Find what's good for you.
@@ -184,27 +187,29 @@ Relax and learn from it.
 We've had so many situations where things almost derailed and came close to crumbling down because people were losing their minds.
 *Relax*, be calm, assess the situation, do your best, learn from any mistakes and move on.
 In the grand scheme of things, it probably doesn't matter that much.
-Diffuse situations, avoid crowd mentality - we've had "critical" situations dozens of times, we're still here
-Remember, 🎵 everything's gonna be alright 🎵.
+Diffuse situations, avoid crowd mentality.
+We've had "critical" situations dozens of times, we're still here.
+Remember, everything's gonna be alright.
 
 If it isn't, not to worry.
 It's an educational program.
-I'm not trying to set the bar low here, things are very challenging and you should strive for excellence, but you have to understand the nature of the program and that the ESA people are here to help and that they know you will commit a lot of mistakes.
-The thought that they expect you to make mistakes is very liberating, because you will make mistakes and you might think that the consequences will be way bigger than they actually will be.
+I'm not trying to set the bar low here, things are very challenging and you should strive for excellence, but you have to understand the nature of the program.
+You have to understand that the ESA people are here to help and that they know you will commit a lot of mistakes.
+The thought that they expect you to make mistakes is very liberating, because you *will* make mistakes and you might think that the consequences will be way bigger than they actually will be.
 
 Plus, having a problem is great because you know that something is wrong, you probably know what it is, and you will eventually figure out a way to fix things.
-That's *way* better than sitting awkwardly wondering whether there's a problem looming around the corner waiting to bite you when you're not looking.
+That's *way* better than sitting awkwardly, wondering whether there's a problem looming around the corner waiting to bite you when you're not looking.
   
 Try to build a momentum, expect a momentum to be built.
 Then, ride it, but guide it too — don't let it carry you.
-I keep saying that things are difficult — you'll find it difficult at first with a lot of things, for example with the organizational structure.
+I keep saying that things are difficult — you'll find it difficult at first in various areas, for example when deciding on the organizational structure.
 It will require a lot of effort in the beginning.
 It's like a slope where, if you're doing it right, little by little it will get easier with time.
 
 Our case happened after we delivered the first CDR version successfully.
-Things somewhat got automated, everyone knew what to work on, communication was frictionless, new members were seamlessly integrated
+Things somewhat got automated, everyone knew what to work on, communication was frictionless, new members were seamlessly integrated.
 No matter what, you have to always keep things in check and constantly revisit.
-We didn't and cracks started to appear soon enough; it costs us a lot in the end.
+We didn't and cracks started to appear soon enough; it cost us a lot in the end.
 
 ### The bus factor
 
@@ -213,13 +218,13 @@ The bus factor is a crude way to assess how important someone is for the project
 The way you do that is you ask yourself, "what if this person was to get hit by a bus tomorrow?".
 You *will* come across it.
 Some times there won't be a lot you'll be able to do to mitigate it.
-But also always remember: no one is irreplaceable.
-Each time we chose to go with someone's flow after a certain threshold was crossed, it never worked.
+But also always remember: *no one* is irreplaceable.
+Each time we chose to keep tolerating people that didn't abide by our collective's rules, it never worked.
 You're capable, don't forget that.
 Also trust your gut, like you should do in interviews.
 
 This is a very long-term project, it therefore *transcends* individuals.
-As we've already stressed, always, always, always think about the long-term.
+As already stressed, always, always think about the long-term.
 Have a plan B, C, D, ... (even about design, _even_ about people).
 A phrase of a friend that I feel encapsulates all of this well:
 > It's a marathon, not a sprint
@@ -271,7 +276,7 @@ You'll have to face great technical challenges.
 At the same time, you'll have to constantly support and get the others pumped.
 You'll have to be there to mediate in case any conflicts occur, etc.
 
-Taking initiatives is vital — that has been one of our biggest complaints about our members.
+Taking initiatives is vital — that has been an area where we often are lacking as a team.
 There's new ideas someone has to think.
 There's work that no one will do unless someone decides to take it up by themselves.
 It also helps tremendously in fostering an environment where people feel their peers are motivated.
@@ -302,24 +307,24 @@ This goes hand-in-hand with forming groups and being part of a gang, crew, band,
 ### Talk!
 
 *Always* face your problems, always speak, always communicate.
-Hoarding problems under the rag instead of facing them is a very well known human tendency.
+Hoarding problems under the rag instead of facing them is a very well known human tendency :P
 Communicate problems to ESA.
-Again, they're hear to help.
+Again, they're here to help.
 The sooner they learn about something the better.
 They'll always appreciate you being upfront, trust me.
-Don't put yourselves into rabbit holes you'll then have to dig out of.
+Don't put yourselves inside rabbit holes you'll then have to dig out of.
 
 Feedback is crucial, it's all about feedback cycles [^7].
-This is by far the most important think to take out of this article.
+Heed this.
 Feedback requires good communication channels, so first build these.
 Then learn to *give* feedback.
 Learn to *receive* feedback.
 Provide people with a lot of different ways they can give feedback.
-Make sure that there's always more than one person (that hopefully occupies a different position in the team) for someone to speak to.
+Make sure that there's always more than one person (which ideally occupies a different position in the team) for someone to speak to.
 Feedback cycles is the way we get better.
 Again, make sure to do everything you can to have people giving feedback, as well as receiving feedback and acting on it.
 
-> Praise in public blame in private
+> Praise in public, blame in private
 
 Well, not always but you get the idea.
 
@@ -354,7 +359,7 @@ People won't do things they don't want to do forever.
 Wisdom has it there's always someone out there that wants to work on what you don't.
 Find them.
 Newer members might find something more exciting.
-Use that and it's good _resource allocation_.
+That's good _resource allocation_.
 Don't shy away from talking to your peers about non-technical issues.
 You can always help them learn how to work more efficiently, for instance.
 A good example would be a talk on [building a second brain](https://xlxs4.github.io/notes/second-brain/).
@@ -362,7 +367,7 @@ A good example would be a talk on [building a second brain](https://xlxs4.github
 ### Help them help you: Vol 2
 
 Don't leave anyone on their own.
-Set group tasks.
+Define group tasks.
 Set small, well-defined tasks.
 Make the members feel and visualize the progress.
 Make sure everyone is on the same page regarding the high-level roadmap.
@@ -410,9 +415,9 @@ Don't be afraid to throw problems at them, that's how they grow.
 - [TRACE](https://tudsat.space/section/cubesat/) by [TUDSAT](https://tudsat.space/): test retroreflector-based satellite identification strategies.
   From Germany, 1U.
 
-Having the chat to get to chat with some of the people working in these projects was a great experience.
+Having the opportunity to get to chat with some of the people working in these projects was a great experience.
 It made me especially happy to see that more research groups are trying to take a jab at developing a satellite that will host a biology payload for in-orbit experiments!
-We've maintained communication with some of the teams and I'm eager to see what they'll announce during their upcoming \abbr{title="Preliminary Design Review", abbr="PDR"}.
+We've maintained communication with some of the teams and I'm eager to see what you'll announce during their upcoming \abbr{title="Preliminary Design Review", abbr="PDR"}.
 
 ## Outro
 
@@ -449,8 +454,10 @@ It's not the CV that keeps you on track while you're in the trenches, it's your 
 Why should you do all of this?
 Well, give it some time, love it enough and you'll join the game.
 I shared my story, give yours form.
-Getting to actively participate in a very demanding, large scale (40-80 teammates) long-term project with a mission at the interface of seemingly unrelated fields as a student is rare.
+Getting to actively participate in a very demanding, large scale (40-80 teammates) project is rare.
+Working on a long-term project with a mission at the interface of seemingly unrelated fields as a student is more rare.
 What's even more rare is the freedom of choice you'll have when trying to make things work in a project such as this one.
+
 FYS! is an invaluable opportunity for you to grow as a person and to inspire others along the way.
 Its scope expands way past getting your CubeSat to fly.
 You'll give form to a common vision — we wanted to bring Aerospace to Greece, and it seems like we're doing just that.
