@@ -454,6 +454,9 @@ What's even more rare is the freedom of choice you'll have when trying to make t
 FYS! is an invaluable opportunity for you to grow as a person and to inspire others along the way.
 Its scope expands way past getting your CubeSat to fly.
 You'll give form to a common vision — we wanted to bring Aerospace to Greece, and it seems like we're doing just that.
+
+[ROSPIN](https://rospin.org/) is an NGO birthed in Romania with the overarching goal of developing the Romanian Space ecosystem. [PETRI](https://www.esa.int/Education/PETRI_programme) is a new ESA program where accepted students receive training and can submit an experiment proposal.
+The experiment can be performed in one of ESA's altered gravity platforms, like the ISS or during a parabolic flight.
 This came in Nov. 6:
 
 \figure{path="./assets/appreciation.png", caption="Giving others the inspiration and opportunities you didn't have is the best."}
