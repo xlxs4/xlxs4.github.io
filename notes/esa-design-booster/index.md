@@ -455,7 +455,10 @@ FYS! is an invaluable opportunity for you to grow as a person and to inspire oth
 Its scope expands way past getting your CubeSat to fly.
 You'll give form to a common vision — we wanted to bring Aerospace to Greece, and it seems like we're doing just that.
 
-[ROSPIN](https://rospin.org/) is an NGO birthed in Romania with the overarching goal of developing the Romanian Space ecosystem. [PETRI](https://www.esa.int/Education/PETRI_programme) is a new ESA program where accepted students receive training and can submit an experiment proposal.
+[ROSPIN](https://rospin.org/) is an NGO birthed in Romania with the overarching goal of developing the Romanian Space ecosystem.
+We've helped them with SYE, \abbr{title="On-Board Computer", abbr="OBC"}, had some general chats and even had a team member come visit our lab.
+By the way, the team behind their first project, the [ROPSIN-SAT-1](https://rospin.org/rospin-sat-1/) CubeSat, [took part](#teams) in the training week at ESTEC.
+[PETRI](https://www.esa.int/Education/PETRI_programme) is a new ESA program where accepted students receive training and can submit an experiment proposal.
 The experiment can be performed in one of ESA's altered gravity platforms, like the ISS or during a parabolic flight.
 This came in Nov. 6:
 
