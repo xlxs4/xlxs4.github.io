@@ -394,30 +394,33 @@ Don't be afraid to throw problems at them, that's how they grow.
 12 teams developing a CubeSat were shortlisted to participate in the "Training and Selection" phase:
 
 - [6S](https://polispace.it/6s-cubesat-project/) by PoliSpace: flight-proof and characterize solar cells and structural battery payloads.
-  From Italy, 1U.
-- AlbaSat - Italy.
-- ANTAUES - Portugal.
+  From Italy, affiliated with the Polytechnic University of Milan, 1U.
+- [AlbaSat](https://www.instagram.com/albacubesat) — Italy, affiliated with the University of Padua.
+- [Antaeus](https://www.lip.pt/?section=press&page=news-details&id=1348&lang=en&ref=homepage) led by the [LIP](https://www.lip.pt/?section=about&page=presentation) i-Astro group: measure intense gamma ray sources in the 100 keV - 10 MeV.
+  From Portugal, affiliated with the University of Coimbra, 2U.
 - [Astrojam](https://www.nottingham.ac.uk/aerospace/space/student-space-programme/missions/index.aspx) by the Aerospace department of the University of Nottingham: GNSS interference mapping and characterization payload.
   From UK.
 - [BioSat](https://orbitntnu.com/biosat/) by [Orbit NTNU](https://orbitntnu.com/): sustain a plant in \abbr{title="Sun-Synchronous Orbit", abbr="SSO"} (400-600km).
-  From Norway.
+  From Norway, affiliated with the Norwegian University of Science and Technology.
 - [BIXO](https://uvigospacelab.space/en/bixo/) by [UVigo SpaceLab](https://uvigospacelab.space/en/): probe quorum sensing in bacteria inside millifluidic cards.
-  From Spain, 2U.
+  From Spain, affiliated with the University of Vigo, 2U.
 - [Estigia](https://www.upv.es/noticias-upv/noticia-13869-pluton-upv-es.html) by the Valencia Polytechnic University: AI chatbot for the public to communicate with the satellite.
   From Spain, 2U.
-- [LEDSAT 2](https://www.s5lab.space/) from [S5Lab](Sapienza Space Systems and Space Surveillance Laboratory) - Italy
+- [LEDSAT 2](https://www.s5lab.space/) from [S5Lab](Sapienza Space Systems and Space Surveillance Laboratory) - Italy, affiliated with the 	Sapienza University of Rome
 - [ROSPIN-SAT-1](https://rospin.org/rospin-sat-1/) by [ROSPIN](https://rospin.org/): monitor Romania's health vegetation status.
-  From Romania, 3U.
+  From Romania, affiliated with the Polytechnic University of Bucharest, 3U.
 - [SAGE](https://aris-space.ch/sage-2022/) by [ARIS](https://aris-space.ch/): generate milli-gravity and probe its impact on the senescence of primary cell lines.
-  From Switzerland, 3U.
+  From Switzerland, affiliated with ETH Zurich, 3U.
 - [ST3LLAR-Sat1 BOIRA](https://aero.uc3m.es/the-st3llarsat1-boira-has-been-shortlisted-by-esa-for-its-fys-design-booster-program/) by [UC3M](https://www.uc3m.es/home): measure atmospheric humidity primarily in European regions.
-  From Spain, 2U.
+  From Spain, affiliated with the Charles III University of Madrid, 2U.
 - [TRACE](https://tudsat.space/section/cubesat/) by [TUDSAT](https://tudsat.space/): test retroreflector-based satellite identification strategies.
-  From Germany, 1U.
+  From Germany, affiliated with the Technical University of Darmstadt, 1U.
 
 Having the opportunity to get to chat with some of the people working in these projects was a great experience.
 It made me especially happy to see that more research groups are trying to take a jab at developing a satellite that will host a biology payload for in-orbit experiments!
 We've maintained communication with some of the teams and I'm eager to see what you'll announce during your upcoming \abbr{title="Preliminary Design Review", abbr="PDR"}s.
+
+You can take a look at some group photos in this [ESA article](https://www.esa.int/Education/CubeSats_-_Fly_Your_Satellite/80_international_students_attend_first_ever_Fly_Your_Satellite!_Design_Booster_Training_Week).
 
 ## Outro
 
