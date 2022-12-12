@@ -143,5 +143,39 @@ We're gonna get some extra perks here.
 We're gonna get optimal code by default, without having to worry about the most optimal way to compute these things — we just worry about the mechanics and then we get the optimal code for free.
 The code will also be parallelizable by default.
 
+### Description
+
+ModelingToolkit is a modeling language.
+It can do both symbolic and numeric computation.
+It is highly performant and parallel.
+It is extendable because it brings ideas from symbolic \abbr{title="Computer Algebra System", abbr="CAS"} and causal/acausal equation-based modeling frameworks, but also because it's built in Julia and it's easy to pry into the source and modify as we please.
+
+The high-level modeling process is as follows: the model can be input as a high-level description.
+Then, the model is analyzed and enhanced through symbolic preprocessing.
+ModelingToolkit allows for automatic transformations, such as index reduction, to be applied before solving in order to easily handle equations that could not have been solved without some sort of symbolic intervention.
+
+### Features
+
+- Causal and acausal modeling ([Simulink](https://www.mathworks.com/products/simulink.html)/[Modelica](https://modelica.org/modelicalanguage.html)) .
+- Automated model transformation, simplification, and composition.
+- Automatic conversion of numerical models into symbolic models.
+- Composition of models through the components, a lazy connection system, and tools for expanding/flattening
+- Pervasive parallelism in symbolic computations and generated functions.
+- Transformations like alias elimination and tearing of nonlinear systems for efficiently numerically handling large-scale systems of equations.
+- The ability to use the entire [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl) CAS as part of the modeling process.
+- Import models from common formats like [SBML](https://sbml.org/), [CellML](https://www.cellml.org/), [BioNetGen](https://bionetgen.org/), and more.
+- Extendability: the whole system is written in pure [Julia](https://julialang.org/), so adding new functions, simplification rules, and model transformations has no barrier.
+
+### Equation Types
+
+- [Ordinary differential equations](https://www.wikiwand.com/en/Ordinary_differential_equation)
+- [Stochastic differential equations](https://www.wikiwand.com/en/Stochastic_differential_equation)
+- [Partial differential equations](https://www.wikiwand.com/en/Partial_differential_equation)
+- [Nonlinear systems](https://www.wikiwand.com/en/Nonlinear_system)
+- [Optimization problems](https://www.wikiwand.com/en/Optimization_problem)
+- [Continuous-Time Markov Chains](https://www.wikiwand.com/en/Continuous-time_Markov_chain)
+- [Chemical Reactions](https://www.wikiwand.com/en/Chemical_reaction_network_theory) (via [Catalyst.jl](https://docs.sciml.ai/Catalyst/stable/))
+- [Nonlinear Optimal Control](https://www.wikiwand.com/en/Optimal_control)
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
