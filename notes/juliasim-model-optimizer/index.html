@@ -44,6 +44,7 @@
 <p>After we get the optimal version of the model, we can create our <code>ODEProblem</code>, run it over a particular timespan, and, optionally, have it save at certain timepoints &#40;mostly for plotting later&#41;. We can then solve the problem:</p>
 <pre><code class="julia hljs">prob = ODEProblem(sys, <span class=hljs-built_in >Pair</span>[], (<span class=hljs-number >0</span>, <span class=hljs-number >5e4</span>), saveat=<span class=hljs-number >100</span>)
 sol = solve(prob, Rodas4())</code></pre>
+<p>Everything up to this point does not evolve Model Optimizer, it&#39;s mostly good ol&#39; Modeling Toolkit. You can find an example in <a href="https://github.com/xlxs4/chua-circuit">this toy GitHub repository</a>.</p>
 <p><table class=fndef  id="fndef:1">
     <tr>
         <td class=fndef-backref ><a href="#fnref:1">[1]</a>

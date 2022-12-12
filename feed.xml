@@ -268,6 +268,7 @@ end</code></pre>
 <p>After we get the optimal version of the model, we can create our <code>ODEProblem</code>, run it over a particular timespan, and, optionally, have it save at certain timepoints &#40;mostly for plotting later&#41;. We can then solve the problem:</p>
 <pre><code class="language-julia">prob &#61; ODEProblem&#40;sys, Pair&#91;&#93;, &#40;0, 5e4&#41;, saveat&#61;100&#41;
 sol &#61; solve&#40;prob, Rodas4&#40;&#41;&#41;</code></pre>
+<p>Everything up to this point does not evolve Model Optimizer, it&#39;s mostly good ol&#39; Modeling Toolkit. You can find an example in <a href="https://github.com/xlxs4/chua-circuit">this toy GitHub repository</a>.</p>
 <p><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
