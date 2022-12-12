@@ -143,6 +143,8 @@ We're gonna get some extra perks here.
 We're gonna get optimal code by default, without having to worry about the most optimal way to compute these things — we just worry about the mechanics and then we get the optimal code for free.
 The code will also be parallelizable by default.
 
+\figure{path="./assets/modeling-toolkit.png", caption="Acausal component-based modeling with <a href='https://mtk.sciml.ai/dev/'>ModelingToolkit.jl</a>."}
+
 ### Description
 
 ModelingToolkit is a modeling language.
