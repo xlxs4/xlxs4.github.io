@@ -308,6 +308,38 @@ connections = [
 ]
 ```
 
+### Handling the Model
+
+We now have everything we need to create our model:
+
+```julia
+@named model = ODESystem(connections, t,
+                        systems=[L, R, G, C1, C2, Nr, Gnd])
+```
+
+When talking about not necessarily having to worry about writing the code, but instead just describing the relationships between each of the components, this is what you see here.
+We can `connect` the `Inductor` to the `Ground`, the `NonlinearResistor` to the `Ground`, the `Capacitor`s to the `Ground`.
+We can do all of this with `connect` statements and at the end put everything in an element (`ODESystem`) called model, which is going to give us everything needed.
+
+But! We didn't pay close attention at all in making sure this runs in an optimal way.
+That's where `structural_simplify` comes into play, and it's a very handy tool:
+
+```julia
+sys = structural_simplify(model)
+```
+
+In many cases, the most convenient way to build the model may leave a lot of unnecessary variables.
+Before numerically solving we can remove these equations.
+`structural_simplify` structurally... simplifies algebraic equations in a system and computes the topological sort of the observed equations.
+
+After we get the optimal version of the model, we can create our `ODEProblem`, run it over a particular timespan, and, optionally, have it save at certain timepoints (mostly for plotting later).
+We can then solve the problem:
+
+```julia
+prob = ODEProblem(sys, Pair[], (0, 5e4), saveat=100)
+sol = solve(prob, Rodas4())
+```
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
 
