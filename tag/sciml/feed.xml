@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit</li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
 <h2 id="juliasim">JuliaSim</h2>
@@ -122,6 +122,50 @@ Following the acausal modeling paradigm comes with important perks.
 </figcaption></figure><h2 id="modeling_toolkit">Modeling Toolkit</h2>
 <p><a href="https://mtk.sciml.ai/dev/">ModelingToolkit.jl</a> is a Julia acausal modeling framework and it will allow us to be expressive and concise when we write our <abbr title="Differential Equation">DE</abbr>
  models. It will also enable us to reuse these models so we can automatically rearrange equations for better stability. We&#39;re gonna get some extra perks here. We&#39;re gonna get optimal code by default, without having to worry about the most optimal way to compute these things — we just worry about the mechanics and then we get the optimal code for free. The code will also be parallelizable by default.</p>
+<h3 id="description">Description</h3>
+<p>ModelingToolkit is a modeling language. It can do both symbolic and numeric computation. It is highly performant and parallel. It is extendable because it brings ideas from symbolic <abbr title="Computer Algebra System">CAS</abbr>
+ and causal/acausal equation-based modeling frameworks, but also because it&#39;s built in Julia and it&#39;s easy to pry into the source and modify as we please.</p>
+<p>The high-level modeling process is as follows: the model can be input as a high-level description. Then, the model is analyzed and enhanced through symbolic preprocessing. ModelingToolkit allows for automatic transformations, such as index reduction, to be applied before solving in order to easily handle equations that could not have been solved without some sort of symbolic intervention.</p>
+<h3 id="features">Features</h3>
+<ul>
+<li><p>Causal and acausal modeling &#40;<a href="https://www.mathworks.com/products/simulink.html">Simulink</a>/<a href="https://modelica.org/modelicalanguage.html">Modelica</a>&#41; .</p>
+</li>
+<li><p>Automated model transformation, simplification, and composition.</p>
+</li>
+<li><p>Automatic conversion of numerical models into symbolic models.</p>
+</li>
+<li><p>Composition of models through the components, a lazy connection system, and tools for expanding/flattening</p>
+</li>
+<li><p>Pervasive parallelism in symbolic computations and generated functions.</p>
+</li>
+<li><p>Transformations like alias elimination and tearing of nonlinear systems for efficiently numerically handling large-scale systems of equations.</p>
+</li>
+<li><p>The ability to use the entire <a href="https://github.com/JuliaSymbolics/Symbolics.jl">Symbolics.jl</a> CAS as part of the modeling process.</p>
+</li>
+<li><p>Import models from common formats like <a href="https://sbml.org/">SBML</a>, <a href="https://www.cellml.org/">CellML</a>, <a href="https://bionetgen.org/">BioNetGen</a>, and more.</p>
+</li>
+<li><p>Extendability: the whole system is written in pure <a href="https://julialang.org/">Julia</a>, so adding new functions, simplification rules, and model transformations has no barrier.</p>
+</li>
+</ul>
+<h3 id="equation_types">Equation Types</h3>
+<ul>
+<li><p><a href="https://www.wikiwand.com/en/Ordinary_differential_equation">Ordinary differential equations</a></p>
+</li>
+<li><p><a href="https://www.wikiwand.com/en/Stochastic_differential_equation">Stochastic differential equations</a></p>
+</li>
+<li><p><a href="https://www.wikiwand.com/en/Partial_differential_equation">Partial differential equations</a></p>
+</li>
+<li><p><a href="https://www.wikiwand.com/en/Nonlinear_system">Nonlinear systems</a></p>
+</li>
+<li><p><a href="https://www.wikiwand.com/en/Optimization_problem">Optimization problems</a></p>
+</li>
+<li><p><a href="https://www.wikiwand.com/en/Continuous-time_Markov_chain">Continuous-Time Markov Chains</a></p>
+</li>
+<li><p><a href="https://www.wikiwand.com/en/Chemical_reaction_network_theory">Chemical Reactions</a> &#40;via <a href="https://docs.sciml.ai/Catalyst/stable/">Catalyst.jl</a>&#41;</p>
+</li>
+<li><p><a href="https://www.wikiwand.com/en/Optimal_control">Nonlinear Optimal Control</a></p>
+</li>
+</ul>
 <table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
