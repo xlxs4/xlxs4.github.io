@@ -409,6 +409,41 @@ Notice that in the results there's a parameter `C`.
 Also observe that for $C_1$ the values are around 10, and for $C_2$ around 100.
 This is a relatively good sign, it means we're getting close to the actual value, and it can be a good eyeball test in general.
 
+### Recap
+
+For a more clear way to see the results that we got, we can use [StatsPlots.jl](https://github.com/JuliaPlots/StatsPlots.jl) to visualize.
+We can create a single image which is a layout of three images and for each one we're going to use a smooth density plot to show the virtual population.
+For bonus points, since we know what the true value actually is, we can plot it too to use for comparison:
+
+```julia
+params = DataFrame(vp)
+
+p1 = density(params[:,1], label = "Estimate: R")
+plot!([12.5e-3,12.5e-3], [0.0, 300],
+    lw=3,color=:green,label="True value: R", linestyle = :dash)
+
+p2 = density(params[:,2], label = "Estimate: C1")
+plot!([10,10], [0.0, 1],
+    lw=3,color=:red,label="True value: C1", linestyle = :dash)
+
+p3 = density(params[:,3], label = "Estimate: C2")
+plot!([100,100], [0.0, 0.15],
+    lw=3,color=:purple,label="True value: C2", linestyle = :dash)
+
+l = @layout [a b c]
+plot(p1, p2, p3, layout = l)
+```
+
+\figure{path="./assets/chua-visualization.png", caption="The estimated model parameters compared to ground truth."}
+
+We can see that even with a low number of iterations we're still capturing the true values pretty well using the virtual populations.
+
+To reiterate, we first created the model with ModelingToolkit, the acausal modeling framework.
+We had to only create one component from scratch, where we were able to leverage the `OnePort` component from the electrical module of the standard library.
+We connected all of the model components, we got some optimized code, and then used that to generate some synthetic data and create the inverse problem.
+Directly from there, we created the virtual population.
+And that was a whirlwind overview of what a Model Optimizer workflow may look like.
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
 
