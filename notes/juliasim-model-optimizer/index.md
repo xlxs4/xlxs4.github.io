@@ -171,14 +171,14 @@ ModelingToolkit allows for automatic transformations, such as index reduction, t
 
 ### Equation Types
 
-- [Ordinary differential equations](https://www.wikiwand.com/en/Ordinary_differential_equation)
-- [Stochastic differential equations](https://www.wikiwand.com/en/Stochastic_differential_equation)
-- [Partial differential equations](https://www.wikiwand.com/en/Partial_differential_equation)
-- [Nonlinear systems](https://www.wikiwand.com/en/Nonlinear_system)
-- [Optimization problems](https://www.wikiwand.com/en/Optimization_problem)
-- [Continuous-Time Markov Chains](https://www.wikiwand.com/en/Continuous-time_Markov_chain)
-- [Chemical Reactions](https://www.wikiwand.com/en/Chemical_reaction_network_theory) (via [Catalyst.jl](https://docs.sciml.ai/Catalyst/stable/))
-- [Nonlinear Optimal Control](https://www.wikiwand.com/en/Optimal_control)
+- \abbr{title="Ordinary differential equations", abbr="ODE"}s
+- \abbr{title="Stochastic differential equations", abbr="SDE"}s
+- \abbr{title="Partial differential equations", abbr="PDE"}s
+- Nonlinear systems
+- Optimization problems
+- Continuous-Time Markov Chains
+- Chemical Reactions (via [Catalyst.jl](https://docs.sciml.ai/Catalyst/stable/))
+- Nonlinear Optimal Control
 
 ## Modeling Toolkit Standard Library
 
@@ -208,6 +208,8 @@ So:
   $\frac{\partial voltage}{\partial t} \cdot capacitance = current$
 - Flow:
   $current \cdot resistance = voltage$
+
+## Example 1: Chua's Circuit
 
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
