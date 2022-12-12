@@ -348,7 +348,7 @@ You can find an example in [this toy GitHub repository](https://github.com/xlxs4
 Now we're moving on to actually take a sneak peek on the core of what Model Optimizer can do.
 The first step is to begin from the experimental data.
 Note that the data can be synthesized.
-Typically, what you might see here would be something like using the [`CSV.jl`](https://csv.juliadata.org/stable/) package to load in the saved data.
+Typically, what you might see here would be something like using the [CSV.jl](https://csv.juliadata.org/stable/) package to load in the saved data.
 Then, you want to somehow tie the data back to the model.
 In this example we can go ahead and directly use the solution that we got from calling `solve` on our problem:
 
@@ -443,6 +443,23 @@ We had to only create one component from scratch, where we were able to leverage
 We connected all of the model components, we got some optimized code, and then used that to generate some synthetic data and create the inverse problem.
 Directly from there, we created the virtual population.
 And that was a whirlwind overview of what a Model Optimizer workflow may look like.
+
+## Example 2: Digital Twin of a Building
+
+### Background
+
+Let's take a look at another, more large-scale example — a model of a real-life building.
+This building exists.
+It's somewhere in Phoenix, Arizona.
+It is an 81-room building, 9 by 3 by 3.
+It's cooled by circulating water at 5 degrees Celsius.
+In the graphs below you can see real meteorological data.
+
+More specifically, the image on the left, the building, correlates to where the vertical line is as it's moving across the two graphs on the right.
+On the top is the room temperature for each room being plotted.
+On the bottom is the ambient temperature.
+You can note that there are 7 visible peaks and valleys on the bottom graph, which correlates with 7 sunrises and falls during the week.
+Therefore, we can see the time of day and how it affects both ambient temperature and room temperature.
 
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
