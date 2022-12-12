@@ -18,7 +18,6 @@ rss_pubdate = Date(2022, 12, 12)
 ## JuliaSim Model Optimizer
 
 Some time ago I attended a remote workshop titled "Model Calibration and Parameter Estimation with JuliaSim Model Optimizer" by the [JuliaHub](https://juliahub.com/company/about-us/) team, specifically [Jacob Vaverka](https://jvaverka.com/) and [Dr. Christopher Rackauckas](https://chrisrackauckas.com/).
-Here's some knowledge.
 
 ## JuliaSim
 
@@ -347,7 +346,7 @@ You can find an example in [this toy GitHub repository](https://github.com/xlxs4
 
 Now we're moving on to actually take a sneak peek on the core of what Model Optimizer can do.
 The first step is to begin from the experimental data.
-Note that the data can be synthesized.
+Note that the data can be synthesized, i.e. it can be surrogate data.
 Typically, what you might see here would be something like using the [CSV.jl](https://csv.juliadata.org/stable/) package to load in the saved data.
 Then, you want to somehow tie the data back to the model.
 In this example we can go ahead and directly use the solution that we got from calling `solve` on our problem:
@@ -460,6 +459,24 @@ On the top is the room temperature for each room being plotted.
 On the bottom is the ambient temperature.
 You can note that there are 7 visible peaks and valleys on the bottom graph, which correlates with 7 sunrises and falls during the week.
 Therefore, we can see the time of day and how it affects both ambient temperature and room temperature.
+
+\figure{path="./assets/building-model.png", caption="A real-world building can have a Digital Twin."}
+
+### Component Setup
+
+How might we go about constructing a model like this with an acausal modeling framework like ModelingToolkit?
+Well, first we load some packages, like the ones also used in the Chua circuit example, CSV to read data and a data interpolation package.
+Then, here is a key bit: we can pull a package of components we've developed ourselves to break down this problem into smaller portions, very similar to a standard library (or SynBio principles, if that's your cup of tea).
+
+Once we've done that and load our meteorological data, slice it and get everything ready, we can finally start setting our structural parameters for the model and the building.
+We set some initial temperatures for the building (currently measured in Kelvin, you'll see how we can convert below).
+
+After we've set our initial conditions, we can do some component setup.
+Very similar to how we would just pull in the `Capacitor`s, the `Inductor`, the `Ground` source, we can pull in our interpolated sources, our constant sources, our step courses...
+Note we even have a function to create a \abbr{title="Heat Exchange", abbr="HEX"} fan there.
+There's some very useful functionality we can take advantage of: we can create many of the components in one go, as you can see in the array syntax below:
+
+\figure{path="./assets/component-setup.png", caption="Setting up the components of our building model in pseudocode."}
 
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
