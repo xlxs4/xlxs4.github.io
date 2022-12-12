@@ -211,5 +211,20 @@ So:
 
 ## Example 1: Chua's Circuit
 
+A Chua circuit is a simple electronic circuit that exhibits classic chaotic behavior.
+It produces an oscillating waveform that never repeats.
+The ease of construction of the circuit has made it a ubiquitous real-world example of a chaotic system, leading some to declare it "a paradigm for chaos" [^2].
+
+In order to get this chaotic behavior, we need to satisfy a couple requirements.
+
+\figure{path="./assets/chua-circuit.png", caption="Chua's circuit diagram."}
+
+We need at least one nonlinear element if you look at the diagram above, and that's what $N_R$ stands for, our nonlinear resistor.
+We need at least one locally active resistor, which is also $N_R$ in the diagram.
+Then, we need at least three energy storage elements, so that's where the capacitors $C_1$ and $C_2$ and the inductor $L$ come into play.
+That diagram is what we're going to be building.
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
+
+[^2]: Madan, R. N. (Ed.). (1993). *Chua's circuit: a paradigm for chaos* (Vol. 1). World Scientific.
