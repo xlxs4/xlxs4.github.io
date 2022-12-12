@@ -343,6 +343,48 @@ sol = solve(prob, Rodas4())
 Everything up to this point does not evolve Model Optimizer, it's mostly good ol' Modeling Toolkit.
 You can find an example in [this toy GitHub repository](https://github.com/xlxs4/chua-circuit).
 
+### Inverse Problem
+
+Now we're moving on to actually take a sneak peek on the core of what Model Optimizer can do.
+The first step is to begin from the experimental data.
+Note that the data can be synthesized.
+Typically, what you might see here would be something like using the [`CSV.jl`](https://csv.juliadata.org/stable/) package to load in the saved data.
+Then, you want to somehow tie the data back to the model.
+In this example we can go ahead and directly use the solution that we got from calling `solve` on our problem:
+
+```julia
+data = DataFrame(sol)
+```
+
+Now we have everything needed to define a trial.
+A trial is the model plus our data.
+We just pass in the data, the system and, again, specify what time to run over:
+
+```julia
+trial = Trial(data, sys, tspan=(0, 5e4))
+```
+
+Finally now that we have a trial, we can go ahead and create something that is core to this Model Optimizer pipeline — the Inverse Problem.
+In simple terms, the inverse problem consists in using the results of observations, experimental data, to infer the values of the parameters characterizing the system under study.
+Doing this in Model Optimizer is surprisingly easy.
+We're specifying the parameters that we want to optimize.
+We also specify the search space we want to look into.
+Lastly we're passing a collection of trials.
+Note that here it's a single trial, but still inside a collection (`[trial]`):
+
+```julia
+invprob = InverseProblem([trial], sys,
+    [
+        R.R => (9.5e-3, 13.5e-3),
+        C1.C => (9, 11),
+        C2.C => (95, 105)
+    ]
+)
+```
+
+The output of `InverseProblem is essentially the parameters found which cause the model to be sufficiently good fit to all data, where all data here is the collection of trials that we've passed.
+In the search space, note that we pass the lower and upper bound for each model parameter.
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
 
