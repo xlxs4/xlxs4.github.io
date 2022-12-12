@@ -381,11 +381,11 @@ Don't be afraid to throw problems at them, that's how they grow.
 
 ## Space Biology Payload Challenges
 
-- Miniaturization of cell culturing instrumentation.
-- Ensuring biocompatibility of payload materials.
-- Regulating temperature and pressure to decouple cell survival-behavior from other space stressors (e.g. radiation).
-- Using methods for autonomous measurements (e.g. spectroscopy, microscopy).
-- Preparing predictable long-term biological sample storage methods before launch.
+- Miniaturization of cell culturing instrumentation: you'll need temperature control, storing growth medium on-board, a place for the waste to go (not necessarily), a platform to host the organisms...
+- Ensuring biocompatibility of payload materials: not a major challenge, given that there is a variety of biocompatible materials and that you'll usually be isolating the biology, e.g. in a millifluidics card. Still, it's something that will affect a lot of design and implementation decisions.
+- Regulating temperature and pressure to decouple cell survival-behavior from other space stressors (e.g. radiation): controlling for pressure is by far the biggest hurdle to overcome here, since it means you will need the container that hosts the biology to be pressurized, which, in space terms, means you'll have to persuade people to let you test and fly a ticking bomb that can go off at any time. Also you'll have to make sure it doesn't leak and more :)
+- Using methods for autonomous measurements (e.g. spectroscopy, microscopy): well it's difficult to find instrumentation that is small, robust, and to somehow invent a way to automate the whole process so it doesn't require (physical) intervention.
+- Preparing predictable long-term biological sample storage methods before launch: You can see [^9] for a great example.
 - Engineering reliable readouts for cell viability/metabolism.
 - Standardization of common wet lab methods to meet space engineering requirements/procedures.
 
@@ -492,3 +492,4 @@ _Have **fun**_.
 [^6]: Cooren, F. (2004). The communicative achievement of collective minding: Analysis of board meeting excerpts. *Management Communication Quarterly*, 17(4), 517-551.
 [^7]: Hattie, J., & Timperley, H. (2007). The power of feedback. *Review of educational research*, 77(1), 81-112.
 [^8]: Alon, U. (2010). How to build a motivated research group. *Molecular cell*, 37(2), 151-152.
+[^9]: Santa Maria, S. R., Marina, D. B., Massaro Tieze, S., Liddell, L. C., & Bhattacharya, S. (2020). BioSentinel: long-term Saccharomyces cerevisiae preservation for a deep space biosensor mission. *Astrobiology*.
