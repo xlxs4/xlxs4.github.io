@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li><li>Handling the Model</li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>. Here&#39;s some knowledge.</p>
 <h2 id="juliasim">JuliaSim</h2>
@@ -257,6 +257,17 @@ end</code></pre>
     connect&#40;C2.n, Gnd.g&#41;
     connect&#40;R.n, Gnd.g&#41;
 &#93;</code></pre>
+<h3 id="handling_the_model">Handling the Model</h3>
+<p>We now have everything we need to create our model:</p>
+<pre><code class="language-julia">@named model &#61; ODESystem&#40;connections, t,
+                        systems&#61;&#91;L, R, G, C1, C2, Nr, Gnd&#93;&#41;</code></pre>
+<p>When talking about not necessarily having to worry about writing the code, but instead just describing the relationships between each of the components, this is what you see here. We can <code>connect</code> the <code>Inductor</code> to the <code>Ground</code>, the <code>NonlinearResistor</code> to the <code>Ground</code>, the <code>Capacitor</code>s to the <code>Ground</code>. We can do all of this with <code>connect</code> statements and at the end put everything in an element &#40;<code>ODESystem</code>&#41; called model, which is going to give us everything needed.</p>
+<p>But&#33; We didn&#39;t pay close attention at all in making sure this runs in an optimal way. That&#39;s where <code>structural_simplify</code> comes into play, and it&#39;s a very handy tool:</p>
+<pre><code class="language-julia">sys &#61; structural_simplify&#40;model&#41;</code></pre>
+<p>In many cases, the most convenient way to build the model may leave a lot of unnecessary variables. Before numerically solving we can remove these equations. <code>structural_simplify</code> structurally... simplifies algebraic equations in a system and computes the topological sort of the observed equations.</p>
+<p>After we get the optimal version of the model, we can create our <code>ODEProblem</code>, run it over a particular timespan, and, optionally, have it save at certain timepoints &#40;mostly for plotting later&#41;. We can then solve the problem:</p>
+<pre><code class="language-julia">prob &#61; ODEProblem&#40;sys, Pair&#91;&#93;, &#40;0, 5e4&#41;, saveat&#61;100&#41;
+sol &#61; solve&#40;prob, Rodas4&#40;&#41;&#41;</code></pre>
 <p><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
