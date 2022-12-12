@@ -54,7 +54,7 @@ The Model Optimizer is a Julia package available on the JuliaHub platform named 
 It contains methodology to perform model calibration and analysis inside a \abbr{title="High-Performance Computing", abbr="HPC"} environment in a user-friendly manner.
 It's a robust and automated framework to scale large and complex models.
 
-#### Model Calibration
+### Model Calibration
 
 A typical model calibration pipeline looks like the following:
 
@@ -64,6 +64,8 @@ A typical model calibration pipeline looks like the following:
 
 \figure{path="./assets/model-calibration.png", caption="Model calibration via optimization in Model Optimizer."}
 
+#### Nonlinear Model Calibration
+
 There's three main challenges that can arise if trying to calibrate a model when nonlinearity is introduced.
 Nonlinear calibration is significantly harder, mainly because:
 
@@ -72,6 +74,31 @@ Nonlinear calibration is significantly harder, mainly because:
 3. Model parameters can be unidentifiable from data
 
 \figure{path="./assets/model-calibration-challenges.png", caption="The challenges of Nonlinear Calibration."}
+
+To address the first challenge — how do we avoid local optima?
+We can leverage specialized methods from Model Optimizer.
+There's a variety of calibration methods available.
+Which one to choose is going to ultimately depend on the specific problem at hand.
+
+To address the second challenge — how do we do effective parallelism on a particular strategy that we're deploying?
+How do we leverage large-scale cloud compute systems to solve these problems?
+Proper strategy selection plays a big role here.
+You can enable parallelism with certain calibration strategies.
+Multiple shooting is one example that can be parallelized, so if it's an effective strategy for the case at hand it can help us break out the serial of execution.
+Note that some of the available techniques are more amenable to distributed compute.
+
+\figure{path="./assets/avoiding-local-optima.png", caption="Robust nonlinear calibration strategies."}
+
+Lastly, to address the third challenge — how do we quantify the uncertainty in the fit?
+The answer is by introducing a Model Optimizer concept called Virtual Populations.
+Virtual Populations are sets of parameters which sufficiently fit all trials, all observations.
+A trial is a different variation of the model which can be ran, it describes an experiment.
+It's a data observation.
+We can have collections of trials, multiple trials.
+Having a collection allows us to define multi-simulation optimization problems.
+We'll see what this means in practice later on in this post, it essentially is a a way to synthesize data to repeat stochastic optimization to better understand the parameter landscape and be able to quantify the uncertainty of global optima in the conditions observed.
+
+\figure{path="./assets/virtual-populations.png", caption="Quantifying uncertainty using Virtual Populations."}
 
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
