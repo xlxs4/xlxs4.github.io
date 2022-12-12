@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer<ol><li>JuliaSim</li><li>Introduction</li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer<ol><li>JuliaSim</li><li>Introduction<ol><li>Model Calibration</li></ol></li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
 <h3 id="juliasim">JuliaSim</h3>
@@ -61,7 +61,21 @@ The Surrogate Diagnostic Summary interactive dashboard.
 JuliaSim at a glance.
 </figcaption></figure><p>The Model Optimizer is a Julia package available on the JuliaHub platform named <code>JuliaSimModelOptimizer</code>. It contains methodology to perform model calibration and analysis inside a <abbr title="High-Performance Computing">HPC</abbr>
  environment in a user-friendly manner. It&#39;s a robust and automated framework to scale large and complex models.</p>
-<table class="fndef" id="fndef:1">
+<h4 id="model_calibration">Model Calibration</h4>
+<p>A typical model calibration pipeline looks like the following:</p>
+<ol>
+<li><p>First, simulate a parameter combination \(\theta_i\) somewhere in the parameter space. Feed the parameters in the model, which outputs the model prediction for \(\theta_i\).</p>
+</li>
+<li><p>Then collect &#40;experimental&#41; data for the same \(\theta_i\) combinations &#40;or vice-versa&#41;.</p>
+</li>
+<li><p>Lastly, combine model prediction and observed data to tune \(\theta_i\) so that the prediction better fits the data, using a loss &#40;usually error&#41; function for optimization.</p>
+</li>
+</ol>
+<figure class="figure">
+  <img src="./assets/model-calibration.png" alt="Model calibration via optimization in Model Optimizer." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Model calibration via optimization in Model Optimizer.
+</figcaption></figure><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
         <td class="fndef-content">Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., &amp; Rackauckas, C. &#40;2020&#41;. Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. <em>arXiv preprint arXiv:2010.04004</em>.</td>
