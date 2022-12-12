@@ -69,9 +69,9 @@ A typical model calibration pipeline looks like the following:
 There's three main challenges that can arise if trying to calibrate a model when nonlinearity is introduced.
 Nonlinear calibration is significantly harder, mainly because:
 
-1. Nonlinear optimization can easily hit local minima
-2. Optimization procedures/algorithms are usually serial
-3. Model parameters can be unidentifiable from data
+1. Nonlinear optimization can easily hit local minima.
+2. Optimization procedures/algorithms are usually serial.
+3. Model parameters can be unidentifiable from data.
 
 \figure{path="./assets/model-calibration-challenges.png", caption="The challenges of Nonlinear Calibration."}
 
@@ -124,6 +124,16 @@ This is more akin to the declarative programming paradigm.
 We only worry about the connections and the relationships between these functional blocks — we don't want to frame the problem particularly in terms of the flow of computation that has to happen, we want to think instead about individual components and the relationships between one another.
 
 \figure{path="./assets/acausal-modeling.png", caption="Acausal modeling in <a href='https://sciml.ai/'>ModelingToolkit.jl</a>, part of the SciML suite."}
+
+There's some key advantages to following the acausal modeling paradigm.
+Acausal modeling can be expressive.
+This allows us to think like scientists and engineers instead of being limited in framing the problem only in terms of how to compute the results.
+Acausal modeling can be concise.
+This can allow us to build large-scale models by connecting well-tested components.
+Acausal modeling can be reusable.
+We can bring these well-tested components and entire component models with us to build new systems.
+
+\figure{path="./assets/why-acausal-modeling.png", caption="Following the acausal modeling paradigm comes with important perks."}
 
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
