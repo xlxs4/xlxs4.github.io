@@ -23,6 +23,32 @@
 
 <item>
   <title>
+    <![CDATA[  JuliaSim Model Optimizer  ]]>
+  </title>
+  <link> https://xlxs4.github.io/notes/juliasim-model-optimizer/index.html </link>
+  <guid> https://xlxs4.github.io/notes/juliasim-model-optimizer/index.html </guid>
+  <description>
+    <![CDATA[  Model Calibration and Parameter Estimation w/ JuliaSim  ]]>
+  </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li></ol></div>
+<h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
+ ]]>
+  </content:encoded>
+    
+  <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Orestis Ousoultzoglou</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  ESA Design Booster  ]]>
   </title>
   <link> https://xlxs4.github.io/notes/esa-design-booster/index.html </link>
