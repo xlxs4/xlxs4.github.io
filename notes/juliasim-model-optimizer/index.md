@@ -100,5 +100,12 @@ We'll see what this means in practice later on in this post, it essentially is a
 
 \figure{path="./assets/virtual-populations.png", caption="Quantifying uncertainty using Virtual Populations."}
 
+### Model Paradigms
+
+So we've seen how model calibration could work at a high level, we've taken a look at some problems that might arise in nonlinear calibration,
+and how Model Optimizer tackles these problems, including the concept of virtual populations which is also very helpful for another reason we'll look into below.
+Before we get to really see how all of this could work in action, we need to discuss different modeling paradigms.
+How do we create these simulations and have something that we can apply these Model Optimizer techniques to?
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
