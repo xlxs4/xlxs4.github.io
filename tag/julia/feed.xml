@@ -37,10 +37,27 @@
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
 <p><a href="https://juliahub.com/products/juliasim/">JuliaSim</a> is a cloud-hosted platform for physical simulation. It combines a vast array of bleeding edge <a href="https://sciml.ai/">SciML</a> techniques, acausal equation-based digital twin modeling and simulation and is powered by the <a href="https://julialang.org/">Julia</a> programming language. It is preview-only software in the time of writing this post &#40;December 2022&#41;.</p>
-<p>JuliaSim produces surrogates of blackbox &#40;and regular&#41; dynamical systems using <a href="https://arxiv.org/pdf/2010.04004.pdf">Continuous Time Echo State Networks</a> &#40;CTESNs&#41;. This technique allows, amongst other features, for implicit training in parameter space to stabilize the ill-conditioning present in stiff systems.</p>
+<p>JuliaSim produces surrogates of blackbox &#40;and regular&#41; dynamical systems using &#91;Continuous Time Echo State Networks &#40;CTESNs&#41; <sup id="fnref:1">[1]</sup>. This technique allows, amongst other features, for implicit training in parameter space to stabilize the ill-conditioning present in stiff systems.</p>
 <p>You can leverage these surrogates to accelerate the process and there&#39;s a variety of techniques for quantifying uncertainty and noise &#40;see the virtual populations below&#41;. You can use JuliaSim for parameter estimation and optimal control, which is what this post is about. There&#39;s the so-called <a href="https://help.juliahub.com/juliasim/stable/ModelLibrary/">Model Library</a>, a collection of acausal &#40;equation-based&#41; components with pre-trained surrogates of models that are ready to use. You can thus discover and import/exchange various models, and combine yours with pre-built models and digital twins. Lastly, there&#39;s specialized numerical environments available for use upon demand. Everything can happen on the JuliaHub cloud-based IDE.</p>
-<p>If you want to build models, you can use the pre-made model libraries, e.g. <a href="https://help.juliahub.com/CellMLPhysiome/dev/">CellMLPhysiome.jl</a> and <a href="https://help.juliahub.com/SBMLBioModels/stable/">SBMLBioModels.jl</a>. You can use the <a href="https://github.com/SciML/Catalyst.jl">Catalyst.jl</a> and <a href="https://github.com/SciML/ModelingToolkit.jl">ModelingToolkit.jl</a> GUIs. If you want to generate models using existing data, you can use a Digital Twin generator. If you want to generate data using existing models, you can use a Surrogatizer and more.</p>
- ]]>
+<figure class="figure">
+  <img src="./assets/juliahub.png" alt="A visual overview of JuliaHub." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+A visual overview of JuliaHub.
+</figcaption></figure><p>If you want to build models, you can use the pre-made model libraries, e.g. <a href="https://help.juliahub.com/CellMLPhysiome/dev/">CellMLPhysiome.jl</a> and <a href="https://help.juliahub.com/SBMLBioModels/stable/">SBMLBioModels.jl</a>. You can use the <a href="https://github.com/SciML/Catalyst.jl">Catalyst.jl</a> and <a href="https://github.com/SciML/ModelingToolkit.jl">ModelingToolkit.jl</a> GUIs. If you want to generate models using existing data, you can use a Digital Twin generator. If you want to generate data using existing models, you can use a Surrogatizer and more.</p>
+<figure class="figure">
+  <img src="./assets/surrogatizer.png" alt="The JuliaSim Surrogatizer GUI." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The JuliaSim Surrogatizer GUI.
+</figcaption></figure><figure class="figure">
+  <img src="./assets/surrogate-dashboard.png" alt="The Surrogate Diagnostic Summary interactive dashboard." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The Surrogate Diagnostic Summary interactive dashboard.
+</figcaption></figure><table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref">[1]</td>
+        <td class="fndef-content">Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., &amp; Rackauckas, C. &#40;2020&#41;. Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. <em>arXiv preprint arXiv:2010.04004</em>.</td>
+    </tr>
+</table> ]]>
   </content:encoded>
     
   <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>  
