@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer<ol><li>JuliaSim</li><li>Introduction</li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer<ol><li>JuliaSim</li><li>Introduction</li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms</li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
 <h3 id="juliasim">JuliaSim</h3>
@@ -100,7 +100,9 @@ Robust nonlinear calibration strategies.
   <img src="./assets/virtual-populations.png" alt="Quantifying uncertainty using Virtual Populations." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
 Quantifying uncertainty using Virtual Populations.
-</figcaption></figure><table class="fndef" id="fndef:1">
+</figcaption></figure><h3 id="model_paradigms">Model Paradigms</h3>
+<p>So we&#39;ve seen how model calibration could work at a high level, we&#39;ve taken a look at some problems that might arise in nonlinear calibration, and how Model Optimizer tackles these problems, including the concept of virtual populations which is also very helpful for another reason we&#39;ll look into below. Before we get to really see how all of this could work in action, we need to discuss different modeling paradigms. How do we create these simulations and have something that we can apply these Model Optimizer techniques to?</p>
+<table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
         <td class="fndef-content">Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., &amp; Rackauckas, C. &#40;2020&#41;. Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. <em>arXiv preprint arXiv:2010.04004</em>.</td>
