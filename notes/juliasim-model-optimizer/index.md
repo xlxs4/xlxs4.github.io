@@ -19,9 +19,12 @@ rss_pubdate = Date(2022, 12, 12)
 
 Some time ago I attended a remote workshop titled "Model Calibration and Parameter Estimation with JuliaSim Model Optimizer" by the [JuliaHub](https://juliahub.com/company/about-us/) team, specifically [Jacob Vaverka](https://jvaverka.com/) and [Dr. Christopher Rackauckas](https://chrisrackauckas.com/).
 
-[JuliaSim](https://juliahub.com/products/juliasim/) is a cloud-hosted platform for physical simulation. It combines a vast array of bleeding edge [SciML](https://sciml.ai/) techniques, acausal equation-based digital twin modeling and simulation and is powered by the [Julia](https://julialang.org/) programming language. It is preview-only software in the time of writing this post (December 2022).
+[JuliaSim](https://juliahub.com/products/juliasim/) is a cloud-hosted platform for physical simulation.
+It combines a vast array of bleeding edge [SciML](https://sciml.ai/) techniques, acausal equation-based digital twin modeling and simulation and is powered by the [Julia](https://julialang.org/) programming language.
+It is preview-only software in the time of writing this post (December 2022).
 
-JuliaSim produces surrogates of blackbox (and regular) dynamical systems using [Continuous Time Echo State Networks](https://arxiv.org/pdf/2010.04004.pdf) (CTESNs). This technique allows, amongst other features, for implicit training in parameter space to stabilize the ill-conditioning present in stiff systems.
+JuliaSim produces surrogates of blackbox (and regular) dynamical systems using [Continuous Time Echo State Networks (CTESNs) [^1].
+This technique allows, amongst other features, for implicit training in parameter space to stabilize the ill-conditioning present in stiff systems.
 
 You can leverage these surrogates to accelerate the process and there's a variety of techniques for quantifying uncertainty and noise (see the virtual populations below).
 You can use JuliaSim for parameter estimation and optimal control, which is what this post is about.
@@ -30,7 +33,16 @@ You can thus discover and import/exchange various models, and combine yours with
 Lastly, there's specialized numerical environments available for use upon demand.
 Everything can happen on the JuliaHub cloud-based IDE.
 
+\figure{path="./assets/juliahub.png", caption="A visual overview of JuliaHub."}
+
 If you want to build models, you can use the pre-made model libraries, e.g. [CellMLPhysiome.jl](https://help.juliahub.com/CellMLPhysiome/dev/) and [SBMLBioModels.jl](https://help.juliahub.com/SBMLBioModels/stable/).
 You can use the [Catalyst.jl](https://github.com/SciML/Catalyst.jl) and [ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl) GUIs.
 If you want to generate models using existing data, you can use a Digital Twin generator.
 If you want to generate data using existing models, you can use a Surrogatizer and more.
+
+\figure{path="./assets/surrogatizer.png", caption="The JuliaSim Surrogatizer GUI."}
+
+\figure{path="./assets/surrogate-dashboard.png", caption="The Surrogate Diagnostic Summary interactive dashboard."}
+
+
+[^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
