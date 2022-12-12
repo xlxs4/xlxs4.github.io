@@ -33,9 +33,9 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
-<p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
+<p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>. Here&#39;s some knowledge.</p>
 <h2 id="juliasim">JuliaSim</h2>
 <p><a href="https://juliahub.com/products/juliasim/">JuliaSim</a> is a cloud-hosted platform for physical simulation. It combines a vast array of bleeding edge <a href="https://sciml.ai/">SciML</a> techniques, acausal equation-based digital twin modeling and simulation and is powered by the <a href="https://julialang.org/">Julia</a> programming language. It is preview-only software in the time of writing this post &#40;December 2022&#41;.</p>
 <p>JuliaSim produces surrogates of blackbox &#40;and regular&#41; dynamical systems using <abbr title="Continuous Time Echo State Networks">CTESN</abbr>
@@ -168,6 +168,27 @@ Acausal component-based modeling with <a href='https://mtk.sciml.ai/dev/'>Modeli
 <li><p><a href="https://www.wikiwand.com/en/Chemical_reaction_network_theory">Chemical Reactions</a> &#40;via <a href="https://docs.sciml.ai/Catalyst/stable/">Catalyst.jl</a>&#41;</p>
 </li>
 <li><p><a href="https://www.wikiwand.com/en/Optimal_control">Nonlinear Optimal Control</a></p>
+</li>
+</ul>
+<h2 id="modeling_toolkit_standard_library">Modeling Toolkit Standard Library</h2>
+<p>We could just use Modeling Toolkit but, if possible, we should try to use the Modeling Toolkit Standard Library, <a href="https://docs.sciml.ai/ModelingToolkitStandardLibrary/stable/">ModelingToolkitStandardLibrary.jl</a>. The standard library contains pre-built components that we can leverage to dive directly into the engineering and not focus as much on the math and the programming of building everything up from scratch.</p>
+<figure class="figure">
+  <img src="./assets/standard-library.png" alt="ModelingToolkit Standard Library." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+ModelingToolkit Standard Library.
+</figcaption></figure><h3 id="background">Background</h3>
+<p>The library defines well-tested acausal connections. In Physical Network Acausal modeling each physical domain must define a connector to combine the model components. Each physical domain connector defines a minimum of two variables, the Through and the Across variable. The through variable is a time derivative of some conserved quantity. The conserved quantity is expressed by the across variable. Generally, the physical system is given by:</p>
+<ul>
+<li><p>Energy dissipation: \(\frac{\partial across}{\partial t} \cdot c_1 = through\)</p>
+</li>
+<li><p>Flow: \(through \cdot c_2 = across\)</p>
+</li>
+</ul>
+<p>For example, for the electrical domain the across variable is voltage, and the through variable is current. So:</p>
+<ul>
+<li><p>Energy dissipation: \(\frac{\partial voltage}{\partial t} \cdot capacitance = current\)</p>
+</li>
+<li><p>Flow: \(current \cdot resistance = voltage\)</p>
 </li>
 </ul>
 <table class="fndef" id="fndef:1">
