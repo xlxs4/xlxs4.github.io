@@ -18,6 +18,7 @@ rss_pubdate = Date(2022, 12, 12)
 ## JuliaSim Model Optimizer
 
 Some time ago I attended a remote workshop titled "Model Calibration and Parameter Estimation with JuliaSim Model Optimizer" by the [JuliaHub](https://juliahub.com/company/about-us/) team, specifically [Jacob Vaverka](https://jvaverka.com/) and [Dr. Christopher Rackauckas](https://chrisrackauckas.com/).
+Here's some knowledge.
 
 ## JuliaSim
 
@@ -178,6 +179,35 @@ ModelingToolkit allows for automatic transformations, such as index reduction, t
 - [Continuous-Time Markov Chains](https://www.wikiwand.com/en/Continuous-time_Markov_chain)
 - [Chemical Reactions](https://www.wikiwand.com/en/Chemical_reaction_network_theory) (via [Catalyst.jl](https://docs.sciml.ai/Catalyst/stable/))
 - [Nonlinear Optimal Control](https://www.wikiwand.com/en/Optimal_control)
+
+## Modeling Toolkit Standard Library
+
+We could just use Modeling Toolkit but, if possible, we should try to use the Modeling Toolkit Standard Library, [ModelingToolkitStandardLibrary.jl](https://docs.sciml.ai/ModelingToolkitStandardLibrary/stable/).
+The standard library contains pre-built components that we can leverage to dive directly into the engineering and not focus as much on the math and the programming of building everything up from scratch.
+
+\figure{path="./assets/standard-library.png", caption="ModelingToolkit Standard Library."}
+
+### Background
+
+The library defines well-tested acausal connections.
+In Physical Network Acausal modeling each physical domain must define a connector to combine the model components.
+Each physical domain connector defines a minimum of two variables, the Through and the Across variable.
+The through variable is a time derivative of some conserved quantity.
+The conserved quantity is expressed by the across variable.
+Generally, the physical system is given by:
+
+- Energy dissipation:
+  $\frac{\partial across}{\partial t} \cdot c_1 = through$
+- Flow:
+  $through \cdot c_2 = across$
+
+For example, for the electrical domain the across variable is voltage, and the through variable is current.
+So:
+
+- Energy dissipation:
+  $\frac{\partial voltage}{\partial t} \cdot capacitance = current$
+- Flow:
+  $current \cdot resistance = voltage$
 
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
