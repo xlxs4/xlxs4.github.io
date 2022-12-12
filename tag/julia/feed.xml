@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li><li>Handling the Model</li><li>Inverse Problem</li><li>Virtual Population</li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li><li>Handling the Model</li><li>Inverse Problem</li><li>Virtual Population</li><li>Recap</li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>. Here&#39;s some knowledge.</p>
 <h2 id="juliasim">JuliaSim</h2>
@@ -294,6 +294,22 @@ sol &#61; solve&#40;prob, Rodas4&#40;&#41;&#41;</code></pre>
   <figcaption class="figure-caption ">
 We got some estimates of the model parameters.
 </figcaption></figure><p>Remember that when we defined our capacitors, \(C_1\) and \(C_2\) we passed in values for <code>C</code>. Notice that in the results there&#39;s a parameter <code>C</code>. Also observe that for \(C_1\) the values are around 10, and for \(C_2\) around 100. This is a relatively good sign, it means we&#39;re getting close to the actual value, and it can be a good eyeball test in general.</p>
+<h3 id="recap">Recap</h3>
+<p>For a more clear way to see the results that we got, we can use <a href="https://github.com/JuliaPlots/StatsPlots.jl">StatsPlots.jl</a> to visualize. We can create a single image which is a layout of three images and for each one we&#39;re going to use a smooth density plot to show the virtual population. For bonus points, since we know what the true value actually is, we can plot it too to use for comparison:</p>
+<pre><code class="language-julia">params &#61; DataFrame&#40;vp&#41;p1 &#61; density&#40;params&#91;:,1&#93;, label &#61; &quot;Estimate: R&quot;&#41;
+plot&#33;&#40;&#91;12.5e-3,12.5e-3&#93;, &#91;0.0, 300&#93;,
+    lw&#61;3,color&#61;:green,label&#61;&quot;True value: R&quot;, linestyle &#61; :dash&#41;p2 &#61; density&#40;params&#91;:,2&#93;, label &#61; &quot;Estimate: C1&quot;&#41;
+plot&#33;&#40;&#91;10,10&#93;, &#91;0.0, 1&#93;,
+    lw&#61;3,color&#61;:red,label&#61;&quot;True value: C1&quot;, linestyle &#61; :dash&#41;p3 &#61; density&#40;params&#91;:,3&#93;, label &#61; &quot;Estimate: C2&quot;&#41;
+plot&#33;&#40;&#91;100,100&#93;, &#91;0.0, 0.15&#93;,
+    lw&#61;3,color&#61;:purple,label&#61;&quot;True value: C2&quot;, linestyle &#61; :dash&#41;l &#61; @layout &#91;a b c&#93;
+plot&#40;p1, p2, p3, layout &#61; l&#41;</code></pre>
+<figure class="figure">
+  <img src="./assets/chua-visualization.png" alt="The estimated model parameters compared to ground truth." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The estimated model parameters compared to ground truth.
+</figcaption></figure><p>We can see that even with a low number of iterations we&#39;re still capturing the true values pretty well using the virtual populations.</p>
+<p>To reiterate, we first created the model with ModelingToolkit, the acausal modeling framework. We had to only create one component from scratch, where we were able to leverage the <code>OnePort</code> component from the electrical module of the standard library. We connected all of the model components, we got some optimized code, and then used that to generate some synthetic data and create the inverse problem. Directly from there, we created the virtual population. And that was a whirlwind overview of what a Model Optimizer workflow may look like.</p>
 <p><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
