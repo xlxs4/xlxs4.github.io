@@ -117,13 +117,13 @@ Here we're worried about the flow of computation — one could draw an analogy l
 
 ### Acausal Modeling
 
-Instead, in causal modeling we describe the behavior and the properties of the model components.
+Instead, in acausal modeling we describe the behavior and the properties of the model components.
 Then, the models are built up out of the composition of the components.
 The overall dynamics of the model fall out of the cumulative behavior of the composition.
 This is more akin to the declarative programming paradigm.
 We only worry about the connections and the relationships between these functional blocks — we don't want to frame the problem particularly in terms of the flow of computation that has to happen, we want to think instead about individual components and the relationships between one another.
 
-\figure{path="./assets/acausal-modeling.png", caption="Acausal modeling in <a href='https://sciml.ai/'>ModelingToolkit.jl</a>, part of the SciML suite."}
+\figure{path="./assets/acausal-modeling.png", caption="Acausal modeling in <a href='https://mtk.sciml.ai/dev/'>ModelingToolkit.jl</a>, part of the <a href='https://sciml.ai/'>SciML</a> suite."}
 
 There's some key advantages to following the acausal modeling paradigm.
 Acausal modeling can be expressive.
@@ -134,6 +134,14 @@ Acausal modeling can be reusable.
 We can bring these well-tested components and entire component models with us to build new systems.
 
 \figure{path="./assets/why-acausal-modeling.png", caption="Following the acausal modeling paradigm comes with important perks."}
+
+## Modeling Toolkit
+
+[ModelingToolkit.jl](https://mtk.sciml.ai/dev/) is a Julia acausal modeling framework and it will allow us to be expressive and concise when we write our \abbr{title="Differential Equation", abbr="DE"} models.
+It will also enable us to reuse these models so we can automatically rearrange equations for better stability.
+We're gonna get some extra perks here.
+We're gonna get optimal code by default, without having to worry about the most optimal way to compute these things — we just worry about the mechanics and then we get the optimal code for free.
+The code will also be parallelizable by default.
 
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
