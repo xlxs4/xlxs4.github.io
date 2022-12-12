@@ -382,8 +382,32 @@ invprob = InverseProblem([trial], sys,
 )
 ```
 
-The output of `InverseProblem is essentially the parameters found which cause the model to be sufficiently good fit to all data, where all data here is the collection of trials that we've passed.
+The output of `InverseProblem` is essentially the parameters found which cause the model to be sufficiently good fit to all data, where all data here is the collection of trials that we've passed.
 In the search space, note that we pass the lower and upper bound for each model parameter.
+
+### Virtual Population
+
+Since that's done, we move on to seeing the concept of virtual populations applied in practice.
+The virtual population is the plausible population of optimal points.
+To create this virtual population, we feed in the inverse problem.
+We also pass an optimization algorithm — in this case we're going to use the stochastic global optimization algorithm.
+Lastly, we specify the number of max iterations we want this to run for.
+We'll use 1000, a much more realistic number to use would be at about 5000:
+
+```julia
+vp = vpop(invprob,
+        StochGlobalOpt(maxiters = 100),
+        population_size = 50)
+```
+
+Et voilà!
+
+\figure{path="./assets/virtual-population-results.png", caption="We got some estimates of the model parameters."}
+
+Remember that when we defined our capacitors, $C_1$ and $C_2$ we passed in values for `C`.
+Notice that in the results there's a parameter `C`.
+Also observe that for $C_1$ the values are around 10, and for $C_2$ around 100.
+This is a relatively good sign, it means we're getting close to the actual value, and it can be a good eyeball test in general.
 
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
