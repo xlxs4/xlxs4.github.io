@@ -19,7 +19,7 @@ rss_pubdate = Date(2022, 12, 12)
 
 Some time ago I attended a remote workshop titled "Model Calibration and Parameter Estimation with JuliaSim Model Optimizer" by the [JuliaHub](https://juliahub.com/company/about-us/) team, specifically [Jacob Vaverka](https://jvaverka.com/) and [Dr. Christopher Rackauckas](https://chrisrackauckas.com/).
 
-### JuliaSim
+## JuliaSim
 
 [JuliaSim](https://juliahub.com/products/juliasim/) is a cloud-hosted platform for physical simulation.
 It combines a vast array of bleeding edge [SciML](https://sciml.ai/) techniques, acausal equation-based digital twin modeling and simulation and is powered by the [Julia](https://julialang.org/) programming language.
@@ -54,7 +54,7 @@ The Model Optimizer is a Julia package available on the JuliaHub platform named 
 It contains methodology to perform model calibration and analysis inside a \abbr{title="High-Performance Computing", abbr="HPC"} environment in a user-friendly manner.
 It's a robust and automated framework to scale large and complex models.
 
-### Model Calibration
+## Model Calibration
 
 A typical model calibration pipeline looks like the following:
 
@@ -64,7 +64,7 @@ A typical model calibration pipeline looks like the following:
 
 \figure{path="./assets/model-calibration.png", caption="Model calibration via optimization in Model Optimizer."}
 
-#### Nonlinear Model Calibration
+### Nonlinear Model Calibration
 
 There's three main challenges that can arise if trying to calibrate a model when nonlinearity is introduced.
 Nonlinear calibration is significantly harder, mainly because:
@@ -100,22 +100,22 @@ We'll see what this means in practice later on in this post, it essentially is a
 
 \figure{path="./assets/virtual-populations.png", caption="Quantifying uncertainty using Virtual Populations."}
 
-### Model Paradigms
+## Model Paradigms
 
 So we've seen how model calibration could work at a high level, we've taken a look at some problems that might arise in nonlinear calibration,
 and how Model Optimizer tackles these problems, including the concept of virtual populations which is also very helpful for another reason we'll look into below.
 Before we get to really see how all of this could work in action, we need to discuss different modeling paradigms.
 How do we create these simulations and have something that we can apply these Model Optimizer techniques to?
 
-#### Causal Modeling
+### Causal Modeling
 
 In causal modeling, we describe the causal mechanisms of a system.
 The way that this works is we provide clear rules for the interactions between functional blocks.
 Here we're worried about the flow of computation — one could draw an analogy linking causal modeling with the imperative programming paradigm.
 
-\figure{path="./assets/causal-modeling.png", caption="Causal Block diagram in Simulink by The Mathworks."}
+\figure{path="./assets/causal-modeling.png", caption="Causal Block diagram in <a href='https://www.mathworks.com/products/simulink.html'>Simulink</a> by The Mathworks."}
 
-#### Acausal Modeling
+### Acausal Modeling
 
 Instead, in causal modeling we describe the behavior and the properties of the model components.
 Then, the models are built up out of the composition of the components.
