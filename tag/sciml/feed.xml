@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit</li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>. Here&#39;s some knowledge.</p>
 <h2 id="juliasim">JuliaSim</h2>
@@ -153,21 +153,24 @@ Acausal component-based modeling with <a href='https://mtk.sciml.ai/dev/'>Modeli
 </ul>
 <h3 id="equation_types">Equation Types</h3>
 <ul>
-<li><p><a href="https://www.wikiwand.com/en/Ordinary_differential_equation">Ordinary differential equations</a></p>
+<li><p><abbr title="Ordinary differential equations">ODE</abbr>
+s</p>
 </li>
-<li><p><a href="https://www.wikiwand.com/en/Stochastic_differential_equation">Stochastic differential equations</a></p>
+<li><p><abbr title="Stochastic differential equations">SDE</abbr>
+s</p>
 </li>
-<li><p><a href="https://www.wikiwand.com/en/Partial_differential_equation">Partial differential equations</a></p>
+<li><p><abbr title="Partial differential equations">PDE</abbr>
+s</p>
 </li>
-<li><p><a href="https://www.wikiwand.com/en/Nonlinear_system">Nonlinear systems</a></p>
+<li><p>Nonlinear systems</p>
 </li>
-<li><p><a href="https://www.wikiwand.com/en/Optimization_problem">Optimization problems</a></p>
+<li><p>Optimization problems</p>
 </li>
-<li><p><a href="https://www.wikiwand.com/en/Continuous-time_Markov_chain">Continuous-Time Markov Chains</a></p>
+<li><p>Continuous-Time Markov Chains</p>
 </li>
-<li><p><a href="https://www.wikiwand.com/en/Chemical_reaction_network_theory">Chemical Reactions</a> &#40;via <a href="https://docs.sciml.ai/Catalyst/stable/">Catalyst.jl</a>&#41;</p>
+<li><p>Chemical Reactions &#40;via <a href="https://docs.sciml.ai/Catalyst/stable/">Catalyst.jl</a>&#41;</p>
 </li>
-<li><p><a href="https://www.wikiwand.com/en/Optimal_control">Nonlinear Optimal Control</a></p>
+<li><p>Nonlinear Optimal Control</p>
 </li>
 </ul>
 <h2 id="modeling_toolkit_standard_library">Modeling Toolkit Standard Library</h2>
@@ -191,6 +194,7 @@ ModelingToolkit Standard Library.
 <li><p>Flow: \(current \cdot resistance = voltage\)</p>
 </li>
 </ul>
+<h2 id="example_1_chuas_circuit">Example 1: Chua&#39;s Circuit</h2>
 <table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
