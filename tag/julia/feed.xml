@@ -122,7 +122,11 @@ Following the acausal modeling paradigm comes with important perks.
 </figcaption></figure><h2 id="modeling_toolkit">Modeling Toolkit</h2>
 <p><a href="https://mtk.sciml.ai/dev/">ModelingToolkit.jl</a> is a Julia acausal modeling framework and it will allow us to be expressive and concise when we write our <abbr title="Differential Equation">DE</abbr>
  models. It will also enable us to reuse these models so we can automatically rearrange equations for better stability. We&#39;re gonna get some extra perks here. We&#39;re gonna get optimal code by default, without having to worry about the most optimal way to compute these things — we just worry about the mechanics and then we get the optimal code for free. The code will also be parallelizable by default.</p>
-<h3 id="description">Description</h3>
+<figure class="figure">
+  <img src="./assets/modeling-toolkit.png" alt="Acausal component-based modeling with <a href='https://mtk.sciml.ai/dev/'>ModelingToolkit.jl</a>." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Acausal component-based modeling with <a href='https://mtk.sciml.ai/dev/'>ModelingToolkit.jl</a>.
+</figcaption></figure><h3 id="description">Description</h3>
 <p>ModelingToolkit is a modeling language. It can do both symbolic and numeric computation. It is highly performant and parallel. It is extendable because it brings ideas from symbolic <abbr title="Computer Algebra System">CAS</abbr>
  and causal/acausal equation-based modeling frameworks, but also because it&#39;s built in Julia and it&#39;s easy to pry into the source and modify as we please.</p>
 <p>The high-level modeling process is as follows: the model can be input as a high-level description. Then, the model is analyzed and enhanced through symbolic preprocessing. ModelingToolkit allows for automatic transformations, such as index reduction, to be applied before solving in order to easily handle equations that could not have been solved without some sort of symbolic intervention.</p>
