@@ -340,6 +340,9 @@ prob = ODEProblem(sys, Pair[], (0, 5e4), saveat=100)
 sol = solve(prob, Rodas4())
 ```
 
+Everything up to this point does not evolve Model Optimizer, it's mostly good ol' Modeling Toolkit.
+You can find an example in [this toy GitHub repository](https://github.com/xlxs4/chua-circuit).
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
 
