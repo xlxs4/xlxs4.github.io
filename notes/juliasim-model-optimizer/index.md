@@ -54,5 +54,15 @@ The Model Optimizer is a Julia package available on the JuliaHub platform named 
 It contains methodology to perform model calibration and analysis inside a \abbr{title="High-Performance Computing", abbr="HPC"} environment in a user-friendly manner.
 It's a robust and automated framework to scale large and complex models.
 
+#### Model Calibration
+
+A typical model calibration pipeline looks like the following:
+
+1. First, simulate a parameter combination $\theta_i$ somewhere in the parameter space. Feed the parameters in the model, which outputs the model prediction for $\theta_i$.
+2. Then collect (experimental) data for the same $\theta_i$ combinations (or vice-versa).
+3. Lastly, combine model prediction and observed data to tune $\theta_i$ so that the prediction better fits the data, using a loss (usually error) function for optimization.
+
+\figure{path="./assets/model-calibration.png", caption="Model calibration via optimization in Model Optimizer."}
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
