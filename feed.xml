@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer<ol><li>JuliaSim</li><li>Introduction</li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li></ol></li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer<ol><li>JuliaSim</li><li>Introduction</li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
 <h3 id="juliasim">JuliaSim</h3>
@@ -108,6 +108,12 @@ Quantifying uncertainty using Virtual Populations.
   <img src="./assets/causal-modeling.png" alt="Causal Block diagram in Simulink by The Mathworks." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
 Causal Block diagram in Simulink by The Mathworks.
+</figcaption></figure><h4 id="acausal_modeling">Acausal Modeling</h4>
+<p>Instead, in causal modeling we describe the behavior and the properties of the model components. Then, the models are built up out of the composition of the components. The overall dynamics of the model fall out of the cumulative behavior of the composition. This is more akin to the declarative programming paradigm. We only worry about the connections and the relationships between these functional blocks — we don&#39;t want to frame the problem particularly in terms of the flow of computation that has to happen, we want to think instead about individual components and the relationships between one another.</p>
+<figure class="figure">
+  <img src="./assets/acausal-modeling.png" alt="Acausal modeling in <a href='https://sciml.ai/'>ModelingToolkit.jl</a>, part of the SciML suite." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Acausal modeling in <a href='https://sciml.ai/'>ModelingToolkit.jl</a>, part of the SciML suite.
 </figcaption></figure><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
