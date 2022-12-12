@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li></ol></li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>. Here&#39;s some knowledge.</p>
 <h2 id="juliasim">JuliaSim</h2>
@@ -231,6 +231,32 @@ function NonlinearResistor&#40;;name, Ga, Gb, Ve&#41;
     extend&#40;ODESystem&#40;eqs, t, &#91;&#93;, pars; name&#61;name&#41;, oneport&#41;
 end</code></pre>
 <p>You can see we&#39;re using some components from the electrical module, and then it&#39;s pretty straightforward to describe the various equations that we want to govern the behavior of the nonlinear resistor. There&#39;s a couple nested <code>ifelse</code> statements which employ different equations based on different conditions of the nonlinear resistor. What we return from this function here is an <code>ODESystem</code> which is going to help us create the component. <code>NonlinearResistor</code> was the only component we needed to build ourselves.</p>
+<h4 id="creating_model_components">Creating Model Components</h4>
+<p>After defining the model parameters that are not readily available in the model library, we can then create the model components. We can do this using various standard library components and the nonlinear resistor we just built:</p>
+<pre><code class="language-julia">@named L &#61; Inductor&#40;L&#61;18&#41;
+@named R &#61; Resistor&#40;R&#61;12.5e-3&#41;
+@named G &#61; Conductor&#40;G&#61;0.565&#41;
+@named C1 &#61; Capacitor&#40;C&#61;10, v_start&#61;4&#41;
+@named C2 &#61; Capacitor&#40;C&#61;100&#41;
+@named Nr &#61; NonlinearResistor&#40;
+    Ga &#61; -0.757576,
+    Gb &#61; -0.409091,
+    Ve&#61;1&#41;
+@named Gnd &#61; Ground&#40;&#41;</code></pre>
+<p><code>Inductor</code>, <code>Resistor</code>, <code>Conductor</code> and <code>Ground</code> are all from the electrical module of the standard library. Note that we can create the model components with the same labels we saw on the diagram.</p>
+<h4 id="connecting_model_components">Connecting Model Components</h4>
+<p>Once we have each of these elements, we can start defining the relationships between the components. That&#39;s what you see in the <code>connect</code> statements below:</p>
+<pre><code class="language-julia">connections &#61; &#91;
+    connect&#40;L.p, G.p&#41;
+    connect&#40;G.n, Nr.p&#41;
+    connect&#40;Nr.n, Gnd.g&#41;
+    connect&#40;C1.p, G.n&#41;
+    connect&#40;L.n, R.p&#41;
+    connect&#40;G.p, C2.p&#41;
+    connect&#40;C1.n, Gnd.g&#41;
+    connect&#40;C2.n, Gnd.g&#41;
+    connect&#40;R.n, Gnd.g&#41;
+&#93;</code></pre>
 <p><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
