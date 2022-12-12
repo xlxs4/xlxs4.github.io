@@ -75,6 +75,19 @@ JuliaSim at a glance.
   <img src="./assets/model-calibration.png" alt="Model calibration via optimization in Model Optimizer." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
 Model calibration via optimization in Model Optimizer.
+</figcaption></figure><p>There&#39;s three main challenges that can arise if trying to calibrate a model when nonlinearity is introduced. Nonlinear calibration is significantly harder, mainly because:</p>
+<ol>
+<li><p>Nonlinear optimization can easily hit local minima</p>
+</li>
+<li><p>Optimization procedures/algorithms are usually serial</p>
+</li>
+<li><p>Model parameters can be unidentifiable from data</p>
+</li>
+</ol>
+<figure class="figure">
+  <img src="./assets/model-calibration-challenges.png" alt="The challenges of Nonlinear Calibration." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The challenges of Nonlinear Calibration.
 </figcaption></figure><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
