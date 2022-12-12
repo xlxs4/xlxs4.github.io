@@ -195,12 +195,27 @@ ModelingToolkit Standard Library.
 </li>
 </ul>
 <h2 id="example_1_chuas_circuit">Example 1: Chua&#39;s Circuit</h2>
-<table class="fndef" id="fndef:1">
+<p>A Chua circuit is a simple electronic circuit that exhibits classic chaotic behavior. It produces an oscillating waveform that never repeats. The ease of construction of the circuit has made it a ubiquitous real-world example of a chaotic system, leading some to declare it &quot;a paradigm for chaos&quot; <sup id="fnref:2">[2]</sup>.</p>
+<p>In order to get this chaotic behavior, we need to satisfy a couple requirements.</p>
+<figure class="figure">
+  <img src="./assets/chua-circuit.png" alt="Chua's circuit diagram." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Chua's circuit diagram.
+</figcaption></figure><p>We need at least one nonlinear element if you look at the diagram above, and that&#39;s what \(N_R\) stands for, our nonlinear resistor. We need at least one locally active resistor, which is also \(N_R\) in the diagram. Then, we need at least three energy storage elements, so that&#39;s where the capacitors \(C_1\) and \(C_2\) and the inductor \(L\) come into play. That diagram is what we&#39;re going to be building.</p>
+<p><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
         <td class="fndef-content">Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., &amp; Rackauckas, C. &#40;2020&#41;. Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. <em>arXiv preprint arXiv:2010.04004</em>.</td>
     </tr>
-</table> ]]>
+</table>
+ <table class="fndef" id="fndef:2">
+    <tr>
+        <td class="fndef-backref">[2]</td>
+        <td class="fndef-content">Madan, R. N. &#40;Ed.&#41;. &#40;1993&#41;. <em>Chua&#39;s circuit: a paradigm for chaos</em> &#40;Vol. 1&#41;. World Scientific.</td>
+    </tr>
+</table>
+</p>
+ ]]>
   </content:encoded>
     
   <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>  
