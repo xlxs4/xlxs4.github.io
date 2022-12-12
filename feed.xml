@@ -23,6 +23,304 @@
 
 <item>
   <title>
+    <![CDATA[  JuliaSim Model Optimizer  ]]>
+  </title>
+  <link> https://xlxs4.github.io/notes/juliasim-model-optimizer/index.html </link>
+  <guid> https://xlxs4.github.io/notes/juliasim-model-optimizer/index.html </guid>
+  <description>
+    <![CDATA[  Model Calibration and Parameter Estimation w/ JuliaSim  ]]>
+  </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li><li>Handling the Model</li><li>Inverse Problem</li><li>Virtual Population</li></ol></li></ol></div>
+<h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
+<p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>. Here&#39;s some knowledge.</p>
+<h2 id="juliasim">JuliaSim</h2>
+<p><a href="https://juliahub.com/products/juliasim/">JuliaSim</a> is a cloud-hosted platform for physical simulation. It combines a vast array of bleeding edge <a href="https://sciml.ai/">SciML</a> techniques, acausal equation-based digital twin modeling and simulation and is powered by the <a href="https://julialang.org/">Julia</a> programming language. It is preview-only software in the time of writing this post &#40;December 2022&#41;.</p>
+<p>JuliaSim produces surrogates of blackbox &#40;and regular&#41; dynamical systems using <abbr title="Continuous Time Echo State Networks">CTESN</abbr>
+s <sup id="fnref:1">[1]</sup>. This technique allows, amongst other features, for implicit training in parameter space to stabilize the ill-conditioning present in stiff systems.</p>
+<p>You can leverage these surrogates to accelerate the process and there&#39;s a variety of techniques for quantifying uncertainty and noise &#40;see the virtual populations below&#41;. You can use JuliaSim for parameter estimation and optimal control, which is what this post is about. There&#39;s the so-called <a href="https://help.juliahub.com/juliasim/stable/ModelLibrary/">Model Library</a>, a collection of acausal &#40;equation-based&#41; components with pre-trained surrogates of models that are ready to use. You can thus discover and import/exchange various models, and combine yours with pre-built models and digital twins. Lastly, there&#39;s specialized numerical environments available for use upon demand. Everything can happen on the JuliaHub cloud-based IDE.</p>
+<figure class="figure">
+  <img src="./assets/juliahub.png" alt="A visual overview of JuliaHub." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+A visual overview of JuliaHub.
+</figcaption></figure><p>If you want to build models, you can use the pre-made model libraries, e.g. <a href="https://help.juliahub.com/CellMLPhysiome/dev/">CellMLPhysiome.jl</a> and <a href="https://help.juliahub.com/SBMLBioModels/stable/">SBMLBioModels.jl</a>. You can use the <a href="https://github.com/SciML/Catalyst.jl">Catalyst.jl</a> and <a href="https://github.com/SciML/ModelingToolkit.jl">ModelingToolkit.jl</a> GUIs. If you want to generate models using existing data, you can use a Digital Twin generator. If you want to generate data using existing models, you can use a Surrogatizer and more.</p>
+<figure class="figure">
+  <img src="./assets/surrogatizer.png" alt="The JuliaSim Surrogatizer GUI." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The JuliaSim Surrogatizer GUI.
+</figcaption></figure><figure class="figure">
+  <img src="./assets/surrogate-dashboard.png" alt="The Surrogate Diagnostic Summary interactive dashboard." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The Surrogate Diagnostic Summary interactive dashboard.
+</figcaption></figure><h3 id="introduction">Introduction</h3>
+<figure class="figure">
+  <img src="./assets/juliasim.png" alt="JuliaSim at a glance." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+JuliaSim at a glance.
+</figcaption></figure><p>The Model Optimizer is a Julia package available on the JuliaHub platform named <code>JuliaSimModelOptimizer</code>. It contains methodology to perform model calibration and analysis inside a <abbr title="High-Performance Computing">HPC</abbr>
+ environment in a user-friendly manner. It&#39;s a robust and automated framework to scale large and complex models.</p>
+<h2 id="model_calibration">Model Calibration</h2>
+<p>A typical model calibration pipeline looks like the following:</p>
+<ol>
+<li><p>First, simulate a parameter combination \(\theta_i\) somewhere in the parameter space. Feed the parameters in the model, which outputs the model prediction for \(\theta_i\).</p>
+</li>
+<li><p>Then collect &#40;experimental&#41; data for the same \(\theta_i\) combinations &#40;or vice-versa&#41;.</p>
+</li>
+<li><p>Lastly, combine model prediction and observed data to tune \(\theta_i\) so that the prediction better fits the data, using a loss &#40;usually error&#41; function for optimization.</p>
+</li>
+</ol>
+<figure class="figure">
+  <img src="./assets/model-calibration.png" alt="Model calibration via optimization in Model Optimizer." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Model calibration via optimization in Model Optimizer.
+</figcaption></figure><h3 id="nonlinear_model_calibration">Nonlinear Model Calibration</h3>
+<p>There&#39;s three main challenges that can arise if trying to calibrate a model when nonlinearity is introduced. Nonlinear calibration is significantly harder, mainly because:</p>
+<ol>
+<li><p>Nonlinear optimization can easily hit local minima.</p>
+</li>
+<li><p>Optimization procedures/algorithms are usually serial.</p>
+</li>
+<li><p>Model parameters can be unidentifiable from data.</p>
+</li>
+</ol>
+<figure class="figure">
+  <img src="./assets/model-calibration-challenges.png" alt="The challenges of Nonlinear Calibration." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The challenges of Nonlinear Calibration.
+</figcaption></figure><p>To address the first challenge — how do we avoid local optima? We can leverage specialized methods from Model Optimizer. There&#39;s a variety of calibration methods available. Which one to choose is going to ultimately depend on the specific problem at hand.</p>
+<p>To address the second challenge — how do we do effective parallelism on a particular strategy that we&#39;re deploying? How do we leverage large-scale cloud compute systems to solve these problems? Proper strategy selection plays a big role here. You can enable parallelism with certain calibration strategies. Multiple shooting is one example that can be parallelized, so if it&#39;s an effective strategy for the case at hand it can help us break out the serial of execution. Note that some of the available techniques are more amenable to distributed compute.</p>
+<figure class="figure">
+  <img src="./assets/avoiding-local-optima.png" alt="Robust nonlinear calibration strategies." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Robust nonlinear calibration strategies.
+</figcaption></figure><p>Lastly, to address the third challenge — how do we quantify the uncertainty in the fit? The answer is by introducing a Model Optimizer concept called Virtual Populations. Virtual Populations are sets of parameters which sufficiently fit all trials, all observations. A trial is a different variation of the model which can be ran, it describes an experiment. It&#39;s a data observation. We can have collections of trials, multiple trials. Having a collection allows us to define multi-simulation optimization problems. We&#39;ll see what this means in practice later on in this post, it essentially is a a way to synthesize data to repeat stochastic optimization to better understand the parameter landscape and be able to quantify the uncertainty of global optima in the conditions observed.</p>
+<figure class="figure">
+  <img src="./assets/virtual-populations.png" alt="Quantifying uncertainty using Virtual Populations." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Quantifying uncertainty using Virtual Populations.
+</figcaption></figure><h2 id="model_paradigms">Model Paradigms</h2>
+<p>So we&#39;ve seen how model calibration could work at a high level, we&#39;ve taken a look at some problems that might arise in nonlinear calibration, and how Model Optimizer tackles these problems, including the concept of virtual populations which is also very helpful for another reason we&#39;ll look into below. Before we get to really see how all of this could work in action, we need to discuss different modeling paradigms. How do we create these simulations and have something that we can apply these Model Optimizer techniques to?</p>
+<h3 id="causal_modeling">Causal Modeling</h3>
+<p>In causal modeling, we describe the causal mechanisms of a system. The way that this works is we provide clear rules for the interactions between functional blocks. Here we&#39;re worried about the flow of computation — one could draw an analogy linking causal modeling with the imperative programming paradigm.</p>
+<figure class="figure">
+  <img src="./assets/causal-modeling.png" alt="Causal Block diagram in <a href='https://www.mathworks.com/products/simulink.html'>Simulink</a> by The Mathworks." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Causal Block diagram in <a href='https://www.mathworks.com/products/simulink.html'>Simulink</a> by The Mathworks.
+</figcaption></figure><h3 id="acausal_modeling">Acausal Modeling</h3>
+<p>Instead, in acausal modeling we describe the behavior and the properties of the model components. Then, the models are built up out of the composition of the components. The overall dynamics of the model fall out of the cumulative behavior of the composition. This is more akin to the declarative programming paradigm. We only worry about the connections and the relationships between these functional blocks — we don&#39;t want to frame the problem particularly in terms of the flow of computation that has to happen, we want to think instead about individual components and the relationships between one another.</p>
+<figure class="figure">
+  <img src="./assets/acausal-modeling.png" alt="Acausal modeling in <a href='https://mtk.sciml.ai/dev/'>ModelingToolkit.jl</a>, part of the <a href='https://sciml.ai/'>SciML</a> suite." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Acausal modeling in <a href='https://mtk.sciml.ai/dev/'>ModelingToolkit.jl</a>, part of the <a href='https://sciml.ai/'>SciML</a> suite.
+</figcaption></figure><p>There&#39;s some key advantages to following the acausal modeling paradigm. Acausal modeling can be expressive. This allows us to think like scientists and engineers instead of being limited in framing the problem only in terms of how to compute the results. Acausal modeling can be concise. This can allow us to build large-scale models by connecting well-tested components. Acausal modeling can be reusable. We can bring these well-tested components and entire component models with us to build new systems.</p>
+<figure class="figure">
+  <img src="./assets/why-acausal-modeling.png" alt="Following the acausal modeling paradigm comes with important perks." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Following the acausal modeling paradigm comes with important perks.
+</figcaption></figure><h2 id="modeling_toolkit">Modeling Toolkit</h2>
+<p><a href="https://mtk.sciml.ai/dev/">ModelingToolkit.jl</a> is a Julia acausal modeling framework and it will allow us to be expressive and concise when we write our <abbr title="Differential Equation">DE</abbr>
+ models. It will also enable us to reuse these models so we can automatically rearrange equations for better stability. We&#39;re gonna get some extra perks here. We&#39;re gonna get optimal code by default, without having to worry about the most optimal way to compute these things — we just worry about the mechanics and then we get the optimal code for free. The code will also be parallelizable by default.</p>
+<figure class="figure">
+  <img src="./assets/modeling-toolkit.png" alt="Acausal component-based modeling with <a href='https://mtk.sciml.ai/dev/'>ModelingToolkit.jl</a>." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Acausal component-based modeling with <a href='https://mtk.sciml.ai/dev/'>ModelingToolkit.jl</a>.
+</figcaption></figure><h3 id="description">Description</h3>
+<p>ModelingToolkit is a modeling language. It can do both symbolic and numeric computation. It is highly performant and parallel. It is extendable because it brings ideas from symbolic <abbr title="Computer Algebra System">CAS</abbr>
+ and causal/acausal equation-based modeling frameworks, but also because it&#39;s built in Julia and it&#39;s easy to pry into the source and modify as we please.</p>
+<p>The high-level modeling process is as follows: the model can be input as a high-level description. Then, the model is analyzed and enhanced through symbolic preprocessing. ModelingToolkit allows for automatic transformations, such as index reduction, to be applied before solving in order to easily handle equations that could not have been solved without some sort of symbolic intervention.</p>
+<h3 id="features">Features</h3>
+<ul>
+<li><p>Causal and acausal modeling &#40;<a href="https://www.mathworks.com/products/simulink.html">Simulink</a>/<a href="https://modelica.org/modelicalanguage.html">Modelica</a>&#41; .</p>
+</li>
+<li><p>Automated model transformation, simplification, and composition.</p>
+</li>
+<li><p>Automatic conversion of numerical models into symbolic models.</p>
+</li>
+<li><p>Composition of models through the components, a lazy connection system, and tools for expanding/flattening</p>
+</li>
+<li><p>Pervasive parallelism in symbolic computations and generated functions.</p>
+</li>
+<li><p>Transformations like alias elimination and tearing of nonlinear systems for efficiently numerically handling large-scale systems of equations.</p>
+</li>
+<li><p>The ability to use the entire <a href="https://github.com/JuliaSymbolics/Symbolics.jl">Symbolics.jl</a> CAS as part of the modeling process.</p>
+</li>
+<li><p>Import models from common formats like <a href="https://sbml.org/">SBML</a>, <a href="https://www.cellml.org/">CellML</a>, <a href="https://bionetgen.org/">BioNetGen</a>, and more.</p>
+</li>
+<li><p>Extendability: the whole system is written in pure <a href="https://julialang.org/">Julia</a>, so adding new functions, simplification rules, and model transformations has no barrier.</p>
+</li>
+</ul>
+<h3 id="equation_types">Equation Types</h3>
+<ul>
+<li><p><abbr title="Ordinary differential equations">ODE</abbr>
+s</p>
+</li>
+<li><p><abbr title="Stochastic differential equations">SDE</abbr>
+s</p>
+</li>
+<li><p><abbr title="Partial differential equations">PDE</abbr>
+s</p>
+</li>
+<li><p>Nonlinear systems</p>
+</li>
+<li><p>Optimization problems</p>
+</li>
+<li><p>Continuous-Time Markov Chains</p>
+</li>
+<li><p>Chemical Reactions &#40;via <a href="https://docs.sciml.ai/Catalyst/stable/">Catalyst.jl</a>&#41;</p>
+</li>
+<li><p>Nonlinear Optimal Control</p>
+</li>
+</ul>
+<h2 id="modeling_toolkit_standard_library">Modeling Toolkit Standard Library</h2>
+<p>We could just use Modeling Toolkit but, if possible, we should try to use the Modeling Toolkit Standard Library, <a href="https://docs.sciml.ai/ModelingToolkitStandardLibrary/stable/">ModelingToolkitStandardLibrary.jl</a>. The standard library contains pre-built components that we can leverage to dive directly into the engineering and not focus as much on the math and the programming of building everything up from scratch.</p>
+<figure class="figure">
+  <img src="./assets/standard-library.png" alt="ModelingToolkit Standard Library." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+ModelingToolkit Standard Library.
+</figcaption></figure><h3 id="background">Background</h3>
+<p>The library defines well-tested acausal connections. In Physical Network Acausal modeling each physical domain must define a connector to combine the model components. Each physical domain connector defines a minimum of two variables, the Through and the Across variable. The through variable is a time derivative of some conserved quantity. The conserved quantity is expressed by the across variable. Generally, the physical system is given by:</p>
+<ul>
+<li><p>Energy dissipation: \(\frac{\partial across}{\partial t} \cdot c_1 = through\)</p>
+</li>
+<li><p>Flow: \(through \cdot c_2 = across\)</p>
+</li>
+</ul>
+<p>For example, for the electrical domain the across variable is voltage, and the through variable is current. So:</p>
+<ul>
+<li><p>Energy dissipation: \(\frac{\partial voltage}{\partial t} \cdot capacitance = current\)</p>
+</li>
+<li><p>Flow: \(current \cdot resistance = voltage\)</p>
+</li>
+</ul>
+<h2 id="example_1_chuas_circuit">Example 1: Chua&#39;s Circuit</h2>
+<h3 id="background__2">Background</h3>
+<p>A Chua circuit is a simple electronic circuit that exhibits classic chaotic behavior. It produces an oscillating waveform that never repeats. The ease of construction of the circuit has made it a ubiquitous real-world example of a chaotic system, leading some to declare it &quot;a paradigm for chaos&quot; <sup id="fnref:2">[2]</sup>.</p>
+<p>In order to get this chaotic behavior, we need to satisfy a couple requirements.</p>
+<figure class="figure">
+  <img src="./assets/chua-circuit.png" alt="Chua's circuit diagram." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Chua's circuit diagram.
+</figcaption></figure><p>We need at least one nonlinear element if you look at the diagram above, and that&#39;s what \(N_R\) stands for, our nonlinear resistor. We need at least one locally active resistor, which is also \(N_R\) in the diagram. Then, we need at least three energy storage elements, so that&#39;s where the capacitors \(C_1\) and \(C_2\) and the inductor \(L\) come into play. That diagram is what we&#39;re going to be building.</p>
+<h3 id="components">Components</h3>
+<p>To get things out of the way, let&#39;s quickly load some packages:</p>
+<pre><code class="language-julia">using OrdinaryDiffEq
+using ModelingToolkit
+using DataFrames
+using ModelingToolkitStandardLibrary.Electrical
+using ModelingToolkitStandardLibrary.Electrical: OnePort
+using Statistics
+using StatsPlots</code></pre>
+<h4 id="defining_model_components">Defining Model Components</h4>
+<p>First we need to define the components we need that are not readily available in the standard library. So we begin with defining a parameter for time, and then we can build our nonlinear resistor. This is the code representation of exactly what was show in the diagram:</p>
+<pre><code class="language-julia">@parameters t
+function NonlinearResistor&#40;;name, Ga, Gb, Ve&#41;
+    @named oneport &#61; OnePort&#40;&#41;
+    @unpack v, i &#61; oneport
+    pars &#61; @parameters Ga&#61;Ga Gb&#61;Gb Ve&#61;Ve
+    eqs &#61; &#91;
+        i ~ ifelse&#40;v &lt; -Ve,
+                Gb*&#40;v &#43; Ve&#41; - Ga*Ve,
+                ifelse&#40;v &gt; Ve,
+                    Gb*&#40;v - Ve&#41; &#43; Ga*Ve,
+                    Ga*v,
+                &#41;,
+            &#41;
+    &#93;
+    extend&#40;ODESystem&#40;eqs, t, &#91;&#93;, pars; name&#61;name&#41;, oneport&#41;
+end</code></pre>
+<p>You can see we&#39;re using some components from the electrical module, and then it&#39;s pretty straightforward to describe the various equations that we want to govern the behavior of the nonlinear resistor. There&#39;s a couple nested <code>ifelse</code> statements which employ different equations based on different conditions of the nonlinear resistor. What we return from this function here is an <code>ODESystem</code> which is going to help us create the component. <code>NonlinearResistor</code> was the only component we needed to build ourselves.</p>
+<h4 id="creating_model_components">Creating Model Components</h4>
+<p>After defining the model parameters that are not readily available in the model library, we can then create the model components. We can do this using various standard library components and the nonlinear resistor we just built:</p>
+<pre><code class="language-julia">@named L &#61; Inductor&#40;L&#61;18&#41;
+@named R &#61; Resistor&#40;R&#61;12.5e-3&#41;
+@named G &#61; Conductor&#40;G&#61;0.565&#41;
+@named C1 &#61; Capacitor&#40;C&#61;10, v_start&#61;4&#41;
+@named C2 &#61; Capacitor&#40;C&#61;100&#41;
+@named Nr &#61; NonlinearResistor&#40;
+    Ga &#61; -0.757576,
+    Gb &#61; -0.409091,
+    Ve&#61;1&#41;
+@named Gnd &#61; Ground&#40;&#41;</code></pre>
+<p><code>Inductor</code>, <code>Resistor</code>, <code>Conductor</code> and <code>Ground</code> are all from the electrical module of the standard library. Note that we can create the model components with the same labels we saw on the diagram.</p>
+<h4 id="connecting_model_components">Connecting Model Components</h4>
+<p>Once we have each of these elements, we can start defining the relationships between the components. That&#39;s what you see in the <code>connect</code> statements below:</p>
+<pre><code class="language-julia">connections &#61; &#91;
+    connect&#40;L.p, G.p&#41;
+    connect&#40;G.n, Nr.p&#41;
+    connect&#40;Nr.n, Gnd.g&#41;
+    connect&#40;C1.p, G.n&#41;
+    connect&#40;L.n, R.p&#41;
+    connect&#40;G.p, C2.p&#41;
+    connect&#40;C1.n, Gnd.g&#41;
+    connect&#40;C2.n, Gnd.g&#41;
+    connect&#40;R.n, Gnd.g&#41;
+&#93;</code></pre>
+<h3 id="handling_the_model">Handling the Model</h3>
+<p>We now have everything we need to create our model:</p>
+<pre><code class="language-julia">@named model &#61; ODESystem&#40;connections, t,
+                        systems&#61;&#91;L, R, G, C1, C2, Nr, Gnd&#93;&#41;</code></pre>
+<p>When talking about not necessarily having to worry about writing the code, but instead just describing the relationships between each of the components, this is what you see here. We can <code>connect</code> the <code>Inductor</code> to the <code>Ground</code>, the <code>NonlinearResistor</code> to the <code>Ground</code>, the <code>Capacitor</code>s to the <code>Ground</code>. We can do all of this with <code>connect</code> statements and at the end put everything in an element &#40;<code>ODESystem</code>&#41; called model, which is going to give us everything needed.</p>
+<p>But&#33; We didn&#39;t pay close attention at all in making sure this runs in an optimal way. That&#39;s where <code>structural_simplify</code> comes into play, and it&#39;s a very handy tool:</p>
+<pre><code class="language-julia">sys &#61; structural_simplify&#40;model&#41;</code></pre>
+<p>In many cases, the most convenient way to build the model may leave a lot of unnecessary variables. Before numerically solving we can remove these equations. <code>structural_simplify</code> structurally... simplifies algebraic equations in a system and computes the topological sort of the observed equations.</p>
+<p>After we get the optimal version of the model, we can create our <code>ODEProblem</code>, run it over a particular timespan, and, optionally, have it save at certain timepoints &#40;mostly for plotting later&#41;. We can then solve the problem:</p>
+<pre><code class="language-julia">prob &#61; ODEProblem&#40;sys, Pair&#91;&#93;, &#40;0, 5e4&#41;, saveat&#61;100&#41;
+sol &#61; solve&#40;prob, Rodas4&#40;&#41;&#41;</code></pre>
+<p>Everything up to this point does not evolve Model Optimizer, it&#39;s mostly good ol&#39; Modeling Toolkit. You can find an example in <a href="https://github.com/xlxs4/chua-circuit">this toy GitHub repository</a>.</p>
+<h3 id="inverse_problem">Inverse Problem</h3>
+<p>Now we&#39;re moving on to actually take a sneak peek on the core of what Model Optimizer can do. The first step is to begin from the experimental data. Note that the data can be synthesized. Typically, what you might see here would be something like using the <a href="https://csv.juliadata.org/stable/"><code>CSV.jl</code></a> package to load in the saved data. Then, you want to somehow tie the data back to the model. In this example we can go ahead and directly use the solution that we got from calling <code>solve</code> on our problem:</p>
+<pre><code class="language-julia">data &#61; DataFrame&#40;sol&#41;</code></pre>
+<p>Now we have everything needed to define a trial. A trial is the model plus our data. We just pass in the data, the system and, again, specify what time to run over:</p>
+<pre><code class="language-julia">trial &#61; Trial&#40;data, sys, tspan&#61;&#40;0, 5e4&#41;&#41;</code></pre>
+<p>Finally now that we have a trial, we can go ahead and create something that is core to this Model Optimizer pipeline — the Inverse Problem. In simple terms, the inverse problem consists in using the results of observations, experimental data, to infer the values of the parameters characterizing the system under study. Doing this in Model Optimizer is surprisingly easy. We&#39;re specifying the parameters that we want to optimize. We also specify the search space we want to look into. Lastly we&#39;re passing a collection of trials. Note that here it&#39;s a single trial, but still inside a collection &#40;<code>&#91;trial&#93;</code>&#41;:</p>
+<pre><code class="language-julia">invprob &#61; InverseProblem&#40;&#91;trial&#93;, sys,
+    &#91;
+        R.R &#61;&gt; &#40;9.5e-3, 13.5e-3&#41;,
+        C1.C &#61;&gt; &#40;9, 11&#41;,
+        C2.C &#61;&gt; &#40;95, 105&#41;
+    &#93;
+&#41;</code></pre>
+<p>The output of <code>InverseProblem</code> is essentially the parameters found which cause the model to be sufficiently good fit to all data, where all data here is the collection of trials that we&#39;ve passed. In the search space, note that we pass the lower and upper bound for each model parameter.</p>
+<h3 id="virtual_population">Virtual Population</h3>
+<p>Since that&#39;s done, we move on to seeing the concept of virtual populations applied in practice. The virtual population is the plausible population of optimal points. To create this virtual population, we feed in the inverse problem. We also pass an optimization algorithm — in this case we&#39;re going to use the stochastic global optimization algorithm. Lastly, we specify the number of max iterations we want this to run for. We&#39;ll use 1000, a much more realistic number to use would be at about 5000:</p>
+<pre><code class="language-julia">vp &#61; vpop&#40;invprob,
+        StochGlobalOpt&#40;maxiters &#61; 100&#41;,
+        population_size &#61; 50&#41;</code></pre>
+<p>Et voilà&#33;</p>
+<figure class="figure">
+  <img src="./assets/virtual-population-results.png" alt="We got some estimates of the model parameters." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+We got some estimates of the model parameters.
+</figcaption></figure><p>Remember that when we defined our capacitors, \(C_1\) and \(C_2\) we passed in values for <code>C</code>. Notice that in the results there&#39;s a parameter <code>C</code>. Also observe that for \(C_1\) the values are around 10, and for \(C_2\) around 100. This is a relatively good sign, it means we&#39;re getting close to the actual value, and it can be a good eyeball test in general.</p>
+<p><table class="fndef" id="fndef:1">
+    <tr>
+        <td class="fndef-backref">[1]</td>
+        <td class="fndef-content">Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., &amp; Rackauckas, C. &#40;2020&#41;. Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. <em>arXiv preprint arXiv:2010.04004</em>.</td>
+    </tr>
+</table>
+ <table class="fndef" id="fndef:2">
+    <tr>
+        <td class="fndef-backref">[2]</td>
+        <td class="fndef-content">Madan, R. N. &#40;Ed.&#41;. &#40;1993&#41;. <em>Chua&#39;s circuit: a paradigm for chaos</em> &#40;Vol. 1&#41;. World Scientific.</td>
+    </tr>
+</table>
+</p>
+ ]]>
+  </content:encoded>
+    
+  <pubDate>Mon, 12 Dec 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Orestis Ousoultzoglou</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  ESA Design Booster  ]]>
   </title>
   <link> https://xlxs4.github.io/notes/esa-design-booster/index.html </link>
