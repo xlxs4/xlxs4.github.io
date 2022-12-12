@@ -64,5 +64,14 @@ A typical model calibration pipeline looks like the following:
 
 \figure{path="./assets/model-calibration.png", caption="Model calibration via optimization in Model Optimizer."}
 
+There's three main challenges that can arise if trying to calibrate a model when nonlinearity is introduced.
+Nonlinear calibration is significantly harder, mainly because:
+
+1. Nonlinear optimization can easily hit local minima
+2. Optimization procedures/algorithms are usually serial
+3. Model parameters can be unidentifiable from data
+
+\figure{path="./assets/model-calibration-challenges.png", caption="The challenges of Nonlinear Calibration."}
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
