@@ -33,11 +33,13 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer<ol><li>JuliaSim</li><li>Introduction</li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
+<h3 id="juliasim">JuliaSim</h3>
 <p><a href="https://juliahub.com/products/juliasim/">JuliaSim</a> is a cloud-hosted platform for physical simulation. It combines a vast array of bleeding edge <a href="https://sciml.ai/">SciML</a> techniques, acausal equation-based digital twin modeling and simulation and is powered by the <a href="https://julialang.org/">Julia</a> programming language. It is preview-only software in the time of writing this post &#40;December 2022&#41;.</p>
-<p>JuliaSim produces surrogates of blackbox &#40;and regular&#41; dynamical systems using &#91;Continuous Time Echo State Networks &#40;CTESNs&#41; <sup id="fnref:1">[1]</sup>. This technique allows, amongst other features, for implicit training in parameter space to stabilize the ill-conditioning present in stiff systems.</p>
+<p>JuliaSim produces surrogates of blackbox &#40;and regular&#41; dynamical systems using <abbr title="Continuous Time Echo State Networks">CTESN</abbr>
+s <sup id="fnref:1">[1]</sup>. This technique allows, amongst other features, for implicit training in parameter space to stabilize the ill-conditioning present in stiff systems.</p>
 <p>You can leverage these surrogates to accelerate the process and there&#39;s a variety of techniques for quantifying uncertainty and noise &#40;see the virtual populations below&#41;. You can use JuliaSim for parameter estimation and optimal control, which is what this post is about. There&#39;s the so-called <a href="https://help.juliahub.com/juliasim/stable/ModelLibrary/">Model Library</a>, a collection of acausal &#40;equation-based&#41; components with pre-trained surrogates of models that are ready to use. You can thus discover and import/exchange various models, and combine yours with pre-built models and digital twins. Lastly, there&#39;s specialized numerical environments available for use upon demand. Everything can happen on the JuliaHub cloud-based IDE.</p>
 <figure class="figure">
   <img src="./assets/juliahub.png" alt="A visual overview of JuliaHub." class="figure-img img-fluid " width="" >
@@ -52,7 +54,14 @@ The JuliaSim Surrogatizer GUI.
   <img src="./assets/surrogate-dashboard.png" alt="The Surrogate Diagnostic Summary interactive dashboard." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
 The Surrogate Diagnostic Summary interactive dashboard.
-</figcaption></figure><table class="fndef" id="fndef:1">
+</figcaption></figure><h3 id="introduction">Introduction</h3>
+<figure class="figure">
+  <img src="./assets/juliasim.png" alt="JuliaSim at a glance." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+JuliaSim at a glance.
+</figcaption></figure><p>The Model Optimizer is a Julia package available on the JuliaHub platform named <code>JuliaSimModelOptimizer</code>. It contains methodology to perform model calibration and analysis inside a <abbr title="High-Performance Computing">HPC</abbr>
+ environment in a user-friendly manner. It&#39;s a robust and automated framework to scale large and complex models.</p>
+<table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
         <td class="fndef-content">Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., &amp; Rackauckas, C. &#40;2020&#41;. Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. <em>arXiv preprint arXiv:2010.04004</em>.</td>
