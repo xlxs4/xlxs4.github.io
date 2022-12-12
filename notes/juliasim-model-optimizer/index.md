@@ -107,5 +107,13 @@ and how Model Optimizer tackles these problems, including the concept of virtual
 Before we get to really see how all of this could work in action, we need to discuss different modeling paradigms.
 How do we create these simulations and have something that we can apply these Model Optimizer techniques to?
 
+#### Causal Modeling
+
+In causal modeling, we describe the causal mechanisms of a system.
+The way that this works is we provide clear rules for the interactions between functional blocks.
+Here we're worried about the flow of computation — one could draw an analogy linking causal modeling with the imperative programming paradigm.
+
+\figure{path="./assets/causal-modeling.png", caption="Causal Block diagram in Simulink by The Mathworks."}
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
