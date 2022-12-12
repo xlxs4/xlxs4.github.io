@@ -29,3 +29,5 @@ There's the so-called [Model Library](https://help.juliahub.com/juliasim/stable/
 You can thus discover and import/exchange various models, and combine yours with pre-built models and digital twins.
 Lastly, there's specialized numerical environments available for use upon demand.
 Everything can happen on the JuliaHub cloud-based IDE.
+
+If you want to build models, you can use the pre-made model libraries, e.g. [CellMLPhysiome.jl](https://help.juliahub.com/CellMLPhysiome/dev/) and [SBMLBioModels.jl](https://help.juliahub.com/SBMLBioModels/stable/). You can use the [Catalyst.jl](https://github.com/SciML/Catalyst.jl) and [ModelingToolkit.jl](https://github.com/SciML/ModelingToolkit.jl) GUIs. If you want to generate models using existing data, you can use a Digital Twin generator. If you want to generate data using existing models, you can use a Surrogatizer and more.
