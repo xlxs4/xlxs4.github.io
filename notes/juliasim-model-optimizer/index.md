@@ -115,5 +115,15 @@ Here we're worried about the flow of computation — one could draw an analogy l
 
 \figure{path="./assets/causal-modeling.png", caption="Causal Block diagram in Simulink by The Mathworks."}
 
+#### Acausal Modeling
+
+Instead, in causal modeling we describe the behavior and the properties of the model components.
+Then, the models are built up out of the composition of the components.
+The overall dynamics of the model fall out of the cumulative behavior of the composition.
+This is more akin to the declarative programming paradigm.
+We only worry about the connections and the relationships between these functional blocks — we don't want to frame the problem particularly in terms of the flow of computation that has to happen, we want to think instead about individual components and the relationships between one another.
+
+\figure{path="./assets/acausal-modeling.png", caption="Acausal modeling in <a href='https://sciml.ai/'>ModelingToolkit.jl</a>, part of the SciML suite."}
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
