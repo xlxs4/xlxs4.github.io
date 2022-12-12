@@ -163,15 +163,15 @@ The <a href='https://www.esa.int/ESA_Multimedia/Images/2019/06/ARLES_experiment'
 Your project learning curve compared to other projects.
 </figcaption></figure><h2 id="space_biology_payload_challenges">Space Biology Payload Challenges</h2>
 <ul>
-<li><p>Miniaturization of cell culturing instrumentation.</p>
+<li><p>Miniaturization of cell culturing instrumentation: you&#39;ll need temperature control, storing growth medium on-board, a place for the waste to go &#40;not necessarily&#41;, a platform to host the organisms...</p>
 </li>
-<li><p>Ensuring biocompatibility of payload materials.</p>
+<li><p>Ensuring biocompatibility of payload materials: not a major challenge, given that there is a variety of biocompatible materials and that you&#39;ll usually be isolating the biology, e.g. in a millifluidics card. Still, it&#39;s something that will affect a lot of design and implementation decisions.</p>
 </li>
-<li><p>Regulating temperature and pressure to decouple cell survival-behavior from other space stressors &#40;e.g. radiation&#41;.</p>
+<li><p>Regulating temperature and pressure to decouple cell survival-behavior from other space stressors &#40;e.g. radiation&#41;: controlling for pressure is by far the biggest hurdle to overcome here, since it means you will need the container that hosts the biology to be pressurized, which, in space terms, means you&#39;ll have to persuade people to let you test and fly a ticking bomb that can go off at any time. Also you&#39;ll have to make sure it doesn&#39;t leak and more :&#41;</p>
 </li>
-<li><p>Using methods for autonomous measurements &#40;e.g. spectroscopy, microscopy&#41;.</p>
+<li><p>Using methods for autonomous measurements &#40;e.g. spectroscopy, microscopy&#41;: well it&#39;s difficult to find instrumentation that is small, robust, and to somehow invent a way to automate the whole process so it doesn&#39;t require &#40;physical&#41; intervention.</p>
 </li>
-<li><p>Preparing predictable long-term biological sample storage methods before launch.</p>
+<li><p>Preparing predictable long-term biological sample storage methods before launch: You can see <sup id="fnref:9">[9]</sup> for a great example.</p>
 </li>
 <li><p>Engineering reliable readouts for cell viability/metabolism.</p>
 </li>
@@ -284,6 +284,12 @@ The Amsterdam Schipol airport at dawn.
     <tr>
         <td class="fndef-backref">[8]</td>
         <td class="fndef-content">Alon, U. &#40;2010&#41;. How to build a motivated research group. <em>Molecular cell</em>, 37&#40;2&#41;, 151-152.</td>
+    </tr>
+</table>
+<table class="fndef" id="fndef:9">
+    <tr>
+        <td class="fndef-backref">[9]</td>
+        <td class="fndef-content">Santa Maria, S. R., Marina, D. B., Massaro Tieze, S., Liddell, L. C., &amp; Bhattacharya, S. &#40;2020&#41;. BioSentinel: long-term Saccharomyces cerevisiae preservation for a deep space biosensor mission. <em>Astrobiology</em>.</td>
     </tr>
 </table>
 </p>
