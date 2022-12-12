@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit</li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
 <h2 id="juliasim">JuliaSim</h2>
@@ -109,17 +109,20 @@ Quantifying uncertainty using Virtual Populations.
   <figcaption class="figure-caption ">
 Causal Block diagram in <a href='https://www.mathworks.com/products/simulink.html'>Simulink</a> by The Mathworks.
 </figcaption></figure><h3 id="acausal_modeling">Acausal Modeling</h3>
-<p>Instead, in causal modeling we describe the behavior and the properties of the model components. Then, the models are built up out of the composition of the components. The overall dynamics of the model fall out of the cumulative behavior of the composition. This is more akin to the declarative programming paradigm. We only worry about the connections and the relationships between these functional blocks — we don&#39;t want to frame the problem particularly in terms of the flow of computation that has to happen, we want to think instead about individual components and the relationships between one another.</p>
+<p>Instead, in acausal modeling we describe the behavior and the properties of the model components. Then, the models are built up out of the composition of the components. The overall dynamics of the model fall out of the cumulative behavior of the composition. This is more akin to the declarative programming paradigm. We only worry about the connections and the relationships between these functional blocks — we don&#39;t want to frame the problem particularly in terms of the flow of computation that has to happen, we want to think instead about individual components and the relationships between one another.</p>
 <figure class="figure">
-  <img src="./assets/acausal-modeling.png" alt="Acausal modeling in <a href='https://sciml.ai/'>ModelingToolkit.jl</a>, part of the SciML suite." class="figure-img img-fluid " width="" >
+  <img src="./assets/acausal-modeling.png" alt="Acausal modeling in <a href='https://mtk.sciml.ai/dev/'>ModelingToolkit.jl</a>, part of the <a href='https://sciml.ai/'>SciML</a> suite." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
-Acausal modeling in <a href='https://sciml.ai/'>ModelingToolkit.jl</a>, part of the SciML suite.
+Acausal modeling in <a href='https://mtk.sciml.ai/dev/'>ModelingToolkit.jl</a>, part of the <a href='https://sciml.ai/'>SciML</a> suite.
 </figcaption></figure><p>There&#39;s some key advantages to following the acausal modeling paradigm. Acausal modeling can be expressive. This allows us to think like scientists and engineers instead of being limited in framing the problem only in terms of how to compute the results. Acausal modeling can be concise. This can allow us to build large-scale models by connecting well-tested components. Acausal modeling can be reusable. We can bring these well-tested components and entire component models with us to build new systems.</p>
 <figure class="figure">
   <img src="./assets/why-acausal-modeling.png" alt="Following the acausal modeling paradigm comes with important perks." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
 Following the acausal modeling paradigm comes with important perks.
-</figcaption></figure><table class="fndef" id="fndef:1">
+</figcaption></figure><h2 id="modeling_toolkit">Modeling Toolkit</h2>
+<p><a href="https://mtk.sciml.ai/dev/">ModelingToolkit.jl</a> is a Julia acausal modeling framework and it will allow us to be expressive and concise when we write our <abbr title="Differential Equation">DE</abbr>
+ models. It will also enable us to reuse these models so we can automatically rearrange equations for better stability. We&#39;re gonna get some extra perks here. We&#39;re gonna get optimal code by default, without having to worry about the most optimal way to compute these things — we just worry about the mechanics and then we get the optimal code for free. The code will also be parallelizable by default.</p>
+<table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
         <td class="fndef-content">Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., &amp; Rackauckas, C. &#40;2020&#41;. Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. <em>arXiv preprint arXiv:2010.04004</em>.</td>
