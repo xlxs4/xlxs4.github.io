@@ -270,6 +270,44 @@ There's a couple nested `ifelse` statements which employ different equations bas
 What we return from this function here is an `ODESystem` which is going to help us create the component.
 `NonlinearResistor` was the only component we needed to build ourselves.
 
+#### Creating Model Components
+
+After defining the model parameters that are not readily available in the model library, we can then create the model components.
+We can do this using various standard library components and the nonlinear resistor we just built:
+```julia
+@named L = Inductor(L=18)
+@named R = Resistor(R=12.5e-3)
+@named G = Conductor(G=0.565)
+@named C1 = Capacitor(C=10, v_start=4)
+@named C2 = Capacitor(C=100)
+@named Nr = NonlinearResistor(
+    Ga = -0.757576,
+    Gb = -0.409091,
+    Ve=1)
+@named Gnd = Ground()
+```
+`Inductor`, `Resistor`, `Conductor` and `Ground` are all from the electrical module of the standard library.
+Note that we can create the model components with the same labels we saw on the diagram.
+
+#### Connecting Model Components
+
+Once we have each of these elements, we can start defining the relationships between the components.
+That's what you see in the `connect` statements below:
+
+```julia
+connections = [
+    connect(L.p, G.p)
+    connect(G.n, Nr.p)
+    connect(Nr.n, Gnd.g)
+    connect(C1.p, G.n)
+    connect(L.n, R.p)
+    connect(G.p, C2.p)
+    connect(C1.n, Gnd.g)
+    connect(C2.n, Gnd.g)
+    connect(R.n, Gnd.g)
+]
+```
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
 
