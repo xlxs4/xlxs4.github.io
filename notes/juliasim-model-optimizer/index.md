@@ -211,6 +211,8 @@ So:
 
 ## Example 1: Chua's Circuit
 
+### Background
+
 A Chua circuit is a simple electronic circuit that exhibits classic chaotic behavior.
 It produces an oscillating waveform that never repeats.
 The ease of construction of the circuit has made it a ubiquitous real-world example of a chaotic system, leading some to declare it "a paradigm for chaos" [^2].
@@ -223,6 +225,50 @@ We need at least one nonlinear element if you look at the diagram above, and tha
 We need at least one locally active resistor, which is also $N_R$ in the diagram.
 Then, we need at least three energy storage elements, so that's where the capacitors $C_1$ and $C_2$ and the inductor $L$ come into play.
 That diagram is what we're going to be building.
+
+### Components
+
+To get things out of the way, let's quickly load some packages:
+
+```julia
+using OrdinaryDiffEq
+using ModelingToolkit
+using DataFrames
+using ModelingToolkitStandardLibrary.Electrical
+using ModelingToolkitStandardLibrary.Electrical: OnePort
+using Statistics
+using StatsPlots
+```
+
+#### Defining Model Components
+
+First we need to define the components we need that are not readily available in the standard library.
+So we begin with defining a parameter for time, and then we can build our nonlinear resistor.
+This is the code representation of exactly what was show in the diagram:
+
+```julia
+@parameters t
+function NonlinearResistor(;name, Ga, Gb, Ve)
+    @named oneport = OnePort()
+    @unpack v, i = oneport
+    pars = @parameters Ga=Ga Gb=Gb Ve=Ve
+    eqs = [
+        i ~ ifelse(v < -Ve,
+                Gb*(v + Ve) - Ga*Ve,
+                ifelse(v > Ve,
+                    Gb*(v - Ve) + Ga*Ve,
+                    Ga*v,
+                ),
+            )
+    ]
+    extend(ODESystem(eqs, t, [], pars; name=name), oneport)
+end
+```
+
+You can see we're using some components from the electrical module, and then it's pretty straightforward to describe the various equations that we want to govern the behavior of the nonlinear resistor.
+There's a couple nested `ifelse` statements which employ different equations based on different conditions of the nonlinear resistor.
+What we return from this function here is an `ODESystem` which is going to help us create the component.
+`NonlinearResistor` was the only component we needed to build ourselves.
 
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
