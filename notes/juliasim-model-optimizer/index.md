@@ -493,6 +493,74 @@ The output is, again, an `ODESystem`:
 
 \figure{path="./assets/model-setup.png", caption="Setting up the equations and connections in pseudocode."}
 
+### Handling the Model
+
+Alright, let's take a look at some actual code now.
+First we need to import our packages:
+
+```julia
+using BuildingModelLibrary # Our own modular components.
+using JuliaSimModelOptimizer
+using ModelingToolkit
+using OrdinaryDiffEq
+using Unitful # For physical units.
+using DataFrames, CSV
+using OptimizationOptimJL
+using DataInterpolations # Interpolations on 1D data.
+```
+
+We'll cheat a bit this time:
+
+```julia
+datapath = joinpath(@__DIR__, "..", "data", "USA_AZ_Phoenix.722780_TMY2.mos")
+```
+
+We can grab our model directly from data now:
+
+```julia
+model = initialize_model(; datapath)
+```
+
+Now there's 2619 equations, a massive reduction from the >17000 equations we started with.
+How?
+The model we get out of the `initialize_model` call has already went through all the various reduction algorithms to get this structurally and algebraically simplified.
+
+\figure{path="./assets/loaded-model.png", caption="The initialized model is shrunk!"}
+
+We now got a nice, lean model to work with.
+We can use [Unitful.jl](https://github.com/PainterQubits/Unitful.jl) to convert seconds to hours, Kelvin to Celsius etc. in an efficient manner that leaves little room for developer-introduced error:
+
+```julia
+day = ustrip(u"s", 24u"hr")
+n_days = 5.0
+t0 = 2.0 * day
+tend = t0 + n_days
+```
+
+### Inverse Problem
+
+Easy peasy.
+We're going to follow the same 3 steps:
+
+1. Load the experimental data,
+2. define our trials,
+3. define the inverse problem:
+
+```julia
+data = CSV.read(joinpath(@__DIR__,"..","data","building_data.csv"),
+                DataFrame)
+trial = Trial(data, model;
+            tspan=(t0, tend),
+            alg=QNDF(autodiff = false))
+invprob = InverseProblem([trial], model,
+    [
+        @nonamespace(model.T_fluids_1_k) => (270.0, 280.0),
+        @nonamespace(model.T_fluids_2_k) => (270.0, 280.0),
+        @nonamespace(model.T_fluids_3_k) => (270.0, 280.0)
+    ]
+)
+```
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
 
