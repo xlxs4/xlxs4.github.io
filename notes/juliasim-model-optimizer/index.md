@@ -478,6 +478,21 @@ There's some very useful functionality we can take advantage of: we can create m
 
 \figure{path="./assets/component-setup.png", caption="Setting up the components of our building model in pseudocode."}
 
+### Model Setup
+
+We now have a more large-scale model to play with — more precisely, a model which clocks in at over 17000 equations.
+Just like before, instead of writing this massive model by hand, we can focus purely on the relationships between our components.
+Again, the model is built up by the composition of each one of these components, same as earlier.
+It's worth repeating — the overall dynamics of this building model fall out of the cumulative behavior of that composition.
+We can get the dynamics of the full model out of all the individual components, all their dynamics and all the connections declared here.
+
+Thus, we only worry about the relationships, the connections between the components.
+This actually happens to unfold in a concise, fast way because we're able to do this inside a `for` loop.
+We're going to go over each room and set up the equations and the connections for every room in the building without having to code all this by hand.
+The output is, again, an `ODESystem`:
+
+\figure{path="./assets/model-setup.png", caption="Setting up the equations and connections in pseudocode."}
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
 
