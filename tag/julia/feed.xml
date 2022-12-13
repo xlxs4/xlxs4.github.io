@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li><li>Handling the Model</li><li>Inverse Problem</li><li>Virtual Population</li><li>Recap</li></ol></li><li>Example 2: Digital Twin of a Building<ol><li>Background</li><li>Component Setup</li><li>Model Setup</li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li><li>Handling the Model</li><li>Inverse Problem</li><li>Virtual Population</li><li>Recap</li></ol></li><li>Example 2: Digital Twin of a Building<ol><li>Background</li><li>Component Setup</li><li>Model Setup</li><li>Handling the Model</li><li>Inverse Problem</li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
 <h2 id="juliasim">JuliaSim</h2>
@@ -334,7 +334,53 @@ Setting up the components of our building model in pseudocode.
   <img src="./assets/model-setup.png" alt="Setting up the equations and connections in pseudocode." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
 Setting up the equations and connections in pseudocode.
-</figcaption></figure><p><table class="fndef" id="fndef:1">
+</figcaption></figure><h3 id="handling_the_model__2">Handling the Model</h3>
+<p>Alright, let&#39;s take a look at some actual code now. First we need to import our packages:</p>
+<pre><code class="language-julia">using BuildingModelLibrary # Our own modular components.
+using JuliaSimModelOptimizer
+using ModelingToolkit
+using OrdinaryDiffEq
+using Unitful # For physical units.
+using DataFrames, CSV
+using OptimizationOptimJL
+using DataInterpolations # Interpolations on 1D data.</code></pre>
+<p>We&#39;ll cheat a bit this time:</p>
+<pre><code class="language-julia">datapath &#61; joinpath&#40;@__DIR__, &quot;..&quot;, &quot;data&quot;, &quot;USA_AZ_Phoenix.722780_TMY2.mos&quot;&#41;</code></pre>
+<p>We can grab our model directly from data now:</p>
+<pre><code class="language-julia">model &#61; initialize_model&#40;; datapath&#41;</code></pre>
+<p>Now there&#39;s 2619 equations, a massive reduction from the &gt;17000 equations we started with. How? The model we get out of the <code>initialize_model</code> call has already went through all the various reduction algorithms to get this structurally and algebraically simplified.</p>
+<figure class="figure">
+  <img src="./assets/loaded-model.png" alt="The initialized model is shrunk!" class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+The initialized model is shrunk!
+</figcaption></figure><p>We now got a nice, lean model to work with. We can use <a href="https://github.com/PainterQubits/Unitful.jl">Unitful.jl</a> to convert seconds to hours, Kelvin to Celsius etc. in an efficient manner that leaves little room for developer-introduced error:</p>
+<pre><code class="language-julia">day &#61; ustrip&#40;u&quot;s&quot;, 24u&quot;hr&quot;&#41;
+n_days &#61; 5.0
+t0 &#61; 2.0 * day
+tend &#61; t0 &#43; n_days</code></pre>
+<h3 id="inverse_problem__2">Inverse Problem</h3>
+<p>Easy peasy. We&#39;re going to follow the same 3 steps:</p>
+<ol>
+<li><p>Load the experimental data,</p>
+</li>
+<li><p>define our trials,</p>
+</li>
+<li><p>define the inverse problem:</p>
+</li>
+</ol>
+<pre><code class="language-julia">data &#61; CSV.read&#40;joinpath&#40;@__DIR__,&quot;..&quot;,&quot;data&quot;,&quot;building_data.csv&quot;&#41;,
+                DataFrame&#41;
+trial &#61; Trial&#40;data, model;
+            tspan&#61;&#40;t0, tend&#41;,
+            alg&#61;QNDF&#40;autodiff &#61; false&#41;&#41;
+invprob &#61; InverseProblem&#40;&#91;trial&#93;, model,
+    &#91;
+        @nonamespace&#40;model.T_fluids_1_k&#41; &#61;&gt; &#40;270.0, 280.0&#41;,
+        @nonamespace&#40;model.T_fluids_2_k&#41; &#61;&gt; &#40;270.0, 280.0&#41;,
+        @nonamespace&#40;model.T_fluids_3_k&#41; &#61;&gt; &#40;270.0, 280.0&#41;
+    &#93;
+&#41;</code></pre>
+<p><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
         <td class="fndef-content">Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., &amp; Rackauckas, C. &#40;2020&#41;. Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. <em>arXiv preprint arXiv:2010.04004</em>.</td>
