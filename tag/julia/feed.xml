@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li><li>Handling the Model</li><li>Inverse Problem</li><li>Virtual Population</li><li>Recap</li></ol></li><li>Example 2: Digital Twin of a Building<ol><li>Background</li><li>Component Setup</li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li><li>Handling the Model</li><li>Inverse Problem</li><li>Virtual Population</li><li>Recap</li></ol></li><li>Example 2: Digital Twin of a Building<ol><li>Background</li><li>Component Setup</li><li>Model Setup</li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
 <h2 id="juliasim">JuliaSim</h2>
@@ -327,6 +327,13 @@ A real-world building can have a Digital Twin.
   <img src="./assets/component-setup.png" alt="Setting up the components of our building model in pseudocode." class="figure-img img-fluid " width="" >
   <figcaption class="figure-caption ">
 Setting up the components of our building model in pseudocode.
+</figcaption></figure><h3 id="model_setup">Model Setup</h3>
+<p>We now have a more large-scale model to play with — more precisely, a model which clocks in at over 17000 equations. Just like before, instead of writing this massive model by hand, we can focus purely on the relationships between our components. Again, the model is built up by the composition of each one of these components, same as earlier. It&#39;s worth repeating — the overall dynamics of this building model fall out of the cumulative behavior of that composition. We can get the dynamics of the full model out of all the individual components, all their dynamics and all the connections declared here.</p>
+<p>Thus, we only worry about the relationships, the connections between the components. This actually happens to unfold in a concise, fast way because we&#39;re able to do this inside a <code>for</code> loop. We&#39;re going to go over each room and set up the equations and the connections for every room in the building without having to code all this by hand. The output is, again, an <code>ODESystem</code>:</p>
+<figure class="figure">
+  <img src="./assets/model-setup.png" alt="Setting up the equations and connections in pseudocode." class="figure-img img-fluid " width="" >
+  <figcaption class="figure-caption ">
+Setting up the equations and connections in pseudocode.
 </figcaption></figure><p><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
