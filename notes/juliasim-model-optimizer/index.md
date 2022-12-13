@@ -561,6 +561,20 @@ invprob = InverseProblem([trial], model,
 )
 ```
 
+### Model Calibration
+
+`calibrate` comes from Model Optimizer.
+Then, we just convert the results from Kelvin to Celsius and we have the parameter estimation for this model.
+That's it.
+Estimated parameters that perfectly match the groundtruth data.
+That's cool.
+
+```julia
+alg = SplineCollocate(maxiters=1_000, solver=BFGS(), interp=CubicSpline)
+result = calibrate(invprob, alg)
+uconvert.(u"°C", result.*u"K")
+```
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
 
