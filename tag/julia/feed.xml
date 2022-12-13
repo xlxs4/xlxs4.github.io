@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li><li>Handling the Model</li><li>Inverse Problem</li><li>Virtual Population</li><li>Recap</li></ol></li><li>Example 2: Digital Twin of a Building<ol><li>Background</li><li>Component Setup</li><li>Model Setup</li><li>Handling the Model</li><li>Inverse Problem</li></ol></li></ol></div>
+<div class="page-tag"><i class="fa fa-tag"></i><a href="https://xlxs4.github.io/tag/julia/">julia</a>, <a href="https://xlxs4.github.io/tag/modeling/">modeling</a>, <a href="https://xlxs4.github.io/tag/sciml/">sciml</a></div><div class="franklin-toc"><ol><li>JuliaSim Model Optimizer</li><li>JuliaSim<ol><li>Introduction</li></ol></li><li>Model Calibration<ol><li>Nonlinear Model Calibration</li></ol></li><li>Model Paradigms<ol><li>Causal Modeling</li><li>Acausal Modeling</li></ol></li><li>Modeling Toolkit<ol><li>Description</li><li>Features</li><li>Equation Types</li></ol></li><li>Modeling Toolkit Standard Library<ol><li>Background</li></ol></li><li>Example 1: Chua&#39;s Circuit<ol><li>Background</li><li>Components<ol><li>Defining Model Components</li><li>Creating Model Components</li><li>Connecting Model Components</li></ol></li><li>Handling the Model</li><li>Inverse Problem</li><li>Virtual Population</li><li>Recap</li></ol></li><li>Example 2: Digital Twin of a Building<ol><li>Background</li><li>Component Setup</li><li>Model Setup</li><li>Handling the Model</li><li>Inverse Problem</li><li>Model Calibration</li></ol></li></ol></div>
 <h2 id="juliasim_model_optimizer">JuliaSim Model Optimizer</h2>
 <p>Some time ago I attended a remote workshop titled &quot;Model Calibration and Parameter Estimation with JuliaSim Model Optimizer&quot; by the <a href="https://juliahub.com/company/about-us/">JuliaHub</a> team, specifically <a href="https://jvaverka.com/">Jacob Vaverka</a> and <a href="https://chrisrackauckas.com/">Dr. Christopher Rackauckas</a>.</p>
 <h2 id="juliasim">JuliaSim</h2>
@@ -380,6 +380,11 @@ invprob &#61; InverseProblem&#40;&#91;trial&#93;, model,
         @nonamespace&#40;model.T_fluids_3_k&#41; &#61;&gt; &#40;270.0, 280.0&#41;
     &#93;
 &#41;</code></pre>
+<h3 id="model_calibration__2">Model Calibration</h3>
+<p><code>calibrate</code> comes from Model Optimizer. Then, we just convert the results from Kelvin to Celsius and we have the parameter estimation for this model. That&#39;s it. Estimated parameters that perfectly match the groundtruth data. That&#39;s cool.</p>
+<pre><code class="language-julia">alg &#61; SplineCollocate&#40;maxiters&#61;1_000, solver&#61;BFGS&#40;&#41;, interp&#61;CubicSpline&#41;
+result &#61; calibrate&#40;invprob, alg&#41;
+uconvert.&#40;u&quot;°C&quot;, result.*u&quot;K&quot;&#41;</code></pre>
 <p><table class="fndef" id="fndef:1">
     <tr>
         <td class="fndef-backref">[1]</td>
