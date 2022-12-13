@@ -575,6 +575,19 @@ result = calibrate(invprob, alg)
 uconvert.(u"°C", result.*u"K")
 ```
 
+### Note
+
+Before waving goodbye, I'd like to note down something important.
+All the methods shown here (and more) are designed for large-scale simulations to fit to data.
+It's a form of curve fitting that is engineered for robustness to nonlinear behavior.
+One could wonder, how do you fit data to a chaotic system?
+That's a well-founded question.
+This is because in a chaotic system, for example, you could have great error in your simulations if you simulate the system for multiple Lyapunov times.
+The Model Optimizer techniques are robust to these behaviors.
+They make use of multiple shooting and things like collocation to be able to be fitting in the derivative space in a way that does not have this compounding of errors.
+If you naively slap an ODE solver into \abbr{title="Broyden–Fletcher–Goldfarb–Shanno algorithm", abbr="BFGS"} and then just directly fit and hope and pray, a chaotic system *is* an example of where this approach would fail.
+The building example in particular demonstrates the robustness of some of the available methods.
+
 
 [^1]: Anantharaman, R., Ma, Y., Gowda, S., Laughman, C., Shah, V., Edelman, A., & Rackauckas, C. (2020). Accelerating simulation of stiff nonlinear systems using continuous-time echo state networks. *arXiv preprint arXiv:2010.04004*.
 
