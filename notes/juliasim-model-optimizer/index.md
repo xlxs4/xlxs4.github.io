@@ -575,7 +575,7 @@ result = calibrate(invprob, alg)
 uconvert.(u"°C", result.*u"K")
 ```
 
-### Note
+## Note
 
 Before waving goodbye, I'd like to note down something important.
 All the methods shown here (and more) are designed for large-scale simulations to fit to data.
