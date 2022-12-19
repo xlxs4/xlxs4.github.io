@@ -172,7 +172,7 @@ function hfun_socialicons()
     </div>
     <div class="social-icon">
         <a href="https://stallman.org/rms-lifestyle.html#:~:text=I%20feel%20a%20responsibility%20not%20to%20contribute%20to%20the%20pressure%20on%20others.%20I%20hope%20my%20refusal%20to%20wear%20a%20tie%20will%20make%20it%20easier%20for%20you%20to%20refuse%20as%20well." title="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa fa-linkedin"></i>
         </a>
     </div>
 </div>
