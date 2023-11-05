@@ -1,0 +1,73 @@
+baseURL: https://xlxs4.com/
+languageCode: en-us
+title: Stochastic Resonance
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    - name: Archive
+      url: archives
+      weight: 5
+    - name: Search
+      url: search/
+      weight: 10
+    - name: Tags
+      url: tags/
+      weight: 10
+
+params:
+  assets:
+    disableHLJS: true
+  env: production
+  title: Stochastic Resonance
+  description: A blog about things in no particular order, shape or form
+  keywords: [blog]
+  author: Orestis Ousoultzoglou
+  DateFormat: January 2, 2006
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  UseHugoToc: true
+  homeInfoParams:
+    Title: Tuning the hum of intrinsic noise
+    Content: will see...
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+markup:
+  highlight:
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    noClasses: false    
