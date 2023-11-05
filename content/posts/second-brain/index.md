@@ -1,10 +1,10 @@
 ---
 author: Orestis Ousoultzoglou
 title: 'Second Brain'
-date: 2023-11-05T00:12:02+02:00
+date: 2022-09-26T00:12:02+02:00
+tags: ["second brain", "sketchnoting"]
 ---
 
-## Second Brain
 
 Besides a notebook, everything else happens in a single [Obsidian](https://obsidian.md/) vault. Note that I'm [writing things for myself by default, disregarding the audience](https://notes.andymatuschak.org/z8AfCaQJdp852orumhXPxHb3r278FHA9xZN8J) — this won't make much sense. If you want it to make more sense, start with the [resources](#resources) first, they're ordered. I want to transition to *sketchnoting*, hopefully accumulating a vocabulary of atomic, small drawings that I can use in a modular fashion. If you want an even more structured way to make sense of all of this, I recommend you start with [The First Principles of Visual Note-Taking - YouTube](https://www.youtube.com/watch?v=fJMP6fg_eIQ) and then [Mind mapping with Excalidraw-Obsidian - YouTube](https://www.youtube.com/watch?v=pWcHBmJLvLc) and [Part 1 Building a Second Brain Book on a Page - YouTube](https://www.youtube.com/watch?v=3i4CiImIYYA).
 

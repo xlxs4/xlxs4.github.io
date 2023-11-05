@@ -1,12 +1,11 @@
 ---
 author: Orestis Ousoultzoglou
 title: 'Esa Design Booster'
-date: 2023-11-03T15:50:50+02:00
+date: 2022-11-22T15:50:50+02:00
+tags: ["space", "esa"]
 math: true
 ---
 
-
-## ESA Design Booster
 
 The [Fly Your Satellite! Design Booster](https://www.esa.int/Education/CubeSats_-_Fly_Your_Satellite/Fly_Your_Satellite!_Design_Booster_pilot?fbclid=IwAR3hcjAva089hKRr8a74cB60zLhuBLy3mbpIcjtmc6AKB5Er1PXpcs9zvpw) is a pilot program of the [European Space Agency (ESA)](https://www.esa.int/).
 It's aimed at students working in the design of a CubeSat mission.
