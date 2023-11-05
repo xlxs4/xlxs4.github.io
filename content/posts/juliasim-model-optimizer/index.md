@@ -26,10 +26,6 @@ You can use the [Catalyst.jl](https://github.com/SciML/Catalyst.jl) and [Modelin
 If you want to generate models using existing data, you can use a Digital Twin generator.
 If you want to generate data using existing models, you can use a Surrogatizer and more.
 
-![surrogatizer](assets/surrogatizer.png)
-
-![surrogate-dashboard](assets/surrogate-dashboard.png)
-
 ### Introduction
 
 The Model Optimizer is a Julia package available on the JuliaHub platform named `JuliaSimModelOptimizer`.
@@ -379,7 +375,7 @@ This is a relatively good sign, it means we're getting close to the actual value
 
 For a more clear way to see the results that we got, we can use [StatsPlots.jl](https://github.com/JuliaPlots/StatsPlots.jl) to visualize.
 We can create a single image which is a layout of three images and for each one we're going to use a smooth density plot to show the virtual population.
-For bonus points, since we know what the true value actually is, we can plot it too to use for comparison:
+For bonus points, since we know what the true value actually is, we can plot it too to use for comparison.
 
 ```julia
 params = DataFrame(vp)
@@ -399,8 +395,6 @@ plot!([100,100], [0.0, 0.15],
 l = @layout [a b c]
 plot(p1, p2, p3, layout = l)
 ```
-
-![chua-visualization](assets/chua-visualization.png)
 
 We can see that even with a low number of iterations we're still capturing the true values pretty well using the virtual populations.
 
