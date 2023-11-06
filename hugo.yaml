@@ -35,6 +35,7 @@ menu:
 params:
   assets:
     disableHLJS: true
+
   env: production
   title: Stochastic Resonance
   description: A blog about things in no particular order, shape or form
@@ -43,6 +44,20 @@ params:
   DateFormat: January 2, 2006
   defaultTheme: auto
   disableThemeToggle: false
+
+  profileMode:
+    enabled: true
+    title: Orestis Ousoultzoglou
+    subtitle: Tuning the hum of intrinsic noise
+    imageURL: https://avatars.githubusercontent.com/u/54778816
+    imageWidth: 250
+    imageHeight: 250
+
+  socialIcons:
+    - name: github
+      url: https://github.com/xlxs4/
+    - name: linkedin
+      url: "https://stallman.org/rms-lifestyle.html#:~:text=I%20feel%20a%20responsibility%20not%20to%20contribute%20to%20the%20pressure%20on%20others.%20I%20hope%20my%20refusal%20to%20wear%20a%20tie%20will%20make%20it%20easier%20for%20you%20to%20refuse%20as%20well."
 
   ShowReadingTime: true
   ShowPostNavLinks: true
@@ -56,9 +71,11 @@ params:
   hideSummary: false
   showtoc: true
   UseHugoToc: true
+
   homeInfoParams:
     Title: Tuning the hum of intrinsic noise
     Content: will see...
+
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
