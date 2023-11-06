@@ -13,6 +13,7 @@ module:
 
 outputs:
   home:
+    - HTML
     - JSON
 
 minify:
