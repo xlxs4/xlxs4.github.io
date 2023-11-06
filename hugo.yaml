@@ -11,6 +11,10 @@ module:
   imports:
     - path: github.com/adityatelange/hugo-PaperMod
 
+outputs:
+  home:
+    - JSON
+
 minify:
   disableXML: true
   minifyOutput: true
