@@ -25,6 +25,9 @@ menu:
     - name: Archive
       url: archives
       weight: 5
+    - name: CV
+      url: files/xlxs4.pdf
+      weight: 5
     - name: Search
       url: search/
       weight: 10
@@ -56,6 +59,8 @@ params:
   socialIcons:
     - name: github
       url: https://github.com/xlxs4/
+    - name: cv
+      url: https://xlxs4.com/files/xlxs4.pdf
     - name: mastodon
       url: https://fosstodon.org/@xlxs4
     - name: linkedin
