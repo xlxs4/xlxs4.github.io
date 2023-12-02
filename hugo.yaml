@@ -57,6 +57,8 @@ params:
     imageHeight: 250
 
   socialIcons:
+    - name: email
+      url: "mailto:orousoultzoglou@gmail.com"
     - name: github
       url: https://github.com/xlxs4/
     - name: cv
