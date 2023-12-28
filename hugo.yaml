@@ -37,6 +37,9 @@ menu:
     - name: About Me
       url: /about/
       weight: 15
+    - name: Digital Garden
+      url: /digital-garden/
+      weight: 18
     - name: Logbook
       url: /logbook/
       weight: 25
