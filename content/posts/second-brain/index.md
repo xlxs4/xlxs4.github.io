@@ -136,6 +136,11 @@ Lastly, you can open a pane as a popup, to work and copy the images side-by-side
 
 ## Fluff
 
+- Keep it simple
+- Minimize friction
+- Brown-field reality: better is the enemy of good
+- Avoid moving things around: things are immutable by default, feel free to change structure if you have a good reason for it
+
 Consider carrying a physical notebook to be able to take a note 24/7.
 Have a place for the roughest notes somewhere (e.g. in your vault).
 Have a place for the summaries.
@@ -178,3 +183,4 @@ Tags not really needed, you can just (fuzzy) search stuff (at least in Obsidian)
 - [emoji toolbar](https://github.com/oliveryh/obsidian-emoji-toolbar)
 - [Excalibrain](https://github.com/zsviczian/excalibrain): Maybe not needed for now, recheck when [Zsolt](https://www.youtube.com/c/VisualPKM) publishes a full [workflow](https://www.youtube.com/playlist?list=PL6mqgtMZ4NP3dJlJLxqVm1rd3y-lWklLu)
   - [dataview](https://github.com/blacksmithgu/obsidian-dataview): Optional, needed for [Excalibrain](https://github.com/zsviczian/excalibrain)
+- [Rethinking my PKM](https://www.youtube.com/watch?v=nJ660t5ku9A)

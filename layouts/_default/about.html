@@ -1,0 +1,21 @@
+{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me | {{ .Site.Title }}</title>
+</head>
+<body>
+
+    <div class="content">
+        <div class="post">
+            <h1>About Me</h1>
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+{{ end }}

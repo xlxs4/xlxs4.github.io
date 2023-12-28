@@ -23,17 +23,26 @@ minify:
 menu:
   main:
     - name: Archive
-      url: archives
+      url: /archives/
       weight: 5
     - name: CV
-      url: files/cv.pdf
+      url: /files/cv.pdf
       weight: 5
     - name: Search
-      url: search/
+      url: /search/
       weight: 10
     - name: Tags
-      url: tags/
+      url: /tags/
       weight: 10
+    - name: About Me
+      url: /about/
+      weight: 15
+    - name: Logbook
+      url: /logbook/
+      weight: 25
+    - name: Diary
+      url: /diary/
+      weight: 20
 
 params:
   assets:
