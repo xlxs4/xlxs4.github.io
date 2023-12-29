@@ -16,3 +16,4 @@ summary: diary
     ```
     TODO: Why was the `arrayref`/`arrayset` interface replaced with the `getindex`/`setindex` interface? Probably related to #6
 6. https://docs.julialang.org/en/v1/devdocs/boundscheck/#Propagating-inbounds TODO
+7. Calls annotated `::Union{}` do not return
