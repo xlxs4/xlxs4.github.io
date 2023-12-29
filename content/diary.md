@@ -14,4 +14,5 @@ summary: diary
     # for backward compat
     arrayref(inbounds::Bool, A::Array, i::Int...) = Main.Base.getindex(A, i...)
     ```
-    TODO: Why was the `arrayref`/`arrayset` interface replaced with the `getindex`/`setindex` interface?
+    TODO: Why was the `arrayref`/`arrayset` interface replaced with the `getindex`/`setindex` interface? Probably related to #6
+6. https://docs.julialang.org/en/v1/devdocs/boundscheck/#Propagating-inbounds TODO
