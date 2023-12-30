@@ -21,3 +21,9 @@ summary: diary
 6. https://docs.julialang.org/en/v1/devdocs/boundscheck/#Propagating-inbounds TODO
 7. Calls annotated `::Union{}` do not return
 8. https://hackmd.io/@vtjnash/rkzazi7an TODO
+9. `julia> ?REPL.activate`
+    ```julia
+    activate(mod::Module=Main)
+
+    Set mod as the default contextual module in the REPL, both for evaluating expressions and printing them.
+    ```
