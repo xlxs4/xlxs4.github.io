@@ -15,7 +15,7 @@ summary: diary
     arrayref(inbounds::Bool, A::Array, i::Int...) = Main.Base.getindex(A, i...)
     ```
 
-    > as of 1..11, `arrayref` is no longer a thing Julia knows about. `Array`` is basically a first class `mutable struct`` built on top of `Memory``. Initially we removed `arrayref`` entirely, but it turns out that enough people were using it (mostly for dumb reasons) that we added a fallback to prevent code from breaking"
+    > as of 1..11, `arrayref` is no longer a thing Julia knows about. `Array` is basically a first class `mutable struct` built on top of `Memory`. Initially we removed `arrayref` entirely, but it turns out that enough people were using it (mostly for dumb reasons) that we added a fallback to prevent code from breaking"
 
     cf. 8
 6. https://docs.julialang.org/en/v1/devdocs/boundscheck/#Propagating-inbounds TODO
