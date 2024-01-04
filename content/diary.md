@@ -45,4 +45,11 @@ In REPL, `using REPL; ModuleName <Alt+m>`: ["Set mod as the default contextual m
 `@allocated`
 %%
 
+If you want to add custom diff rules for [`ForwardDiff.jl`](https://github.com/JuliaDiff/ForwardDiff.jl), use [ForwardDiffChainRules.jl](https://github.com/ThummeTo/ForwardDiffChainRules.jl) to [add a ForwardDiff dispatch for an already existing frule](https://github.com/ThummeTo/ForwardDiffChainRules.jl/blob/decd2c40a2eea4a1ae6aea9852a35ee2f7a22575/README.md?plain=1#L28).
+Note that you can't add rules to `DiffRules` directly.
+The reason is `ForwardDiff` works by adding dispatches for the `DiffRules` rules; to do that, it reads the `DiffRules` tables containing all the rules. Doing, say, `DiffRules.@define_diffrule`, adds the rules *after* they've been read by `ForwardDiff`, so you get no dispatches for your custom rule.
+You can also do something to add an additional dispatch of your function for values of type `ForwardDiff.Dual`: `myfunction(::ForwardDiff.Dual)`.
+However, this is redundant and error-prone, while with `ForwardDiffChainRules` you can *re-use* the differentiation code defined in an existing `ChainRulesCore.frule` without having to re-code the diff rules.
+%%
+
 {{< /diaryList >}}
