@@ -1,0 +1,13 @@
+{{ $counter := 0 }}
+<div class="diary-entries">
+{{ range split .Inner "%%" }}
+    {{ $entry := . | markdownify }}
+    {{ if ne $entry "" }}
+        {{ $counter = add $counter 1 }}
+        <div id="entry{{ $counter }}" class="diary-entry">
+            <a href="#entry{{ $counter }}" class="diary-entry-number">{{ $counter }}.</a>
+            <div class="diary-entry-content">{{ $entry }}</div>
+        </div>
+    {{ end }}
+{{ end }}
+</div>

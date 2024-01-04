@@ -1,3 +1,17 @@
 .chroma {
     background-color: unset !important;
 }
+
+.diary-entries {
+    list-style-type: none; /* Remove bullets */
+    padding-left: 0; /* Adjust padding if needed */
+}
+
+.diary-entry-number {
+    font-weight: bold; /* Make the number bold */
+    margin-right: 0.5em; /* Add space after the number */
+}
+
+.diary-entry-content {
+    display: inline; /* Keep content inline with the number */
+}
