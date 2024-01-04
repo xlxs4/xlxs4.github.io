@@ -3,15 +3,27 @@
 }
 
 .diary-entries {
-    list-style-type: none; /* Remove bullets */
-    padding-left: 0; /* Adjust padding if needed */
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .diary-entry-number {
-    font-weight: bold; /* Make the number bold */
-    margin-right: 0.5em; /* Add space after the number */
+    font-weight: bold;
+    margin-right: 0.5em;
 }
 
 .diary-entry-content {
-    display: inline; /* Keep content inline with the number */
+    display: inline;
+}
+
+:root {
+    --diary-entry-highlight-color: rgba(224, 247, 250, 1.0);
+}
+
+.dark {
+    --diary-entry-highlight-color: rgba(114, 167, 207, 0.4);
+}
+
+.diary-entry-highlighted {
+    background-color: var(--diary-entry-highlight-color);
 }
