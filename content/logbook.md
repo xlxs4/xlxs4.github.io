@@ -9,8 +9,6 @@ summary: logbook
 
 ### Initial
 
-Unique invalidations:
-
 {{< detail "`invalidations.jl`" >}}
 ```julia
 using SnoopCompileCore
@@ -186,3 +184,54 @@ julia> using JET
 julia> @report_opt main!()
 ═════ 535 possible errors found ═════
 ```
+
+### parsefile
+
+#### CSV
+
+No invalidations
+
+```julia
+julia> @benchmark parsefile("schedule.csv")
+BenchmarkTools.Trial: 10000 samples with 1 evaluation.
+ Range (min … max):  78.333 μs …  4.253 ms  ┊ GC (min … max): 0.00% … 61.99%
+ Time  (median):     79.875 μs              ┊ GC (median):    0.00%
+ Time  (mean ± σ):   83.861 μs ± 92.691 μs  ┊ GC (mean ± σ):  1.74% ±  1.55%
+
+   ▃▆▇█▇▆▅▄▃▂▁   ▂▃▃▄▄▄▃▃▂▂▁   ▁ ▁▁▁▁▁▂▁▂▂▁▁▁                 ▂
+  ▇███████████████████████████████████████████▇▇█▇▇▇▇▇█▇▇▇▆▅▆ █
+  78.3 μs      Histogram: log(frequency) by time      94.2 μs <
+
+ Memory estimate: 28.47 KiB, allocs estimate: 421.
+```
+
+```julia
+julia> @report_opt parsefile("schedule.csv")
+═════ 1 possible error found ═════
+┌ parsefile(path::String) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/io.jl:8
+│┌ parsefile(path::String; kwargs::@Kwargs{}) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/io.jl:10
+││ runtime dispatch detected: parsefile(%99::Val, path::String)::Any
+```
+
+This is due to
+
+```julia
+function parsefile(path::AbstractString; kwargs...)
+    ext = lowercase(splitext(path)[2][2:end])
+    return parsefile(Val(Symbol(ext)), path; kwargs...)
+end
+```
+
+and, specifically,
+
+```julia
+return parsefile(Val(Symbol(ext)), path; kwargs...)
+```
+
+Alternative #1: have `parsefile` extract the extension and use either `if`-`else` or indexing a `const Dict` to return `parsecsv, parseply`, etc.
+Alternative #2: use a polymorphic approach; do static dispatch on types, each associated with a file extension (e.g. `CSVFile`, `PLYFile`)
+
+If we ever wish to move to a structure that is easier to modify by a third user, we can implement a registry pattern of sorts.
+
+Turns out that `@report_opt CSV.File(path)` yields a bajillion errors on its own.
+At least we're not dispatching on `Val` now.
