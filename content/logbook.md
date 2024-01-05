@@ -11,11 +11,7 @@ summary: logbook
 
 Unique invalidations:
 
-`invalidations.jl`:
-
-<details>
-    <summary>`invalidations.jl`</summary>
-
+{{< detail "`invalidations.jl`" >}}
 ```julia
 using SnoopCompileCore
 
@@ -26,8 +22,7 @@ using SnoopCompile
 trees = invalidation_trees(invs);
 methinvs = trees[end];
 ```
-
-</details>
+{{< /detail >}}
 
 ```julia-repl
 julia> length(uinvalidated(invs))
