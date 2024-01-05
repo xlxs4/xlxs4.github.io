@@ -7,7 +7,14 @@ summary: logbook
 
 ## 05-01-2024
 
+### Initial
+
+Unique invalidations:
+
 `invalidations.jl`:
+
+<summary>`invalidations.jl`</summary>
+<details>
 
 ```julia
 using SnoopCompileCore
@@ -20,7 +27,10 @@ trees = invalidation_trees(invs);
 methinvs = trees[end];
 ```
 
+</details>
+
 ```julia-repl
 julia> length(uinvalidated(invs))
 6594
 ```
+
