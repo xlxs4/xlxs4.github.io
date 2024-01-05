@@ -13,8 +13,8 @@ Unique invalidations:
 
 `invalidations.jl`:
 
-<summary>`invalidations.jl`</summary>
 <details>
+    <summary>`invalidations.jl`</summary>
 
 ```julia
 using SnoopCompileCore
