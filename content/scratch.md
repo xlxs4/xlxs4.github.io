@@ -1,8 +1,8 @@
 ---
-title: Logbook
-layout: logbook
-url: "/logbook/"
-summary: logbook
+title: Scratch
+layout: scratch
+url: "/scratch/"
+summary: scratch
 ---
 
 ## 05-01-2024
@@ -164,6 +164,8 @@ end
 ```
 {{< /detail >}}
 
+
+{{< detail "`@benchmark`" >}}
 ```julia
 julia> using BenchmarkTools
 julia> @benchmark main!()
@@ -178,19 +180,21 @@ BenchmarkTools.Trial: 2 samples with 1 evaluation.
 
  Memory estimate: 2.18 GiB, allocs estimate: 51344590.
 ```
+{{< /detail >}}
 
+{{< detail "`@report_opt`" >}}
 ```julia
 julia> using JET
 julia> @report_opt main!()
 ═════ 535 possible errors found ═════
 ```
+{{< /detail >}}
 
 ### parsefile
 
-#### CSV
-
 No invalidations
 
+{{< detail "`@benchmark`" >}}
 ```julia
 julia> @benchmark parsefile("schedule.csv")
 BenchmarkTools.Trial: 10000 samples with 1 evaluation.
@@ -204,7 +208,9 @@ BenchmarkTools.Trial: 10000 samples with 1 evaluation.
 
  Memory estimate: 28.47 KiB, allocs estimate: 421.
 ```
+{{< /detail >}}
 
+{{< detail "`@benchmark`" >}}
 ```julia
 julia> @report_opt parsefile("schedule.csv")
 ═════ 1 possible error found ═════
@@ -212,6 +218,7 @@ julia> @report_opt parsefile("schedule.csv")
 │┌ parsefile(path::String; kwargs::@Kwargs{}) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/io.jl:10
 ││ runtime dispatch detected: parsefile(%99::Val, path::String)::Any
 ```
+{{< /detail >}}
 
 This is due to
 
@@ -235,3 +242,96 @@ If we ever wish to move to a structure that is easier to modify by a third user,
 
 Turns out that `@report_opt CSV.File(path)` yields a bajillion errors on its own.
 At least we're not dispatching on `Val` now.
+
+### get_total_time
+
+{{< detail "`@report_opt`" >}}
+```julia
+julia> @report_opt ADCSSims.get_total_time(schedule_df, config.simulation.dt)
+═════ 6 possible errors found ═════
+┌ get_total_time(df::DataFrames.DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:36
+│┌ sum(a::Base.SkipMissing{T} where T<:(AbstractVector)) @ Base ./reduce.jl:564
+││┌ sum(a::Base.SkipMissing{T} where T<:(AbstractVector); kw::@Kwargs{}) @ Base ./reduce.jl:564
+│││┌ sum(f::typeof(identity), a::Base.SkipMissing{T} where T<:(AbstractVector)) @ Base ./reduce.jl:535
+││││┌ sum(f::typeof(identity), a::Base.SkipMissing{T} where T<:(AbstractVector); kw::@Kwargs{}) @ Base ./reduce.jl:535
+│││││┌ mapreduce(f::typeof(identity), op::typeof(Base.add_sum), itr::Base.SkipMissing{T} where T<:(AbstractVector)) @ Base ./missing.jl:283
+││││││┌ eltype(x::SparseArrays.ReadOnly{T, 1, V} where {T, V<:AbstractVector{T}}) @ SparseArrays /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-10/usr/share/julia/stdlib/v1.10/SparseArrays/src/readonly.jl:17
+│││││││ runtime dispatch detected: eltype(%1::AbstractVector)::Any
+││││││└────────────────────
+┌ get_total_time(df::DataFrames.DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:36
+│ runtime dispatch detected: ADCSSims.sum(%9::Base.SkipMissing{T} where T<:(AbstractVector))::Any
+└────────────────────
+┌ get_total_time(df::DataFrames.DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:38
+│ runtime dispatch detected: (%10::Any ADCSSims.:/ dt::Float64)::Any
+└────────────────────
+┌ get_total_time(df::DataFrames.DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:38
+│ runtime dispatch detected: ADCSSims.round(%33::Any)::Any
+└────────────────────
+┌ get_total_time(df::DataFrames.DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:38
+│ runtime dispatch detected: (%34::Any ADCSSims.:* dt::Float64)::Any
+└────────────────────
+┌ get_total_time(df::DataFrames.DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:39
+│ runtime dispatch detected: Core.kwcall(%36::@NamedTuple{digits::Int64}, ADCSSims.round, %35::Any)::Any
+└────────────────────
+```
+{{< /detail >}}
+
+Adding a `collect` just shifted the type instability to it and then back to `sum`:
+
+{{< detail "`@report_opt`" >}}
+```julia
+julia> @report_opt ADCSSims.get_total_time(schedule_df, config.simulation.dt)
+═════ 6 possible errors found ═════
+┌ get_total_time(df::DataFrame, dt::Float64) @ Main ./REPL[17]:2
+│ runtime dispatch detected: collect(%9::Base.SkipMissing{T} where T<:(AbstractVector))::Vector
+└────────────────────
+┌ get_total_time(df::DataFrame, dt::Float64) @ Main ./REPL[17]:2
+│ runtime dispatch detected: sum(%10::Vector)::Any
+└────────────────────
+┌ get_total_time(df::DataFrame, dt::Float64) @ Main ./REPL[17]:4
+│ runtime dispatch detected: (%11::Any / dt::Float64)::Any
+└────────────────────
+┌ get_total_time(df::DataFrame, dt::Float64) @ Main ./REPL[17]:4
+│ runtime dispatch detected: round(%34::Any)::Any
+└────────────────────
+┌ get_total_time(df::DataFrame, dt::Float64) @ Main ./REPL[17]:4
+│ runtime dispatch detected: (%35::Any * dt::Float64)::Any
+└────────────────────
+┌ get_total_time(df::DataFrame, dt::Float64) @ Main ./REPL[17]:5
+│ runtime dispatch detected: Core.kwcall(%37::@NamedTuple{digits::Int64}, round, %36::Any)::Any
+```
+{{< /detail >}}
+
+Cutting `skipmissing` doesn't help much:
+
+{{< detail "`@report_opt`" >}}
+```
+julia> @report_opt ADCSSims.get_total_time(schedule_df, config.simulation.dt)
+═════ 5 possible errors found ═════
+┌ get_total_time(df::DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:36
+│ runtime dispatch detected: ADCSSims.sum(%1::AbstractVector)::Any
+└────────────────────
+┌ get_total_time(df::DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:38
+│ runtime dispatch detected: (%2::Any ADCSSims.:/ dt::Float64)::Any
+└────────────────────
+┌ get_total_time(df::DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:38
+│ runtime dispatch detected: ADCSSims.round(%25::Any)::Any
+└────────────────────
+┌ get_total_time(df::DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:38
+│ runtime dispatch detected: (%26::Any ADCSSims.:* dt::Float64)::Any
+└────────────────────
+┌ get_total_time(df::DataFrame, dt::Float64) @ ADCSSims /Users/xlxs4/GitHub/ADCSSims.jl/src/utils.jl:39
+│ runtime dispatch detected: Core.kwcall(%28::@NamedTuple{digits::Int64}, ADCSSims.round, %27::Any)::Any
+└────────────────────
+```
+{{< /detail >}}
+
+Seems like the compiler isn't able to compile an instance where `df[!, "duration"]` is a `Vector{Float64}`.
+Instead of being more explicit, let's remove the barrier by directly passing a vector to the method instead of the whole `DataFrame`:
+
+{{< detail "`@report_opt`" >}}
+```julia
+julia> @report_opt ADCSSims.get_total_time(schedule_df[!, "duration"], config.simulation.dt)
+No errors detected
+```
+{{< /detail >}}

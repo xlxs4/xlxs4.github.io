@@ -40,8 +40,8 @@ menu:
     - name: Digital Garden
       url: /digital-garden/
       weight: 18
-    - name: Logbook
-      url: /logbook/
+    - name: Scratch
+      url: /scratch/
       weight: 25
     - name: Diary
       url: /diary/
