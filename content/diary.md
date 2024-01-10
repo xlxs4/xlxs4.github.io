@@ -58,4 +58,13 @@ Increase `VSCode -> Settings (UI) -> Terminal > Integrated: Scrollback` for larg
 `CSV.File` is multithreaded by default; see [here](https://csv.juliadata.org/stable/reading.html#ntasks)
 %%
 
+[`Pkg.activate(; temp=true)`](https://github.com/JuliaLang/Pkg.jl/blob/cc71837381da2569b0d8e9d2c6130a13f3f5b8f4/src/Pkg.jl#L526-L555): Create and activate a temporary environment that will be deleted when the julia process is exited
+%%
+
+Writing documentation [according to the field values of a type instance rather than just the type itself](https://docs.julialang.org/en/v1/manual/documentation/#Dynamic-documentation)
+%%
+
+Using [metaprogramming for docgen](https://docs.julialang.org/en/v1/manual/documentation/#Advanced-Usage)
+%%
+
 {{< /diaryList >}}
