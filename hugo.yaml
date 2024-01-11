@@ -108,6 +108,9 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     anchorLineNos: true
     codeFences: true
