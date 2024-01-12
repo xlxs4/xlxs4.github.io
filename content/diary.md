@@ -28,7 +28,7 @@ arrayref(inbounds::Bool, A::Array, i::Int...) = Main.Base.getindex(A, i...)
 
 > as of 1..11, `arrayref` is no longer a thing Julia knows about. `Array` is basically a first class `mutable struct` built on top of `Memory`. Initially we removed `arrayref` entirely, but it turns out that enough people were using it (mostly for dumb reasons) that we added a fallback to prevent code from breaking
 
-cf. 8
+cf. [#8](https://xlxs4.com/diary/#entry8)
 {{< /detail >}}
 %%
 
@@ -74,7 +74,7 @@ Using [metaprogramming for docgen](https://docs.julialang.org/en/v1/manual/docum
 [`julia --help-hidden`](https://docs.julialang.org/en/v1/manual/command-line-interface/#command-line-interface)
 %%
 
-Use [`TimerOutputs.jl`](https://github.com/KristofferC/TimerOutputs.jl) for profiling
+Use [`TimerOutputs.jl`](https://github.com/KristofferC/TimerOutputs.jl) for profiling together with Revise
 {{< detail "Example usage" >}}
 ```julia
 using TimerOutputs
@@ -170,4 +170,17 @@ funcdef            1    334ns    0.0%   334ns     0.00B    0.0%    0.00B
 ```
 {{< /detail >}}
 %%
+
+Use the new [Package Extensions](https://docs.julialang.org/en/v1.10/manual/code-loading/#man-extensions)
+%%
+
+The compiler will [decide against specializing](https://docs.julialang.org/en/v1/manual/performance-tips/#Be-aware-of-when-Julia-avoids-specializing) on `Type`, `Function`, `Vararg`. You can add a type parameter to force specialization.
+[`Cthulhu`](https://github.com/JuliaDebug/Cthulhu.jl/issues/456), `JET` (through `@report_opt`) and `@code_warntype` can get confused by this.
+This can also be a reason `StaticCompile` can fail due to dynamism while everything appears to be typestable.
+[#21](https://xlxs4.com/diary/#entry21) should catch these correctly.
+%%
+
+[`AllocCheck.jl`](https://github.com/JuliaLang/AllocCheck.jl)
+%%
+
 {{< /diaryList >}}
