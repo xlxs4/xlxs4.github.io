@@ -183,4 +183,11 @@ This can also be a reason `StaticCompile` can fail due to dynamism while everyth
 [`AllocCheck.jl`](https://github.com/JuliaLang/AllocCheck.jl)
 %%
 
+Always prefix `abstract` `type`s with `Abstract`, e.g. `AbstractMyType`.
+If its a parametric type, keep it as is (e.g. `Base.Complex` instead of `AbstractComplex`).
+Be mindful of `Ref` vs `Refvalue`, too.
+%%
+
+
+
 {{< /diaryList >}}
