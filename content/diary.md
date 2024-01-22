@@ -188,6 +188,113 @@ If its a parametric type, keep it as is (e.g. `Base.Complex` instead of `Abstrac
 Be mindful of `Ref` vs `Refvalue`, too.
 %%
 
+`Base.@nospecializeinfer` was added (but not advertized in any way) in Julia 1.10.
+You can check what it does in the [introducing PR](https://github.com/JuliaLang/julia/pull/41931).
+An example of its use can be found in this [JLD2 PR](https://github.com/JuliaIO/JLD2.jl/pull/527).
+You can use `SnoopCompile.@snoopi_deep` to figure out where to despecialize to cut down on time spent on time inference and make precompilation way more effective.
+%%
 
+Currently, `precompile` only caches results for type-inference, not other stages in code generation.
+For that reason, efforts at reducing latency should be informed by measuring the amount of time spent on type-inference.
+You can do that using [`SnoopCompile.@snoopi_deep`](https://timholy.github.io/SnoopCompile.jl/stable/snoopi_deep/).
+%%
+
+Argument standardization is a very important technique for reducing specilization: do `foo(x::X, y::Y)` instead of `foo(x, y)`.
+{{< detail "Code" >}}
+instead of
+```julia
+function foo(x, y)
+    # some huge function, slow to compile,
+    # and you'd prefer not to compile it many times
+    # for different types of x and y
+end
+```
+consider whether you can write it safely as
+```julia
+function foo(x::X, y::Y) # X and Y are concrete types
+    # some huge function, but the concrete typing ensures
+    # you only compile it once
+end
+# This allows you to still call it with any argument types
+foo(x, y) = foo(convert(X, x)::X, convert(Y, y)::Y)
+```
+{{</ detail >}}
+{{< detail "More" >}}
+Part of the power of Julia is the ability to specify generic methods that "do the right thing" for a wide variety of types.
+However, when you're doing a standard task, e.g., writing some data to a file, there's no reason to recompile your "`save`" method for a filename encoded as a `String`, and again for a `SubString{String}`, and for `SubstitutionString`, and so on: if `save` isn't sensitive to the precise encoding of the filename, it should be safe to instead convert all filenams to `String`, reducing the diversity of input arguments for expensive-to-compile methods.
+{{< /detail >}}
+%%
+
+Specilization often improves runtime performance, but incurs extra inference and code-generation time costs.
+Some times it can even hurt both runtime and compile time perfomance.
+You can use [`pgdsgui`](https://timholy.github.io/SnoopCompile.jl/stable/pgdsgui/) for PGDS, aka, Profile-Guided DeSpecialization.
+%%
+
+The [SnoopCompile documentation](https://timholy.github.io/SnoopCompile.jl/stable/) is a great resource for improving performance and taking a peak at language internals.
+%%
+
+[`ProfileCanvas`](https://github.com/pfitzseb/ProfileCanvas.jl) is great for profiling work either inside VSCode or a Pluto notebook.
+There's `@profview`, but also `@profview_allocs` to profile memory allocations.
+%%
+
+There are several reasons not to use higher order functions
+{{< detail "More" >}}
+1. Julia sometimes [doesn't properly specialize](https://docs.julialang.org/en/v1/manual/performance-tips/#Be-aware-of-when-Julia-avoids-specializing) higher order functions which [can be hard to reason about](https://github.com/JuliaLang/julia/issues/51423)
+2. It complicates stacktraces by adding more wrapper functions where no real business logic happens, and stacktraces with anonymous functions are especially harder to read
+3. It encourages closures, which are vulnerable to the [slow closure bug](https://docs.julialang.org/en/v1/manual/performance-tips/#man-performance-captured) which has proven very hard to fix
+4. The [recursive inference](https://discourse.julialang.org/t/failure-to-optimize-due-to-type-recursion/108568) issue
+{{< /detail >}}
+%%
+
+The `mapfoldl`/`mapreduce` implementations have way too many layers.
+It is very complicated, often slow, and often comes with inference problems.
+%%
+
+A way for finer grained control over what is considered to be API is speciliazing `getproperty`.
+Everything that is then accessible through `getproperty` is considered to be API.
+{{< detail "Commonly used example" >}}
+```julia
+module Package
+
+const f = Internals.f
+export f
+
+module Internals
+# everything else
+end
+
+end
+```
+{{< /detail >}}
+%%
+
+It'd be better if `==` errored instead of falling back to `===`, but that would [be breaking](https://github.com/JuliaLang/julia/issues/40717).
+%%
+
+A great resource for Julia internals is the `devdocs`: https://docs.julialang.org/en/v1.11-dev/devdocs/object/
+%%
+
+To enter `Pkg` mode without having to type `]` you can do `julia -E'using Pkg; pkg"status"'`
+%%
+
+A few things that are on master now:
+- `pkg> add --weak/--extra Foo`
+- `pkg> add` now adds compat entries for the added deps if the active env is a package
+- Julia now prefers reading `Manifest-v{major}.{minor}.toml` over `Manifest.toml` so you can have version specific manifests
+%%
+
+[`OnlineStats`](https://github.com/joshday/OnlineStats.jl) is amazing
+%%
+
+`PartialStruct` intermediate types from `@code_warntype` is about constant propagation.
+It means the compiler knows that some values are guaranteed to be constant, but other parts of the `struct` are not
+%%
+
+There is no limit to the number of uniquely parametric-typed fields in a `struct`, but it's more and more work for the compiler
+%%
+
+In Julia GitHub actions you might try to specify a version like `1.10-rc2` and get an error.
+Remember, it needs to be in `~1.10.0-rc2` form
+%%
 
 {{< /diaryList >}}
