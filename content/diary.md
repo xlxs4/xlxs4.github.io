@@ -297,4 +297,8 @@ In Julia GitHub actions you might try to specify a version like `1.10-rc2` and g
 Remember, it needs to be in `~1.10.0-rc2` form
 %%
 
+The compiler parameters that control abstract interpretation-based type inference are accessible through [the source code](https://github.com/JuliaLang/julia/blob/47d31acd1494dfed4f8f361d67fe1fb8c3888656/base/compiler/types.jl#L120).
+As an example, by default the compiler gives up analysis when splatting a tuple with more than [32 elements](https://github.com/JuliaLang/julia/blob/47d31acd1494dfed4f8f361d67fe1fb8c3888656/base/compiler/types.jl#L141).
+%%
+
 {{< /diaryList >}}
