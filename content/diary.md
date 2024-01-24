@@ -301,4 +301,20 @@ The compiler parameters that control abstract interpretation-based type inferenc
 As an example, by default the compiler gives up analysis when splatting a tuple with more than [32 elements](https://github.com/JuliaLang/julia/blob/47d31acd1494dfed4f8f361d67fe1fb8c3888656/base/compiler/types.jl#L141).
 %%
 
+For storing a small number (<40 is a good rule of thumb) of heterogeneous elements in a container, prefer a `Tuple`/`NamedTuple`.
+If you use an abstractly-typed container like a `Vector{Any}`, you'll face performance hits due to the type instabilities introduced.
+%%
+
+If you want to generate code in a custom way, for example to circumvent a limitation imposed by the parameters that control type inference ([#40](https://xlxs4.com/diary/#entry40)) only for a specific code block and not for the whole program, you can do codegen yourself: generate [`IRCode`](https://github.com/JuliaLang/julia/blob/e42ffa63deb489dec7f971b897eaa43ecc85a322/base/compiler/ssair/ir.jl#L365) using your own [`AbstractInterpreter`](https://github.com/JuliaLang/julia/blob/e42ffa63deb489dec7f971b897eaa43ecc85a322/base/compiler/types.jl#L3-L18) and put it in an [opaque closure](https://github.com/JuliaLang/julia/blob/e42ffa63deb489dec7f971b897eaa43ecc85a322/base/opaque_closure.jl).
+%%
+
+For persistence in a data structure you can use [`PersistentDict`](https://github.com/JuliaLang/julia/blob/e42ffa63deb489dec7f971b897eaa43ecc85a322/base/dict.jl#L946) starting from Julia 1.11.
+Alternatively, you can also use a "Mutable until shared" discipline with [`MuttsDucts.jl`](https://github.com/RelationalAI-oss/MuttsDicts.jl)
+%%
+
+When using (Julia) GH Actions, try to always have them on the latest version.
+Avoid using `@latest`.
+Make sure you read `julia-actions/cache` docs to set it up well.
+%%
+
 {{< /diaryList >}}
