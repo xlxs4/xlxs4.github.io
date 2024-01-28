@@ -317,4 +317,7 @@ Avoid using `@latest`.
 Make sure you read `julia-actions/cache` docs to set it up well.
 %%
 
+When using [`JLD2.jl`](https://github.com/JuliaIO/JLD2.jl), note that [it caches loaded data by default](https://juliaio.github.io/JLD2.jl/dev/#Objects-are-cached-during-loading).
+%%
+
 {{< /diaryList >}}
